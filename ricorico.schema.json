@@ -56,7 +56,7 @@
             "properties": {
                 "type": { "const": "Ingrediente" },
                 "id": { "type": "string" },
-                "idTemporada": { "type": "string" }
+                "idsTemporadas": { "type": "array", "items": { "type": "string" } }
             },
             "required": ["type", "id", "idTemporada"],
             "additionalProperties": false

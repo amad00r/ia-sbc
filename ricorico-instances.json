@@ -130,5 +130,110 @@
         "id": "cerveza_ipa_artesanal",
         "precio": 5.20,
         "alcoholica": true
+    },
+    {
+        "type": "Categoria",
+        "id": "Pasta"
+    },
+    {
+        "type": "Categoria",
+        "id": "Carne"
+    },
+    {
+        "type": "Categoria",
+        "id": "Mariscos"
+    },
+    {
+        "type": "Categoria",
+        "id": "Vegetariano"
+    },
+    {
+        "type": "Categoria",
+        "id": "Postre"
+    },
+    {
+        "type": "Ingrediente",
+        "id": "tomate_seco",
+        "idsTemporadas": ["Verano", "Otoño"]
+    },
+    {
+        "type": "Ingrediente",
+        "id": "queso_parmesano",
+        "idsTemporadas": ["Primavera", "Verano"]
+    },
+    {
+        "type": "Ingrediente",
+        "id": "ternera",
+        "idsTemporadas": ["Otoño", "Invierno"]
+    },
+    {
+        "type": "Ingrediente",
+        "id": "gambas",
+        "idsTemporadas": ["Verano"]
+    },
+    {
+        "type": "Ingrediente",
+        "id": "berenjena",
+        "idsTemporadas": ["Verano", "Otoño"]
+    },
+    {
+        "type": "Ingrediente",
+        "id": "chocolate_negro",
+        "idsTemporadas": ["Invierno"]
+    },
+    {
+        "type": "Plato",
+        "id": "ravioli_ricotta_espinaca",
+        "precio": 14.50,
+        "dificultad": 6,
+        "idCategoria": "Pasta",
+        "idOrigen": "Italia",
+        "idsIngredientes": ["tomate_seco", "queso_parmesano"],
+        "idsPlatosCompatibles": ["lasagna_vegetal"],
+        "idsBebidasCompatibles": ["vino_tinto_rioja_alta", "agua_mineral_con_gas"]
+    },
+    {
+        "type": "Plato",
+        "id": "estofado_ternera",
+        "precio": 18.00,
+        "dificultad": 8,
+        "idCategoria": "Carne",
+        "idOrigen": "España",
+        "idsIngredientes": ["ternera", "tomate_seco"],
+        "idsPlatosCompatibles": ["ravioli_ricotta_espinaca"],
+        "idsBebidasCompatibles": ["vino_tinto_rioja_alta", "cerveza_ipa_artesanal"]
+    },
+    {
+        "type": "Plato",
+        "id": "paella_mariscos",
+        "precio": 21.50,
+        "dificultad": 7,
+        "idCategoria": "Mariscos",
+        "idOrigen": "España",
+        "idsIngredientes": ["gambas", "tomate_seco"],
+        "idsPlatosCompatibles": ["estofado_ternera"],
+        "idsBebidasCompatibles": ["vino_blanco_rueda_verdejo", "cerveza_lager_local"]
+    },
+    {
+        "type": "Plato",
+        "id": "lasagna_vegetal",
+        "precio": 13.75,
+        "dificultad": 5,
+        "idCategoria": "Vegetariano",
+        "idOrigen": "Italia",
+        "idsIngredientes": ["berenjena", "queso_parmesano"],
+        "idsPlatosCompatibles": ["paella_mariscos"],
+        "idsBebidasCompatibles": ["refresco_cola", "zumo_naranja_natural"]
+    },
+    {
+        "type": "Plato",
+        "id": "fondant_chocolate",
+        "precio": 7.00,
+        "dificultad": 4,
+        "idCategoria": "Postre",
+        "idOrigen": "Francia",
+        "idsIngredientes": ["chocolate_negro"],
+        "idsPlatosCompatibles": ["ravioli_ricotta_espinaca", "estofado_ternera"],
+        "idsBebidasCompatibles": ["vino_dulce_moscatel", "zumo_naranja_natural"]
     }
 ]
