@@ -12,4 +12,4 @@ with open("ricorico.json", "r") as f:
 	for obj in json.load(f):
 		if obj["type"] in ("Origen", "Temporada", "Preparacion"):
 			ident = re.sub(r'\s+', '_', unicodedata.normalize("NFKD", obj["id"]).encode("ASCII", "ignore").decode("utf-8").lower())
-			print(f':{ident} rdf:type owl:NamedIndividual , :{obj["type"]} ; :nombre "{obj["id"]}"')
+			print(f':{ident} rdf:type owl:NamedIndividual , :{obj["type"]} ; :nombre "{obj["id"]}" .')
