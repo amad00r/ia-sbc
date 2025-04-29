@@ -1,0 +1,114 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ricorico",
+    "type": "array",
+    "items": {
+        "anyOf": [
+            { "$ref": "#/definitions/Categoria" },
+            { "$ref": "#/definitions/Origen" },
+            { "$ref": "#/definitions/Temporada" },
+            { "$ref": "#/definitions/Preparacion" },
+            { "$ref": "#/definitions/Ingrediente" },
+            { "$ref": "#/definitions/Plato" },
+            { "$ref": "#/definitions/Vino" },
+            { "$ref": "#/definitions/Casual" }
+        ]
+    },
+    "definitions": {
+        "Categoria": {
+            "type": "object",
+            "properties": {
+                "type": { "const": "Categoria" },
+                "id": { "type": "string" }
+            },
+            "required": ["type", "id"],
+            "additionalProperties": false
+        },
+        "Origen": {
+            "type": "object",
+            "properties": {
+                "type": { "const": "Origen" },
+                "id": { "type": "string" }
+            },
+            "required": ["type", "id"],
+            "additionalProperties": false
+        },
+        "Temporada": {
+            "type": "object",
+            "properties": {
+                "type": { "const": "Temporada" },
+                "id": { "type": "string" }
+            },
+            "required": ["type", "id"],
+            "additionalProperties": false
+        },
+        "Preparacion": {
+            "type": "object",
+            "properties": {
+                "type": { "const": "Preparacion" },
+                "id": { "type": "string" }
+            },
+            "required": ["type", "id"],
+            "additionalProperties": false
+        },
+        "Ingrediente": {
+            "type": "object",
+            "properties": {
+                "type": { "const": "Ingrediente" },
+                "id": { "type": "string" },
+                "idTemporada": { "type": "string" }
+            },
+            "required": ["type", "id", "idTemporada"],
+            "additionalProperties": false
+        },
+        "Plato": {
+            "type": "object",
+            "properties": {
+                "type": { "const": "Plato" },
+                "id": { "type": "string" },
+                "precio": { "type": "number" },
+                "dificultad": { "type": "integer", "minimum": 0, "maximum": 10 },
+                "idCategoria": { "type": "string" },
+                "idOrigen": { "type": "string" },
+                "idsIngredientes": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+                "idsPlatosCompatibles": { "type": "array", "items": { "type": "string" } },
+                "idsBebidasCompatibles": { "type": "array", "items": { "type": "string" } }
+            },
+            "required": ["type", "id", "precio", "dificultad", "idCategoria", "idOrigen", "idsIngredientes", "idsPlatosCompatibles", "idsBebidasCompatibles"],
+            "additionalProperties": false
+        },
+        "Bebida": {
+            "type": "object",
+            "properties": {
+                "type": { "const": "Bebida" },
+                "id": { "type": "string" },
+                "precio": { "type": "number" },
+                "alcoholica": { "type": "boolean" }
+            },
+            "required": ["type", "id", "precio", "alcoholica"],
+            "additionalProperties": false
+        },
+        "Vino": {
+            "allOf": [
+                { "$ref": "#/definitions/Bebida" },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": [],
+                    "additionalProperties": false
+                }
+            ]
+        },
+        "Casual": {
+            "allOf": [
+                { "$ref": "#/definitions/Bebida" },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": [],
+                    "additionalProperties": false
+                }
+            ]
+        }
+    }
+}

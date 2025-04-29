@@ -1,0 +1,134 @@
+[
+    {
+        "type": "Origen",
+        "id": "Italia"
+    },
+    {
+        "type": "Origen",
+        "id": "España"
+    },
+    {
+        "type": "Origen",
+        "id": "Francia"
+    },
+    {
+        "type": "Origen",
+        "id": "Grecia"
+    },
+    {
+        "type": "Temporada",
+        "id": "Primavera"
+    },
+    {
+        "type": "Temporada",
+        "id": "Verano"
+    },
+    {
+        "type": "Temporada",
+        "id": "Otoño"
+    },
+    {
+        "type": "Temporada",
+        "id": "Invierno"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Parrilla"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Crudo"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Cocido"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Frito"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Al Horno"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Ahumado"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Guisado"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Salteado"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Al Vapor"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Marinado"
+    },
+    {
+        "type": "Vino",
+        "id": "vino_tinto_rioja_alta",
+        "precio": 25.50,
+        "alcoholica": true
+    },
+    {
+        "type": "Vino",
+        "id": "vino_blanco_rueda_verdejo",
+        "precio": 18.75,
+        "alcoholica": true
+    },
+    {
+        "type": "Vino",
+        "id": "vino_rosado_provenza",
+        "precio": 22.00,
+        "alcoholica": true
+    },
+    {
+        "type": "Vino",
+        "id": "cava_brut_nature",
+        "precio": 30.00,
+        "alcoholica": true
+    },
+    {
+        "type": "Vino",
+        "id": "vino_dulce_moscatel",
+        "precio": 15.90,
+        "alcoholica": true
+    },
+    {
+        "type": "Casual",
+        "id": "cerveza_lager_local",
+        "precio": 3.50,
+        "alcoholica": true
+    },
+    {
+        "type": "Casual",
+        "id": "refresco_cola",
+        "precio": 2.80,
+        "alcoholica": false
+    },
+    {
+        "type": "Casual",
+        "id": "agua_mineral_con_gas",
+        "precio": 2.50,
+        "alcoholica": false
+    },
+    {
+        "type": "Casual",
+        "id": "zumo_naranja_natural",
+        "precio": 4.00,
+        "alcoholica": false
+    },
+    {
+        "type": "Casual",
+        "id": "cerveza_ipa_artesanal",
+        "precio": 5.20,
+        "alcoholica": true
+    }
+]
