@@ -1,0 +1,239 @@
+[
+    {
+        "type": "Origen",
+        "id": "Italia"
+    },
+    {
+        "type": "Origen",
+        "id": "España"
+    },
+    {
+        "type": "Origen",
+        "id": "Francia"
+    },
+    {
+        "type": "Origen",
+        "id": "Grecia"
+    },
+    {
+        "type": "Temporada",
+        "id": "Primavera"
+    },
+    {
+        "type": "Temporada",
+        "id": "Verano"
+    },
+    {
+        "type": "Temporada",
+        "id": "Otoño"
+    },
+    {
+        "type": "Temporada",
+        "id": "Invierno"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Parrilla"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Crudo"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Cocido"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Frito"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Al Horno"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Ahumado"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Guisado"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Salteado"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Al Vapor"
+    },
+    {
+        "type": "Preparacion",
+        "id": "Marinado"
+    },
+    {
+        "type": "Vino",
+        "id": "vino_tinto_rioja_alta",
+        "precio": 25.50,
+        "alcoholica": true
+    },
+    {
+        "type": "Vino",
+        "id": "vino_blanco_rueda_verdejo",
+        "precio": 18.75,
+        "alcoholica": true
+    },
+    {
+        "type": "Vino",
+        "id": "vino_rosado_provenza",
+        "precio": 22.00,
+        "alcoholica": true
+    },
+    {
+        "type": "Vino",
+        "id": "cava_brut_nature",
+        "precio": 30.00,
+        "alcoholica": true
+    },
+    {
+        "type": "Vino",
+        "id": "vino_dulce_moscatel",
+        "precio": 15.90,
+        "alcoholica": true
+    },
+    {
+        "type": "Casual",
+        "id": "cerveza_lager_local",
+        "precio": 3.50,
+        "alcoholica": true
+    },
+    {
+        "type": "Casual",
+        "id": "refresco_cola",
+        "precio": 2.80,
+        "alcoholica": false
+    },
+    {
+        "type": "Casual",
+        "id": "agua_mineral_con_gas",
+        "precio": 2.50,
+        "alcoholica": false
+    },
+    {
+        "type": "Casual",
+        "id": "zumo_naranja_natural",
+        "precio": 4.00,
+        "alcoholica": false
+    },
+    {
+        "type": "Casual",
+        "id": "cerveza_ipa_artesanal",
+        "precio": 5.20,
+        "alcoholica": true
+    },
+    {
+        "type": "Categoria",
+        "id": "Pasta"
+    },
+    {
+        "type": "Categoria",
+        "id": "Carne"
+    },
+    {
+        "type": "Categoria",
+        "id": "Mariscos"
+    },
+    {
+        "type": "Categoria",
+        "id": "Vegetariano"
+    },
+    {
+        "type": "Categoria",
+        "id": "Postre"
+    },
+    {
+        "type": "Ingrediente",
+        "id": "tomate_seco",
+        "idsTemporadas": ["Verano", "Otoño"]
+    },
+    {
+        "type": "Ingrediente",
+        "id": "queso_parmesano",
+        "idsTemporadas": ["Primavera", "Verano"]
+    },
+    {
+        "type": "Ingrediente",
+        "id": "ternera",
+        "idsTemporadas": ["Otoño", "Invierno"]
+    },
+    {
+        "type": "Ingrediente",
+        "id": "gambas",
+        "idsTemporadas": ["Verano"]
+    },
+    {
+        "type": "Ingrediente",
+        "id": "berenjena",
+        "idsTemporadas": ["Verano", "Otoño"]
+    },
+    {
+        "type": "Ingrediente",
+        "id": "chocolate_negro",
+        "idsTemporadas": ["Invierno"]
+    },
+    {
+        "type": "Plato",
+        "id": "ravioli_ricotta_espinaca",
+        "precio": 14.50,
+        "dificultad": 6,
+        "idCategoria": "Pasta",
+        "idOrigen": "Italia",
+        "idsIngredientes": ["tomate_seco", "queso_parmesano"],
+        "idsPlatosCompatibles": ["lasagna_vegetal"],
+        "idsBebidasCompatibles": ["vino_tinto_rioja_alta", "agua_mineral_con_gas"]
+    },
+    {
+        "type": "Plato",
+        "id": "estofado_ternera",
+        "precio": 18.00,
+        "dificultad": 8,
+        "idCategoria": "Carne",
+        "idOrigen": "España",
+        "idsIngredientes": ["ternera", "tomate_seco"],
+        "idsPlatosCompatibles": ["ravioli_ricotta_espinaca"],
+        "idsBebidasCompatibles": ["vino_tinto_rioja_alta", "cerveza_ipa_artesanal"]
+    },
+    {
+        "type": "Plato",
+        "id": "paella_mariscos",
+        "precio": 21.50,
+        "dificultad": 7,
+        "idCategoria": "Mariscos",
+        "idOrigen": "España",
+        "idsIngredientes": ["gambas", "tomate_seco"],
+        "idsPlatosCompatibles": ["estofado_ternera"],
+        "idsBebidasCompatibles": ["vino_blanco_rueda_verdejo", "cerveza_lager_local"]
+    },
+    {
+        "type": "Plato",
+        "id": "lasagna_vegetal",
+        "precio": 13.75,
+        "dificultad": 5,
+        "idCategoria": "Vegetariano",
+        "idOrigen": "Italia",
+        "idsIngredientes": ["berenjena", "queso_parmesano"],
+        "idsPlatosCompatibles": ["paella_mariscos"],
+        "idsBebidasCompatibles": ["refresco_cola", "zumo_naranja_natural"]
+    },
+    {
+        "type": "Plato",
+        "id": "fondant_chocolate",
+        "precio": 7.00,
+        "dificultad": 4,
+        "idCategoria": "Postre",
+        "idOrigen": "Francia",
+        "idsIngredientes": ["chocolate_negro"],
+        "idsPlatosCompatibles": ["ravioli_ricotta_espinaca", "estofado_ternera"],
+        "idsBebidasCompatibles": ["vino_dulce_moscatel", "zumo_naranja_natural"]
+    }
+]
