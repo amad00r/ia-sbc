@@ -1,8 +1,8 @@
 ;;; ---------------------------------------------------------
-;;; ricorico.clp
+;;; ricorico_ontology.clp
 ;;; Translated by owl2clips
 ;;; Translated to CLIPS from ontology ricorico.ttl
-;;; :Date 30/04/2025 19:21:47
+;;; :Date 05/05/2025 09:27:03
 
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
@@ -110,6 +110,7 @@
     (multislot compatibleConPlato
         (type INSTANCE)
         (create-accessor read-write))
+    ;;; Relación para indicar que ingredientes componen un plato.
     (multislot compuestoPor
         (type INSTANCE)
         (create-accessor read-write))
@@ -128,7 +129,7 @@
     ;;; Atributo de tipo Integer para indicar la dificultad de realizar un plato. 
 Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el valor que indica la máxima dificultad.
     (slot dificultad
-        (type INTEGER)
+        (type SYMBOL)
         (create-accessor read-write))
     ;;; Atributo de tipo String para indicar el nombre del elemento en cuestión.
     (slot nombre
@@ -137,6 +138,14 @@ Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el val
     ;;; Atributo de tipo Float para indicar el precio del elemento en cuestión.
     (slot precio
         (type FLOAT)
+        (create-accessor read-write))
+    ;;; Atributo de tipo Integer que indica el tipo de plato (Primero, Segundo, Postre).
+0 -> Postre
+1 -> Primero
+2 -> Segundo
+3 -> Primero o Segundo
+    (slot tipo
+        (type SYMBOL)
         (create-accessor read-write))
 )
 

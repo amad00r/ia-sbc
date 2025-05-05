@@ -72,7 +72,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 :compuestoPor rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
               rdfs:domain :Plato ;
-              rdfs:range :Ingrediente .
+              rdfs:range :Ingrediente ;
+              rdfs:comment "Relación para indicar que ingredientes componen un plato." .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/disponibleEn
@@ -137,7 +138,14 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
             rdfs:subPropertyOf owl:topDataProperty ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain :Plato ;
-            rdfs:range xsd:integer ;
+            rdfs:range [ rdf:type rdfs:Datatype ;
+                         owl:onDatatype xsd:integer ;
+                         owl:withRestrictions ( [ xsd:minInclusive 1
+                                                ]
+                                                [ xsd:maxInclusive 10
+                                                ]
+                                              )
+                       ] ;
             rdfs:comment """Atributo de tipo Integer para indicar la dificultad de realizar un plato. 
 Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el valor que indica la máxima dificultad.""" .
 
@@ -166,6 +174,26 @@ Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el val
                     :Plato ;
         rdfs:range xsd:float ;
         rdfs:comment "Atributo de tipo Float para indicar el precio del elemento en cuestión." .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tipo
+:tipo rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdf:type owl:FunctionalProperty ;
+      rdfs:domain :Plato ;
+      rdfs:range [ rdf:type rdfs:Datatype ;
+                   owl:onDatatype xsd:integer ;
+                   owl:withRestrictions ( [ xsd:minInclusive 0
+                                          ]
+                                          [ xsd:maxInclusive 3
+                                          ]
+                                        )
+                 ] ;
+      rdfs:comment """Atributo de tipo Integer que indica el tipo de plato (Primero, Segundo, Postre).
+0 -> Postre
+1 -> Primero
+2 -> Segundo
+3 -> Primero o Segundo""" .
 
 
 #################################################################
