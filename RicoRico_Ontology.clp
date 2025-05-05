@@ -1,8 +1,8 @@
 ;;; ---------------------------------------------------------
-;;; ricorico_ontology.clp
+;;; RicoRico_Ontology.clp
 ;;; Translated by owl2clips
 ;;; Translated to CLIPS from ontology ricorico.ttl
-;;; :Date 05/05/2025 09:27:03
+;;; :Date 05/05/2025 12:57:41
 
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
@@ -126,10 +126,9 @@
     (slot originarioDe
         (type INSTANCE)
         (create-accessor read-write))
-    ;;; Atributo de tipo Integer para indicar la dificultad de realizar un plato. 
-Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el valor que indica la máxima dificultad.
+    ;;; Atributo de tipo Integer para indicar la dificultad de realizar un plato. Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el valor que indica la máxima dificultad.
     (slot dificultad
-        (type SYMBOL)
+        (type INTEGER)
         (create-accessor read-write))
     ;;; Atributo de tipo String para indicar el nombre del elemento en cuestión.
     (slot nombre
@@ -139,13 +138,9 @@ Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el val
     (slot precio
         (type FLOAT)
         (create-accessor read-write))
-    ;;; Atributo de tipo Integer que indica el tipo de plato (Primero, Segundo, Postre).
-0 -> Postre
-1 -> Primero
-2 -> Segundo
-3 -> Primero o Segundo
+    ;;; Atributo de tipo Integer que indica el tipo de plato (Primero, Segundo, Postre). 0 -> Postre // 1 -> Primero // 2 -> Segundo // 3 -> Primero o Segundo
     (slot tipo
-        (type SYMBOL)
+        (type INTEGER)
         (create-accessor read-write))
 )
 
@@ -236,7 +231,8 @@ Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el val
          (esCategoria  [mocCategoria])
          (esPreparacion  [mocPreparacion])
          (originarioDe  [mocOrigen])
-         (dificultad  4 "PostreMoc")
+         (dificultad  4)
+         (nombre  "PostreMoc")
          (precio  8.2)
     )
 

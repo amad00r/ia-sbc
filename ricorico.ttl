@@ -138,16 +138,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
             rdfs:subPropertyOf owl:topDataProperty ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain :Plato ;
-            rdfs:range [ rdf:type rdfs:Datatype ;
-                         owl:onDatatype xsd:integer ;
-                         owl:withRestrictions ( [ xsd:minInclusive 1
-                                                ]
-                                                [ xsd:maxInclusive 10
-                                                ]
-                                              )
-                       ] ;
-            rdfs:comment """Atributo de tipo Integer para indicar la dificultad de realizar un plato. 
-Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el valor que indica la máxima dificultad.""" .
+            rdfs:range xsd:integer ;
+            rdfs:comment "Atributo de tipo Integer para indicar la dificultad de realizar un plato. Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el valor que indica la máxima dificultad." .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/nombre
@@ -181,19 +173,8 @@ Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el val
       rdfs:subPropertyOf owl:topDataProperty ;
       rdf:type owl:FunctionalProperty ;
       rdfs:domain :Plato ;
-      rdfs:range [ rdf:type rdfs:Datatype ;
-                   owl:onDatatype xsd:integer ;
-                   owl:withRestrictions ( [ xsd:minInclusive 0
-                                          ]
-                                          [ xsd:maxInclusive 3
-                                          ]
-                                        )
-                 ] ;
-      rdfs:comment """Atributo de tipo Integer que indica el tipo de plato (Primero, Segundo, Postre).
-0 -> Postre
-1 -> Primero
-2 -> Segundo
-3 -> Primero o Segundo""" .
+      rdfs:range xsd:integer ;
+      rdfs:comment "Atributo de tipo Integer que indica el tipo de plato (Primero, Segundo, Postre). 0 -> Postre // 1 -> Primero // 2 -> Segundo // 3 -> Primero o Segundo" .
 
 
 #################################################################
@@ -347,8 +328,8 @@ Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el val
            :esCategoria :mocCategoria ;
            :esPreparacion :mocPreparacion ;
            :originarioDe :mocOrigen ;
-           :dificultad 4 ,
-                       "PostreMoc" ;
+           :dificultad 4 ;
+           :nombre "PostreMoc" ;
            :precio "8.2"^^xsd:float .
 
 
