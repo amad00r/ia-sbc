@@ -304,7 +304,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
            :originarioDe :mocOrigen ;
            :dificultad 7 ;
            :nombre "Plato1Moc" ;
-           :precio "7.23"^^xsd:float .
+           :precio "7.23"^^xsd:float ;
+           :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mocPlato2
@@ -316,7 +317,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
            :originarioDe :mocOrigen ;
            :dificultad 1 ;
            :nombre "Plato2Moc" ;
-           :precio "2.56"^^xsd:float .
+           :precio "2.56"^^xsd:float ;
+           :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mocPostre
@@ -330,7 +332,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
            :originarioDe :mocOrigen ;
            :dificultad 4 ;
            :nombre "PostreMoc" ;
-           :precio "8.2"^^xsd:float .
+           :precio "8.2"^^xsd:float ;
+           :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mocPreparacion

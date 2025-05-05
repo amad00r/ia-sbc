@@ -2,7 +2,7 @@
 ;;; RicoRico_Ontology.clp
 ;;; Translated by owl2clips
 ;;; Translated to CLIPS from ontology ricorico.ttl
-;;; :Date 05/05/2025 12:57:41
+;;; :Date 05/05/2025 19:43:45
 
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
@@ -212,6 +212,7 @@
          (dificultad  7)
          (nombre  "Plato1Moc")
          (precio  7.23)
+         (tipo  1)
     )
 
     ([mocPlato2] of Plato
@@ -222,6 +223,7 @@
          (dificultad  1)
          (nombre  "Plato2Moc")
          (precio  2.56)
+         (tipo  2)
     )
 
     ([mocPostre] of Plato
@@ -234,6 +236,7 @@
          (dificultad  4)
          (nombre  "PostreMoc")
          (precio  8.2)
+         (tipo  0)
     )
 
     ([mocPreparacion] of Preparacion
