@@ -69,12 +69,13 @@
                 "precio": { "type": "number" },
                 "dificultad": { "type": "integer", "minimum": 0, "maximum": 10 },
                 "idCategoria": { "type": "string" },
+                "idPreparacion": { "type": "string"},
                 "idOrigen": { "type": "string" },
                 "idsIngredientes": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
                 "idsPlatosCompatibles": { "type": "array", "items": { "type": "string" } },
                 "idsBebidasCompatibles": { "type": "array", "items": { "type": "string" } }
             },
-            "required": ["type", "id", "precio", "dificultad", "idCategoria", "idOrigen", "idsIngredientes", "idsPlatosCompatibles", "idsBebidasCompatibles"],
+            "required": ["type", "id", "precio", "dificultad", "idCategoria", "idPreparacion", "idOrigen", "idsIngredientes", "idsPlatosCompatibles", "idsBebidasCompatibles"],
             "additionalProperties": false
         },
         "Bebida": {
