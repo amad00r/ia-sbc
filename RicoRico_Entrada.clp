@@ -333,17 +333,16 @@
 )
 
 (deffunction RicoRico_Entrada::obtener_ingredientes_prohibidos ($?lista_ingredientes)
-	(printout t crlf)
     (printout t "¿Quieres prohibir algun ingrediente?" crlf)
     (printout t "Estos son los ingredientes disponibles: " $?lista_ingredientes crlf)
     (printout t "Introduzca el ingrediente que quieres prohibir o FIN para terminar: " crlf)
-    (bind ?respuesta (read))
+    (bind ?respuesta (str-cat (read)))
     (bind $?lista_prohibidos (create$))
-    (while (not (eq ?respuesta FIN)) do
+    (while (not (eq ?respuesta "FIN")) do
         (if (and (member$ ?respuesta $?lista_ingredientes)(not(member$ ?respuesta $?lista_prohibidos))) then
             (bind $?lista_prohibidos (insert$ $?lista_prohibidos (+ (length$ $?lista_prohibidos) 1) ?respuesta))
         )
-        (bind ?respuesta (read))
+        (bind ?respuesta (str-cat (read)))
     )
     (printout t crlf)
     (return $?lista_prohibidos)
