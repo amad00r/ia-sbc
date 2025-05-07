@@ -115,6 +115,12 @@
     },
     {
         "type": "Casual",
+        "id": "agua_mineral",
+        "precio": 2.00,
+        "alcoholica": false
+    },
+    {
+        "type": "Casual",
         "id": "agua_mineral_con_gas",
         "precio": 2.50,
         "alcoholica": false
