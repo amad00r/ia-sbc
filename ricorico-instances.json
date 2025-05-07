@@ -1,245 +1,433 @@
 [
+    { "type": "Categoria", "id": "Carne" },
+    { "type": "Categoria", "id": "Pasta" },
+    { "type": "Categoria", "id": "Mariscos" },
+    { "type": "Categoria", "id": "Vegetariano" },
+    { "type": "Categoria", "id": "Arroces" },
+    { "type": "Categoria", "id": "Pescado" },
+    { "type": "Categoria", "id": "Huevos" },
+    { "type": "Categoria", "id": "Legumbres" },
+  
+    { "type": "Origen", "id": "España" },
+    { "type": "Origen", "id": "Italia" },
+  
+    { "type": "Temporada", "id": "Primavera" },
+    { "type": "Temporada", "id": "Verano" },
+    { "type": "Temporada", "id": "Otoño" },
+    { "type": "Temporada", "id": "Invierno" },
+  
+    { "type": "Preparacion", "id": "Al Horno" },
+    { "type": "Preparacion", "id": "Frito" },
+    { "type": "Preparacion", "id": "A La Parrilla" },
+    { "type": "Preparacion", "id": "Cocido" },
+    { "type": "Preparacion", "id": "Crudo" },
+    { "type": "Preparacion", "id": "Salteado" },
+  
+    { "type": "Ingrediente", "id": "Tomate", "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"] },
+    { "type": "Ingrediente", "id": "Aceite De Oliva", "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"] },
+    { "type": "Ingrediente", "id": "Ajo", "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"] },
+    { "type": "Ingrediente", "id": "Cebolla", "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"] },
+    { "type": "Ingrediente", "id": "Pimiento Rojo", "idsTemporadas": ["Verano", "Otoño"] },
+    { "type": "Ingrediente", "id": "Arroz", "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"] },
+    { "type": "Ingrediente", "id": "Pollo", "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"] },
+    { "type": "Ingrediente", "id": "Cerdo", "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"] },
+    { "type": "Ingrediente", "id": "Ternera", "idsTemporadas": ["Invierno", "Otoño"] },
+    { "type": "Ingrediente", "id": "Bacalao", "idsTemporadas": ["Primavera", "Invierno"] },
+    { "type": "Ingrediente", "id": "Gambas", "idsTemporadas": ["Verano", "Otoño"] },
+    { "type": "Ingrediente", "id": "Calamares", "idsTemporadas": ["Primavera", "Verano"] },
+    { "type": "Ingrediente", "id": "Almejas", "idsTemporadas": ["Primavera", "Verano"] },
+    { "type": "Ingrediente", "id": "Judías Blancas", "idsTemporadas": ["Otoño", "Invierno"] },
+    { "type": "Ingrediente", "id": "Garbanzos", "idsTemporadas": ["Otoño", "Invierno"] },
+    { "type": "Ingrediente", "id": "Espinacas", "idsTemporadas": ["Primavera", "Invierno"] },
+    { "type": "Ingrediente", "id": "Huevo", "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"] },
+    { "type": "Ingrediente", "id": "Queso Parmesano", "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"] },
+    { "type": "Ingrediente", "id": "Pasta", "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"] },
+    { "type": "Ingrediente", "id": "Albahaca", "idsTemporadas": ["Verano"] },
+    { "type": "Ingrediente", "id": "Mozzarella", "idsTemporadas": ["Primavera", "Verano"] },
+    { "type": "Ingrediente", "id": "Setas", "idsTemporadas": ["Otoño"] },
+    { "type": "Ingrediente", "id": "Carne Picada", "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"] },
+    { "type": "Ingrediente", "id": "Salchicha Italiana", "idsTemporadas": ["Invierno", "Otoño"] },
+    { "type": "Ingrediente", "id": "Pimiento Verde", "idsTemporadas": ["Verano"] },
+    { "type": "Ingrediente", "id": "Aceitunas Negras", "idsTemporadas": ["Verano", "Otoño"] },
+    { "type": "Ingrediente", "id": "Pan", "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"] },
+  
+    { "type": "Vino", "id": "Rioja Tinto", "precio": 14.5, "alcoholica": true },
+    { "type": "Vino", "id": "Albariño", "precio": 12.0, "alcoholica": true },
+    { "type": "Vino", "id": "Ribera Del Duero", "precio": 16.0, "alcoholica": true },
+    { "type": "Vino", "id": "Txakoli", "precio": 11.0, "alcoholica": true },
+  
+    { "type": "Vino", "id": "Chianti", "precio": 15.0, "alcoholica": true },
+    { "type": "Vino", "id": "Barolo", "precio": 22.0, "alcoholica": true },
+    { "type": "Vino", "id": "Lambrusco", "precio": 10.0, "alcoholica": true },
+    { "type": "Vino", "id": "Verdicchio", "precio": 13.0, "alcoholica": true },
+  
+    { "type": "Casual", "id": "Agua Con Gas", "precio": 2.0, "alcoholica": false },
+    { "type": "Casual", "id": "Agua Sin Gas", "precio": 1.5, "alcoholica": false },
+    { "type": "Casual", "id": "Refresco De Limón", "precio": 2.5, "alcoholica": false },
+    { "type": "Casual", "id": "Refresco De Naranja", "precio": 2.5, "alcoholica": false },
+    { "type": "Casual", "id": "Tinto De Verano", "precio": 3.0, "alcoholica": true },
+    { "type": "Casual", "id": "Cerveza Rubia", "precio": 3.5, "alcoholica": true },
+    { "type": "Casual", "id": "Cerveza Artesanal", "precio": 4.5, "alcoholica": true },
+  
     {
-        "type": "Origen",
-        "id": "Italia"
+      "type": "Plato",
+      "id": "Paella Valenciana",
+      "precio": 14.0,
+      "dificultad": 7,
+      "idCategoria": "Arroces",
+      "idPreparacion": "Al Horno",
+      "idOrigen": "España",
+      "idsIngredientes": ["Arroz", "Pollo", "Judías Blancas", "Tomate", "Aceite De Oliva", "Pimiento Rojo"],
+      "idsPlatosCompatibles": ["Tortilla Española", "Gazpacho Andaluz"],
+      "idsBebidasCompatibles": ["Albariño", "Agua Con Gas"]
     },
     {
-        "type": "Origen",
-        "id": "España"
+      "type": "Plato",
+      "id": "Tortilla Española",
+      "precio": 8.0,
+      "dificultad": 4,
+      "idCategoria": "Huevos",
+      "idPreparacion": "Frito",
+      "idOrigen": "España",
+      "idsIngredientes": ["Huevo", "Cebolla", "Aceite De Oliva", "Patata"],
+      "idsPlatosCompatibles": ["Paella Valenciana", "Salmorejo"],
+      "idsBebidasCompatibles": ["Cerveza Rubia", "Agua Sin Gas"]
     },
     {
-        "type": "Origen",
-        "id": "Francia"
+      "type": "Plato",
+      "id": "Gazpacho Andaluz",
+      "precio": 6.5,
+      "dificultad": 3,
+      "idCategoria": "Vegetariano",
+      "idPreparacion": "Crudo",
+      "idOrigen": "España",
+      "idsIngredientes": ["Tomate", "Pimiento Verde", "Ajo", "Aceite De Oliva", "Cebolla", "Pan"],
+      "idsPlatosCompatibles": ["Tortilla Española", "Pisto Manchego"],
+      "idsBebidasCompatibles": ["Refresco De Limón", "Agua Sin Gas"]
     },
     {
-        "type": "Origen",
-        "id": "Grecia"
+      "type": "Plato",
+      "id": "Cocido Madrileño",
+      "precio": 12.0,
+      "dificultad": 6,
+      "idCategoria": "Legumbres",
+      "idPreparacion": "Cocido",
+      "idOrigen": "España",
+      "idsIngredientes": ["Garbanzos", "Chorizo", "Pollo", "Ternera", "Zanahoria", "Patata"],
+      "idsPlatosCompatibles": ["Pan Tumaca", "Tortilla Española"],
+      "idsBebidasCompatibles": ["Ribera Del Duero", "Agua Sin Gas"]
     },
     {
-        "type": "Temporada",
-        "id": "Primavera"
+      "type": "Plato",
+      "id": "Pulpo A La Gallega",
+      "precio": 13.0,
+      "dificultad": 5,
+      "idCategoria": "Mariscos",
+      "idPreparacion": "Cocido",
+      "idOrigen": "España",
+      "idsIngredientes": ["Pulpo", "Patata", "Pimentón", "Aceite De Oliva"],
+      "idsPlatosCompatibles": ["Paella Valenciana", "Tortilla Española"],
+      "idsBebidasCompatibles": ["Albariño", "Agua Con Gas"]
     },
     {
-        "type": "Temporada",
-        "id": "Verano"
+      "type": "Plato",
+      "id": "Salmorejo",
+      "precio": 5.5,
+      "dificultad": 3,
+      "idCategoria": "Vegetariano",
+      "idPreparacion": "Crudo",
+      "idOrigen": "España",
+      "idsIngredientes": ["Tomate", "Pan", "Aceite De Oliva", "Ajo"],
+      "idsPlatosCompatibles": ["Tortilla Española", "Ensaladilla Rusa"],
+      "idsBebidasCompatibles": ["Refresco De Naranja", "Agua Con Gas"]
     },
     {
-        "type": "Temporada",
-        "id": "Otoño"
+      "type": "Plato",
+      "id": "Pisto Manchego",
+      "precio": 7.5,
+      "dificultad": 4,
+      "idCategoria": "Vegetariano",
+      "idPreparacion": "Salteado",
+      "idOrigen": "España",
+      "idsIngredientes": ["Tomate", "Pimiento Rojo", "Pimiento Verde", "Calabacín", "Cebolla", "Aceite De Oliva"],
+      "idsPlatosCompatibles": ["Salmorejo", "Tortilla Española"],
+      "idsBebidasCompatibles": ["Cerveza Artesanal", "Agua Sin Gas"]
     },
     {
-        "type": "Temporada",
-        "id": "Invierno"
+      "type": "Plato",
+      "id": "Fabada Asturiana",
+      "precio": 11.0,
+      "dificultad": 6,
+      "idCategoria": "Legumbres",
+      "idPreparacion": "Cocido",
+      "idOrigen": "España",
+      "idsIngredientes": ["Judías Blancas", "Chorizo", "Morcilla", "Tocino", "Aceite De Oliva"],
+      "idsPlatosCompatibles": ["Tortilla Española", "Pisto Manchego"],
+      "idsBebidasCompatibles": ["Ribera Del Duero", "Cerveza Artesanal"]
     },
     {
-        "type": "Preparacion",
-        "id": "Parrilla"
+      "type": "Plato",
+      "id": "Bacalao Al Pil Pil",
+      "precio": 13.0,
+      "dificultad": 5,
+      "idCategoria": "Pescado",
+      "idPreparacion": "A La Parrilla",
+      "idOrigen": "España",
+      "idsIngredientes": ["Bacalao", "Ajo", "Aceite De Oliva", "Guindilla"],
+      "idsPlatosCompatibles": ["Tortilla Española", "Pan Tumaca"],
+      "idsBebidasCompatibles": ["Txakoli", "Agua Sin Gas"]
     },
     {
-        "type": "Preparacion",
-        "id": "Crudo"
+      "type": "Plato",
+      "id": "Pan Tumaca",
+      "precio": 4.0,
+      "dificultad": 2,
+      "idCategoria": "Vegetariano",
+      "idPreparacion": "Crudo",
+      "idOrigen": "España",
+      "idsIngredientes": ["Pan", "Tomate", "Aceite De Oliva", "Ajo"],
+      "idsPlatosCompatibles": ["Gazpacho Andaluz", "Bacalao Al Pil Pil"],
+      "idsBebidasCompatibles": ["Tinto De Verano", "Agua Con Gas"]
     },
     {
-        "type": "Preparacion",
-        "id": "Cocido"
+      "type": "Plato",
+      "id": "Arroz Negro",
+      "precio": 12.5,
+      "dificultad": 6,
+      "idCategoria": "Arroces",
+      "idPreparacion": "Al Horno",
+      "idOrigen": "España",
+      "idsIngredientes": ["Arroz", "Calamares", "Ajo", "Aceite De Oliva", "Tinta De Calamar"],
+      "idsPlatosCompatibles": ["Pulpo A La Gallega", "Pan Tumaca"],
+      "idsBebidasCompatibles": ["Albariño", "Agua Con Gas"]
     },
     {
-        "type": "Preparacion",
-        "id": "Frito"
+      "type": "Plato",
+      "id": "Callos A La Madrileña",
+      "precio": 11.0,
+      "dificultad": 6,
+      "idCategoria": "Carne",
+      "idPreparacion": "Cocido",
+      "idOrigen": "España",
+      "idsIngredientes": ["Ternera", "Chorizo", "Morcilla", "Pimiento Rojo", "Ajo"],
+      "idsPlatosCompatibles": ["Pan Tumaca", "Pisto Manchego"],
+      "idsBebidasCompatibles": ["Ribera Del Duero", "Cerveza Artesanal"]
     },
     {
-        "type": "Preparacion",
-        "id": "Al Horno"
+      "type": "Plato",
+      "id": "Ensaladilla Rusa",
+      "precio": 6.0,
+      "dificultad": 3,
+      "idCategoria": "Vegetariano",
+      "idPreparacion": "Cocido",
+      "idOrigen": "España",
+      "idsIngredientes": ["Patata", "Zanahoria", "Guisantes", "Huevo", "Mayonesa"],
+      "idsPlatosCompatibles": ["Salmorejo", "Tortilla Española"],
+      "idsBebidasCompatibles": ["Refresco De Limón", "Agua Sin Gas"]
     },
     {
-        "type": "Preparacion",
-        "id": "Ahumado"
+      "type": "Plato",
+      "id": "Sepia A La Plancha",
+      "precio": 10.5,
+      "dificultad": 4,
+      "idCategoria": "Mariscos",
+      "idPreparacion": "A La Parrilla",
+      "idOrigen": "España",
+      "idsIngredientes": ["Sepia", "Ajo", "Aceite De Oliva", "Perejil"],
+      "idsPlatosCompatibles": ["Arroz Negro", "Pan Tumaca"],
+      "idsBebidasCompatibles": ["Txakoli", "Agua Con Gas"]
     },
     {
-        "type": "Preparacion",
-        "id": "Guisado"
+      "type": "Plato",
+      "id": "Huevos Rotos Con Jamón",
+      "precio": 8.5,
+      "dificultad": 3,
+      "idCategoria": "Huevos",
+      "idPreparacion": "Frito",
+      "idOrigen": "España",
+      "idsIngredientes": ["Huevo", "Patata", "Jamón Serrano", "Aceite De Oliva"],
+      "idsPlatosCompatibles": ["Gazpacho Andaluz", "Ensaladilla Rusa"],
+      "idsBebidasCompatibles": ["Tinto De Verano", "Cerveza Rubia"]
+    },
+  
+    {
+      "type": "Plato",
+      "id": "Spaghetti Alla Carbonara",
+      "precio": 10.0,
+      "dificultad": 5,
+      "idCategoria": "Pasta",
+      "idPreparacion": "Hervido",
+      "idOrigen": "Italia",
+      "idsIngredientes": ["Espaguetis", "Huevo", "Queso Pecorino", "Pimienta Negra", "Guanciale"],
+      "idsPlatosCompatibles": ["Bruschetta", "Caprese"],
+      "idsBebidasCompatibles": ["Chianti", "Agua Sin Gas"]
     },
     {
-        "type": "Preparacion",
-        "id": "Salteado"
+      "type": "Plato",
+      "id": "Lasagna Alla Bolognese",
+      "precio": 12.5,
+      "dificultad": 6,
+      "idCategoria": "Pasta",
+      "idPreparacion": "Al Horno",
+      "idOrigen": "Italia",
+      "idsIngredientes": ["Láminas De Pasta", "Carne Molida", "Tomate", "Cebolla", "Queso Parmesano", "Bechamel"],
+      "idsPlatosCompatibles": ["Caprese", "Focaccia"],
+      "idsBebidasCompatibles": ["Barolo", "Cerveza Artesanal"]
     },
     {
-        "type": "Preparacion",
-        "id": "Al Vapor"
+      "type": "Plato",
+      "id": "Risotto Ai Funghi",
+      "precio": 11.0,
+      "dificultad": 6,
+      "idCategoria": "Arroces",
+      "idPreparacion": "Cocido",
+      "idOrigen": "Italia",
+      "idsIngredientes": ["Arroz Arborio", "Champiñones", "Caldo De Verduras", "Queso Parmesano", "Cebolla", "Aceite De Oliva"],
+      "idsPlatosCompatibles": ["Bruschetta", "Carpaccio Di Manzo"],
+      "idsBebidasCompatibles": ["Verdicchio", "Agua Con Gas"]
     },
     {
-        "type": "Preparacion",
-        "id": "Marinado"
+      "type": "Plato",
+      "id": "Pizza Margherita",
+      "precio": 9.0,
+      "dificultad": 4,
+      "idCategoria": "Panificados",
+      "idPreparacion": "Al Horno",
+      "idOrigen": "Italia",
+      "idsIngredientes": ["Masa De Pizza", "Mozzarella", "Tomate", "Albahaca", "Aceite De Oliva"],
+      "idsPlatosCompatibles": ["Caprese", "Bruschetta"],
+      "idsBebidasCompatibles": ["Lambrusco", "Cerveza Rubia"]
     },
     {
-        "type": "Vino",
-        "id": "vino_tinto_rioja_alta",
-        "precio": 25.50,
-        "alcoholica": true
+      "type": "Plato",
+      "id": "Parmigiana Di Melanzane",
+      "precio": 10.0,
+      "dificultad": 5,
+      "idCategoria": "Vegetariano",
+      "idPreparacion": "Al Horno",
+      "idOrigen": "Italia",
+      "idsIngredientes": ["Berenjena", "Queso Parmesano", "Mozzarella", "Tomate", "Aceite De Oliva"],
+      "idsPlatosCompatibles": ["Caprese", "Focaccia"],
+      "idsBebidasCompatibles": ["Chianti", "Agua Sin Gas"]
     },
     {
-        "type": "Vino",
-        "id": "vino_blanco_rueda_verdejo",
-        "precio": 18.75,
-        "alcoholica": true
+      "type": "Plato",
+      "id": "Penne All Arrabbiata",
+      "precio": 8.5,
+      "dificultad": 4,
+      "idCategoria": "Pasta",
+      "idPreparacion": "Hervido",
+      "idOrigen": "Italia",
+      "idsIngredientes": ["Penne", "Tomate", "Ajo", "Guindilla", "Aceite De Oliva"],
+      "idsPlatosCompatibles": ["Focaccia", "Bruschetta"],
+      "idsBebidasCompatibles": ["Lambrusco", "Refresco De Naranja"]
     },
     {
-        "type": "Vino",
-        "id": "vino_rosado_provenza",
-        "precio": 22.00,
-        "alcoholica": true
+      "type": "Plato",
+      "id": "Caprese",
+      "precio": 6.0,
+      "dificultad": 2,
+      "idCategoria": "Vegetariano",
+      "idPreparacion": "Crudo",
+      "idOrigen": "Italia",
+      "idsIngredientes": ["Tomate", "Mozzarella", "Albahaca", "Aceite De Oliva"],
+      "idsPlatosCompatibles": ["Pizza Margherita", "Parmigiana Di Melanzane"],
+      "idsBebidasCompatibles": ["Verdicchio", "Agua Con Gas"]
     },
     {
-        "type": "Vino",
-        "id": "cava_brut_nature",
-        "precio": 30.00,
-        "alcoholica": true
+      "type": "Plato",
+      "id": "Gnocchi Al Pesto",
+      "precio": 10.0,
+      "dificultad": 5,
+      "idCategoria": "Pasta",
+      "idPreparacion": "Hervido",
+      "idOrigen": "Italia",
+      "idsIngredientes": ["Gnocchi", "Pesto", "Queso Parmesano"],
+      "idsPlatosCompatibles": ["Bruschetta", "Caprese"],
+      "idsBebidasCompatibles": ["Chianti", "Agua Sin Gas"]
     },
     {
-        "type": "Vino",
-        "id": "vino_dulce_moscatel",
-        "precio": 15.90,
-        "alcoholica": true
+      "type": "Plato",
+      "id": "Bruschetta",
+      "precio": 5.0,
+      "dificultad": 2,
+      "idCategoria": "Vegetariano",
+      "idPreparacion": "Tostado",
+      "idOrigen": "Italia",
+      "idsIngredientes": ["Pan", "Tomate", "Ajo", "Aceite De Oliva", "Albahaca"],
+      "idsPlatosCompatibles": ["Spaghetti Alla Carbonara", "Risotto Ai Funghi"],
+      "idsBebidasCompatibles": ["Refresco De Limón", "Agua Con Gas"]
     },
     {
-        "type": "Casual",
-        "id": "cerveza_lager_local",
-        "precio": 3.50,
-        "alcoholica": true
+      "type": "Plato",
+      "id": "Focaccia",
+      "precio": 4.5,
+      "dificultad": 3,
+      "idCategoria": "Panificados",
+      "idPreparacion": "Al Horno",
+      "idOrigen": "Italia",
+      "idsIngredientes": ["Harina", "Aceite De Oliva", "Romero", "Sal", "Agua"],
+      "idsPlatosCompatibles": ["Parmigiana Di Melanzane", "Lasagna Alla Bolognese"],
+      "idsBebidasCompatibles": ["Cerveza Artesanal", "Agua Sin Gas"]
     },
     {
-        "type": "Casual",
-        "id": "refresco_cola",
-        "precio": 2.80,
-        "alcoholica": false
+      "type": "Plato",
+      "id": "Carpaccio Di Manzo",
+      "precio": 12.0,
+      "dificultad": 5,
+      "idCategoria": "Carne",
+      "idPreparacion": "Crudo",
+      "idOrigen": "Italia",
+      "idsIngredientes": ["Ternera", "Aceite De Oliva", "Rúcula", "Queso Parmesano", "Limón"],
+      "idsPlatosCompatibles": ["Risotto Ai Funghi", "Caprese"],
+      "idsBebidasCompatibles": ["Barolo", "Agua Con Gas"]
     },
     {
-        "type": "Casual",
-        "id": "agua_mineral",
-        "precio": 2.00,
-        "alcoholica": false
+      "type": "Plato",
+      "id": "Spaghetti Aglio E Olio",
+      "precio": 8.0,
+      "dificultad": 3,
+      "idCategoria": "Pasta",
+      "idPreparacion": "Hervido",
+      "idOrigen": "Italia",
+      "idsIngredientes": ["Espaguetis", "Ajo", "Aceite De Oliva", "Guindilla", "Perejil"],
+      "idsPlatosCompatibles": ["Focaccia", "Bruschetta"],
+      "idsBebidasCompatibles": ["Verdicchio", "Agua Sin Gas"]
     },
     {
-        "type": "Casual",
-        "id": "agua_mineral_con_gas",
-        "precio": 2.50,
-        "alcoholica": false
+      "type": "Plato",
+      "id": "Ravioli Di Ricotta E Spinaci",
+      "precio": 11.5,
+      "dificultad": 6,
+      "idCategoria": "Pasta",
+      "idPreparacion": "Hervido",
+      "idOrigen": "Italia",
+      "idsIngredientes": ["Ravioli", "Ricotta", "Espinaca", "Salsa De Tomate", "Queso Parmesano"],
+      "idsPlatosCompatibles": ["Caprese", "Focaccia"],
+      "idsBebidasCompatibles": ["Chianti", "Agua Sin Gas"]
     },
     {
-        "type": "Casual",
-        "id": "zumo_naranja_natural",
-        "precio": 4.00,
-        "alcoholica": false
+      "type": "Plato",
+      "id": "Polenta Con Funghi",
+      "precio": 9.5,
+      "dificultad": 4,
+      "idCategoria": "Vegetariano",
+      "idPreparacion": "Cocido",
+      "idOrigen": "Italia",
+      "idsIngredientes": ["Harina De Maíz", "Champiñones", "Queso Parmesano", "Aceite De Oliva", "Ajo"],
+      "idsPlatosCompatibles": ["Caprese", "Risotto Ai Funghi"],
+      "idsBebidasCompatibles": ["Barolo", "Cerveza Artesanal"]
     },
     {
-        "type": "Casual",
-        "id": "cerveza_ipa_artesanal",
-        "precio": 5.20,
-        "alcoholica": true
-    },
-    {
-        "type": "Categoria",
-        "id": "Pasta"
-    },
-    {
-        "type": "Categoria",
-        "id": "Carne"
-    },
-    {
-        "type": "Categoria",
-        "id": "Mariscos"
-    },
-    {
-        "type": "Categoria",
-        "id": "Vegetariano"
-    },
-    {
-        "type": "Categoria",
-        "id": "Postre"
-    },
-    {
-        "type": "Ingrediente",
-        "id": "tomate_seco",
-        "idsTemporadas": ["Verano", "Otoño"]
-    },
-    {
-        "type": "Ingrediente",
-        "id": "queso_parmesano",
-        "idsTemporadas": ["Primavera", "Verano"]
-    },
-    {
-        "type": "Ingrediente",
-        "id": "ternera",
-        "idsTemporadas": ["Otoño", "Invierno"]
-    },
-    {
-        "type": "Ingrediente",
-        "id": "gambas",
-        "idsTemporadas": ["Verano"]
-    },
-    {
-        "type": "Ingrediente",
-        "id": "berenjena",
-        "idsTemporadas": ["Verano", "Otoño"]
-    },
-    {
-        "type": "Ingrediente",
-        "id": "chocolate_negro",
-        "idsTemporadas": ["Invierno"]
-    },
-    {
-        "type": "Plato",
-        "id": "ravioli_ricotta_espinaca",
-        "precio": 14.50,
-        "dificultad": 6,
-        "idCategoria": "Pasta",
-        "idOrigen": "Italia",
-        "idsIngredientes": ["tomate_seco", "queso_parmesano"],
-        "idsPlatosCompatibles": ["lasagna_vegetal"],
-        "idsBebidasCompatibles": ["vino_tinto_rioja_alta", "agua_mineral_con_gas"]
-    },
-    {
-        "type": "Plato",
-        "id": "estofado_ternera",
-        "precio": 18.00,
-        "dificultad": 8,
-        "idCategoria": "Carne",
-        "idOrigen": "España",
-        "idsIngredientes": ["ternera", "tomate_seco"],
-        "idsPlatosCompatibles": ["ravioli_ricotta_espinaca"],
-        "idsBebidasCompatibles": ["vino_tinto_rioja_alta", "cerveza_ipa_artesanal"]
-    },
-    {
-        "type": "Plato",
-        "id": "paella_mariscos",
-        "precio": 21.50,
-        "dificultad": 7,
-        "idCategoria": "Mariscos",
-        "idOrigen": "España",
-        "idsIngredientes": ["gambas", "tomate_seco"],
-        "idsPlatosCompatibles": ["estofado_ternera"],
-        "idsBebidasCompatibles": ["vino_blanco_rueda_verdejo", "cerveza_lager_local"]
-    },
-    {
-        "type": "Plato",
-        "id": "lasagna_vegetal",
-        "precio": 13.75,
-        "dificultad": 5,
-        "idCategoria": "Vegetariano",
-        "idOrigen": "Italia",
-        "idsIngredientes": ["berenjena", "queso_parmesano"],
-        "idsPlatosCompatibles": ["paella_mariscos"],
-        "idsBebidasCompatibles": ["refresco_cola", "zumo_naranja_natural"]
-    },
-    {
-        "type": "Plato",
-        "id": "fondant_chocolate",
-        "precio": 7.00,
-        "dificultad": 4,
-        "idCategoria": "Postre",
-        "idOrigen": "Francia",
-        "idsIngredientes": ["chocolate_negro"],
-        "idsPlatosCompatibles": ["ravioli_ricotta_espinaca", "estofado_ternera"],
-        "idsBebidasCompatibles": ["vino_dulce_moscatel", "zumo_naranja_natural"]
+      "type": "Plato",
+      "id": "Ossobuco Alla Milanese",
+      "precio": 14.0,
+      "dificultad": 7,
+      "idCategoria": "Carne",
+      "idPreparacion": "Estofado",
+      "idOrigen": "Italia",
+      "idsIngredientes": ["Ternera", "Zanahoria", "Apio", "Cebolla", "Vino Blanco", "Caldo"],
+      "idsPlatosCompatibles": ["Risotto Ai Funghi", "Focaccia"],
+      "idsBebidasCompatibles": ["Barolo", "Agua Sin Gas"]
     }
-]
+  ]
