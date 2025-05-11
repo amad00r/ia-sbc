@@ -220,7 +220,7 @@
          (2oBebida  [mocBebida2])
          (2oPlato  [mocPlato2])
          (postre  [mocPostre])
-         (generado  FALSE)
+         (generado  TRUE)
          (nombre  "Opción 1")
     )
 
@@ -230,7 +230,7 @@
          (2oBebida  [mocBebida2])
          (2oPlato  [mocPlato2])
          (postre  [mocPostre])
-         (generado  FALSE)
+         (generado  TRUE)
          (nombre  "Opción 2")
     )
 
@@ -240,7 +240,7 @@
          (2oBebida  [mocBebida2])
          (2oPlato  [mocPlato2])
          (postre  [mocPostre])
-         (generado  FALSE)
+         (generado  TRUE)
          (nombre  "Opción 3")
     )
 
@@ -315,6 +315,15 @@
 	(focus RicoRico_Salida)
 )
 
+(deffunction RicoRico_Salida::imprimir_menu (?menu)
+    (printout t "   Menú: " (send ?menu get-nombre) crlf)
+    (printout t "       Primera bebida: " (send (send ?menu get-1rBebida) get-nombre) crlf)
+    (printout t "       Primer plato: " (send (send ?menu get-1rPlato) get-nombre) crlf)
+    (printout t "       Segunda bebida: " (send (send ?menu get-2oBebida) get-nombre) crlf)
+    (printout t "       Segundo plato: " (send (send ?menu get-2oPlato) get-nombre) crlf)
+    (printout t "       Postre: " (send (send ?menu get-postre) get-nombre) crlf crlf)
+)
+
 (deffunction RicoRico_Salida::procesar_salida ()
     ; Obtener todos los menús disponibles
     (bind ?menus (find-all-instances ((?menu Menu)) (eq (send ?menu get-generado) TRUE)))
@@ -328,36 +337,21 @@
             (printout t "Con las restricciones actuales, solo se ha podido generar 1 menú." crlf)
             (printout t "Menú disponible:" crlf)
             (foreach ?menu ?menus
-                (printout t "   Menú: " (send ?menu get-nombre) crlf)
-                (printout t "       Primera bebida: " (send (send ?menu get-1rBebida) get-nombre) crlf)
-                (printout t "       Primer plato: " (send (send ?menu get-1rPlato) get-nombre) crlf)
-                (printout t "       Segunda bebida: " (send (send ?menu get-2oBebida) get-nombre) crlf)
-                (printout t "       Segundo plato: " (send (send ?menu get-2oPlato) get-nombre) crlf)
-                (printout t "       Postre: " (send (send ?menu get-postre) get-nombre) crlf crlf)
+                (RicoRico_Salida::imprimir_menu ?menu)
             )
         )
         (case 2 then
             (printout t "Con las restricciones actuales, solo se han podido generar 2 menús." crlf)
             (printout t "Menús disponibles:" crlf)
             (foreach ?menu ?menus
-                (printout t "   Menú: " (send ?menu get-nombre) crlf)
-                (printout t "       Primera bebida: " (send (send ?menu get-1rBebida) get-nombre) crlf)
-                (printout t "       Primer plato: " (send (send ?menu get-1rPlato) get-nombre) crlf)
-                (printout t "       Segunda bebida: " (send (send ?menu get-2oBebida) get-nombre) crlf)
-                (printout t "       Segundo plato: " (send (send ?menu get-2oPlato) get-nombre) crlf)
-                (printout t "       Postre: " (send (send ?menu get-postre) get-nombre) crlf crlf)
+                (RicoRico_Salida::imprimir_menu ?menu)
             )
         )
         (case 3 then
             (printout t "Se han generado los 3 menús." crlf)
             (printout t "Menús disponibles:" crlf)
             (foreach ?menu ?menus
-                (printout t "   Menú: " (send ?menu get-nombre) crlf)
-                (printout t "       Primera bebida: " (send (send ?menu get-1rBebida) get-nombre) crlf)
-                (printout t "       Primer plato: " (send (send ?menu get-1rPlato) get-nombre) crlf)
-                (printout t "       Segunda bebida: " (send (send ?menu get-2oBebida) get-nombre) crlf)
-                (printout t "       Segundo plato: " (send (send ?menu get-2oPlato) get-nombre) crlf)
-                (printout t "       Postre: " (send (send ?menu get-postre) get-nombre) crlf crlf)
+                (RicoRico_Salida::imprimir_menu ?menu)
             )
         )
         (default
