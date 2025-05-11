@@ -124,6 +124,14 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 #    Data properties
 #################################################################
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico#generado
+:generado rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Menu ;
+          rdfs:range xsd:boolean ;
+          rdfs:comment "Atributo de tipo Booleano para indicar si un menú ha sido generado o no." .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/alcoholica
 :alcoholica rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
@@ -307,7 +315,9 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
          <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico#1rPlato> :mocPlato1 ;
          <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico#2oBebida> :mocBebida2 ;
          <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico#2oPlato> :mocPlato2 ;
-         :postre :mocPostre .
+         :postre :mocPostre ;
+         :generado "true"^^xsd:boolean ;
+         :nombre "Opción 1" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mocOrigen

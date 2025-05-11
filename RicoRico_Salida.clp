@@ -1,9 +1,3 @@
-;;; ---------------------------------------------------------
-;;; RicoRico_Ontology.clp
-;;; Translated by owl2clips
-;;; Translated to CLIPS from ontology ricorico.ttl
-;;; :Date 11/05/2025 19:45:52
-
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
     (role concrete)
@@ -89,10 +83,6 @@
     ;;; Relación para indicar el postre de un menú.
     (slot postre
         (type INSTANCE)
-        (create-accessor read-write))
-    ;;; Atributo de tipo Booleano para indicar si un menú ha sido generado o no.
-    (multislot generado
-        (type SYMBOL)
         (create-accessor read-write))
     ;;; Atributo de tipo String para indicar el nombre del elemento en cuestión.
     (slot nombre
@@ -214,14 +204,28 @@
          (nombre  "LechugaMoc")
     )
 
-    ([mocMenu] of Menu
+    ([mocMenu1] of Menu
          (1rBebida  [mocBebida1])
          (1rPlato  [mocPlato1])
          (2oBebida  [mocBebida2])
          (2oPlato  [mocPlato2])
          (postre  [mocPostre])
-         (generado  TRUE)
-         (nombre  "Opción 1")
+    )
+
+    ([mocMenu2] of Menu
+         (1rBebida  [mocBebida1])
+         (1rPlato  [mocPlato1])
+         (2oBebida  [mocBebida2])
+         (2oPlato  [mocPlato2])
+         (postre  [mocPostre])
+    )
+
+    ([mocMenu3] of Menu
+         (1rBebida  [mocBebida1])
+         (1rPlato  [mocPlato1])
+         (2oBebida  [mocBebida2])
+         (2oPlato  [mocPlato2])
+         (postre  [mocPostre])
     )
 
     ([mocOrigen] of Origen
@@ -277,4 +281,79 @@
          (nombre  "PrimaveraMoc")
     )
 
+)
+
+(defmodule MAIN 
+    (export ?ALL)
+)
+
+(defmodule RicoRico_Salida
+    (import MAIN ?ALL)
+    (export ?ALL)
+)
+
+(defrule MAIN::inicio 
+	(declare (salience 20)) 
+	=> 
+	(printout t "Test salidas en función de los menús disponibles" crlf)
+	(focus RicoRico_Salida)
+)
+
+(deffunction RicoRico_Salida::procesar_salida ()
+    ; Obtener todos los menús disponibles
+    (bind ?menus (find-all-instances ((?menu Menu)) TRUE))
+
+    ; Sacar el número de menús disponibles
+    (bind ?numMenus (length$ ?menus))
+    (printout t "Número de menús disponibles: " ?numMenus crlf crlf)
+
+    ; Mostrar menús según el número disponible
+    (switch ?numMenus
+        (case 1 then
+            (printout t "Con las restricciones actuales, solo se ha podido generar 1 menú." crlf)
+            (printout t "Menú disponible:" crlf)
+            (foreach ?menu ?menus
+                (printout t "   Menú: " (send ?menu get-nombre) crlf)
+                (printout t "       Primera bebida: " (send (send ?menu get-1rBebida) get-nombre) crlf)
+                (printout t "       Primer plato: " (send (send ?menu get-1rPlato) get-nombre) crlf)
+                (printout t "       Segunda bebida: " (send (send ?menu get-2oBebida) get-nombre) crlf)
+                (printout t "       Segundo plato: " (send (send ?menu get-2oPlato) get-nombre) crlf)
+                (printout t "       Postre: " (send (send ?menu get-postre) get-nombre) crlf crlf)
+            )
+        )
+        (case 2 then
+            (printout t "Con las restricciones actuales, solo se han podido generar 2 menús." crlf)
+            (printout t "Menús disponibles:" crlf)
+            (foreach ?menu ?menus
+                (printout t "   Menú: " (send ?menu get-nombre) crlf)
+                (printout t "       Primera bebida: " (send (send ?menu get-1rBebida) get-nombre) crlf)
+                (printout t "       Primer plato: " (send (send ?menu get-1rPlato) get-nombre) crlf)
+                (printout t "       Segunda bebida: " (send (send ?menu get-2oBebida) get-nombre) crlf)
+                (printout t "       Segundo plato: " (send (send ?menu get-2oPlato) get-nombre) crlf)
+                (printout t "       Postre: " (send (send ?menu get-postre) get-nombre) crlf crlf)
+            )
+        )
+        (case 3 then
+            (printout t "Se han generado los 3 menús." crlf)
+            (printout t "Menús disponibles:" crlf)
+            (foreach ?menu ?menus
+                (printout t "   Menú: " (send ?menu get-nombre) crlf)
+                (printout t "       Primera bebida: " (send (send ?menu get-1rBebida) get-nombre) crlf)
+                (printout t "       Primer plato: " (send (send ?menu get-1rPlato) get-nombre) crlf)
+                (printout t "       Segunda bebida: " (send (send ?menu get-2oBebida) get-nombre) crlf)
+                (printout t "       Segundo plato: " (send (send ?menu get-2oPlato) get-nombre) crlf)
+                (printout t "       Postre: " (send (send ?menu get-postre) get-nombre) crlf crlf)
+            )
+        )
+        (default
+            (printout t "No se ha podido generar ningún menú - Demasiado restrictivo." crlf)
+        )
+    )
+)
+
+(defrule RicoRico_Salida::escrituraSalida
+    (declare (salience 10))
+    =>
+    (printout t "Procesando la salida ..." crlf crlf)
+    (RicoRico_Salida::procesar_salida)
 )
