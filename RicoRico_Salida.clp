@@ -1,3 +1,9 @@
+;;; ---------------------------------------------------------
+;;; RicoRico_Ontology.clp
+;;; Translated by owl2clips
+;;; Translated to CLIPS from ontology ricorico.ttl
+;;; :Date 11/05/2025 19:54:09
+
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
     (role concrete)
@@ -83,6 +89,10 @@
     ;;; Relación para indicar el postre de un menú.
     (slot postre
         (type INSTANCE)
+        (create-accessor read-write))
+    ;;; Atributo de tipo Booleano para indicar si un menú ha sido generado o no.
+    (slot generado
+        (type SYMBOL)
         (create-accessor read-write))
     ;;; Atributo de tipo String para indicar el nombre del elemento en cuestión.
     (slot nombre
@@ -210,6 +220,8 @@
          (2oBebida  [mocBebida2])
          (2oPlato  [mocPlato2])
          (postre  [mocPostre])
+         (generado  FALSE)
+         (nombre  "Opción 1")
     )
 
     ([mocMenu2] of Menu
@@ -218,6 +230,8 @@
          (2oBebida  [mocBebida2])
          (2oPlato  [mocPlato2])
          (postre  [mocPostre])
+         (generado  FALSE)
+         (nombre  "Opción 2")
     )
 
     ([mocMenu3] of Menu
@@ -226,6 +240,8 @@
          (2oBebida  [mocBebida2])
          (2oPlato  [mocPlato2])
          (postre  [mocPostre])
+         (generado  FALSE)
+         (nombre  "Opción 3")
     )
 
     ([mocOrigen] of Origen
@@ -301,11 +317,10 @@
 
 (deffunction RicoRico_Salida::procesar_salida ()
     ; Obtener todos los menús disponibles
-    (bind ?menus (find-all-instances ((?menu Menu)) TRUE))
+    (bind ?menus (find-all-instances ((?menu Menu)) (eq (send ?menu get-generado) TRUE)))
 
     ; Sacar el número de menús disponibles
     (bind ?numMenus (length$ ?menus))
-    (printout t "Número de menús disponibles: " ?numMenus crlf crlf)
 
     ; Mostrar menús según el número disponible
     (switch ?numMenus
@@ -346,7 +361,7 @@
             )
         )
         (default
-            (printout t "No se ha podido generar ningún menú - Demasiado restrictivo." crlf)
+            (printout t "No se ha podido generar ningún menú - Condiciones demasiado restrictivas." crlf)
         )
     )
 )
