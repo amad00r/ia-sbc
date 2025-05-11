@@ -2,7 +2,7 @@
 ;;; RicoRico_Ontology.clp
 ;;; Translated by owl2clips
 ;;; Translated to CLIPS from ontology ricorico.ttl
-;;; :Date 11/05/2025 19:45:52
+;;; :Date 11/05/2025 19:54:09
 
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
@@ -91,7 +91,7 @@
         (type INSTANCE)
         (create-accessor read-write))
     ;;; Atributo de tipo Booleano para indicar si un menú ha sido generado o no.
-    (multislot generado
+    (slot generado
         (type SYMBOL)
         (create-accessor read-write))
     ;;; Atributo de tipo String para indicar el nombre del elemento en cuestión.

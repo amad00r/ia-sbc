@@ -124,14 +124,6 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico#generado
-:generado rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf owl:topDataProperty ;
-          rdfs:domain :Menu ;
-          rdfs:range xsd:boolean ;
-          rdfs:comment "Atributo de tipo Booleano para indicar si un menú ha sido generado o no." .
-
-
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/alcoholica
 :alcoholica rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
@@ -148,6 +140,15 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
             rdfs:domain :Plato ;
             rdfs:range xsd:integer ;
             rdfs:comment "Atributo de tipo Integer para indicar la dificultad de realizar un plato. Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el valor que indica la máxima dificultad." .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/generado
+:generado rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdf:type owl:FunctionalProperty ;
+          rdfs:domain :Menu ;
+          rdfs:range xsd:boolean ;
+          rdfs:comment "Atributo de tipo Booleano para indicar si un menú ha sido generado o no." .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/glutenFree
