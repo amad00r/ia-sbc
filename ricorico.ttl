@@ -124,24 +124,6 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico#esGlutenFree
-:esGlutenFree rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:domain :Bebida ,
-                          :Plato ;
-              rdfs:range xsd:boolean ;
-              rdfs:comment "Atributo de tipo Booleano para indicar si es elemento es libre de gluten." .
-
-
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico#esLactosaFree
-:esLactosaFree rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf owl:topDataProperty ;
-               rdfs:domain :Bebida ,
-                           :Plato ;
-               rdfs:range xsd:boolean ;
-               rdfs:comment "Atributo de tipo Booleano para indicar si el elemento es libre de lactosa." .
-
-
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/alcoholica
 :alcoholica rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
@@ -158,6 +140,24 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
             rdfs:domain :Plato ;
             rdfs:range xsd:integer ;
             rdfs:comment "Atributo de tipo Integer para indicar la dificultad de realizar un plato. Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el valor que indica la máxima dificultad." .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/glutenFree
+:glutenFree rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Bebida ,
+                        :Plato ;
+            rdfs:range xsd:boolean ;
+            rdfs:comment "Atributo de tipo Booleano para indicar si es elemento es libre de gluten." .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/lactosaFree
+:lactosaFree rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Bebida ,
+                         :Plato ;
+             rdfs:range xsd:boolean ;
+             rdfs:comment "Atributo de tipo Booleano para indicar si el elemento es libre de lactosa." .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/nombre
@@ -259,8 +259,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mocBebida1
 :mocBebida1 rdf:type owl:NamedIndividual ,
                      :Vino ;
-            :esGlutenFree "true"^^xsd:boolean ;
-            :esLactosaFree "true"^^xsd:boolean ;
+            :glutenFree "true"^^xsd:boolean ;
+            :lactosaFree "true"^^xsd:boolean ;
             :nombre "vinoMoc" ;
             :precio "10.5"^^xsd:float .
 
@@ -268,9 +268,9 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mocBebida2
 :mocBebida2 rdf:type owl:NamedIndividual ,
                      :Casual ;
-            :esGlutenFree "false"^^xsd:boolean ;
-            :esLactosaFree "false"^^xsd:boolean ;
             :alcoholica "true"^^xsd:boolean ;
+            :glutenFree "false"^^xsd:boolean ;
+            :lactosaFree "false"^^xsd:boolean ;
             :nombre "cocacolaMoc" ;
             :precio "1.2"^^xsd:float .
 
@@ -286,8 +286,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                           :Ingrediente ;
                  :disponibleEn :mocTemporada ,
                                :mocTemporada2 ;
-                 :esGlutenFree "true"^^xsd:boolean ;
-                 :esLactosaFree "false"^^xsd:boolean ;
+                 :glutenFree "true"^^xsd:boolean ;
+                 :lactosaFree "false"^^xsd:boolean ;
                  :nombre "ArrozMoc" .
 
 
@@ -295,8 +295,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 :mocIngrediente2 rdf:type owl:NamedIndividual ,
                           :Ingrediente ;
                  :disponibleEn :mocTemporada ;
-                 :esGlutenFree "false"^^xsd:boolean ;
-                 :esLactosaFree "true"^^xsd:boolean ;
+                 :glutenFree "false"^^xsd:boolean ;
+                 :lactosaFree "true"^^xsd:boolean ;
                  :nombre "LechugaMoc" .
 
 

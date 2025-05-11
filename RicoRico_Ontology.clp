@@ -2,18 +2,18 @@
 ;;; RicoRico_Ontology.clp
 ;;; Translated by owl2clips
 ;;; Translated to CLIPS from ontology ricorico.ttl
-;;; :Date 09/05/2025 18:32:58
+;;; :Date 11/05/2025 12:24:40
 
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
     (role concrete)
     (pattern-match reactive)
     ;;; Atributo de tipo Booleano para indicar si es elemento es libre de gluten.
-    (multislot esGlutenFree
+    (multislot glutenFree
         (type SYMBOL)
         (create-accessor read-write))
     ;;; Atributo de tipo Booleano para indicar si el elemento es libre de lactosa.
-    (multislot esLactosaFree
+    (multislot lactosaFree
         (type SYMBOL)
         (create-accessor read-write))
     ;;; Atributo de tipo String para indicar el nombre del elemento en cuestión.
@@ -134,17 +134,17 @@
     (slot originarioDe
         (type INSTANCE)
         (create-accessor read-write))
-    ;;; Atributo de tipo Booleano para indicar si es elemento es libre de gluten.
-    (multislot esGlutenFree
-        (type SYMBOL)
-        (create-accessor read-write))
-    ;;; Atributo de tipo Booleano para indicar si el elemento es libre de lactosa.
-    (multislot esLactosaFree
-        (type SYMBOL)
-        (create-accessor read-write))
     ;;; Atributo de tipo Integer para indicar la dificultad de realizar un plato. Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el valor que indica la máxima dificultad.
     (slot dificultad
         (type INTEGER)
+        (create-accessor read-write))
+    ;;; Atributo de tipo Booleano para indicar si es elemento es libre de gluten.
+    (multislot glutenFree
+        (type SYMBOL)
+        (create-accessor read-write))
+    ;;; Atributo de tipo Booleano para indicar si el elemento es libre de lactosa.
+    (multislot lactosaFree
+        (type SYMBOL)
         (create-accessor read-write))
     ;;; Atributo de tipo String para indicar el nombre del elemento en cuestión.
     (slot nombre
@@ -182,16 +182,16 @@
 
 (definstances instances
     ([mocBebida1] of Vino
-         (esGlutenFree  "true")
-         (esLactosaFree  "true")
+         (glutenFree  "true")
+         (lactosaFree  "true")
          (nombre  "vinoMoc")
          (precio  10.5)
     )
 
     ([mocBebida2] of Casual
          (alcoholica  "true")
-         (esGlutenFree  "false")
-         (esLactosaFree  "false")
+         (glutenFree  "false")
+         (lactosaFree  "false")
          (nombre  "cocacolaMoc")
          (precio  1.2)
     )
