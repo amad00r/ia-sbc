@@ -4,10 +4,24 @@
 ;;; Translated to CLIPS from ontology ricorico.ttl
 ;;; :Date 05/05/2025 19:43:45
 
+;;; ---------------------------------------------------------
+;;; RicoRico_Ontology.clp
+;;; Translated by owl2clips
+;;; Translated to CLIPS from ontology ricorico.ttl
+;;; :Date 11/05/2025 12:24:40
+
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
     (role concrete)
     (pattern-match reactive)
+    ;;; Atributo de tipo Booleano para indicar si es elemento es libre de gluten.
+    (multislot glutenFree
+        (type SYMBOL)
+        (create-accessor read-write))
+    ;;; Atributo de tipo Booleano para indicar si el elemento es libre de lactosa.
+    (multislot lactosaFree
+        (type SYMBOL)
+        (create-accessor read-write))
     ;;; Atributo de tipo String para indicar el nombre del elemento en cuestión.
     (slot nombre
         (type STRING)
@@ -102,14 +116,6 @@
     (is-a USER)
     (role concrete)
     (pattern-match reactive)
-    ;;; Relación para indicar que bebidas son compatibles con un plato.
-    (multislot compatibleConBebida
-        (type INSTANCE)
-        (create-accessor read-write))
-    ;;; Relación para indicar que platos son compatibles con un plato concreto.
-    (multislot compatibleConPlato
-        (type INSTANCE)
-        (create-accessor read-write))
     ;;; Relación para indicar que ingredientes componen un plato.
     (multislot compuestoPor
         (type INSTANCE)
@@ -122,6 +128,14 @@
     (slot esPreparacion
         (type INSTANCE)
         (create-accessor read-write))
+    ;;; Relación para indicar que bebidas son incompatibles con un plato.
+    (multislot incompatibleConBebida
+        (type INSTANCE)
+        (create-accessor read-write))
+    ;;; Relación para indicar que platos son incompatibles con un plato concreto.
+    (multislot incompatibleConPlato
+        (type INSTANCE)
+        (create-accessor read-write))
     ;;; Relación para indicar el país de origen de un plato.
     (slot originarioDe
         (type INSTANCE)
@@ -129,6 +143,14 @@
     ;;; Atributo de tipo Integer para indicar la dificultad de realizar un plato. Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el valor que indica la máxima dificultad.
     (slot dificultad
         (type INTEGER)
+        (create-accessor read-write))
+    ;;; Atributo de tipo Booleano para indicar si es elemento es libre de gluten.
+    (multislot glutenFree
+        (type SYMBOL)
+        (create-accessor read-write))
+    ;;; Atributo de tipo Booleano para indicar si el elemento es libre de lactosa.
+    (multislot lactosaFree
+        (type SYMBOL)
         (create-accessor read-write))
     ;;; Atributo de tipo String para indicar el nombre del elemento en cuestión.
     (slot nombre
@@ -166,12 +188,16 @@
 
 (definstances instances
     ([mocBebida1] of Vino
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
          (nombre  "vinoMoc")
          (precio  10.5)
     )
 
     ([mocBebida2] of Casual
-         (alcoholica  "true")
+         (alcoholica  TRUE)
+         (glutenFree  FALSE)
+         (lactosaFree  FALSE)
          (nombre  "cocacolaMoc")
          (precio  1.2)
     )
@@ -203,11 +229,11 @@
     )
 
     ([mocPlato1] of Plato
-         (compatibleConBebida  [mocBebida1] [mocBebida2])
-         (compatibleConPlato  [mocPlato2] [mocPostre])
          (compuestoPor  [mocIngrediente1] [mocIngrediente2])
          (esCategoria  [mocCategoria])
          (esPreparacion  [mocPreparacion])
+         (incompatibleConBebida  [mocBebida1] [mocBebida2])
+         (incompatibleConPlato  [mocPlato2] [mocPostre])
          (originarioDe  [mocOrigen])
          (dificultad  7)
          (nombre  "Plato1Moc")
@@ -227,11 +253,11 @@
     )
 
     ([mocPostre] of Plato
-         (compatibleConBebida  [mocBebida1])
-         (compatibleConPlato  [mocPlato1])
          (compuestoPor  [mocIngrediente1])
          (esCategoria  [mocCategoria])
          (esPreparacion  [mocPreparacion])
+         (incompatibleConBebida  [mocBebida1])
+         (incompatibleConPlato  [mocPlato1])
          (originarioDe  [mocOrigen])
          (dificultad  4)
          (nombre  "PostreMoc")
@@ -252,6 +278,7 @@
     )
 
 )
+
 
 (defmodule MAIN (export ?ALL))
 

@@ -182,16 +182,16 @@
 
 (definstances instances
     ([mocBebida1] of Vino
-         (glutenFree  "true")
-         (lactosaFree  "true")
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
          (nombre  "vinoMoc")
          (precio  10.5)
     )
 
     ([mocBebida2] of Casual
-         (alcoholica  "true")
-         (glutenFree  "false")
-         (lactosaFree  "false")
+         (alcoholica  TRUE)
+         (glutenFree  FALSE)
+         (lactosaFree  FALSE)
          (nombre  "cocacolaMoc")
          (precio  1.2)
     )
