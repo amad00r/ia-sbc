@@ -342,40 +342,39 @@
     (return ?respuesta)
 )
 
-(deffunction RicoRico_Entrada::obtener_vino () 
-    (bind ?vino (seleccion_una_opcion "Quieres vino con el menú? " Si No))
-    (if (eq ?vino Si) then
-        (return (create$ TRUE TRUE))
-    else
-        (printout t crlf)
-        (bind ?alcoholica (seleccion_una_opcion "Quieres que el menú tenga bebidas alcoholicas? " Si No))
-        (return (create$ FALSE (if (eq ?alcoholica Si) then TRUE else FALSE)))
-    )
+(deffunction RicoRico_Entrada::obtener_bebida () 
+    (bind ?alcoholica (seleccion_una_opcion "Quieres que el menú tenga bebidas alcoholicas? " Si No))
+    (bind ?alcoholica (if (eq ?alcoholica Si) then TRUE else FALSE))
+
+    (if (eq ?alcoholica TRUE) then 
+        (bind ?vino (seleccion_una_opcion "Quieres vino con el menú? " Si No)) 
+        (if (eq ?vino Si) then (bind ?vino TRUE) else (bind ?vino FALSE))
+    else (bind ?vino FALSE))
+
+    (bind ?diferentesBebidas (seleccion_una_opcion "Quieres una bebida diferente para el primer plato y el segundo? " Si No))
+    (if (eq ?diferentesBebidas Si) then (bind ?diferentesBebidas TRUE) else (bind ?diferentesBebidas FALSE))
+
+    (printout t "Alcoholicas:" ?alcoholica crlf)
+    (printout t "Vino:" ?vino crlf)
+    (printout t "Diferentes:" ?diferentesBebidas crlf)
+
+    (return (create$ ?alcoholica ?vino ?diferentesBebidas))
 )
 
-(deffunction RicoRico_Entrada::obtener_nombres_ingredientes ()
-    (bind $?ingredientes (find-all-instances ((?i Ingrediente)) TRUE))
-    (bind $?nombres (create$))
-    (do-for-all-instances ((?ing Ingrediente)) TRUE
-        (bind $?nombres (insert$ $?nombres (+ (length$ $?nombres) 1) (send ?ing get-nombre)))
-    )
-    (return $?nombres)
-)
+(deffunction RicoRico_Entrada::obtener_intolerancias ()
+    (bind ?alguna_intolerancia (seleccion_una_opcion "¿Hay alguien con intolerancia alimentaria?" Si No))
+    (bind ?intolerancia_gluten FALSE)
+    (bind ?intolerancia_lactosa FALSE)
 
-(deffunction RicoRico_Entrada::obtener_ingredientes_prohibidos ($?lista_ingredientes)
-    (printout t "¿Quieres prohibir algun ingrediente?" crlf)
-    (printout t "Estos son los ingredientes disponibles: " $?lista_ingredientes crlf)
-    (printout t "Introduzca el ingrediente que quieres prohibir o FIN para terminar: " crlf)
-    (bind ?respuesta (str-cat (read)))
-    (bind $?lista_prohibidos (create$))
-    (while (not (eq ?respuesta "FIN")) do
-        (if (and (member$ ?respuesta $?lista_ingredientes)(not(member$ ?respuesta $?lista_prohibidos))) then
-            (bind $?lista_prohibidos (insert$ $?lista_prohibidos (+ (length$ $?lista_prohibidos) 1) ?respuesta))
-        )
-        (bind ?respuesta (str-cat (read)))
+    (if (eq ?alguna_intolerancia Si) then 
+        (bind ?intolerancia_gluten (seleccion_una_opcion "¿Es intolerante al gluten?" Si No))
+        (if (eq ?intolerancia_gluten Si) then (bind ?intolerancia_gluten TRUE) else (bind ?intolerancia_gluten FALSE))
+
+        (bind ?intolerancia_lactosa (seleccion_una_opcion "¿Es intolerante a la lactosa?" Si No))
+        (if (eq ?intolerancia_lactosa Si) then (bind ?intolerancia_lactosa TRUE) else (bind ?intolerancia_lactosa FALSE))
     )
-    (printout t crlf)
-    (return $?lista_prohibidos)
+
+    (return (create$ ?intolerancia_gluten ?intolerancia_lactosa))
 )
 
 (deffunction RicoRico_Entrada::obtener_preferencias_restricciones ()
@@ -385,22 +384,21 @@
     (bind ?temporada (seleccion_una_opcion "Introduzca la temporada del año." Invierno Primavera Otono Verano))
 
     ;;Obtener si quiere vino o bebida alcoholica
-    (bind $?vino_alcoholica (obtener_vino))
-    (bind ?vino (nth$ 1 $?vino_alcoholica))
-    (bind ?alcoholica (nth$ 2 $?vino_alcoholica))
+    (bind $?condiciones_bebida (obtener_bebida))
+    (bind ?alcoholica (nth$ 1 $?condiciones_bebida))
+    (bind ?vino (nth$ 2 $?condiciones_bebida))
+    (bind ?diferentesBebidas (nth$ 3 $?condiciones_bebida))
     
     ;; Crear una lista con todos los ingredientes + prohibir los que quiera el usuario
-    (bind $?lista_ingredientes (obtener_nombres_ingredientes))
-    (bind $?lista_prohibidos (obtener_ingredientes_prohibidos $?lista_ingredientes))
-    (printout t "Se han prohibido los siguientes ingredientes: ")
-    (printout t $?lista_prohibidos crlf)
+    (bind $?lista_intolerancias (obtener_intolerancias))
+    (bind ?intolerancia_gluten (nth$ 1 $?lista_intolerancias))
+    (bind ?intolerancia_lactosa (nth$ 2 $?lista_intolerancias))
 
     ;; Devolvemos los datos recopilados
-    (return (create$ ?num_comensales ?precio_min ?precio_max ?temporada ?vino ?alcoholica $?lista_prohibidos))
-
+    (return (create$ ?num_comensales ?precio_min ?precio_max ?temporada ?alcoholica ?vino ?diferentesBebidas ?intolerancia_gluten ?intolerancia_lactosa))
 )
 
-(defrule RicoRico_Entrada::intanciacion_preferencias_restricciones
+(defrule RicoRico_Entrada::instanciacion_preferencias_restricciones
 	(declare (salience 10))
 	=> 
 	(printout t "Ahora vamos a hacerte una serie de preguntas para poder generate el menú en base a tus preferencias y restricciones." crlf crlf)
