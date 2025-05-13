@@ -2,7 +2,7 @@
 ;;; RicoRico_Ontology.clp
 ;;; Translated by owl2clips
 ;;; Translated to CLIPS from ontology ricorico.ttl
-;;; :Date 11/05/2025 19:54:09
+;;; :Date 13/05/2025 16:34:28
 
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
@@ -89,10 +89,6 @@
     ;;; Relación para indicar el postre de un menú.
     (slot postre
         (type INSTANCE)
-        (create-accessor read-write))
-    ;;; Atributo de tipo Booleano para indicar si un menú ha sido generado o no.
-    (slot generado
-        (type SYMBOL)
         (create-accessor read-write))
     ;;; Atributo de tipo String para indicar el nombre del elemento en cuestión.
     (slot nombre
@@ -212,16 +208,6 @@
     ([mocIngrediente2] of Ingrediente
          (disponibleEn  [mocTemporada])
          (nombre  "LechugaMoc")
-    )
-
-    ([mocMenu] of Menu
-         (1rBebida  [mocBebida1])
-         (1rPlato  [mocPlato1])
-         (2oBebida  [mocBebida2])
-         (2oPlato  [mocPlato2])
-         (postre  [mocPostre])
-         (generado  TRUE)
-         (nombre  "Opción 1")
     )
 
     ([mocOrigen] of Origen

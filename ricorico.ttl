@@ -142,15 +142,6 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
             rdfs:comment "Atributo de tipo Integer para indicar la dificultad de realizar un plato. Su rango va de 1 a 10, siendo 1 el valor que indica menor dificultad y 10 el valor que indica la máxima dificultad." .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/generado
-:generado rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf owl:topDataProperty ;
-          rdf:type owl:FunctionalProperty ;
-          rdfs:domain :Menu ;
-          rdfs:range xsd:boolean ;
-          rdfs:comment "Atributo de tipo Booleano para indicar si un menú ha sido generado o no." .
-
-
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/glutenFree
 :glutenFree rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
@@ -307,18 +298,6 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                  :glutenFree "false"^^xsd:boolean ;
                  :lactosaFree "true"^^xsd:boolean ;
                  :nombre "LechugaMoc" .
-
-
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mocMenu
-:mocMenu rdf:type owl:NamedIndividual ,
-                  :Menu ;
-         <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico#1rBebida> :mocBebida1 ;
-         <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico#1rPlato> :mocPlato1 ;
-         <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico#2oBebida> :mocBebida2 ;
-         <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico#2oPlato> :mocPlato2 ;
-         :postre :mocPostre ;
-         :generado "true"^^xsd:boolean ;
-         :nombre "Opción 1" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mocOrigen
