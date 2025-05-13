@@ -1,9 +1,3 @@
-;;; ---------------------------------------------------------
-;;; RicoRico_Ontology.clp
-;;; Translated by owl2clips
-;;; Translated to CLIPS from ontology ricorico.ttl
-;;; :Date 11/05/2025 19:54:09
-
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
     (role concrete)
@@ -89,10 +83,6 @@
     ;;; Relación para indicar el postre de un menú.
     (slot postre
         (type INSTANCE)
-        (create-accessor read-write))
-    ;;; Atributo de tipo Booleano para indicar si un menú ha sido generado o no.
-    (slot generado
-        (type SYMBOL)
         (create-accessor read-write))
     ;;; Atributo de tipo String para indicar el nombre del elemento en cuestión.
     (slot nombre
@@ -214,36 +204,6 @@
          (nombre  "LechugaMoc")
     )
 
-    ([mocMenu1] of Menu
-         (1rBebida  [mocBebida1])
-         (1rPlato  [mocPlato1])
-         (2oBebida  [mocBebida2])
-         (2oPlato  [mocPlato2])
-         (postre  [mocPostre])
-         (generado  TRUE)
-         (nombre  "Opción 1")
-    )
-
-    ([mocMenu2] of Menu
-         (1rBebida  [mocBebida1])
-         (1rPlato  [mocPlato1])
-         (2oBebida  [mocBebida2])
-         (2oPlato  [mocPlato2])
-         (postre  [mocPostre])
-         (generado  TRUE)
-         (nombre  "Opción 2")
-    )
-
-    ([mocMenu3] of Menu
-         (1rBebida  [mocBebida1])
-         (1rPlato  [mocPlato1])
-         (2oBebida  [mocBebida2])
-         (2oPlato  [mocPlato2])
-         (postre  [mocPostre])
-         (generado  TRUE)
-         (nombre  "Opción 3")
-    )
-
     ([mocOrigen] of Origen
          (nombre  "EspañaMoc")
     )
@@ -297,6 +257,32 @@
          (nombre  "PrimaveraMoc")
     )
 
+    ; ([mocMenu1] of Menu
+    ;      (1rBebida  [mocBebida1])
+    ;      (1rPlato  [mocPlato1])
+    ;      (2oBebida  [mocBebida2])
+    ;      (2oPlato  [mocPlato2])
+    ;      (postre  [mocPostre])
+    ;      (nombre  "Menú1Moc")
+    ; )
+
+    ; ([mocMenu2] of Menu
+    ;      (1rBebida  [mocBebida2])
+    ;      (1rPlato  [mocPlato2])
+    ;      (2oBebida  [mocBebida1])
+    ;      (2oPlato  [mocPlato1])
+    ;      (postre  [mocPostre])
+    ;      (nombre  "Menú2Moc")
+    ; )
+
+    ; ([mocMenu3] of Menu
+    ;      (1rBebida  [mocBebida1])
+    ;      (1rPlato  [mocPlato2])
+    ;      (2oBebida  [mocBebida2])
+    ;      (2oPlato  [mocPlato1])
+    ;      (postre  [mocPostre])
+    ;      (nombre  "Menú3Moc")
+    ; )
 )
 
 (defmodule MAIN 
@@ -315,6 +301,33 @@
 	(focus RicoRico_Salida)
 )
 
+; (deffunction RicoRico_Salida::crear_menus_hardcoded ()
+;     (make-instance [mocMenu1] of Menu
+;         (nombre "Menú1Moc")
+;         (1rBebida [mocBebida1])
+;         (1rPlato [mocPlato1])
+;         (2oBebida [mocBebida2])
+;         (2oPlato [mocPlato2])
+;         (postre [mocPostre])
+;     )
+;     (make-instance [mocMenu2] of Menu
+;         (nombre "Menú2Moc")
+;         (1rBebida [mocBebida2])
+;         (1rPlato [mocPlato2])
+;         (2oBebida [mocBebida1])
+;         (2oPlato [mocPlato1])
+;         (postre [mocPostre])
+;     )
+;     (make-instance [mocMenu3] of Menu
+;         (nombre "Menú3Moc")
+;         (1rBebida [mocBebida1])
+;         (1rPlato [mocPlato2])
+;         (2oBebida [mocBebida2])
+;         (2oPlato [mocPlato1])
+;         (postre [mocPostre])
+;     )
+; )
+
 (deffunction RicoRico_Salida::imprimir_menu (?menu)
     (printout t "   Menú: " (send ?menu get-nombre) crlf)
     (printout t "       Primera bebida: " (send (send ?menu get-1rBebida) get-nombre) crlf)
@@ -326,7 +339,7 @@
 
 (deffunction RicoRico_Salida::procesar_salida ()
     ; Obtener todos los menús disponibles
-    (bind ?menus (find-all-instances ((?menu Menu)) (eq (send ?menu get-generado) TRUE)))
+    (bind ?menus (find-all-instances ((?menu Menu)) TRUE))
 
     ; Sacar el número de menús disponibles
     (bind ?numMenus (length$ ?menus))
@@ -364,5 +377,6 @@
     (declare (salience 10))
     =>
     (printout t "Procesando la salida ..." crlf crlf)
+    ; (RicoRico_Salida::crear_menus_hardcoded)
     (RicoRico_Salida::procesar_salida)
 )
