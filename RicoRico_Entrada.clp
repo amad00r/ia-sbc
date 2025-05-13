@@ -259,6 +259,19 @@
 
 )
 
+;; Para almacenar las preferencias y restricciones del usuario.
+(deftemplate preferencias
+    (slot num_comensales)
+    (slot precio_min)
+    (slot precio_max)
+    (slot temporada)
+    (slot alcoholica)
+    (slot vino)
+    (slot diferentesBebidas)
+    (slot intolerancia_gluten)
+    (slot intolerancia_lactosa)
+)
+
 (defmodule MAIN (export ?ALL))
 
 (defrule MAIN::inicio 
@@ -268,7 +281,10 @@
     (focus RicoRico_Entrada)
 )
 
-(defmodule RicoRico_Entrada (export ?ALL) (import MAIN ?ALL))
+(defmodule RicoRico_Entrada 
+    (import MAIN ?ALL)
+    (export ?ALL) 
+)
 
 (deffunction RicoRico_Entrada::obtener_numero_comensales ()
     (printout t"Introuce el número de comensales: ")
@@ -333,10 +349,6 @@
     (bind ?diferentesBebidas (seleccion_una_opcion "Quieres una bebida diferente para el primer plato y el segundo? " Si No))
     (if (eq ?diferentesBebidas Si) then (bind ?diferentesBebidas TRUE) else (bind ?diferentesBebidas FALSE))
 
-    (printout t "Alcoholicas:" ?alcoholica crlf)
-    (printout t "Vino:" ?vino crlf)
-    (printout t "Diferentes:" ?diferentesBebidas crlf)
-
     (return (create$ ?alcoholica ?vino ?diferentesBebidas))
 )
 
@@ -357,24 +369,34 @@
 )
 
 (deffunction RicoRico_Entrada::obtener_preferencias_restricciones ()
+    ;;Obtenemos el número de comensales, el precio mínimo y máximo y la temporada
     (bind ?num_comensales (obtener_numero_comensales))
     (bind ?precio_min (obtener_precio_min))
     (bind ?precio_max (obtener_precio_max ?precio_min))
     (bind ?temporada (seleccion_una_opcion "Introduzca la temporada del año." Invierno Primavera Otono Verano))
 
-    ;;Obtener si quiere vino o bebida alcoholica
+    ;; Obtenemos las preferencias y restricciones de bebida
     (bind $?condiciones_bebida (obtener_bebida))
     (bind ?alcoholica (nth$ 1 $?condiciones_bebida))
     (bind ?vino (nth$ 2 $?condiciones_bebida))
     (bind ?diferentesBebidas (nth$ 3 $?condiciones_bebida))
     
-    ;; Crear una lista con todos los ingredientes + prohibir los que quiera el usuario
+    ;; Obtenemos las intolerancias alimentarias
     (bind $?lista_intolerancias (obtener_intolerancias))
     (bind ?intolerancia_gluten (nth$ 1 $?lista_intolerancias))
     (bind ?intolerancia_lactosa (nth$ 2 $?lista_intolerancias))
 
-    ;; Devolvemos los datos recopilados
-    (return (create$ ?num_comensales ?precio_min ?precio_max ?temporada ?alcoholica ?vino ?diferentesBebidas ?intolerancia_gluten ?intolerancia_lactosa))
+    (assert (preferencias
+        (num_comensales ?num_comensales)
+        (precio_min ?precio_min)
+        (precio_max ?precio_max)
+        (temporada ?temporada)
+        (alcoholica ?alcoholica)
+        (vino ?vino)
+        (diferentesBebidas ?diferentesBebidas)
+        (intolerancia_gluten ?intolerancia_gluten)
+        (intolerancia_lactosa ?intolerancia_lactosa)
+    ))
 )
 
 (defrule RicoRico_Entrada::instanciacion_preferencias_restricciones
