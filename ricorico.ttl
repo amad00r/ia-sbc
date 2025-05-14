@@ -128,7 +128,7 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 :alcoholica rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
             rdf:type owl:FunctionalProperty ;
-            rdfs:domain :Casual ;
+            rdfs:domain :Bebida ;
             rdfs:range xsd:boolean ;
             rdfs:comment "Atributo de tipo Booleano para indicar si una bebida casual es alcohólica o no." .
 
@@ -261,6 +261,7 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mocBebida1
 :mocBebida1 rdf:type owl:NamedIndividual ,
                      :Vino ;
+            :alcoholica "true"^^xsd:boolean ;
             :glutenFree "true"^^xsd:boolean ;
             :lactosaFree "true"^^xsd:boolean ;
             :nombre "vinoMoc" ;
@@ -270,7 +271,7 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mocBebida2
 :mocBebida2 rdf:type owl:NamedIndividual ,
                      :Casual ;
-            :alcoholica "true"^^xsd:boolean ;
+            :alcoholica "false"^^xsd:boolean ;
             :glutenFree "false"^^xsd:boolean ;
             :lactosaFree "false"^^xsd:boolean ;
             :nombre "cocacolaMoc" ;

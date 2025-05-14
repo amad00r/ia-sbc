@@ -2,12 +2,16 @@
 ;;; RicoRico_Ontology.clp
 ;;; Translated by owl2clips
 ;;; Translated to CLIPS from ontology ricorico.ttl
-;;; :Date 14/05/2025 16:43:06
+;;; :Date 14/05/2025 17:52:07
 
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
     (role concrete)
     (pattern-match reactive)
+    ;;; Atributo de tipo Booleano para indicar si una bebida casual es alcohólica o no.
+    (slot alcoholica
+        (type SYMBOL)
+        (create-accessor read-write))
     ;;; Atributo de tipo Booleano para indicar si es elemento es libre de gluten.
     (slot glutenFree
         (type SYMBOL)
@@ -30,10 +34,6 @@
     (is-a Bebida)
     (role concrete)
     (pattern-match reactive)
-    ;;; Atributo de tipo Booleano para indicar si una bebida casual es alcohólica o no.
-    (slot alcoholica
-        (type SYMBOL)
-        (create-accessor read-write))
 )
 
 (defclass Vino "Clase para representar un vino."
@@ -182,6 +182,7 @@
 
 (definstances instances
     ([mocBebida1] of Vino
+         (alcoholica  TRUE)
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "vinoMoc")
@@ -189,7 +190,7 @@
     )
 
     ([mocBebida2] of Casual
-         (alcoholica  TRUE)
+         (alcoholica  FALSE)
          (glutenFree  FALSE)
          (lactosaFree  FALSE)
          (nombre  "cocacolaMoc")

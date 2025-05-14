@@ -2,6 +2,10 @@
     (is-a USER)
     (role concrete)
     (pattern-match reactive)
+    ;;; Atributo de tipo Booleano para indicar si una bebida casual es alcohólica o no.
+    (slot alcoholica
+        (type SYMBOL)
+        (create-accessor read-write))
     ;;; Atributo de tipo Booleano para indicar si es elemento es libre de gluten.
     (slot glutenFree
         (type SYMBOL)
@@ -24,10 +28,6 @@
     (is-a Bebida)
     (role concrete)
     (pattern-match reactive)
-    ;;; Atributo de tipo Booleano para indicar si una bebida casual es alcohólica o no.
-    (slot alcoholica
-        (type SYMBOL)
-        (create-accessor read-write))
 )
 
 (defclass Vino "Clase para representar un vino."
@@ -176,6 +176,7 @@
 
 (definstances instances
     ([mocBebida1] of Vino
+         (alcoholica  TRUE)
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "vinoMoc")
@@ -183,7 +184,7 @@
     )
 
     ([mocBebida2] of Casual
-         (alcoholica  TRUE)
+         (alcoholica  FALSE)
          (glutenFree  FALSE)
          (lactosaFree  FALSE)
          (nombre  "cocacolaMoc")
