@@ -1,16 +1,15 @@
 ;;; PARA TESTEAR EL GENERADOR DE FORMA INDEPENDIENTE
 ;;; Ahora mismo es MOC.
-
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
     (role concrete)
     (pattern-match reactive)
     ;;; Atributo de tipo Booleano para indicar si es elemento es libre de gluten.
-    (multislot glutenFree
+    (slot glutenFree
         (type SYMBOL)
         (create-accessor read-write))
     ;;; Atributo de tipo Booleano para indicar si el elemento es libre de lactosa.
-    (multislot lactosaFree
+    (slot lactosaFree
         (type SYMBOL)
         (create-accessor read-write))
     ;;; Atributo de tipo String para indicar el nombre del elemento en cuestión.
@@ -56,6 +55,14 @@
     ;;; Relación para indicar en qué temporada está disponible un ingrediente.
     (multislot disponibleEn
         (type INSTANCE)
+        (create-accessor read-write))
+    ;;; Atributo de tipo Booleano para indicar si es elemento es libre de gluten.
+    (slot glutenFree
+        (type SYMBOL)
+        (create-accessor read-write))
+    ;;; Atributo de tipo Booleano para indicar si el elemento es libre de lactosa.
+    (slot lactosaFree
+        (type SYMBOL)
         (create-accessor read-write))
     ;;; Atributo de tipo String para indicar el nombre del elemento en cuestión.
     (slot nombre
@@ -135,14 +142,6 @@
     (slot dificultad
         (type INTEGER)
         (create-accessor read-write))
-    ;;; Atributo de tipo Booleano para indicar si es elemento es libre de gluten.
-    (multislot glutenFree
-        (type SYMBOL)
-        (create-accessor read-write))
-    ;;; Atributo de tipo Booleano para indicar si el elemento es libre de lactosa.
-    (multislot lactosaFree
-        (type SYMBOL)
-        (create-accessor read-write))
     ;;; Atributo de tipo String para indicar el nombre del elemento en cuestión.
     (slot nombre
         (type STRING)
@@ -199,11 +198,15 @@
 
     ([mocIngrediente1] of Ingrediente
          (disponibleEn  [mocTemporada] [mocTemporada2])
+         (glutenFree  TRUE)
+         (lactosaFree  FALSE)
          (nombre  "ArrozMoc")
     )
 
     ([mocIngrediente2] of Ingrediente
          (disponibleEn  [mocTemporada])
+         (glutenFree  FALSE)
+         (lactosaFree  TRUE)
          (nombre  "LechugaMoc")
     )
 

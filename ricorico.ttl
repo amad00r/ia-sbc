@@ -145,8 +145,9 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/glutenFree
 :glutenFree rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
+            rdf:type owl:FunctionalProperty ;
             rdfs:domain :Bebida ,
-                        :Plato ;
+                        :Ingrediente ;
             rdfs:range xsd:boolean ;
             rdfs:comment "Atributo de tipo Booleano para indicar si es elemento es libre de gluten." .
 
@@ -154,8 +155,9 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/lactosaFree
 :lactosaFree rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf owl:topDataProperty ;
+             rdf:type owl:FunctionalProperty ;
              rdfs:domain :Bebida ,
-                         :Plato ;
+                         :Ingrediente ;
              rdfs:range xsd:boolean ;
              rdfs:comment "Atributo de tipo Booleano para indicar si el elemento es libre de lactosa." .
 
