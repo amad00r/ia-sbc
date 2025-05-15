@@ -86,9 +86,11 @@
                 "type": { "const": "Bebida" },
                 "id": { "type": "string" },
                 "precio": { "type": "number" },
-                "alcoholica": { "type": "boolean" }
+                "alcoholica": { "type": "boolean" },
+                "glutenFree": { "type": "boolean" },
+                "lactosaFree": { "type": "boolean" }
             },
-            "required": ["type", "id", "precio", "alcoholica"],
+            "required": ["type", "id", "precio", "alcoholica", "glutenFree", "lactosaFree"],
             "additionalProperties": false
         },
         "Vino": {
