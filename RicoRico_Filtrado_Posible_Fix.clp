@@ -1144,16 +1144,17 @@
 )
 
 ;; Para almacenar las preferencias y restricciones del usuario.
-(deftemplate preferencias
-    (slot num_comensales)
-    (slot precio_min)
-    (slot precio_max)
-    (slot temporada)
-    (slot alcoholica)
-    (slot vino)
-    (slot diferentesBebidas)
-    (slot intolerancia_gluten)
-    (slot intolerancia_lactosa)
+(defclass Preferencias
+   (is-a USER)
+   (slot num_comensales)
+   (slot precio_min)
+   (slot precio_max)
+   (slot temporada)
+   (slot alcoholica)
+   (slot vino)
+   (slot diferentesBebidas)
+   (slot intolerancia_gluten)
+   (slot intolerancia_lactosa)
 )
 
 (defmodule MAIN (export ?ALL))
@@ -1164,60 +1165,42 @@
     (export ?ALL)
 )
 
-(defrule MAIN::inicio 
-    (declare (salience 20)) 
-    => 
+(defrule MAIN::inicio
+    (declare (salience 20))
+    =>
     (printout t "Bienvenido al sistema de filtrado." crlf)
+    (make-instance prefs of Preferencias
+        (num_comensales 4)
+        (precio_min 5)
+        (precio_max 20)
+        (temporada [verano])
+        (alcoholica FALSE)
+        (vino FALSE)
+        (diferentesBebidas TRUE)
+        (intolerancia_gluten TRUE)
+        (intolerancia_lactosa TRUE)
+    )
     (focus RicoRico_Filtrado)
 )
 
+; Sample function
 (defrule RicoRico_Filtrado::eliminar_platos_complejos
-    (preferencias (num_comensales ?comensales))
-    ?plato <- (object (is-a Plato)
-                      (dificultad ?dificultad))
-    (test (> ?dificultad ?comensales))
+    (declare (salience 10))
     =>
-    (send ?plato delete)
-)
-
-(defrule RicoRico_Filtrado::eliminar_platos_fuera_temporada
-    (preferencias (temporada ?temporada))
-    ?plato <- (object (is-a Plato) (compuestoPor $?ingredienteList))
-    ?ingrediente <- (object (is-a Ingrediente) (disponibleEn $?disponibles))
-    (test (member$ ?ingrediente ?ingredienteList))
-    (test (not (member$ ?temporada ?disponibles)))
-    =>
-    (send ?plato delete)
-)
-
-(defrule RicoRico_Filtrado::eliminar_bebidas_alcoholicas
-    (preferencias (alcoholica FALSE))
-    ?bebida <- (object (is-a Bebida) (alcoholica TRUE))
-    =>
-    (send ?bebida delete)
-)
-
-(defrule RicoRico_Filtrado::eliminar_vinos
-    (preferencias (vino FALSE))
-    ?vino <- (object (is-a Vino))
-    =>
-    (send ?vino delete)
-)
-
-(defrule RicoRico_Filtrado::eliminar_platos_lactosa
-    (preferencias (intolerancia_lactosa TRUE))
-    ?plato <- (object (is-a Plato) (compuestoPor $?ingredienteList))
-    ?ingrediente <- (object (is-a Ingrediente) (lactosaFree FALSE))
-    (test (member$ ?ingrediente ?ingredienteList))
-    =>
-    (send ?plato delete)
-)
-
-(defrule RicoRico_Filtrado::eliminar_platos_gluten
-    (preferencias (intolerancia_gluten TRUE))
-    ?plato <- (object (is-a Plato) (compuestoPor $?ingredienteList))
-    ?ingrediente <- (object (is-a Ingrediente) (glutenFree FALSE))
-    (test (member$ ?ingrediente ?ingredienteList))
-    =>
-    (send ?plato delete)
+    (bind ?preferencias (find-instance ((?p Preferencias)) TRUE))
+    (if (> (length$ ?preferencias) 0) then
+        (bind ?pref (nth$ 1 ?preferencias))
+        (bind ?comensales (send ?pref get-num_comensales))
+        ;(printout t "Número de comensales: " ?comensales crlf)
+        
+        (bind ?platos (find-all-instances ((?p Plato)) (> (send ?p get-dificultad) ?comensales)))
+        (printout t "Platos complejos a eliminar: " (length$ ?platos) crlf)
+        
+        (foreach ?plato ?platos
+            ;(printout t "Eliminando plato con dificultad " (send ?plato get-dificultad) crlf)
+            (send ?plato delete)
+        )
+    else
+        (printout t "No se encontraron preferencias" crlf)
+    )
 )
