@@ -1155,7 +1155,8 @@
    (slot vino)
    (slot diferentesBebidas)
    (slot intolerancia_gluten)
-   (slot int
+   (slot intolerancia_lactosa)
+)
 
 (defmodule MAIN 
     (export ?ALL)
@@ -1173,14 +1174,54 @@
 	(focus RicoRico_Salida)
 )
 
+(deffunction RicoRico_Salida::calcular_precio_menu (?menu)
+     ;Función para calcular el precio del menú
+     (bind ?precioTotal 0)
+     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-1rBebida) get-precio)))
+     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-1rPlato) get-precio)))
+     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-2oBebida) get-precio)))
+     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-2oPlato) get-precio)))
+     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-postre) get-precio)))
+     ?precioTotal
+)
+
+(deffunction RicoRico_Salida::crear_menus_hardcoded ()
+     (printout t "Creando menús hardcoded...")
+     (make-instance [menu1] of Menu
+          (nombre "Menú Español Tradicional")
+          (1rBebida [agua_mineral])
+          (1rPlato [paella_valenciana])
+          (2oBebida [vino_tinto_rioja])
+          (2oPlato [tortilla_de_patatas])
+          (postre [gazpacho_andaluz])
+     )
+     (make-instance [menu2] of Menu
+          (nombre "Menú Italiano Clásico")
+          (1rBebida [prosecco])
+          (1rPlato [spaghetti_alla_carbonara])
+          (2oBebida [chianti_clasico])
+          (2oPlato [pizza_margherita])
+          (postre [insalata_caprese])
+     )
+     (make-instance [menu3] of Menu
+          (nombre "Menú Mar y Tierra")
+          (1rBebida [cerveza_sin_gluten])
+          (1rPlato [arroz_caldoso_con_marisco])
+          (2oBebida [vino_blanco_albarino])
+          (2oPlato [ossobuco_alla_milanese])
+          (postre [ensalada_campera])
+     )
+) 
+
 (deffunction RicoRico_Salida::imprimir_menu (?menu)
-    ; Imprimir el menú con un formato amigable
-    (printout t "   Menú: " (send ?menu get-nombre) crlf)
-    (printout t "       Primera bebida: " (send (send ?menu get-1rBebida) get-nombre) crlf)
-    (printout t "       Primer plato: " (send (send ?menu get-1rPlato) get-nombre) crlf)
-    (printout t "       Segunda bebida: " (send (send ?menu get-2oBebida) get-nombre) crlf)
-    (printout t "       Segundo plato: " (send (send ?menu get-2oPlato) get-nombre) crlf)
-    (printout t "       Postre: " (send (send ?menu get-postre) get-nombre) crlf crlf)
+     ; Imprimir el menú con un formato amigable
+     (printout t "   Menú: " (send ?menu get-nombre) crlf)
+     (printout t "   Precio: " (calcular_precio_menu ?menu) "€" crlf)
+     (printout t "       Primera bebida: " (send (send ?menu get-1rBebida) get-nombre) crlf)
+     (printout t "       Primer plato: " (send (send ?menu get-1rPlato) get-nombre) crlf)
+     (printout t "       Segunda bebida: " (send (send ?menu get-2oBebida) get-nombre) crlf)
+     (printout t "       Segundo plato: " (send (send ?menu get-2oPlato) get-nombre) crlf)
+     (printout t "       Postre: " (send (send ?menu get-postre) get-nombre) crlf crlf)
 )
 
 (deffunction RicoRico_Salida::procesar_salida ()
@@ -1223,6 +1264,6 @@
     (declare (salience 10))
     =>
     (printout t "Procesando la salida ..." crlf crlf)
-    ; (RicoRico_Salida::crear_menus_hardcoded)
+    (RicoRico_Salida::crear_menus_hardcoded)
     (RicoRico_Salida::procesar_salida)
 )

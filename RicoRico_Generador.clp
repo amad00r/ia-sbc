@@ -1157,7 +1157,8 @@
    (slot vino)
    (slot diferentesBebidas)
    (slot intolerancia_gluten)
-   (slot int
+   (slot intolerancia_lactosa)
+)
 
 (defmodule MAIN (export ?ALL))
 

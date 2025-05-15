@@ -1388,9 +1388,21 @@
 ;;;;;;;;;;;; SALIDA ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(deffunction RicoRico_Salida::calcular_precio_menu (?menu)
+     ;Función para calcular el precio del menú
+     (bind ?precioTotal 0)
+     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-1rBebida) get-precio)))
+     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-1rPlato) get-precio)))
+     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-2oBebida) get-precio)))
+     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-2oPlato) get-precio)))
+     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-postre) get-precio)))
+     ?precioTotal
+)
+
 (deffunction RicoRico_Salida::imprimir_menu (?menu)
      ; Imprimir el menú con un formato amigable
      (printout t "   Menú: " (send ?menu get-nombre) crlf)
+     (printout t "   Precio: " (calcular_precio_menu ?menu) "€" crlf)
      (printout t "       Primera bebida: " (send (send ?menu get-1rBebida) get-nombre) crlf)
      (printout t "       Primer plato: " (send (send ?menu get-1rPlato) get-nombre) crlf)
      (printout t "       Segunda bebida: " (send (send ?menu get-2oBebida) get-nombre) crlf)
