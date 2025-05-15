@@ -8,12 +8,15 @@ import unicodedata
 import json
 import re
 
-with open("ricorico-instances-v2.json", "r") as f:
+def format_transformation(i):
+	return re.sub(r'\s+', '_', unicodedata.normalize("NFKD", i).encode("ASCII", "ignore").decode("utf-8").lower())
+
+with open("ricorico-instances.json", "r", encoding="utf-8") as f:
 	for obj in json.load(f):
-		ident = re.sub(r'\s+', '_', unicodedata.normalize("NFKD", obj["id"]).encode("ASCII", "ignore").decode("utf-8").lower())
+		ident = format_transformation(obj["id"])
 		print(f':{ident} rdf:type owl:NamedIndividual ,\n\t\t\t:{obj["type"]} ;')
 		if obj["type"] in ("Origen", "Temporada", "Preparacion", "Categoria"):
-			print(f'\t\t:nombre "{obj["id"]}" .')
+			print(f'\t\t:nombre "{format_transformation(obj["id"])}" .')
 		elif obj["type"] in ("Vino", "Casual"):
 			print(f'\t\t:alcoholica "{str(obj["alcoholica"]).lower()}"^^xsd:boolean ;')
 			print(f'\t\t:glutenFree "{str(obj["glutenFree"]).lower()}"^^xsd:boolean ;')
@@ -26,14 +29,14 @@ with open("ricorico-instances-v2.json", "r") as f:
 			print(f'\t\t:lactosaFree "{str(obj["lactosaFree"]).lower()}"^^xsd:boolean ;')
 			print(f'\t\t:nombre "{ident}" .')
 		elif obj["type"] == "Plato":
-			print('\t\t:compuestoPor ' + " , ".join(f":{str(e)}" for e in obj["idsIngredientes"]) + ' ;')  
-			print(f'\t\t:esCategoria :{obj["idCategoria"]} ;')
-			print(f'\t\t:esPreparacion :{obj["idPreparacion"]} ;')
+			print('\t\t:compuestoPor ' + " , ".join(f":{str(format_transformation(e))}" for e in obj["idsIngredientes"]) + ' ;')  
+			print(f'\t\t:esCategoria :{format_transformation(obj["idCategoria"])} ;')
+			print(f'\t\t:esPreparacion :{format_transformation(obj["idPreparacion"])} ;')
 			if obj["idsBebidasIncompatibles"]:
-				print('\t\t:incompatibleConBebida ' + " , ".join(f":{str(e)}" for e in obj["idsBebidasIncompatibles"]) + ' ;')
+				print('\t\t:incompatibleConBebida ' + " , ".join(f":{str(format_transformation(e))}" for e in obj["idsBebidasIncompatibles"]) + ' ;')
 			if obj["idsPlatosIncompatibles"]:
-				print('\t\t:incompatibleConPlato ' + " , ".join(f":{str(e)}" for e in obj["idsPlatosIncompatibles"]) + ' ;')
-			print(f'\t\t:originarioDe :{obj["idOrigen"]} ;')
+				print('\t\t:incompatibleConPlato ' + " , ".join(f":{str(format_transformation(e))}" for e in obj["idsPlatosIncompatibles"]) + ' ;')
+			print(f'\t\t:originarioDe :{format_transformation(obj["idOrigen"])} ;')
 			print(f'\t\t:dificultad {obj["dificultad"]} ;')
 			print(f'\t\t:nombre "{ident}" ;')
 			print(f'\t\t:precio "{obj["precio"]}"^^xsd:float .')
