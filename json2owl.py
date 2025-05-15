@@ -24,7 +24,7 @@ with open("ricorico-instances.json", "r", encoding="utf-8") as f:
 			print(f'\t\t:nombre "{ident}" ;')
 			print(f'\t\t:precio "{obj["precio"]}"^^xsd:float .')
 		elif obj["type"] == "Ingrediente":
-			print('\t\t:disponibleEn ' + " , ".join(f":{str(e)}" for e in obj["idsTemporadas"]) + ' ;')	           
+			print('\t\t:disponibleEn ' + " , ".join(f":{str(format_transformation(e))}" for e in obj["idsTemporadas"]) + ' ;')	           
 			print(f'\t\t:glutenFree "{str(obj["glutenFree"]).lower()}"^^xsd:boolean ;')
 			print(f'\t\t:lactosaFree "{str(obj["lactosaFree"]).lower()}"^^xsd:boolean ;')
 			print(f'\t\t:nombre "{ident}" .')
@@ -40,3 +40,4 @@ with open("ricorico-instances.json", "r", encoding="utf-8") as f:
 			print(f'\t\t:dificultad {obj["dificultad"]} ;')
 			print(f'\t\t:nombre "{ident}" ;')
 			print(f'\t\t:precio "{obj["precio"]}"^^xsd:float .')
+		print()
