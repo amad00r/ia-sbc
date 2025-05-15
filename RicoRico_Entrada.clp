@@ -1144,18 +1144,18 @@
 
 )
 
-
 ;; Para almacenar las preferencias y restricciones del usuario.
-(deftemplate preferencias
-    (slot num_comensales)
-    (slot precio_min)
-    (slot precio_max)
-    (slot temporada)
-    (slot alcoholica)
-    (slot vino)
-    (slot diferentesBebidas)
-    (slot intolerancia_gluten)
-    (slot intolerancia_lactosa)
+(defclass Preferencias
+   (is-a USER)
+   (slot num_comensales)
+   (slot precio_min)
+   (slot precio_max)
+   (slot temporada)
+   (slot alcoholica)
+   (slot vino)
+   (slot diferentesBebidas)
+   (slot intolerancia_gluten)
+   (slot intolerancia_lactosa)
 )
 
 (defmodule MAIN (export ?ALL))
@@ -1272,7 +1272,7 @@
     (bind ?intolerancia_gluten (nth$ 1 $?lista_intolerancias))
     (bind ?intolerancia_lactosa (nth$ 2 $?lista_intolerancias))
 
-    (assert (preferencias
+    (make-instance prefs of Preferencias
         (num_comensales ?num_comensales)
         (precio_min ?precio_min)
         (precio_max ?precio_max)
@@ -1290,5 +1290,5 @@
 	=> 
 	(printout t "Ahora vamos a hacerte una serie de preguntas para poder generate el menú en base a tus preferencias y restricciones." crlf crlf)
 	(obtener_preferencias_restricciones)
-    (printout t "Preferencias y restricciones recopiladas correctamente." crlf)
+     (printout t "Preferencias y restricciones recopiladas correctamente." crlf)
 )

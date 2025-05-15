@@ -1145,16 +1145,17 @@
 )
 
 ;; Para almacenar las preferencias y restricciones del usuario.
-(deftemplate preferencias
-    (slot num_comensales)
-    (slot precio_min)
-    (slot precio_max)
-    (slot temporada)
-    (slot alcoholica)
-    (slot vino)
-    (slot diferentesBebidas)
-    (slot intolerancia_gluten)
-    (slot intolerancia_lactosa)
+(defclass Preferencias
+   (is-a USER)
+   (slot num_comensales)
+   (slot precio_min)
+   (slot precio_max)
+   (slot temporada)
+   (slot alcoholica)
+   (slot vino)
+   (slot diferentesBebidas)
+   (slot intolerancia_gluten)
+   (slot intolerancia_lactosa)
 )
 
 (defmodule MAIN 
@@ -1191,12 +1192,20 @@
     (export ?ALL)
 )
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;; MAIN ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defrule MAIN::inicio 
     (declare (salience 20)) 
     => 
     (printout t "Bienvenido al creador de menús para el catering RicoRico." crlf)
     (focus RicoRico_Entrada)
 )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;; ENTRADA ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (deffunction RicoRico_Entrada::obtener_numero_comensales ()
     ;;; Función para obtener el número de comensales.
@@ -1255,32 +1264,32 @@
 
 (deffunction RicoRico_Entrada::obtener_bebida () 
     ;;; Función para obtener las preferencias y restricciones de bebida.
-    (bind ?alcoholica (seleccion_una_opcion "Quieres que el menú tenga bebidas alcoholicas? " Si No))
-    (bind ?alcoholica (if (eq ?alcoholica Si) then TRUE else FALSE))
+    (bind ?alcoholica (seleccion_una_opcion "Quieres que el menú tenga bebidas alcoholicas? " si no))
+    (bind ?alcoholica (if (eq ?alcoholica si) then TRUE else FALSE))
 
     (if (eq ?alcoholica TRUE) then 
-        (bind ?vino (seleccion_una_opcion "Quieres vino con el menú? " Si No)) 
-        (if (eq ?vino Si) then (bind ?vino TRUE) else (bind ?vino FALSE))
+        (bind ?vino (seleccion_una_opcion "Quieres vino con el menú? " si no)) 
+        (if (eq ?vino si) then (bind ?vino TRUE) else (bind ?vino FALSE))
     else (bind ?vino FALSE))
 
-    (bind ?diferentesBebidas (seleccion_una_opcion "Quieres una bebida diferente para el primer plato y el segundo? " Si No))
-    (if (eq ?diferentesBebidas Si) then (bind ?diferentesBebidas TRUE) else (bind ?diferentesBebidas FALSE))
+    (bind ?diferentesBebidas (seleccion_una_opcion "Quieres una bebida diferente para el primer plato y el segundo? " si no))
+    (if (eq ?diferentesBebidas si) then (bind ?diferentesBebidas TRUE) else (bind ?diferentesBebidas FALSE))
 
     (return (create$ ?alcoholica ?vino ?diferentesBebidas))
 )
 
 (deffunction RicoRico_Entrada::obtener_intolerancias ()
     ;;; Función para obtener las intolerancias alimentarias.
-    (bind ?alguna_intolerancia (seleccion_una_opcion "¿Hay alguien con intolerancia alimentaria?" Si No))
+    (bind ?alguna_intolerancia (seleccion_una_opcion "¿Hay alguien con intolerancia alimentaria?" si no))
     (bind ?intolerancia_gluten FALSE)
     (bind ?intolerancia_lactosa FALSE)
 
-    (if (eq ?alguna_intolerancia Si) then 
-        (bind ?intolerancia_gluten (seleccion_una_opcion "¿Es intolerante al gluten?" Si No))
-        (if (eq ?intolerancia_gluten Si) then (bind ?intolerancia_gluten TRUE) else (bind ?intolerancia_gluten FALSE))
+    (if (eq ?alguna_intolerancia si) then 
+        (bind ?intolerancia_gluten (seleccion_una_opcion "¿Es intolerante al gluten?" si no))
+        (if (eq ?intolerancia_gluten si) then (bind ?intolerancia_gluten TRUE) else (bind ?intolerancia_gluten FALSE))
 
-        (bind ?intolerancia_lactosa (seleccion_una_opcion "¿Es intolerante a la lactosa?" Si No))
-        (if (eq ?intolerancia_lactosa Si) then (bind ?intolerancia_lactosa TRUE) else (bind ?intolerancia_lactosa FALSE))
+        (bind ?intolerancia_lactosa (seleccion_una_opcion "¿Es intolerante a la lactosa?" si no))
+        (if (eq ?intolerancia_lactosa si) then (bind ?intolerancia_lactosa TRUE) else (bind ?intolerancia_lactosa FALSE))
     )
 
     (return (create$ ?intolerancia_gluten ?intolerancia_lactosa))
@@ -1291,7 +1300,7 @@
     (bind ?num_comensales (obtener_numero_comensales))
     (bind ?precio_min (obtener_precio_min))
     (bind ?precio_max (obtener_precio_max ?precio_min))
-    (bind ?temporada (seleccion_una_opcion "Introduzca la temporada del año." Invierno Primavera Otono Verano))
+    (bind ?temporada (seleccion_una_opcion "Introduzca la temporada del año." invierno primavera otono verano))
 
     ;; Obtenemos las preferencias y restricciones de bebida
     (bind $?condiciones_bebida (obtener_bebida))
@@ -1304,7 +1313,7 @@
     (bind ?intolerancia_gluten (nth$ 1 $?lista_intolerancias))
     (bind ?intolerancia_lactosa (nth$ 2 $?lista_intolerancias))
 
-    (assert (preferencias
+     (make-instance prefs of Preferencias
         (num_comensales ?num_comensales)
         (precio_min ?precio_min)
         (precio_max ?precio_max)
@@ -1314,7 +1323,7 @@
         (diferentesBebidas ?diferentesBebidas)
         (intolerancia_gluten ?intolerancia_gluten)
         (intolerancia_lactosa ?intolerancia_lactosa)
-    ))
+     )
 )
 
 (defrule RicoRico_Entrada::instanciacion_preferencias_restricciones
@@ -1326,42 +1335,58 @@
     (focus RicoRico_Generador)
 )
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;; FILTRADO ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;; GENERADOR ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;;;TODO: CAMBIAR A FUNCION REAL; MOC!
-; (deffunction RicoRico_Generador::crear_menus_hardcoded ()
-;     (make-instance [mocMenu1] of Menu
-;         (nombre "Menú1Moc")
-;         (1rBebida [mocBebida1])
-;         (1rPlato [mocPlato1])
-;         (2oBebida [mocBebida2])
-;         (2oPlato [mocPlato2])
-;         (postre [mocPostre])
-;     )
-;     (make-instance [mocMenu2] of Menu
-;         (nombre "Menú2Moc")
-;         (1rBebida [mocBebida2])
-;         (1rPlato [mocPlato2])
-;         (2oBebida [mocBebida1])
-;         (2oPlato [mocPlato1])
-;         (postre [mocPostre])
-;     )
-;     (make-instance [mocMenu3] of Menu
-;         (nombre "Menú3Moc")
-;         (1rBebida [mocBebida1])
-;         (1rPlato [mocPlato2])
-;         (2oBebida [mocBebida2])
-;         (2oPlato [mocPlato1])
-;         (postre [mocPostre])
-;     )
-; )
+(deffunction RicoRico_Generador::crear_menus_hardcoded ()
+     (make-instance [menu1] of Menu
+          (nombre "Menú Español Tradicional")
+          (1rBebida [agua_mineral])
+          (1rPlato [paella_valenciana])
+          (2oBebida [vino_tinto_rioja])
+          (2oPlato [tortilla_de_patatas])
+          (postre [gazpacho_andaluz])
+     )
+     (make-instance [menu2] of Menu
+          (nombre "Menú Italiano Clásico")
+          (1rBebida [prosecco])
+          (1rPlato [spaghetti_alla_carbonara])
+          (2oBebida [chianti_clasico])
+          (2oPlato [pizza_margherita])
+          (postre [insalata_caprese])
+     )
+     (make-instance [menu3] of Menu
+          (nombre "Menú Mar y Tierra")
+          (1rBebida [cerveza_sin_gluten])
+          (1rPlato [arroz_caldoso_con_marisco])
+          (2oBebida [vino_blanco_albarino])
+          (2oPlato [ossobuco_alla_milanese])
+          (postre [ensalada_campera])
+     )
+) 
 
 (defrule RicoRico_Generador::generador
 	(declare (salience 10))
 	=> 
 	(printout t "--> MOC - GENERANDO MENUS <--" crlf)
-	; (crear_menus_hardcoded)
-    (printout t "--> MOC - SE HAN GENERADO CORRECTAMENTE <--" crlf)
-    (focus RicoRico_Salida)
+	(crear_menus_hardcoded)
+     (printout t "--> MOC - SE HAN GENERADO CORRECTAMENTE <--" crlf)
+     (focus RicoRico_Salida)
 )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;; SALIDA ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (deffunction RicoRico_Salida::imprimir_menu (?menu)
     ; Imprimir el menú con un formato amigable

@@ -1146,6 +1146,18 @@
 
 )
 
+;; Para almacenar las preferencias y restricciones del usuario.
+(defclass Preferencias
+   (is-a USER)
+   (slot num_comensales)
+   (slot precio_min)
+   (slot precio_max)
+   (slot temporada)
+   (slot alcoholica)
+   (slot vino)
+   (slot diferentesBebidas)
+   (slot intolerancia_gluten)
+   (slot int
 
 (defmodule MAIN (export ?ALL))
 
@@ -1163,30 +1175,30 @@
 
 ;;;TODO: CAMBIAR A FUNCION REAL; MOC!
 (deffunction RicoRico_Generador::crear_menus_hardcoded ()
-    (make-instance [mocMenu1] of Menu
-        (nombre "Menú1Moc")
-        (1rBebida [mocBebida1])
-        (1rPlato [mocPlato1])
-        (2oBebida [mocBebida2])
-        (2oPlato [mocPlato2])
-        (postre [mocPostre])
-    )
-    (make-instance [mocMenu2] of Menu
-        (nombre "Menú2Moc")
-        (1rBebida [mocBebida2])
-        (1rPlato [mocPlato2])
-        (2oBebida [mocBebida1])
-        (2oPlato [mocPlato1])
-        (postre [mocPostre])
-    )
-    (make-instance [mocMenu3] of Menu
-        (nombre "Menú3Moc")
-        (1rBebida [mocBebida1])
-        (1rPlato [mocPlato2])
-        (2oBebida [mocBebida2])
-        (2oPlato [mocPlato1])
-        (postre [mocPostre])
-    )
+     (make-instance [menu1] of Menu
+          (nombre "Menú Español Tradicional")
+          (1rBebida [agua_mineral])
+          (1rPlato [paella_valenciana])
+          (2oBebida [vino_tinto_rioja])
+          (2oPlato [tortilla_de_patatas])
+          (postre [gazpacho_andaluz])
+     )
+     (make-instance [menu2] of Menu
+          (nombre "Menú Italiano Clásico")
+          (1rBebida [prosecco])
+          (1rPlato [spaghetti_alla_carbonara])
+          (2oBebida [chianti_clasico])
+          (2oPlato [pizza_margherita])
+          (postre [insalata_caprese])
+     )
+     (make-instance [menu3] of Menu
+          (nombre "Menú Mar y Tierra")
+          (1rBebida [cerveza_sin_gluten])
+          (1rPlato [arroz_caldoso_con_marisco])
+          (2oBebida [vino_blanco_albarino])
+          (2oPlato [ossobuco_alla_milanese])
+          (postre [ensalada_campera])
+     )
 )
 
 (defrule RicoRico_Generador::generador

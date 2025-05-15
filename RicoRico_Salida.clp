@@ -1144,6 +1144,19 @@
 
 )
 
+;; Para almacenar las preferencias y restricciones del usuario.
+(defclass Preferencias
+   (is-a USER)
+   (slot num_comensales)
+   (slot precio_min)
+   (slot precio_max)
+   (slot temporada)
+   (slot alcoholica)
+   (slot vino)
+   (slot diferentesBebidas)
+   (slot intolerancia_gluten)
+   (slot int
+
 (defmodule MAIN 
     (export ?ALL)
 )
@@ -1159,33 +1172,6 @@
 	(printout t "Test salidas en función de los menús disponibles" crlf)
 	(focus RicoRico_Salida)
 )
-
-; (deffunction RicoRico_Salida::crear_menus_hardcoded ()
-;     (make-instance [mocMenu1] of Menu
-;         (nombre "Menú1Moc")
-;         (1rBebida [mocBebida1])
-;         (1rPlato [mocPlato1])
-;         (2oBebida [mocBebida2])
-;         (2oPlato [mocPlato2])
-;         (postre [mocPostre])
-;     )
-;     (make-instance [mocMenu2] of Menu
-;         (nombre "Menú2Moc")
-;         (1rBebida [mocBebida2])
-;         (1rPlato [mocPlato2])
-;         (2oBebida [mocBebida1])
-;         (2oPlato [mocPlato1])
-;         (postre [mocPostre])
-;     )
-;     (make-instance [mocMenu3] of Menu
-;         (nombre "Menú3Moc")
-;         (1rBebida [mocBebida1])
-;         (1rPlato [mocPlato2])
-;         (2oBebida [mocBebida2])
-;         (2oPlato [mocPlato1])
-;         (postre [mocPostre])
-;     )
-; )
 
 (deffunction RicoRico_Salida::imprimir_menu (?menu)
     ; Imprimir el menú con un formato amigable
@@ -1240,32 +1226,3 @@
     ; (RicoRico_Salida::crear_menus_hardcoded)
     (RicoRico_Salida::procesar_salida)
 )
-
-; For testing
-; (defrule RicoRico_Salida::escrituraSalida
-;     (declare (salience 10))
-;     ?p <- (preferencias
-;         (num_comensales ?num_comensales)
-;         (precio_min ?precio_min)
-;         (precio_max ?precio_max)
-;         (temporada ?temporada)
-;         (alcoholica ?alcoholica)
-;         (vino ?vino)
-;         (diferentesBebidas ?diferentesBebidas)
-;         (intolerancia_gluten ?intolerancia_gluten)
-;         (intolerancia_lactosa ?intolerancia_lactosa)
-;     )
-;     =>
-;     (printout t "Procesando la salida..." crlf)
-;     (printout t "Número de comensales: " ?num_comensales crlf)
-;     (printout t "Precio mínimo: " ?precio_min crlf)
-;     (printout t "Precio máximo: " ?precio_max crlf)
-;     (printout t "Temporada: " ?temporada crlf)
-;     (printout t "¿Bebidas alcohólicas?: " ?alcoholica crlf)
-;     (printout t "¿Vino?: " ?vino crlf)
-;     (printout t "¿Diferentes bebidas?: " ?diferentesBebidas crlf)
-;     (printout t "¿Intolerancia al gluten?: " ?intolerancia_gluten crlf)
-;     (printout t "¿Intolerancia a la lactosa?: " ?intolerancia_lactosa crlf)
-;     (printout t crlf)
-;     (RicoRico_Salida::procesar_salida)
-; )
