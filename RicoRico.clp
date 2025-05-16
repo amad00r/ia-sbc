@@ -1191,7 +1191,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defrule MAIN::inicio 
-     (declare (salience 20)) 
+     (declare (salience 25)) 
      => 
      (printout t "Bienvenido al creador de menús para el catering RicoRico." crlf)
      (focus RicoRico_Entrada)
@@ -1321,59 +1321,246 @@
 )
 
 (defrule RicoRico_Entrada::instanciacion_preferencias_restricciones
-     (declare (salience 15))
+     (declare (salience 20))
      => 
      (printout t "Ahora vamos a hacerte una serie de preguntas para poder generar el menú en base a tus preferencias y restricciones." crlf crlf)
      (obtener_preferencias_restricciones)
      (printout t "Preferencias y restricciones recopiladas correctamente." crlf)
-     (focus RicoRico_Generador)
+     (focus RicoRico_Filtrado)
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;; FILTRADO ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(deffunction RicoRico_Filtrado::eliminar_platos_complejos ()
+     (printout t "Eliminando platos complejos..." crlf)
 
+     (bind ?pref (nth$ 1 (find-instance ((?p Preferencias)) TRUE)))
+     (bind ?comensales (send ?pref get-num_comensales))
 
+     (bind ?lista (find-all-instances ((?p Plato)) TRUE))
 
+     (foreach ?plato ?lista
+          (bind ?dificultad (send ?plato get-dificultad))
+          (if (or 
+               (and (> ?comensales 20) (> ?dificultad 9))
+               (and (> ?comensales 50) (> ?dificultad 7))
+               (and (> ?comensales 100) (> ?dificultad 5)))
+          then
+               (send ?plato delete)
+          )
+     )
+)
+
+(deffunction RicoRico_Filtrado::eliminar_platos_fuera_temporada ()
+
+     (printout t "Eliminando platos fuera de temporada..." crlf) 
+
+     (bind ?pref (nth$ 1 (find-instance ((?p Preferencias)) TRUE)))
+     (bind ?temporada (send ?pref get-temporada))
+
+     (bind ?lista1 (find-all-instances ((?l1 Plato)) TRUE))
+
+     (foreach ?plato ?lista1
+          (bind ?ingredienteList (send ?plato get-compuestoPor))
+          (bind ?delete FALSE)
+
+          (bind ?lista2 (find-all-instances ((?l2 Ingrediente)) TRUE))
+          
+          (foreach ?ingrediente ?lista2
+               (bind ?disponibles (send ?ingrediente get-disponibleEn))
+
+               (if (and (member$ (instance-name ?ingrediente) ?ingredienteList)
+                        (not (member$ (instance-name ?temporada) ?disponibles)))
+               then
+                    (bind ?delete TRUE)
+               )
+          )
+
+          (if ?delete then
+               (send ?plato delete)     
+          )
+     )
+)
+
+(deffunction RicoRico_Filtrado::eliminar_bebidas_alcoholicas ()
+    
+     (printout t "Eliminando bebidas alcoholicas..." crlf)
+
+     (bind ?pref (nth$ 1 (find-instance ((?p Preferencias)) TRUE)))
+     (if (eq (send ?pref get-alcoholica) FALSE) then
+
+          (do-for-all-instances ((?bebida Bebida))
+               (if (eq (send ?bebida get-alcoholica) TRUE) then
+                    (send ?bebida delete)
+               )   
+          )
+     )
+)
+
+(deffunction RicoRico_Filtrado::eliminar_vinos ()
+
+     (printout t "Eliminando vinos..." crlf)
+
+     (bind ?pref (nth$ 1 (find-instance ((?p Preferencias)) TRUE)))
+     (if (eq (send ?pref get-vino) FALSE) then
+
+          (do-for-all-instances ((?vino Vino))
+               (send ?vino delete)  
+          )
+     )
+)
+
+(deffunction RicoRico_Filtrado::eliminar_platos_lactosa ()
+
+     (printout t "Eliminando platos con lactosa..." crlf)
+    
+     (bind ?pref (nth$ 1 (find-instance ((?p Preferencias)) TRUE)))
+     (bind ?lactosa (send ?pref get-intolerancia_lactosa))
+     (if ?lactosa then
+
+          (bind ?lista1 (find-all-instances ((?l1 Plato)) TRUE))
+
+          (foreach ?plato ?lista1
+               (bind ?ingredienteList (send ?plato get-compuestoPor))
+               (bind ?delete FALSE)
+               
+               (foreach ?ingrediente ?ingredienteList
+
+                    (if (not (send ?ingrediente get-lactosaFree)) then
+                         (bind ?delete TRUE)
+                    )
+               )
+
+               (if ?delete then
+                    (send ?plato delete)     
+               )
+          )
+     )
+)
+
+(deffunction RicoRico_Filtrado::eliminar_bebidas_lactosa ()
+
+     (printout t "Eliminando bebidas con lactosa..." crlf)
+
+     (bind ?pref (nth$ 1 (find-instance ((?p Preferencias)) TRUE)))
+     (if (send ?pref get-intolerancia_lactosa) then
+
+          (do-for-all-instances ((?bebida Bebida))
+               (if (not (send ?bebida get-lactosaFree)) then
+                    (send ?bebida delete)
+               )   
+          )
+     )
+)
+
+(deffunction RicoRico_Filtrado::eliminar_platos_gluten ()
+
+     (printout t "Eliminando platos con gluten..." crlf)
+
+     (bind ?pref (nth$ 1 (find-instance ((?p Preferencias)) TRUE)))
+     (bind ?gluten (send ?pref get-intolerancia_gluten))
+
+     (if ?gluten then
+
+          (bind ?lista1 (find-all-instances ((?l1 Plato)) TRUE))
+          (foreach ?plato ?lista1
+               (bind ?ingredienteList (send ?plato get-compuestoPor))
+               (bind ?delete FALSE)
+
+               (foreach ?ingrediente ?ingredienteList
+
+                    (if (not (send ?ingrediente get-glutenFree)) then
+                         (bind ?delete TRUE)
+                    )
+               )
+
+               (if ?delete then
+                    (send ?plato delete)     
+               )
+          )
+     )
+)
+
+(deffunction RicoRico_Filtrado::eliminar_bebidas_gluten ()
+
+     (printout t "Eliminando bebidas con gluten..." crlf)
+    
+     (bind ?pref (nth$ 1 (find-instance ((?p Preferencias)) TRUE)))
+     (if (send ?pref get-intolerancia_gluten) then
+
+          (do-for-all-instances ((?bebida Bebida))
+               (if (not (send ?bebida get-glutenFree)) then
+                    (send ?bebida delete)
+               )   
+          )
+     )
+)
+
+(defrule RicoRico_Filtrado::filtrado
+     (declare (salience 15))
+     =>
+     (eliminar_bebidas_alcoholicas)
+     (eliminar_bebidas_gluten)
+     (eliminar_bebidas_lactosa)
+     (eliminar_platos_complejos)
+     (eliminar_platos_fuera_temporada)
+     (eliminar_platos_gluten)
+     (eliminar_platos_lactosa)
+     (eliminar_vinos)
+     (focus RicoRico_Generador)
+)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;; GENERADOR ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;TODO: CAMBIAR A FUNCION REAL; MOC!
-(deffunction RicoRico_Generador::crear_menus_hardcoded ()
-     (make-instance [menu1] of Menu
-          (nombre "Menú Español Tradicional")
-          (1rBebida [agua_mineral])
-          (1rPlato [paella_valenciana])
-          (2oBebida [vino_tinto_rioja])
-          (2oPlato [tortilla_de_patatas])
-          (postre [gazpacho_andaluz])
-     )
-     (make-instance [menu2] of Menu
-          (nombre "Menú Italiano Clásico")
-          (1rBebida [prosecco])
-          (1rPlato [spaghetti_alla_carbonara])
-          (2oBebida [chianti_clasico])
-          (2oPlato [pizza_margherita])
-          (postre [insalata_caprese])
-     )
-     (make-instance [menu3] of Menu
-          (nombre "Menú Mar y Tierra")
-          (1rBebida [cerveza_sin_gluten])
-          (1rPlato [arroz_caldoso_con_marisco])
-          (2oBebida [vino_blanco_albarino])
-          (2oPlato [ossobuco_alla_milanese])
-          (postre [ensalada_campera])
-     )
-) 
+; (deffunction RicoRico_Generador::crear_menus_hardcoded ()
+;      (make-instance [menu1] of Menu
+;           (1rBebida [agua_mineral])
+;           (1rPlato [paella_valenciana])
+;           (2oBebida [vino_tinto_rioja])
+;           (2oPlato [tortilla_de_patatas])
+;           (postre [gazpacho_andaluz])
+;           (precio (+ (send [agua_mineral] get-precio)
+;                      (send [paella_valenciana] get-precio)
+;                      (send [vino_tinto_rioja] get-precio)
+;                      (send [tortilla_de_patatas] get-precio)
+;                      (send [gazpacho_andaluz] get-precio)))
+;      )
+;      (make-instance [menu2] of Menu
+;           (1rBebida [prosecco])
+;           (1rPlato [spaghetti_alla_carbonara])
+;           (2oBebida [chianti_clasico])
+;           (2oPlato [pizza_margherita])
+;           (postre [insalata_caprese])
+;           (precio (+ (send [prosecco] get-precio)
+;                      (send [spaghetti_alla_carbonara] get-precio)
+;                      (send [chianti_clasico] get-precio)
+;                      (send [pizza_margherita] get-precio)
+;                      (send [insalata_caprese] get-precio)))
+;      )
+;      (make-instance [menu3] of Menu
+;           (1rBebida [cerveza_sin_gluten])
+;           (1rPlato [arroz_caldoso_con_marisco])
+;           (2oBebida [vino_blanco_albarino])
+;           (2oPlato [ossobuco_alla_milanese])
+;           (postre [ensalada_campera])
+;           (precio (+ (send [cerveza_sin_gluten] get-precio)
+;                      (send [arroz_caldoso_con_marisco] get-precio)
+;                      (send [vino_blanco_albarino] get-precio)
+;                      (send [ossobuco_alla_milanese] get-precio)
+;                      (send [ensalada_campera] get-precio)))
+;      )
+; ) 
 
 (defrule RicoRico_Generador::generador
      (declare (salience 10))
      => 
      (printout t "--> MOC - GENERANDO MENUS <--" crlf)
-     (crear_menus_hardcoded)
+     ;(crear_menus_hardcoded)
      (printout t "--> MOC - SE HAN GENERADO CORRECTAMENTE <--" crlf)
      (focus RicoRico_Salida)
 )
@@ -1401,21 +1588,9 @@
      )
 )
 
-(deffunction RicoRico_Salida::calcular_precio_menu (?menu)
-     ;Función para calcular el precio del menú
-     (bind ?precioTotal 0)
-     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-1rBebida) get-precio)))
-     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-1rPlato) get-precio)))
-     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-2oBebida) get-precio)))
-     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-2oPlato) get-precio)))
-     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-postre) get-precio)))
-     ?precioTotal
-)
-
 (deffunction RicoRico_Salida::imprimir_menu (?menu)
      ; Imprimir el menú con un formato amigable
-     (printout t "   Menú: " (send ?menu get-nombre) crlf)
-     (printout t "   Precio: " (calcular_precio_menu ?menu) "€" crlf)
+     (printout t "   Precio: " (send ?menu get-precio) "€" crlf)
      (printout t "       Primera bebida: " (send (send ?menu get-1rBebida) get-nombre) crlf)
      (printout t "       Primer plato: " (send (send ?menu get-1rPlato) get-nombre) crlf)
      (printout t "       Segunda bebida: " (send (send ?menu get-2oBebida) get-nombre) crlf)
