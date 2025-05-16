@@ -1167,6 +1167,8 @@
 
 (defrule MAIN::inicio
     (declare (salience 20))
+    ;;En esta zona de aquí no puede haber nada de código. 
+    ;;.Todo despues del =>
     =>
     (printout t "Bienvenido al sistema de filtrado." crlf)
     (make-instance prefs of Preferencias
@@ -1183,10 +1185,25 @@
     (focus RicoRico_Filtrado)
 )
 
-; Sample function
+;; Función de debug.
+(deffunction RicoRico_Filtrado::imprimir_platos_disponibles ()
+     (bind ?platos (find-all-instances ((?p Plato)) TRUE))
+     (printout t "Platos disponibles:" crlf)
+     (foreach ?plato ?platos
+          (printout t " - " (send ?plato get-nombre) crlf)
+     )
+)
+
+; Funcion MOC, plantear correctamente con un numero hardcoded de dificultad y 
+; Comensales!!
+; Ej 35 comensales -> dificultad <= 6
 (defrule RicoRico_Filtrado::eliminar_platos_complejos
     (declare (salience 10))
+    ;;En esta zona de aquí no puede haber nada de código. 
+    ;;.Todo despues del =>
     =>
+    (printout t "-----> Antes de eliminar platos <-----" crlf)
+    (imprimir_platos_disponibles)
     (bind ?preferencias (find-instance ((?p Preferencias)) TRUE))
     (if (> (length$ ?preferencias) 0) then
         (bind ?pref (nth$ 1 ?preferencias))
@@ -1203,4 +1220,6 @@
     else
         (printout t "No se encontraron preferencias" crlf)
     )
+    (printout t "-----> Después de eliminar platos <-----" crlf)
+    (imprimir_platos_disponibles)
 )
