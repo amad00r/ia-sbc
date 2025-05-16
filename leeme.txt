@@ -1,0 +1,75 @@
+----- Scripts Auxiliares:
+
+- **json2owl.py**: Script auxiliar que transforma las instancias.json a formato OWL.
+
+- **boolConverter.py**: Script auxiliar que transforma las apariciones de 
+  "true"/"false" a TRUE/FALSE en el fichero que se pase como argumento. 
+  Utilizado para dar el formato correcto a RicoRico_Ontology.clp.
+
+----- Ontología:
+
+- **ricorico.ttl**: Ontología completa definida en Protege5.
+
+- **RicoRico_Ontology.clp**: Ontología completa en sintaxis de CLIPS.
+
+----- Instancias:
+
+- **ricorico-instances.json**: Parte 1 de las instancias de platos, bebidas, 
+  ingredientes...
+
+- **ricorico-instances-v2.json**: Parte 2 de las instancias de platos, bebidas, 
+  ingredientes...
+
+----- Scripts Parciales:
+
+- **RicoRico_Entrada.clp**: Script parcial para probar el correcto 
+  funcionamiento del proceso de adquisición de datos. Utilizado para obtener 
+  las restricciones y preferencias del usuario.
+
+- **RicoRico_Filtrado.clp**: Script parcial para probar el correcto 
+  funcionamiento del filtrado de platos que no cumplen con los requisitos y 
+  preferencias del usuario. Utilizado para eliminar las instancias que no 
+  cumplen con los requisitos y preferencias del usuario.
+
+- **RicoRico_Generador.clp**: Script parcial para probar el correcto 
+  funcionamiento de la generación de menús. Utilizado para generar entre 0 y 3 
+  menús en función de los platos y bebidas disponibles después del filtrado.
+
+- **RicoRico_Salida.clp**: Script parcial para probar el correcto funcionamiento 
+  de la escritura de los menús por pantalla. Utilizado para mostrar los menús 
+  generados en el script de generación.
+
+----- Script Completo:
+
+- **RicoRico.clp**: Incluye todas las funcionalidades e instancias de la 
+  ontología.
+
+----- Funcionamiento Actual:
+
+Ejecución dividida en 4 módulos:
+
+1. **Entrada**: Se pide al usuario que introduzca sus preferencias y 
+   restricciones mediante una encuesta por terminal, respondiendo a preguntas 
+   una a una.
+
+2. **Filtrado**: Se eliminan del sistema las instancias que no cumplen con los 
+   requisitos y preferencias del usuario. Después de esta ejecución, solo 
+   quedan las instancias utilizables. Se eliminan instancias en base a:
+   - Dificultad (si el número de comensales es alto).
+   - Temporada.
+   - Preferencia por bebidas alcohólicas o no.
+   - Preferencia por vino o no.
+   - Intolerancias (gluten o lactosa).
+
+3. **Generación**: Se generan todos los menús posibles y se seleccionan entre 0 
+   y 3 menús que cumplan con las condiciones de precio máximo y mínimo. También 
+   se generan en base a si el usuario quiere la misma bebida para primero y 
+   segundo plato o bebidas diferentes.
+
+4. **Salida**: Se muestran por terminal los 0-3 menús generados.
+
+**Planteamiento General**:
+
+Cada módulo tiene una `defrule` que llama a las `deffunction` auxiliares que 
+necesite. Finalmente, al terminar su trabajo, cede el control al siguiente 
+módulo.
