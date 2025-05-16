@@ -14,6 +14,8 @@
 
 ----- Instancias:
 
+- **ricorico.schema.json**: Esquema para la generación de instancias.
+
 - **ricorico-instances.json**: Parte 1 de las instancias de platos, bebidas, 
   ingredientes...
 
