@@ -1388,6 +1388,25 @@
 ;;;;;;;;;;;; SALIDA ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(deffunction RicoRico_Salida::imprimir_preferencias_y_restricciones ()
+     (bind ?prefs (find-instance ((?p Preferencias)) TRUE))
+     (if (neq ?prefs nil) then
+          (bind ?prefs (nth$ 1 ?prefs))
+          (printout t "Preferencias y restricciones definidas por el usuario:" crlf)
+          (printout t "       Número de comensales: " (send ?prefs get-num_comensales) crlf)
+          (printout t "       Precio mínimo: " (send ?prefs get-precio_min) "€" crlf)
+          (printout t "       Precio máximo: " (send ?prefs get-precio_max) "€" crlf)
+          (printout t "       Temporada: " (send ?prefs get-temporada) crlf)
+          (printout t "       ¿Bebida alcohólica?: " (if (eq (send ?prefs get-alcoholica) TRUE) then "Si" else "No") crlf)
+          (printout t "       ¿Vino?: " (if (eq (send ?prefs get-vino) TRUE) then "Si" else "No") crlf)
+          (printout t "       ¿Diferentes bebidas?: " (if (eq (send ?prefs get-diferentesBebidas) TRUE) then "Si" else "No") crlf)
+          (printout t "       ¿Intolerancia al gluten?: " (if (eq (send ?prefs get-intolerancia_gluten) TRUE) then "Si" else "No") crlf)
+          (printout t "       ¿Intolerancia a la lactosa?: " (if (eq (send ?prefs get-intolerancia_lactosa) TRUE) then "Si" else "No") crlf crlf)
+     else
+          (printout t "No hay preferencias definidas." crlf)
+     )
+)
+
 (deffunction RicoRico_Salida::calcular_precio_menu (?menu)
      ;Función para calcular el precio del menú
      (bind ?precioTotal 0)
@@ -1416,6 +1435,9 @@
 
      ; Sacar el número de menús disponibles
      (bind ?numMenus (length$ ?menus))
+
+     ; Mostrar las preferencias y restricciones del usuario
+     (imprimir_preferencias_y_restricciones)
 
      ; Mostrar menús según el número disponible
      (switch ?numMenus

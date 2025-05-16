@@ -1174,19 +1174,9 @@
 	(focus RicoRico_Salida)
 )
 
-(deffunction RicoRico_Salida::calcular_precio_menu (?menu)
-     ;Función para calcular el precio del menú
-     (bind ?precioTotal 0)
-     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-1rBebida) get-precio)))
-     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-1rPlato) get-precio)))
-     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-2oBebida) get-precio)))
-     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-2oPlato) get-precio)))
-     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-postre) get-precio)))
-     ?precioTotal
-)
 
 (deffunction RicoRico_Salida::crear_menus_hardcoded ()
-     (printout t "Creando menús hardcoded...")
+     (printout t "Creando menús hardcoded..." crlf)
      (make-instance [menu1] of Menu
           (nombre "Menú Español Tradicional")
           (1rBebida [agua_mineral])
@@ -1211,17 +1201,47 @@
           (2oPlato [ossobuco_alla_milanese])
           (postre [ensalada_campera])
      )
-) 
+)
+
+(deffunction RicoRico_Salida::calcular_precio_menu (?menu)
+     ;Función para calcular el precio del menú
+     (bind ?precioTotal 0)
+     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-1rBebida) get-precio)))
+     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-1rPlato) get-precio)))
+     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-2oBebida) get-precio)))
+     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-2oPlato) get-precio)))
+     (bind ?precioTotal (+ ?precioTotal (send (send ?menu get-postre) get-precio)))
+     ?precioTotal
+)
+
+(deffunction RicoRico_Salida::imprimir_preferencias_y_restricciones ()
+     (bind ?prefs (find-instance ((?p Preferencias)) TRUE))
+     (if (neq ?prefs nil) then
+          (bind ?prefs (nth$ 1 ?prefs))
+          (printout t "Preferencias y restricciones definidas por el usuario:" crlf)
+          (printout t "       Número de comensales: " (send ?prefs get-num_comensales) crlf)
+          (printout t "       Precio mínimo: " (send ?prefs get-precio_min) "€" crlf)
+          (printout t "       Precio máximo: " (send ?prefs get-precio_max) "€" crlf)
+          (printout t "       Temporada: " (send ?prefs get-temporada) crlf)
+          (printout t "       ¿Bebida alcohólica?: " (if (eq (send ?prefs get-alcoholica) TRUE) then "Si" else "No") crlf)
+          (printout t "       ¿Vino?: " (if (eq (send ?prefs get-vino) TRUE) then "Si" else "No") crlf)
+          (printout t "       ¿Diferentes bebidas?: " (if (eq (send ?prefs get-diferentesBebidas) TRUE) then "Si" else "No") crlf)
+          (printout t "       ¿Intolerancia al gluten?: " (if (eq (send ?prefs get-intolerancia_gluten) TRUE) then "Si" else "No") crlf)
+          (printout t "       ¿Intolerancia a la lactosa?: " (if (eq (send ?prefs get-intolerancia_lactosa) TRUE) then "Si" else "No") crlf crlf)
+     else
+          (printout t "No hay preferencias definidas." crlf)
+     )
+)
 
 (deffunction RicoRico_Salida::imprimir_menu (?menu)
      ; Imprimir el menú con un formato amigable
-     (printout t "   Menú: " (send ?menu get-nombre) crlf)
-     (printout t "   Precio: " (calcular_precio_menu ?menu) "€" crlf)
-     (printout t "       Primera bebida: " (send (send ?menu get-1rBebida) get-nombre) crlf)
-     (printout t "       Primer plato: " (send (send ?menu get-1rPlato) get-nombre) crlf)
-     (printout t "       Segunda bebida: " (send (send ?menu get-2oBebida) get-nombre) crlf)
-     (printout t "       Segundo plato: " (send (send ?menu get-2oPlato) get-nombre) crlf)
-     (printout t "       Postre: " (send (send ?menu get-postre) get-nombre) crlf crlf)
+     (printout t "       Menú: " (send ?menu get-nombre) crlf)
+     (printout t "       Precio: " (calcular_precio_menu ?menu) "€" crlf)
+     (printout t "            Primera bebida: " (send (send ?menu get-1rBebida) get-nombre) crlf)
+     (printout t "            Primer plato: " (send (send ?menu get-1rPlato) get-nombre) crlf)
+     (printout t "            Segunda bebida: " (send (send ?menu get-2oBebida) get-nombre) crlf)
+     (printout t "            Segundo plato: " (send (send ?menu get-2oPlato) get-nombre) crlf)
+     (printout t "            Postre: " (send (send ?menu get-postre) get-nombre) crlf crlf)
 )
 
 (deffunction RicoRico_Salida::procesar_salida ()
@@ -1230,6 +1250,9 @@
 
     ; Sacar el número de menús disponibles
     (bind ?numMenus (length$ ?menus))
+
+    ; Mostrar las preferencias y restricciones del usuario
+     (imprimir_preferencias_y_restricciones)
 
     ; Mostrar menús según el número disponible
     (switch ?numMenus
@@ -1263,6 +1286,17 @@
 (defrule RicoRico_Salida::escrituraSalida
     (declare (salience 10))
     =>
+    (make-instance prefs of Preferencias
+        (num_comensales 40)
+        (precio_min 5.24)
+        (precio_max 20.84)
+        (temporada otono)
+        (alcoholica TRUE)
+        (vino TRUE)
+        (diferentesBebidas FALSE)
+        (intolerancia_gluten FALSE)
+        (intolerancia_lactosa FALSE)
+    )
     (printout t "Procesando la salida ..." crlf crlf)
     (RicoRico_Salida::crear_menus_hardcoded)
     (RicoRico_Salida::procesar_salida)
