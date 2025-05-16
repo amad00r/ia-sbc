@@ -460,7 +460,7 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                        :compuestoPor :aceite_de_oliva ,
                                      :calamar ,
                                      :harina_de_trigo ,
-                                     :huevo ,
+                                     :huevos ,
                                      :limon ;
                        :esCategoria :marisco ;
                        :esPreparacion :frito ;

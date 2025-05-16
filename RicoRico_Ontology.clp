@@ -321,7 +321,7 @@
     )
 
     ([calamares_a_la_romana] of Plato
-         (compuestoPor  [aceite_de_oliva] [calamar] [harina_de_trigo] [huevo] [limon])
+         (compuestoPor  [aceite_de_oliva] [calamar] [harina_de_trigo] [huevos] [limon])
          (esCategoria  [marisco])
          (esPreparacion  [frito])
          (originarioDe  [espana])

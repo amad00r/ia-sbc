@@ -200,7 +200,7 @@
     "idCategoria": "Marisco",
     "idPreparacion": "Frito",
     "idOrigen": "España",
-    "idsIngredientes": ["Calamar", "Harina de Trigo", "Huevo", "Aceite de Oliva", "Limón"],
+    "idsIngredientes": ["Calamar", "Harina de Trigo", "Huevos", "Aceite de Oliva", "Limón"],
     "idsPlatosIncompatibles": [],
     "idsBebidasIncompatibles": []
   },
