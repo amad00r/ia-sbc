@@ -251,6 +251,7 @@
          (dificultad  7)
          (nombre  "arroz_caldoso_con_marisco")
          (precio  15.0)
+         (tipo 1)
     )
 
     ([azafran] of Ingrediente
@@ -275,6 +276,7 @@
          (dificultad  6)
          (nombre  "bacalao_al_pil_pil")
          (precio  12.0)
+         (tipo 2)
     )
 
     ([barolo] of Vino
@@ -322,6 +324,8 @@
          (dificultad  4)
          (nombre  "calamares_a_la_romana")
          (precio  8.5)
+         (tipo 1)
+
     )
 
     ([caldo_de_carne] of Ingrediente
@@ -402,6 +406,8 @@
          (dificultad  6)
          (nombre  "croquetas_de_jamon")
          (precio  7.5)
+         (tipo 1)
+
     )
 
     ([crudo] of Preparacion
@@ -416,6 +422,8 @@
          (dificultad  3)
          (nombre  "ensalada_campera")
          (precio  6.5)
+         (tipo 1)
+
     )
 
     ([escalivada] of Plato
@@ -426,6 +434,8 @@
          (dificultad  4)
          (nombre  "escalivada")
          (precio  7.0)
+         (tipo 2)
+
     )
 
     ([espaguetis] of Ingrediente
@@ -461,6 +471,8 @@
          (dificultad  4)
          (nombre  "espinacas_con_garbanzos")
          (precio  6.5)
+         (tipo 1)
+
     )
 
     ([fabada_asturiana] of Plato
@@ -471,6 +483,8 @@
          (dificultad  6)
          (nombre  "fabada_asturiana")
          (precio  11.0)
+         (tipo 2)
+
     )
 
     ([fabes] of Ingrediente
@@ -492,6 +506,8 @@
          (dificultad  4)
          (nombre  "frittata_di_zucchine")
          (precio  7.5)
+         (tipo 0)
+
     )
 
     ([gambas] of Ingrediente
@@ -523,6 +539,8 @@
          (dificultad  3)
          (nombre  "gazpacho_andaluz")
          (precio  6.0)
+         (tipo 0)
+
     )
 
     ([gnocchi] of Ingrediente
@@ -540,6 +558,8 @@
          (dificultad  5)
          (nombre  "gnocchi_al_pesto")
          (precio  10.0)
+         (tipo 1)
+
     )
 
     ([guindilla] of Ingrediente
@@ -590,6 +610,8 @@
          (dificultad  4)
          (nombre  "huevos_rotos_con_jamon")
          (precio  8.0)
+         (tipo 1)
+
     )
 
     ([insalata_caprese] of Plato
@@ -600,6 +622,8 @@
          (dificultad  2)
          (nombre  "insalata_caprese")
          (precio  6.0)
+         (tipo 2)
+
     )
 
     ([invierno] of Temporada
@@ -647,6 +671,8 @@
          (dificultad  7)
          (nombre  "lasagna_alla_bolognese")
          (precio  13.5)
+         (tipo 2)
+
     )
 
     ([leche] of Ingrediente
@@ -704,6 +730,8 @@
          (dificultad  6)
          (nombre  "melanzane_alla_parmigiana")
          (precio  9.5)
+         (tipo 2)
+
     )
 
     ([merluza] of Ingrediente
@@ -721,6 +749,8 @@
          (dificultad  6)
          (nombre  "merluza_a_la_koskera")
          (precio  12.0)
+         (tipo 1)
+
     )
 
     ([morcilla] of Ingrediente
@@ -766,6 +796,8 @@
          (dificultad  7)
          (nombre  "ossobuco_alla_milanese")
          (precio  16.0)
+         (tipo 1)
+
     )
 
     ([otono] of Temporada
@@ -780,6 +812,8 @@
          (dificultad  7)
          (nombre  "paella_valenciana")
          (precio  14.5)
+         (tipo 2)
+
     )
 
     ([pan] of Ingrediente
@@ -811,6 +845,8 @@
          (dificultad  3)
          (nombre  "pasta_al_pomodoro")
          (precio  8.0)
+         (tipo 1)
+
     )
 
     ([pasta_alla_norma] of Plato
@@ -821,6 +857,8 @@
          (dificultad  5)
          (nombre  "pasta_alla_norma")
          (precio  9.0)
+         (tipo 1)
+
     )
 
     ([patata] of Ingrediente
@@ -884,6 +922,8 @@
          (dificultad  5)
          (nombre  "pimientos_rellenos")
          (precio  9.0)
+         (tipo 2)
+
     )
 
     ([pizza_margherita] of Plato
@@ -894,6 +934,8 @@
          (dificultad  5)
          (nombre  "pizza_margherita")
          (precio  9.0)
+         (tipo 2)
+
     )
 
     ([plancha] of Preparacion
@@ -915,6 +957,8 @@
          (dificultad  4)
          (nombre  "polenta_con_funghi")
          (precio  8.5)
+         (tipo 0)
+
     )
 
     ([pollo] of Ingrediente
@@ -951,6 +995,8 @@
          (dificultad  6)
          (nombre  "pulpo_a_la_gallega")
          (precio  13.0)
+         (tipo 1)
+
     )
 
     ([queso_parmesano] of Ingrediente
@@ -968,6 +1014,8 @@
          (dificultad  6)
          (nombre  "ravioli_di_ricotta_e_spinaci")
          (precio  11.0)
+         (tipo 2)
+
     )
 
     ([raviolis] of Ingrediente
@@ -1000,6 +1048,8 @@
          (dificultad  6)
          (nombre  "risotto_ai_funghi")
          (precio  12.0)
+         (tipo 1)
+
     )
 
     ([risotto_alla_milanese] of Plato
@@ -1010,6 +1060,8 @@
          (dificultad  6)
          (nombre  "risotto_alla_milanese")
          (precio  12.5)
+         (tipo 2)
+
     )
 
     ([sal_gruesa] of Ingrediente
@@ -1031,6 +1083,8 @@
          (dificultad  5)
          (nombre  "spaghetti_alla_carbonara")
          (precio  10.5)
+         (tipo 1)
+
     )
 
     ([te_helado_de_limon] of Casual
@@ -1056,6 +1110,8 @@
          (dificultad  5)
          (nombre  "tortilla_de_patatas")
          (precio  7.5)
+         (tipo 1)
+
     )
 
     ([trofie] of Ingrediente
@@ -1073,6 +1129,8 @@
          (dificultad  4)
          (nombre  "trofie_al_pesto")
          (precio  10.0)
+         (tipo 1)
+
     )
 
     ([vegetariano] of Categoria
@@ -1505,7 +1563,7 @@
      (eliminar_bebidas_gluten)
      (eliminar_bebidas_lactosa)
      (eliminar_platos_complejos)
-     (eliminar_platos_fuera_temporada)
+     ;(eliminar_platos_fuera_temporada)
      (eliminar_platos_gluten)
      (eliminar_platos_lactosa)
      (eliminar_vinos)
@@ -1556,12 +1614,64 @@
 ;      )
 ; ) 
 
+(deffunction RicoRico_Generador::compute_price (?b1 ?p1 ?b2 ?p2 ?pst) (+
+    (send ?b1  get-precio)
+    (send ?p1  get-precio)
+    (if (eq (send ?b1 get-nombre) (send ?b2 get-nombre)) then 0 else (send ?b2 get-precio))
+    (send ?p2  get-precio)
+    (send ?pst get-precio)
+))
+
 (defrule RicoRico_Generador::generador
      (declare (salience 10))
-     => 
-     (printout t "--> MOC - GENERANDO MENUS <--" crlf)
-     ;(crear_menus_hardcoded)
-     (printout t "--> MOC - SE HAN GENERADO CORRECTAMENTE <--" crlf)
+     ?b1  <- (object (is-a Bebida))
+     ?b2  <- (object (is-a Bebida))
+     ?p1  <- (object (is-a Plato) (tipo ?t1&:(or (eq 1 ?t1) (eq 3 ?t1))))
+     ?p2  <- (object (is-a Plato) (tipo ?t2&:(or (eq 2 ?t2) (eq 3 ?t2))))
+     ?pst <- (object (is-a Plato) (tipo 0))
+     =>
+     (bind ?pref (nth$ 1 (find-instance ((?p Preferencias)) TRUE)))
+     (bind ?price (compute_price ?b1 ?p1 ?b2 ?p2 ?pst))
+     (if (and
+          (neq ?p1 ?p2)
+          (>= ?price (send ?pref get-precio_min))
+          (<= ?price (send ?pref get-precio_max))
+          (or
+               (and (eq TRUE (send ?pref get-diferentesBebidas)) (neq ?b1 ?b2))
+               (and (eq FALSE (send ?pref get-diferentesBebidas)) (eq ?b1 ?b2))
+          ))
+          then
+          (make-instance of Menu
+               (1rBebida ?b1)
+               (1rPlato ?p1)
+               (2oBebida ?b2)
+               (2oPlato ?p2)
+               (postre ?pst)
+               (precio ?price))
+     )
+)
+
+(defrule RicoRico_Generador::filter_menus
+    (declare (salience 9))
+    =>
+    (bind ?menus (find-all-instances ((?m Menu)) TRUE))
+    (bind ?count (length$ ?menus))
+    (if (> ?count 3) then
+        ;(bind ?sorted (sort ?menus compare-by-precio))
+
+        ;; Select 3 random indices between 1 and ?count (inclusive)
+        ;(bind ?m1 (nth$ (random 1 (- ?count 2)) ?sorted))
+        ;(bind ?m2 (nth$ (random (+ ?m1 1) (- ?count 1)) ?sorted))
+        ;(bind ?m3 (nth$ (random (+ ?m1 1) (- ?m2 1)) ?sorted))
+        (bind ?m1 (nth$ (random 1 ?count) ?menus))
+        (bind ?m2 (nth$ (random 1 ?count) ?menus))
+        (bind ?m3 (nth$ (random 1 ?count) ?menus))
+
+        (do-for-all-instances ((?m Menu)) TRUE
+            (if (and (neq ?m ?m1) (neq ?m ?m2) (neq ?m ?m3)) then
+                (send ?m delete)))
+    )
+
      (focus RicoRico_Salida)
 )
 
@@ -1569,77 +1679,78 @@
 ;;;;;;;;;;;; SALIDA ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(deffunction RicoRico_Salida::imprimir_preferencias_y_restricciones ()
-     (bind ?prefs (find-instance ((?p Preferencias)) TRUE))
-     (if (neq ?prefs nil) then
-          (bind ?prefs (nth$ 1 ?prefs))
-          (printout t "Preferencias y restricciones definidas por el usuario:" crlf)
-          (printout t "       Número de comensales: " (send ?prefs get-num_comensales) crlf)
-          (printout t "       Precio mínimo: " (send ?prefs get-precio_min) "€" crlf)
-          (printout t "       Precio máximo: " (send ?prefs get-precio_max) "€" crlf)
-          (printout t "       Temporada: " (send ?prefs get-temporada) crlf)
-          (printout t "       ¿Bebida alcohólica?: " (if (eq (send ?prefs get-alcoholica) TRUE) then "Si" else "No") crlf)
-          (printout t "       ¿Vino?: " (if (eq (send ?prefs get-vino) TRUE) then "Si" else "No") crlf)
-          (printout t "       ¿Diferentes bebidas?: " (if (eq (send ?prefs get-diferentesBebidas) TRUE) then "Si" else "No") crlf)
-          (printout t "       ¿Intolerancia al gluten?: " (if (eq (send ?prefs get-intolerancia_gluten) TRUE) then "Si" else "No") crlf)
-          (printout t "       ¿Intolerancia a la lactosa?: " (if (eq (send ?prefs get-intolerancia_lactosa) TRUE) then "Si" else "No") crlf crlf)
-     else
-          (printout t "No hay preferencias definidas." crlf)
-     )
-)
-
-(deffunction RicoRico_Salida::imprimir_menu (?menu)
-     ; Imprimir el menú con un formato amigable
-     (printout t "   Precio: " (send ?menu get-precio) "€" crlf)
-     (printout t "       Primera bebida: " (send (send ?menu get-1rBebida) get-nombre) crlf)
-     (printout t "       Primer plato: " (send (send ?menu get-1rPlato) get-nombre) crlf)
-     (printout t "       Segunda bebida: " (send (send ?menu get-2oBebida) get-nombre) crlf)
-     (printout t "       Segundo plato: " (send (send ?menu get-2oPlato) get-nombre) crlf)
-     (printout t "       Postre: " (send (send ?menu get-postre) get-nombre) crlf crlf)
-)
-
-(deffunction RicoRico_Salida::procesar_salida ()
-     ; Obtener todos los menús disponibles
-     (bind ?menus (find-all-instances ((?menu Menu)) TRUE))
-
-     ; Sacar el número de menús disponibles
-     (bind ?numMenus (length$ ?menus))
-
-     ; Mostrar las preferencias y restricciones del usuario
-     (imprimir_preferencias_y_restricciones)
-
-     ; Mostrar menús según el número disponible
-     (switch ?numMenus
-          (case 1 then
-               (printout t "Con las restricciones actuales, solo se ha podido generar 1 menú." crlf)
-               (printout t "Menú disponible:" crlf)
-               (foreach ?menu ?menus
-                    (RicoRico_Salida::imprimir_menu ?menu)
-               )
-          )
-          (case 2 then
-               (printout t "Con las restricciones actuales, solo se han podido generar 2 menús." crlf)
-               (printout t "Menús disponibles:" crlf)
-               (foreach ?menu ?menus
-                    (RicoRico_Salida::imprimir_menu ?menu)
-               )
-          )
-          (case 3 then
-               (printout t "Se han generado los 3 menús." crlf)
-               (printout t "Menús disponibles:" crlf)
-               (foreach ?menu ?menus
-                    (RicoRico_Salida::imprimir_menu ?menu)
-               )
-          )
-          (default
-               (printout t "No se ha podido generar ningún menú - Condiciones demasiado restrictivas." crlf)
-          )
-     )
-)
-
 (defrule RicoRico_Salida::escrituraSalida
-     (declare (salience 5))
-     =>
-     (printout t "Procesando la salida..." crlf)
-     (RicoRico_Salida::procesar_salida)
+    (declare (salience 5))
+    =>
+    (printout t "Procesando la salida ..." crlf)
+
+    ; Mostrar las preferencias y restricciones del usuario
+    (bind ?prefs (find-instance ((?p Preferencias)) TRUE))
+    (if (neq ?prefs nil) then
+        (bind ?prefs (nth$ 1 ?prefs))
+        (printout t "Preferencias y restricciones definidas por el usuario:" crlf)
+        (printout t "       Número de comensales: " (send ?prefs get-num_comensales) crlf)
+        (printout t "       Precio mínimo: " (send ?prefs get-precio_min) "€" crlf)
+        (printout t "       Precio máximo: " (send ?prefs get-precio_max) "€" crlf)
+        (printout t "       Temporada: " (send ?prefs get-temporada) crlf)
+        (printout t "       ¿Bebida alcohólica?: " (if (eq (send ?prefs get-alcoholica) TRUE) then "Si" else "No") crlf)
+        (printout t "       ¿Vino?: " (if (eq (send ?prefs get-vino) TRUE) then "Si" else "No") crlf)
+        (printout t "       ¿Diferentes bebidas?: " (if (eq (send ?prefs get-diferentesBebidas) TRUE) then "Si" else "No") crlf)
+        (printout t "       ¿Intolerancia al gluten?: " (if (eq (send ?prefs get-intolerancia_gluten) TRUE) then "Si" else "No") crlf)
+        (printout t "       ¿Intolerancia a la lactosa?: " (if (eq (send ?prefs get-intolerancia_lactosa) TRUE) then "Si" else "No") crlf crlf)
+    else
+        (printout t "No hay preferencias definidas." crlf)
+    )
+
+    ; Mostrar menús según el número disponible
+    (switch (length$ (find-all-instances ((?m Menu)) TRUE))
+        (case 1 then
+            (printout t "Con las restricciones actuales, solo se ha podido generar 1 menú." crlf)
+            (printout t "Menú disponible:" crlf)
+        )
+        (case 2 then
+            (printout t "Con las restricciones actuales, solo se han podido generar 2 menús." crlf)
+            (printout t "Menús disponibles:" crlf)
+        )
+        (case 3 then
+            (printout t "Se han generado los 3 menús." crlf)
+            (printout t "Menús disponibles:" crlf)
+        )
+        (default
+            (printout t "No se ha podido generar ningún menú - Condiciones demasiado restrictivas." crlf)
+        )
+    )
+)
+
+(defrule RicoRico_Salida::escrituraMenu
+    (declare (salience 3))
+    ?menu <- (object
+        (is-a      Menu)
+        (1rBebida ?b1)
+        (1rPlato  ?p1)
+        (2oBebida ?b2)
+        (2oPlato  ?p2)
+        (postre   ?pst)
+        (precio   ?precio))
+    =>
+    (if (eq (send ?b1 get-nombre) (send ?b2 get-nombre)) then
+        (printout t
+            "Menú (" ?precio " euros)" crlf
+            "    Bebida: "        (send ?b1  get-nombre) crlf
+            "    Primer plato: "  (send ?p1  get-nombre) crlf
+            "    Segundo plato: " (send ?p2  get-nombre) crlf
+            "    Postre: "        (send ?pst get-nombre) crlf
+            crlf
+        )
+    else
+        (printout t
+            "Menú (" ?precio " euros)" crlf
+            "    Primera bebida: " (send ?b1  get-nombre) crlf
+            "    Primer plato: "   (send ?p1  get-nombre) crlf
+            "    Segunda bebida: " (send ?b2  get-nombre) crlf
+            "    Segundo plato: "  (send ?p2  get-nombre) crlf
+            "    Postre: "         (send ?pst get-nombre) crlf
+            crlf
+        )
+    )
 )

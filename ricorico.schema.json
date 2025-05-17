@@ -75,9 +75,10 @@
                 "idOrigen": { "type": "string" },
                 "idsIngredientes": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
                 "idsPlatosIncompatibles": { "type": "array", "items": { "type": "string" } },
-                "idsBebidasIncompatibles": { "type": "array", "items": { "type": "string" } }
+                "idsBebidasIncompatibles": { "type": "array", "items": { "type": "string" } },
+                "tipo": { "type": "integer" }
             },
-            "required": ["type", "id", "precio", "dificultad", "idCategoria", "idPreparacion", "idOrigen", "idsIngredientes", "idsPlatosIncompatibles", "idsBebidasIncompatibles"],
+            "required": ["type", "id", "precio", "dificultad", "idCategoria", "idPreparacion", "idOrigen", "idsIngredientes", "idsPlatosIncompatibles", "idsBebidasIncompatibles", "tipo"],
             "additionalProperties": false
         },
         "Bebida": {
