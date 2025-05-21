@@ -169,11 +169,12 @@
         "idOrigen": "Francia",
         "idsIngredientes": ["Caracoles", "Ajo", "Perejil", "Mantequilla", "Chalotas", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Cerveza Rubia"]
+        "idsBebidasIncompatibles": ["Cerveza Rubia"],
+        "tipo": 1
     },
     {
         "type": "Plato",
-        "id": "Soupe à l’Oignon",
+        "id": "Soupe à l'Oignon",
         "precio": 5.50,
         "dificultad": 4,
         "idCategoria": "Sopa",
@@ -181,7 +182,8 @@
         "idOrigen": "Francia",
         "idsIngredientes": ["Cebolla", "Caldo de carne", "Mantequilla", "Vino blanco", "Baguette", "Queso Gruyère", "Tomillo", "Laurel", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Tinto De Verano"]
+        "idsBebidasIncompatibles": ["Tinto De Verano"],
+        "tipo": 1
     },
     {
         "type": "Plato",
@@ -193,7 +195,8 @@
         "idOrigen": "Francia",
         "idsIngredientes": ["Hígado de pato o ganso", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Cerveza Artesanal"]
+        "idsBebidasIncompatibles": ["Cerveza Artesanal"],
+        "tipo": 1
     },
     {
         "type": "Plato",
@@ -205,7 +208,8 @@
         "idOrigen": "Francia",
         "idsIngredientes": ["Masa quebrada", "Huevo", "Nata espesa", "Lardones", "Queso Gruyère", "Nuez moscada", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Tinto De Verano"]
+        "idsBebidasIncompatibles": ["Tinto De Verano"],
+        "tipo": 3
     },
     {
         "type": "Plato",
@@ -217,7 +221,8 @@
         "idOrigen": "Francia",
         "idsIngredientes": ["Queso de cabra", "Baguette", "Hojas verdes", "Nuez", "Aceite", "Vinagre balsámico", "Mostaza de Dijon", "Miel", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Cerveza Rubia"]
+        "idsBebidasIncompatibles": ["Cerveza Rubia"],
+        "tipo": 1
     },
     {
         "type": "Plato",
@@ -229,7 +234,8 @@
         "idOrigen": "Francia",
         "idsIngredientes": ["Carne de res", "Vino tinto", "Zanahoria", "Cebolla", "Ajo", "Bacon", "Champiñones", "Pasta de tomate", "Caldo de carne", "Tomillo", "Laurel", "Harina", "Mantequilla", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Coca-Cola", "Fanta Naranja"]
+        "idsBebidasIncompatibles": ["Coca-Cola", "Fanta Naranja"],
+        "tipo": 2
     },
     {
         "type": "Plato",
@@ -241,7 +247,8 @@
         "idOrigen": "Francia",
         "idsIngredientes": ["Pollo", "Vino tinto", "Bacon", "Cebolla", "Champiñones", "Ajo", "Zanahoria", "Caldo de pollo", "Tomillo", "Laurel", "Harina", "Mantequilla", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Coca-Cola", "Pepsi"]
+        "idsBebidasIncompatibles": ["Coca-Cola", "Pepsi"],
+        "tipo": 2
     },
     {
         "type": "Plato",
@@ -253,7 +260,8 @@
         "idOrigen": "Francia",
         "idsIngredientes": ["Muslos de pato", "Grasa de pato", "Ajo", "Tomillo", "Laurel", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Sprite"]
+        "idsBebidasIncompatibles": ["Sprite"],
+        "tipo": 2
     },
     {
         "type": "Plato",
@@ -265,7 +273,8 @@
         "idOrigen": "Francia",
         "idsIngredientes": ["Filete de res", "Patatas", "Sal", "Pimienta", "Aceite"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Agua Sin Gas"]
+        "idsBebidasIncompatibles": ["Agua Sin Gas"],
+        "tipo": 2
     },
     {
         "type": "Plato",
@@ -277,7 +286,8 @@
         "idOrigen": "Francia",
         "idsIngredientes": ["Calabacín", "Berenjena", "Pimiento", "Tomate", "Cebolla", "Ajo", "Aceite", "Tomillo", "Albahaca", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Cerveza Rubia"]
+        "idsBebidasIncompatibles": ["Cerveza Rubia"],
+        "tipo": 3
     },
     {
         "type": "Plato",
@@ -289,7 +299,8 @@
         "idOrigen": "Francia",
         "idsIngredientes": ["Pescados variados", "Mariscos", "Hinojo", "Puerro", "Cebolla", "Ajo", "Tomate", "Ralladura de naranja", "Azafrán", "Aceite", "Caldo de pescado", "Laurel", "Tomillo"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Cerveza Artesanal"]
+        "idsBebidasIncompatibles": ["Cerveza Artesanal"],
+        "tipo": 2
     },
     {
         "type": "Plato",
@@ -301,7 +312,8 @@
         "idOrigen": "Francia",
         "idsIngredientes": ["Mejillones", "Chalotas", "Ajo", "Vino blanco", "Perejil", "Mantequilla", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Tinto De Verano"]
+        "idsBebidasIncompatibles": ["Tinto De Verano"],
+        "tipo": 2
     },
     {
         "type": "Plato",
@@ -313,7 +325,8 @@
         "idOrigen": "Francia",
         "idsIngredientes": ["Brie", "Roquefort", "Comté", "Queso de cabra", "Baguette"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["7Up"]
+        "idsBebidasIncompatibles": ["7Up"],
+        "tipo": 3
     },
     {
         "type": "Plato",
@@ -325,7 +338,8 @@
         "idOrigen": "Francia",
         "idsIngredientes": ["Nata espesa", "Huevo", "Azúcar", "Vainilla", "Azúcar moreno"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Cerveza Rubia"]
+        "idsBebidasIncompatibles": ["Cerveza Rubia"],
+        "tipo": 0
     },
     {
         "type": "Plato",
@@ -337,7 +351,8 @@
         "idOrigen": "Francia",
         "idsIngredientes": ["Manzanas", "Mantequilla", "Azúcar", "Masa de hojaldre", "Canela"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Pepsi", "Fanta Naranja"]
+        "idsBebidasIncompatibles": ["Pepsi", "Fanta Naranja"],
+        "tipo": 0
     },
     {
         "type": "Plato",
@@ -349,7 +364,8 @@
         "idOrigen": "Grecia",
         "idsIngredientes": ["Carne de res", "Berenjena", "Salsa bechamel", "Cebolla", "Ajo", "Tomate"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Txakoli", "Sauvignon Blanc", "Sprite", "7Up", "Refresco de limón"]
+        "idsBebidasIncompatibles": ["Txakoli", "Sauvignon Blanc", "Sprite", "7Up", "Refresco de limón"],
+        "tipo": 2
     },
     {
         "type": "Plato",
@@ -361,7 +377,8 @@
         "idOrigen": "Grecia",
         "idsIngredientes": ["Cerdo", "Pollo", "Aceite", "Limón", "Orégano", "Ajo", "Pita", "Tomate", "Cebolla", "Tzatziki"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Barolo", "Cabernet Sauvignon", "Chardonnay"]
+        "idsBebidasIncompatibles": ["Barolo", "Cabernet Sauvignon", "Chardonnay"],
+        "tipo": 2
     },
     {
         "type": "Plato",
@@ -373,7 +390,8 @@
         "idOrigen": "Grecia",
         "idsIngredientes": ["Espinaca", "Queso feta", "Masa filo", "Cebolla", "Eneldo", "Aceite"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Zinfandel", "Merlot", "Cerveza artesanal"]
+        "idsBebidasIncompatibles": ["Zinfandel", "Merlot", "Cerveza artesanal"],
+        "tipo": 1
     },
     {
         "type": "Plato",
@@ -385,7 +403,8 @@
         "idOrigen": "Grecia",
         "idsIngredientes": ["Hojas de parra", "Arroz", "Cordero", "Carne de res", "Hierbas", "Cebolla", "Aceite", "Limón"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Barolo", "Tinto de verano", "Zinfandel"]
+        "idsBebidasIncompatibles": ["Barolo", "Tinto de verano", "Zinfandel"],
+        "tipo": 1
     },
     {
         "type": "Plato",
@@ -397,7 +416,8 @@
         "idOrigen": "Grecia",
         "idsIngredientes": ["Yogur griego", "Pepino", "Ajo", "Eneldo", "Aceite", "Limón"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Cabernet Sauvignon", "Ribera del Duero", "Barolo", "Cerveza artesanal", "Coca-Cola", "Pepsi"]
+        "idsBebidasIncompatibles": ["Cabernet Sauvignon", "Ribera del Duero", "Barolo", "Cerveza artesanal", "Coca-Cola", "Pepsi"],
+        "tipo": 1
     },
     {
         "type": "Plato",
@@ -409,7 +429,8 @@
         "idOrigen": "Grecia",
         "idsIngredientes": ["Carne de res", "Pasta", "Salsa bechamel", "Queso", "Cebolla", "Ajo", "Canela"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Txakoli", "Albariño", "Verdicchio", "7Up", "Fanta naranja"]
+        "idsBebidasIncompatibles": ["Txakoli", "Albariño", "Verdicchio", "7Up", "Fanta naranja"],
+        "tipo": 2
     },
     {
         "type": "Plato",
@@ -421,7 +442,8 @@
         "idOrigen": "Grecia",
         "idsIngredientes": ["Arroz", "Tomate", "Pimiento", "Calabacín", "Cebolla", "Hierbas", "Aceite"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Barolo", "Cabernet Sauvignon", "Lambrusco", "Fanta naranja", "Pepsi"]
+        "idsBebidasIncompatibles": ["Barolo", "Cabernet Sauvignon", "Lambrusco", "Fanta naranja", "Pepsi"],
+        "tipo": 2
     },
     {
         "type": "Plato",
@@ -433,7 +455,8 @@
         "idOrigen": "Grecia",
         "idsIngredientes": ["Frijol", "Tomate", "Aceite", "Cebolla", "Zanahoria", "Apio", "Hierbas"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Chardonnay", "Merlot", "Zinfandel", "Cerveza artesanal"]
+        "idsBebidasIncompatibles": ["Chardonnay", "Merlot", "Zinfandel", "Cerveza artesanal"],
+        "tipo": 1
     },
     {
         "type": "Plato",
@@ -445,7 +468,8 @@
         "idOrigen": "Grecia",
         "idsIngredientes": ["Cordero", "Papas", "Ajo", "Romero", "Limón", "Aceite"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Txakoli", "Albariño", "Sprite", "7Up"]
+        "idsBebidasIncompatibles": ["Txakoli", "Albariño", "Sprite", "7Up"],
+        "tipo": 2
     },
     {
         "type": "Plato",
@@ -457,7 +481,8 @@
         "idOrigen": "Grecia",
         "idsIngredientes": ["Sémola", "Leche", "Azúcar", "Masa filo", "Limón", "Mantequilla"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Cabernet Sauvignon", "Merlot", "Chianti", "Ribera del Duero", "Cerveza rubia", "Tinto de verano"]
+        "idsBebidasIncompatibles": ["Cabernet Sauvignon", "Merlot", "Chianti", "Ribera del Duero", "Cerveza rubia", "Tinto de verano"],
+        "tipo": 0
     },
     {
         "type": "Plato",
@@ -469,7 +494,8 @@
         "idOrigen": "Grecia",
         "idsIngredientes": ["Harina", "Levadura", "Miel", "Azúcar", "Canela"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Barolo", "Zinfandel", "Ribera del Duero", "Cerveza artesanal"]
+        "idsBebidasIncompatibles": ["Barolo", "Zinfandel", "Ribera del Duero", "Cerveza artesanal"],
+        "tipo": 0
     },
     {
         "type": "Plato",
@@ -481,7 +507,8 @@
         "idOrigen": "Grecia",
         "idsIngredientes": ["Frijol", "Tomate", "Aceite", "Ajo", "Cebolla", "Hierbas"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Chianti", "Barolo", "Cabernet Sauvignon", "Fanta naranja", "7Up"]
+        "idsBebidasIncompatibles": ["Chianti", "Barolo", "Cabernet Sauvignon", "Fanta naranja", "7Up"],
+        "tipo": 3
     },
     {
         "type": "Plato",
@@ -493,7 +520,8 @@
         "idOrigen": "Grecia",
         "idsIngredientes": ["Masa filo", "Nuez", "Pistacho", "Miel", "Azúcar", "Mantequilla"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Merlot", "Barolo", "Cabernet Sauvignon", "Cerveza rubia", "Cerveza artesanal"]
+        "idsBebidasIncompatibles": ["Merlot", "Barolo", "Cabernet Sauvignon", "Cerveza rubia", "Cerveza artesanal"],
+        "tipo": 0
     },
     {
         "type": "Plato",
@@ -505,7 +533,8 @@
         "idOrigen": "Grecia",
         "idsIngredientes": ["Pollo", "Arroz", "Huevo", "Limón", "Caldo"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Txakoli", "Sauvignon Blanc", "Tinto de verano"]
+        "idsBebidasIncompatibles": ["Txakoli", "Sauvignon Blanc", "Tinto de verano"],
+        "tipo": 1
     },
     {
         "type": "Plato",
@@ -517,6 +546,7 @@
         "idOrigen": "Grecia",
         "idsIngredientes": ["Queso feta", "Masa filo", "Huevo", "Aceite"],
         "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Zinfandel", "Cabernet Sauvignon", "Ribera del Duero", "Sprite", "Refresco de limón"]
+        "idsBebidasIncompatibles": ["Zinfandel", "Cabernet Sauvignon", "Ribera del Duero", "Sprite", "Refresco de limón"],
+        "tipo": 1
     }
 ]
