@@ -1272,7 +1272,7 @@
     )
 )
 
-(deffunction compare-by-precio (?a ?b)
+(deffunction RicoRico_Generador::compare-by-precio (?a ?b)
   (< (send ?a get-precio) (send ?b get-precio)))
 
 (defrule RicoRico_Generador::filter_menus
