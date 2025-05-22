@@ -118,7 +118,7 @@
     (multislot compuestoPor
         (type INSTANCE)
         (create-accessor read-write))
-    ;;; Relación para indicar en qué temporada está disponible un ingrediente.
+    ;;; Relación para indicar en qué temporada está disponible un plato.
     (multislot disponibleEn
         (type INSTANCE)
         (create-accessor read-write))

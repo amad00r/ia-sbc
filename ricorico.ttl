@@ -65,7 +65,7 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
               rdfs:subPropertyOf owl:topObjectProperty ;
               rdfs:domain :Plato ;
               rdfs:range :Temporada ;
-              rdfs:comment "Relación para indicar en qué temporada está disponible un ingrediente." .
+              rdfs:comment "Relación para indicar en qué temporada está disponible un plato." .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/esCategoria
