@@ -69,95 +69,95 @@
     { "type": "Casual", "id": "Cerveza Rubia", "precio": 3.5, "alcoholica": true },
     { "type": "Casual", "id": "Cerveza Artesanal", "precio": 4.5, "alcoholica": true },
 
-    {"Aceite":{"type":"Ingrediente","id":"Aceite","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Ajo":{"type":"Ingrediente","id":"Ajo","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Albahaca":{"type":"Ingrediente","id":"Albahaca","idsTemporadas":["Primavera","Verano"],"glutenFree":true,"lactosaFree":true}},
-    {"Apio":{"type":"Ingrediente","id":"Apio","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Arroz":{"type":"Ingrediente","id":"Arroz","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Azafrán":{"type":"Ingrediente","id":"Azafrán","idsTemporadas":["Primavera","Verano"],"glutenFree":true,"lactosaFree":true}},
-    {"Azúcar":{"type":"Ingrediente","id":"Azúcar","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Azúcar moreno":{"type":"Ingrediente","id":"Azúcar moreno","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Bacon":{"type":"Ingrediente","id":"Bacon","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Baguette":{"type":"Ingrediente","id":"Baguette","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":false,"lactosaFree":false}},
-    {"Berenjena":{"type":"Ingrediente","id":"Berenjena","idsTemporadas":["Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Brie":{"type":"Ingrediente","id":"Brie","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":false}},
-    {"Calabacín":{"type":"Ingrediente","id":"Calabacín","idsTemporadas":["Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Caldo":{"type":"Ingrediente","id":"Caldo","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Caldo de carne":{"type":"Ingrediente","id":"Caldo de carne","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Caldo de pescado":{"type":"Ingrediente","id":"Caldo de pescado","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Caldo de pollo":{"type":"Ingrediente","id":"Caldo de pollo","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Canela":{"type":"Ingrediente","id":"Canela","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Caracoles":{"type":"Ingrediente","id":"Caracoles","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Carne de res":{"type":"Ingrediente","id":"Carne de res","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Cebolla":{"type":"Ingrediente","id":"Cebolla","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Cerdo":{"type":"Ingrediente","id":"Cerdo","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Chalotas":{"type":"Ingrediente","id":"Chalotas","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Champiñones":{"type":"Ingrediente","id":"Champiñones","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Comté":{"type":"Ingrediente","id":"Comté","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":false}},
-    {"Cordero":{"type":"Ingrediente","id":"Cordero","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Eneldo":{"type":"Ingrediente","id":"Eneldo","idsTemporadas":["Primavera","Verano"],"glutenFree":true,"lactosaFree":true}},
-    {"Espinaca":{"type":"Ingrediente","id":"Espinaca","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Filete de res":{"type":"Ingrediente","id":"Filete de res","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Frijol":{"type":"Ingrediente","id":"Frijol","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Grasa de pato":{"type":"Ingrediente","id":"Grasa de pato","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Harina":{"type":"Ingrediente","id":"Harina","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":false,"lactosaFree":true}},
-    {"Hierbas":{"type":"Ingrediente","id":"Hierbas","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Hinojo":{"type":"Ingrediente","id":"Hinojo","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Hojas de parra":{"type":"Ingrediente","id":"Hojas de parra","idsTemporadas":["Primavera","Verano"],"glutenFree":true,"lactosaFree":true}},
-    {"Hojas verdes":{"type":"Ingrediente","id":"Hojas verdes","idsTemporadas":["Primavera","Verano"],"glutenFree":true,"lactosaFree":true}},
-    {"Huevo":{"type":"Ingrediente","id":"Huevo","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":false}},
-    {"Hígado de pato o ganso":{"type":"Ingrediente","id":"Hígado de pato o ganso","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":false}},
-    {"Lardones":{"type":"Ingrediente","id":"Lardones","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Laurel":{"type":"Ingrediente","id":"Laurel","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Leche":{"type":"Ingrediente","id":"Leche","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":false}},
-    {"Levadura":{"type":"Ingrediente","id":"Levadura","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":false,"lactosaFree":true}},
-    {"Limón":{"type":"Ingrediente","id":"Limón","idsTemporadas":["Primavera","Verano"],"glutenFree":true,"lactosaFree":true}},
-    {"Mantequilla":{"type":"Ingrediente","id":"Mantequilla","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":false}},
-    {"Manzanas":{"type":"Ingrediente","id":"Manzanas","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Mariscos":{"type":"Ingrediente","id":"Mariscos","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Masa de hojaldre":{"type":"Ingrediente","id":"Masa de hojaldre","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":false,"lactosaFree":false}},
-    {"Masa filo":{"type":"Ingrediente","id":"Masa filo","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":false,"lactosaFree":false}},
-    {"Masa quebrada":{"type":"Ingrediente","id":"Masa quebrada","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":false,"lactosaFree":false}},
-    {"Mejillones":{"type":"Ingrediente","id":"Mejillones","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Miel":{"type":"Ingrediente","id":"Miel","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Mostaza de Dijon":{"type":"Ingrediente","id":"Mostaza de Dijon","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Muslos de pato":{"type":"Ingrediente","id":"Muslos de pato","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Nata espesa":{"type":"Ingrediente","id":"Nata espesa","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":false}},
-    {"Nuez":{"type":"Ingrediente","id":"Nuez","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Nuez moscada":{"type":"Ingrediente","id":"Nuez moscada","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Orégano":{"type":"Ingrediente","id":"Orégano","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Papas":{"type":"Ingrediente","id":"Papas","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Pasta":{"type":"Ingrediente","id":"Pasta","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":false,"lactosaFree":true}},
-    {"Pasta de tomate":{"type":"Ingrediente","id":"Pasta de tomate","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Patatas":{"type":"Ingrediente","id":"Patatas","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Pepino":{"type":"Ingrediente","id":"Pepino","idsTemporadas":["Primavera","Verano"],"glutenFree":true,"lactosaFree":true}},
-    {"Perejil":{"type":"Ingrediente","id":"Perejil","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Pescados variados":{"type":"Ingrediente","id":"Pescados variados","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Pimienta":{"type":"Ingrediente","id":"Pimienta","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Pimiento":{"type":"Ingrediente","id":"Pimiento","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Pistacho":{"type":"Ingrediente","id":"Pistacho","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Pita":{"type":"Ingrediente","id":"Pita","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":false,"lactosaFree":true}},
-    {"Pollo":{"type":"Ingrediente","id":"Pollo","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Puerro":{"type":"Ingrediente","id":"Puerro","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Queso":{"type":"Ingrediente","id":"Queso","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":false}},
-    {"Queso Gruyère":{"type":"Ingrediente","id":"Queso Gruyère","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":false}},
-    {"Queso de cabra":{"type":"Ingrediente","id":"Queso de cabra","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":false}},
-    {"Queso feta":{"type":"Ingrediente","id":"Queso feta","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":false}},
-    {"Ralladura de naranja":{"type":"Ingrediente","id":"Ralladura de naranja","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Romero":{"type":"Ingrediente","id":"Romero","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Roquefort":{"type":"Ingrediente","id":"Roquefort","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":false}},
-    {"Sal":{"type":"Ingrediente","id":"Sal","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Salsa bechamel":{"type":"Ingrediente","id":"Salsa bechamel","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":false,"lactosaFree":false}},
-    {"Sémola":{"type":"Ingrediente","id":"Sémola","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":false,"lactosaFree":true}},
-    {"Tomate":{"type":"Ingrediente","id":"Tomate","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Tomillo":{"type":"Ingrediente","id":"Tomillo","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
-    {"Tzatziki":{"type":"Ingrediente","id":"Tzatziki","idsTemporadas":["Primavera","Verano"],"glutenFree":true,"lactosaFree":false}},
-    {"Vainilla":{"type":"Ingrediente","id":"Vainilla","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Vinagre balsámico":{"type":"Ingrediente","id":"Vinagre balsámico","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Vino blanco":{"type":"Ingrediente","id":"Vino blanco","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Vino tinto":{"type":"Ingrediente","id":"Vino tinto","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":true}},
-    {"Yogur griego":{"type":"Ingrediente","id":"Yogur griego","idsTemporadas":["Primavera","Verano","Otoño","Invierno"],"glutenFree":true,"lactosaFree":false}},
-    {"Zanahoria":{"type":"Ingrediente","id":"Zanahoria","idsTemporadas":["Primavera","Verano","Otoño"],"glutenFree":true,"lactosaFree":true}},
+    {"Aceite":{"type":"Ingrediente","id":"Aceite","glutenFree":true,"lactosaFree":true}},
+    {"Ajo":{"type":"Ingrediente","id":"Ajo","glutenFree":true,"lactosaFree":true}},
+    {"Albahaca":{"type":"Ingrediente","id":"Albahaca","glutenFree":true,"lactosaFree":true}},
+    {"Apio":{"type":"Ingrediente","id":"Apio","glutenFree":true,"lactosaFree":true}},
+    {"Arroz":{"type":"Ingrediente","id":"Arroz","glutenFree":true,"lactosaFree":true}},
+    {"Azafrán":{"type":"Ingrediente","id":"Azafrán","glutenFree":true,"lactosaFree":true}},
+    {"Azúcar":{"type":"Ingrediente","id":"Azúcar","glutenFree":true,"lactosaFree":true}},
+    {"Azúcar moreno":{"type":"Ingrediente","id":"Azúcar moreno","glutenFree":true,"lactosaFree":true}},
+    {"Bacon":{"type":"Ingrediente","id":"Bacon","glutenFree":true,"lactosaFree":true}},
+    {"Baguette":{"type":"Ingrediente","id":"Baguette","glutenFree":false,"lactosaFree":false}},
+    {"Berenjena":{"type":"Ingrediente","id":"Berenjena","glutenFree":true,"lactosaFree":true}},
+    {"Brie":{"type":"Ingrediente","id":"Brie","glutenFree":true,"lactosaFree":false}},
+    {"Calabacín":{"type":"Ingrediente","id":"Calabacín","glutenFree":true,"lactosaFree":true}},
+    {"Caldo":{"type":"Ingrediente","id":"Caldo","glutenFree":true,"lactosaFree":true}},
+    {"Caldo de carne":{"type":"Ingrediente","id":"Caldo de carne","glutenFree":true,"lactosaFree":true}},
+    {"Caldo de pescado":{"type":"Ingrediente","id":"Caldo de pescado","glutenFree":true,"lactosaFree":true}},
+    {"Caldo de pollo":{"type":"Ingrediente","id":"Caldo de pollo","glutenFree":true,"lactosaFree":true}},
+    {"Canela":{"type":"Ingrediente","id":"Canela","glutenFree":true,"lactosaFree":true}},
+    {"Caracoles":{"type":"Ingrediente","id":"Caracoles","glutenFree":true,"lactosaFree":true}},
+    {"Carne de res":{"type":"Ingrediente","id":"Carne de res","glutenFree":true,"lactosaFree":true}},
+    {"Cebolla":{"type":"Ingrediente","id":"Cebolla","glutenFree":true,"lactosaFree":true}},
+    {"Cerdo":{"type":"Ingrediente","id":"Cerdo","glutenFree":true,"lactosaFree":true}},
+    {"Chalotas":{"type":"Ingrediente","id":"Chalotas","glutenFree":true,"lactosaFree":true}},
+    {"Champiñones":{"type":"Ingrediente","id":"Champiñones","glutenFree":true,"lactosaFree":true}},
+    {"Comté":{"type":"Ingrediente","id":"Comté","glutenFree":true,"lactosaFree":false}},
+    {"Cordero":{"type":"Ingrediente","id":"Cordero","glutenFree":true,"lactosaFree":true}},
+    {"Eneldo":{"type":"Ingrediente","id":"Eneldo","glutenFree":true,"lactosaFree":true}},
+    {"Espinaca":{"type":"Ingrediente","id":"Espinaca","glutenFree":true,"lactosaFree":true}},
+    {"Filete de res":{"type":"Ingrediente","id":"Filete de res","glutenFree":true,"lactosaFree":true}},
+    {"Frijol":{"type":"Ingrediente","id":"Frijol","glutenFree":true,"lactosaFree":true}},
+    {"Grasa de pato":{"type":"Ingrediente","id":"Grasa de pato","glutenFree":true,"lactosaFree":true}},
+    {"Harina":{"type":"Ingrediente","id":"Harina","glutenFree":false,"lactosaFree":true}},
+    {"Hierbas":{"type":"Ingrediente","id":"Hierbas","glutenFree":true,"lactosaFree":true}},
+    {"Hinojo":{"type":"Ingrediente","id":"Hinojo","glutenFree":true,"lactosaFree":true}},
+    {"Hojas de parra":{"type":"Ingrediente","id":"Hojas de parra","glutenFree":true,"lactosaFree":true}},
+    {"Hojas verdes":{"type":"Ingrediente","id":"Hojas verdes","glutenFree":true,"lactosaFree":true}},
+    {"Huevo":{"type":"Ingrediente","id":"Huevo","glutenFree":true,"lactosaFree":false}},
+    {"Hígado de pato o ganso":{"type":"Ingrediente","id":"Hígado de pato o ganso","glutenFree":true,"lactosaFree":false}},
+    {"Lardones":{"type":"Ingrediente","id":"Lardones","glutenFree":true,"lactosaFree":true}},
+    {"Laurel":{"type":"Ingrediente","id":"Laurel","glutenFree":true,"lactosaFree":true}},
+    {"Leche":{"type":"Ingrediente","id":"Leche","glutenFree":true,"lactosaFree":false}},
+    {"Levadura":{"type":"Ingrediente","id":"Levadura","glutenFree":false,"lactosaFree":true}},
+    {"Limón":{"type":"Ingrediente","id":"Limón","glutenFree":true,"lactosaFree":true}},
+    {"Mantequilla":{"type":"Ingrediente","id":"Mantequilla","glutenFree":true,"lactosaFree":false}},
+    {"Manzanas":{"type":"Ingrediente","id":"Manzanas","glutenFree":true,"lactosaFree":true}},
+    {"Mariscos":{"type":"Ingrediente","id":"Mariscos","glutenFree":true,"lactosaFree":true}},
+    {"Masa de hojaldre":{"type":"Ingrediente","id":"Masa de hojaldre","glutenFree":false,"lactosaFree":false}},
+    {"Masa filo":{"type":"Ingrediente","id":"Masa filo","glutenFree":false,"lactosaFree":false}},
+    {"Masa quebrada":{"type":"Ingrediente","id":"Masa quebrada","glutenFree":false,"lactosaFree":false}},
+    {"Mejillones":{"type":"Ingrediente","id":"Mejillones","glutenFree":true,"lactosaFree":true}},
+    {"Miel":{"type":"Ingrediente","id":"Miel","glutenFree":true,"lactosaFree":true}},
+    {"Mostaza de Dijon":{"type":"Ingrediente","id":"Mostaza de Dijon","glutenFree":true,"lactosaFree":true}},
+    {"Muslos de pato":{"type":"Ingrediente","id":"Muslos de pato","glutenFree":true,"lactosaFree":true}},
+    {"Nata espesa":{"type":"Ingrediente","id":"Nata espesa","glutenFree":true,"lactosaFree":false}},
+    {"Nuez":{"type":"Ingrediente","id":"Nuez","glutenFree":true,"lactosaFree":true}},
+    {"Nuez moscada":{"type":"Ingrediente","id":"Nuez moscada","glutenFree":true,"lactosaFree":true}},
+    {"Orégano":{"type":"Ingrediente","id":"Orégano","glutenFree":true,"lactosaFree":true}},
+    {"Papas":{"type":"Ingrediente","id":"Papas","glutenFree":true,"lactosaFree":true}},
+    {"Pasta":{"type":"Ingrediente","id":"Pasta","glutenFree":false,"lactosaFree":true}},
+    {"Pasta de tomate":{"type":"Ingrediente","id":"Pasta de tomate","glutenFree":true,"lactosaFree":true}},
+    {"Patatas":{"type":"Ingrediente","id":"Patatas","glutenFree":true,"lactosaFree":true}},
+    {"Pepino":{"type":"Ingrediente","id":"Pepino","glutenFree":true,"lactosaFree":true}},
+    {"Perejil":{"type":"Ingrediente","id":"Perejil","glutenFree":true,"lactosaFree":true}},
+    {"Pescados variados":{"type":"Ingrediente","id":"Pescados variados","glutenFree":true,"lactosaFree":true}},
+    {"Pimienta":{"type":"Ingrediente","id":"Pimienta","glutenFree":true,"lactosaFree":true}},
+    {"Pimiento":{"type":"Ingrediente","id":"Pimiento","glutenFree":true,"lactosaFree":true}},
+    {"Pistacho":{"type":"Ingrediente","id":"Pistacho","glutenFree":true,"lactosaFree":true}},
+    {"Pita":{"type":"Ingrediente","id":"Pita","glutenFree":false,"lactosaFree":true}},
+    {"Pollo":{"type":"Ingrediente","id":"Pollo","glutenFree":true,"lactosaFree":true}},
+    {"Puerro":{"type":"Ingrediente","id":"Puerro","glutenFree":true,"lactosaFree":true}},
+    {"Queso":{"type":"Ingrediente","id":"Queso","glutenFree":true,"lactosaFree":false}},
+    {"Queso Gruyère":{"type":"Ingrediente","id":"Queso Gruyère","glutenFree":true,"lactosaFree":false}},
+    {"Queso de cabra":{"type":"Ingrediente","id":"Queso de cabra","glutenFree":true,"lactosaFree":false}},
+    {"Queso feta":{"type":"Ingrediente","id":"Queso feta","glutenFree":true,"lactosaFree":false}},
+    {"Ralladura de naranja":{"type":"Ingrediente","id":"Ralladura de naranja","glutenFree":true,"lactosaFree":true}},
+    {"Romero":{"type":"Ingrediente","id":"Romero","glutenFree":true,"lactosaFree":true}},
+    {"Roquefort":{"type":"Ingrediente","id":"Roquefort","glutenFree":true,"lactosaFree":false}},
+    {"Sal":{"type":"Ingrediente","id":"Sal","glutenFree":true,"lactosaFree":true}},
+    {"Salsa bechamel":{"type":"Ingrediente","id":"Salsa bechamel","glutenFree":false,"lactosaFree":false}},
+    {"Sémola":{"type":"Ingrediente","id":"Sémola","glutenFree":false,"lactosaFree":true}},
+    {"Tomate":{"type":"Ingrediente","id":"Tomate","glutenFree":true,"lactosaFree":true}},
+    {"Tomillo":{"type":"Ingrediente","id":"Tomillo","glutenFree":true,"lactosaFree":true}},
+    {"Tzatziki":{"type":"Ingrediente","id":"Tzatziki","glutenFree":true,"lactosaFree":false}},
+    {"Vainilla":{"type":"Ingrediente","id":"Vainilla","glutenFree":true,"lactosaFree":true}},
+    {"Vinagre balsámico":{"type":"Ingrediente","id":"Vinagre balsámico","glutenFree":true,"lactosaFree":true}},
+    {"Vino blanco":{"type":"Ingrediente","id":"Vino blanco","glutenFree":true,"lactosaFree":true}},
+    {"Vino tinto":{"type":"Ingrediente","id":"Vino tinto","glutenFree":true,"lactosaFree":true}},
+    {"Yogur griego":{"type":"Ingrediente","id":"Yogur griego","glutenFree":true,"lactosaFree":false}},
+    {"Zanahoria":{"type":"Ingrediente","id":"Zanahoria","glutenFree":true,"lactosaFree":true}},
 
     {
         "type": "Plato",
@@ -170,6 +170,7 @@
         "idsIngredientes": ["Caracoles", "Ajo", "Perejil", "Mantequilla", "Chalotas", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Cerveza Rubia"],
+        "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 1
     },
     {
@@ -183,6 +184,7 @@
         "idsIngredientes": ["Cebolla", "Caldo de carne", "Mantequilla", "Vino blanco", "Baguette", "Queso Gruyère", "Tomillo", "Laurel", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Tinto De Verano"],
+        "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 1
     },
     {
@@ -196,6 +198,7 @@
         "idsIngredientes": ["Hígado de pato o ganso", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Cerveza Artesanal"],
+        "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 1
     },
     {
@@ -209,6 +212,7 @@
         "idsIngredientes": ["Masa quebrada", "Huevo", "Nata espesa", "Lardones", "Queso Gruyère", "Nuez moscada", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Tinto De Verano"],
+        "idsTemporadas": ["Primavera", "Verano", "Otoño"],
         "tipo": 3
     },
     {
@@ -222,6 +226,7 @@
         "idsIngredientes": ["Queso de cabra", "Baguette", "Hojas verdes", "Nuez", "Aceite", "Vinagre balsámico", "Mostaza de Dijon", "Miel", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Cerveza Rubia"],
+        "idsTemporadas": ["Primavera", "Verano"],
         "tipo": 1
     },
     {
@@ -235,6 +240,7 @@
         "idsIngredientes": ["Carne de res", "Vino tinto", "Zanahoria", "Cebolla", "Ajo", "Bacon", "Champiñones", "Pasta de tomate", "Caldo de carne", "Tomillo", "Laurel", "Harina", "Mantequilla", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Coca-Cola", "Fanta Naranja"],
+        "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 2
     },
     {
@@ -248,6 +254,7 @@
         "idsIngredientes": ["Pollo", "Vino tinto", "Bacon", "Cebolla", "Champiñones", "Ajo", "Zanahoria", "Caldo de pollo", "Tomillo", "Laurel", "Harina", "Mantequilla", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Coca-Cola", "Pepsi"],
+        "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 2
     },
     {
@@ -261,6 +268,7 @@
         "idsIngredientes": ["Muslos de pato", "Grasa de pato", "Ajo", "Tomillo", "Laurel", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Sprite"],
+        "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 2
     },
     {
@@ -274,6 +282,7 @@
         "idsIngredientes": ["Filete de res", "Patatas", "Sal", "Pimienta", "Aceite"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Agua Sin Gas"],
+        "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
         "tipo": 2
     },
     {
@@ -287,6 +296,7 @@
         "idsIngredientes": ["Calabacín", "Berenjena", "Pimiento", "Tomate", "Cebolla", "Ajo", "Aceite", "Tomillo", "Albahaca", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Cerveza Rubia"],
+        "idsTemporadas": ["Verano"],
         "tipo": 3
     },
     {
@@ -300,6 +310,7 @@
         "idsIngredientes": ["Pescados variados", "Mariscos", "Hinojo", "Puerro", "Cebolla", "Ajo", "Tomate", "Ralladura de naranja", "Azafrán", "Aceite", "Caldo de pescado", "Laurel", "Tomillo"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Cerveza Artesanal"],
+        "idsTemporadas": ["Verano"],
         "tipo": 2
     },
     {
@@ -313,6 +324,7 @@
         "idsIngredientes": ["Mejillones", "Chalotas", "Ajo", "Vino blanco", "Perejil", "Mantequilla", "Sal", "Pimienta"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Tinto De Verano"],
+        "idsTemporadas": ["Verano"],
         "tipo": 2
     },
     {
@@ -326,6 +338,7 @@
         "idsIngredientes": ["Brie", "Roquefort", "Comté", "Queso de cabra", "Baguette"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["7Up"],
+        "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
         "tipo": 3
     },
     {
@@ -339,6 +352,7 @@
         "idsIngredientes": ["Nata espesa", "Huevo", "Azúcar", "Vainilla", "Azúcar moreno"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Cerveza Rubia"],
+        "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
         "tipo": 0
     },
     {
@@ -352,6 +366,7 @@
         "idsIngredientes": ["Manzanas", "Mantequilla", "Azúcar", "Masa de hojaldre", "Canela"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Pepsi", "Fanta Naranja"],
+        "idsTemporadas": ["Otoño"],
         "tipo": 0
     },
     {
@@ -365,6 +380,7 @@
         "idsIngredientes": ["Carne de res", "Berenjena", "Salsa bechamel", "Cebolla", "Ajo", "Tomate"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Txakoli", "Sauvignon Blanc", "Sprite", "7Up", "Refresco de limón"],
+        "idsTemporadas": ["Verano", "Otoño"],
         "tipo": 2
     },
     {
@@ -378,6 +394,7 @@
         "idsIngredientes": ["Cerdo", "Pollo", "Aceite", "Limón", "Orégano", "Ajo", "Pita", "Tomate", "Cebolla", "Tzatziki"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Barolo", "Cabernet Sauvignon", "Chardonnay"],
+        "idsTemporadas": ["Primavera", "Verano"],
         "tipo": 2
     },
     {
@@ -391,6 +408,7 @@
         "idsIngredientes": ["Espinaca", "Queso feta", "Masa filo", "Cebolla", "Eneldo", "Aceite"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Zinfandel", "Merlot", "Cerveza artesanal"],
+        "idsTemporadas": ["Primavera", "Verano"],
         "tipo": 1
     },
     {
@@ -404,6 +422,7 @@
         "idsIngredientes": ["Hojas de parra", "Arroz", "Cordero", "Carne de res", "Hierbas", "Cebolla", "Aceite", "Limón"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Barolo", "Tinto de verano", "Zinfandel"],
+        "idsTemporadas": ["Primavera", "Verano"],
         "tipo": 1
     },
     {
@@ -417,6 +436,7 @@
         "idsIngredientes": ["Yogur griego", "Pepino", "Ajo", "Eneldo", "Aceite", "Limón"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Cabernet Sauvignon", "Ribera del Duero", "Barolo", "Cerveza artesanal", "Coca-Cola", "Pepsi"],
+        "idsTemporadas": ["Verano"],
         "tipo": 1
     },
     {
@@ -430,6 +450,7 @@
         "idsIngredientes": ["Carne de res", "Pasta", "Salsa bechamel", "Queso", "Cebolla", "Ajo", "Canela"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Txakoli", "Albariño", "Verdicchio", "7Up", "Fanta naranja"],
+        "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 2
     },
     {
@@ -443,6 +464,7 @@
         "idsIngredientes": ["Arroz", "Tomate", "Pimiento", "Calabacín", "Cebolla", "Hierbas", "Aceite"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Barolo", "Cabernet Sauvignon", "Lambrusco", "Fanta naranja", "Pepsi"],
+        "idsTemporadas": ["Verano"],
         "tipo": 2
     },
     {
@@ -456,6 +478,7 @@
         "idsIngredientes": ["Frijol", "Tomate", "Aceite", "Cebolla", "Zanahoria", "Apio", "Hierbas"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Chardonnay", "Merlot", "Zinfandel", "Cerveza artesanal"],
+        "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 1
     },
     {
@@ -469,6 +492,7 @@
         "idsIngredientes": ["Cordero", "Papas", "Ajo", "Romero", "Limón", "Aceite"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Txakoli", "Albariño", "Sprite", "7Up"],
+        "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 2
     },
     {
@@ -482,6 +506,7 @@
         "idsIngredientes": ["Sémola", "Leche", "Azúcar", "Masa filo", "Limón", "Mantequilla"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Cabernet Sauvignon", "Merlot", "Chianti", "Ribera del Duero", "Cerveza rubia", "Tinto de verano"],
+        "idsTemporadas": ["Primavera", "Verano"],
         "tipo": 0
     },
     {
@@ -495,6 +520,7 @@
         "idsIngredientes": ["Harina", "Levadura", "Miel", "Azúcar", "Canela"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Barolo", "Zinfandel", "Ribera del Duero", "Cerveza artesanal"],
+        "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
         "tipo": 0
     },
     {
@@ -508,6 +534,7 @@
         "idsIngredientes": ["Frijol", "Tomate", "Aceite", "Ajo", "Cebolla", "Hierbas"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Chianti", "Barolo", "Cabernet Sauvignon", "Fanta naranja", "7Up"],
+        "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 3
     },
     {
@@ -521,6 +548,7 @@
         "idsIngredientes": ["Masa filo", "Nuez", "Pistacho", "Miel", "Azúcar", "Mantequilla"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Merlot", "Barolo", "Cabernet Sauvignon", "Cerveza rubia", "Cerveza artesanal"],
+        "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
         "tipo": 0
     },
     {
@@ -534,6 +562,7 @@
         "idsIngredientes": ["Pollo", "Arroz", "Huevo", "Limón", "Caldo"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Txakoli", "Sauvignon Blanc", "Tinto de verano"],
+        "idsTemporadas": ["Invierno"],
         "tipo": 1
     },
     {
@@ -547,6 +576,7 @@
         "idsIngredientes": ["Queso feta", "Masa filo", "Huevo", "Aceite"],
         "idsPlatosIncompatibles": [],
         "idsBebidasIncompatibles": ["Zinfandel", "Cabernet Sauvignon", "Ribera del Duero", "Sprite", "Refresco de limón"],
+        "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
         "tipo": 1
     }
 ]
