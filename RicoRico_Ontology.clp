@@ -2,7 +2,7 @@
 ;;; RicoRico_Ontology.clp
 ;;; Translated by owl2clips
 ;;; Translated to CLIPS from ontology ricorico.ttl
-;;; :Date 16/05/2025 16:29:23
+;;; :Date 22/05/2025 12:04:45
 
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
@@ -56,10 +56,6 @@
     (is-a USER)
     (role concrete)
     (pattern-match reactive)
-    ;;; Relación para indicar en qué temporada está disponible un ingrediente.
-    (multislot disponibleEn
-        (type INSTANCE)
-        (create-accessor read-write))
     ;;; Atributo de tipo Booleano para indicar si es elemento es libre de gluten.
     (slot glutenFree
         (type SYMBOL)
@@ -122,6 +118,10 @@
     (multislot compuestoPor
         (type INSTANCE)
         (create-accessor read-write))
+    ;;; Relación para indicar en qué temporada está disponible un ingrediente.
+    (multislot disponibleEn
+        (type INSTANCE)
+        (create-accessor read-write))
     ;;; Relación para indicar la categoría de un plato.
     (slot esCategoria
         (type INSTANCE)
@@ -182,14 +182,12 @@
 
 (definstances instances
     ([aceite_de_oliva] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "aceite_de_oliva")
     )
 
     ([aceitunas] of Ingrediente
-         (disponibleEn  [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "aceitunas")
@@ -204,28 +202,24 @@
     )
 
     ([ajo] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "ajo")
     )
 
     ([albahaca] of Ingrediente
-         (disponibleEn  [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "albahaca")
     )
 
     ([almejas] of Ingrediente
-         (disponibleEn  [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "almejas")
     )
 
     ([apio] of Ingrediente
-         (disponibleEn  [otono])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "apio")
@@ -236,14 +230,12 @@
     )
 
     ([arroz_arborio] of Ingrediente
-         (disponibleEn  [otono])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "arroz_arborio")
     )
 
     ([arroz_blanco] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "arroz_blanco")
@@ -260,14 +252,12 @@
     )
 
     ([azafran] of Ingrediente
-         (disponibleEn  [otono])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "azafran")
     )
 
     ([bacalao] of Ingrediente
-         (disponibleEn  [primavera])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "bacalao")
@@ -300,21 +290,18 @@
     )
 
     ([berenjena] of Ingrediente
-         (disponibleEn  [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "berenjena")
     )
 
     ([calabacin] of Ingrediente
-         (disponibleEn  [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "calabacin")
     )
 
     ([calamar] of Ingrediente
-         (disponibleEn  [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "calamar")
@@ -331,14 +318,12 @@
     )
 
     ([caldo_de_carne] of Ingrediente
-         (disponibleEn  [invierno])
          (glutenFree  TRUE)
          (lactosaFree  FALSE)
          (nombre  "caldo_de_carne")
     )
 
     ([caldo_de_verduras] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "caldo_de_verduras")
@@ -349,14 +334,12 @@
     )
 
     ([carne_de_res] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "carne_de_res")
     )
 
     ([cebolla] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "cebolla")
@@ -379,7 +362,6 @@
     )
 
     ([champinones] of Ingrediente
-         (disponibleEn  [otono])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "champinones")
@@ -394,7 +376,6 @@
     )
 
     ([chorizo] of Ingrediente
-         (disponibleEn  [invierno])
          (glutenFree  FALSE)
          (lactosaFree  TRUE)
          (nombre  "chorizo")
@@ -435,7 +416,6 @@
     )
 
     ([espaguetis] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  FALSE)
          (lactosaFree  TRUE)
          (nombre  "espaguetis")
@@ -446,14 +426,12 @@
     )
 
     ([esparragos] of Ingrediente
-         (disponibleEn  [primavera])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "esparragos")
     )
 
     ([espinacas] of Ingrediente
-         (disponibleEn  [primavera])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "espinacas")
@@ -480,7 +458,6 @@
     )
 
     ([fabes] of Ingrediente
-         (disponibleEn  [invierno])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "fabes")
@@ -501,21 +478,18 @@
     )
 
     ([gambas] of Ingrediente
-         (disponibleEn  [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "gambas")
     )
 
     ([garbanzos] of Ingrediente
-         (disponibleEn  [invierno])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "garbanzos")
     )
 
     ([garrofo] of Ingrediente
-         (disponibleEn  [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "garrofo")
@@ -532,7 +506,6 @@
     )
 
     ([gnocchi] of Ingrediente
-         (disponibleEn  [invierno])
          (glutenFree  FALSE)
          (lactosaFree  TRUE)
          (nombre  "gnocchi")
@@ -549,21 +522,18 @@
     )
 
     ([guindilla] of Ingrediente
-         (disponibleEn  [primavera])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "guindilla")
     )
 
     ([guisantes] of Ingrediente
-         (disponibleEn  [primavera])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "guisantes")
     )
 
     ([harina_de_trigo] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  FALSE)
          (lactosaFree  TRUE)
          (nombre  "harina_de_trigo")
@@ -582,7 +552,6 @@
     )
 
     ([huevos] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "huevos")
@@ -617,14 +586,12 @@
     )
 
     ([jamon_serrano] of Ingrediente
-         (disponibleEn  [invierno])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "jamon_serrano")
     )
 
     ([judia_verde] of Ingrediente
-         (disponibleEn  [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "judia_verde")
@@ -639,7 +606,6 @@
     )
 
     ([laminas_de_lasana] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  FALSE)
          (lactosaFree  TRUE)
          (nombre  "laminas_de_lasana")
@@ -656,7 +622,6 @@
     )
 
     ([leche] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  FALSE)
          (nombre  "leche")
@@ -671,14 +636,12 @@
     )
 
     ([limon] of Ingrediente
-         (disponibleEn  [primavera])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "limon")
     )
 
     ([mantequilla] of Ingrediente
-         (disponibleEn  [invierno])
          (glutenFree  TRUE)
          (lactosaFree  FALSE)
          (nombre  "mantequilla")
@@ -689,14 +652,12 @@
     )
 
     ([masa_de_pizza] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  FALSE)
          (lactosaFree  TRUE)
          (nombre  "masa_de_pizza")
     )
 
     ([mejillones] of Ingrediente
-         (disponibleEn  [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "mejillones")
@@ -713,7 +674,6 @@
     )
 
     ([merluza] of Ingrediente
-         (disponibleEn  [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "merluza")
@@ -730,35 +690,30 @@
     )
 
     ([morcilla] of Ingrediente
-         (disponibleEn  [invierno])
          (glutenFree  FALSE)
          (lactosaFree  FALSE)
          (nombre  "morcilla")
     )
 
     ([mozzarella] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  FALSE)
          (nombre  "mozzarella")
     )
 
     ([nata] of Ingrediente
-         (disponibleEn  [invierno])
          (glutenFree  TRUE)
          (lactosaFree  FALSE)
          (nombre  "nata")
     )
 
     ([oregano] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "oregano")
     )
 
     ([osobuco_de_ternera] of Ingrediente
-         (disponibleEn  [invierno])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "osobuco_de_ternera")
@@ -789,21 +744,18 @@
     )
 
     ([pan] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  FALSE)
          (lactosaFree  TRUE)
          (nombre  "pan")
     )
 
     ([panceta] of Ingrediente
-         (disponibleEn  [invierno])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "panceta")
     )
 
     ([pasta] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  FALSE)
          (lactosaFree  TRUE)
          (nombre  "pasta")
@@ -830,14 +782,12 @@
     )
 
     ([patata] of Ingrediente
-         (disponibleEn  [invierno] [otono])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "patata")
     )
 
     ([pepino] of Ingrediente
-         (disponibleEn  [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "pepino")
@@ -848,35 +798,30 @@
     )
 
     ([pesto] of Ingrediente
-         (disponibleEn  [verano])
          (glutenFree  TRUE)
          (lactosaFree  FALSE)
          (nombre  "pesto")
     )
 
     ([pimenton] of Ingrediente
-         (disponibleEn  [otono])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "pimenton")
     )
 
     ([pimienta_negra] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "pimienta_negra")
     )
 
     ([pimiento_rojo] of Ingrediente
-         (disponibleEn  [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "pimiento_rojo")
     )
 
     ([pimiento_verde] of Ingrediente
-         (disponibleEn  [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "pimiento_verde")
@@ -907,7 +852,6 @@
     )
 
     ([polenta] of Ingrediente
-         (disponibleEn  [invierno])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "polenta")
@@ -924,7 +868,6 @@
     )
 
     ([pollo] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "pollo")
@@ -943,7 +886,6 @@
     )
 
     ([pulpo] of Ingrediente
-         (disponibleEn  [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "pulpo")
@@ -960,7 +902,6 @@
     )
 
     ([queso_parmesano] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  FALSE)
          (nombre  "queso_parmesano")
@@ -977,7 +918,6 @@
     )
 
     ([raviolis] of Ingrediente
-         (disponibleEn  [otono])
          (glutenFree  FALSE)
          (lactosaFree  FALSE)
          (nombre  "raviolis")
@@ -992,7 +932,6 @@
     )
 
     ([ricotta] of Ingrediente
-         (disponibleEn  [primavera])
          (glutenFree  TRUE)
          (lactosaFree  FALSE)
          (nombre  "ricotta")
@@ -1019,7 +958,6 @@
     )
 
     ([sal_gruesa] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "sal_gruesa")
@@ -1048,7 +986,6 @@
     )
 
     ([tomate] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "tomate")
@@ -1065,7 +1002,6 @@
     )
 
     ([trofie] of Ingrediente
-         (disponibleEn  [primavera])
          (glutenFree  FALSE)
          (lactosaFree  TRUE)
          (nombre  "trofie")
@@ -1090,14 +1026,12 @@
     )
 
     ([vinagre] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "vinagre")
     )
 
     ([vino_blanco] of Ingrediente
-         (disponibleEn  [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "vino_blanco")
@@ -1128,7 +1062,6 @@
     )
 
     ([zanahoria] of Ingrediente
-         (disponibleEn  [invierno] [otono] [primavera] [verano])
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "zanahoria")
