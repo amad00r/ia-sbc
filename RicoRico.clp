@@ -1199,6 +1199,7 @@
 ;; Para almacenar las preferencias y restricciones del usuario.
 (defclass Preferencias
      (is-a USER)
+     (slot tipo_evento)
      (slot num_comensales)
      (slot precio_min)
      (slot precio_max)
@@ -1349,6 +1350,7 @@
 
 (deffunction RicoRico_Entrada::obtener_preferencias_restricciones ()
      ;;Obtenemos el número de comensales, el precio mínimo y máximo y la temporada
+     (bind ?tipo_evento (seleccion_una_opcion "¿Qué tipo de evento es?" casual formal))
      (bind ?num_comensales (obtener_numero_comensales))
      (bind ?precio_min (obtener_precio_min))
      (bind ?precio_max (obtener_precio_max ?precio_min))
@@ -1366,6 +1368,7 @@
      (bind ?intolerancia_lactosa (nth$ 2 $?lista_intolerancias))
 
      (make-instance prefs of Preferencias
+          (tipo_evento ?tipo_evento)
           (num_comensales ?num_comensales)
           (precio_min ?precio_min)
           (precio_max ?precio_max)
