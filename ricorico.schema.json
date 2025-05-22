@@ -56,11 +56,10 @@
             "properties": {
                 "type": { "const": "Ingrediente" },
                 "id": { "type": "string" },
-                "idsTemporadas": { "type": "array", "items": { "type": "string" } },
                 "glutenFree": { "type": "boolean" },
                 "lactosaFree": { "type": "boolean" }
             },
-            "required": ["type", "id", "idTemporada", "glutenFree", "lactosaFree"],
+            "required": ["type", "id", "glutenFree", "lactosaFree"],
             "additionalProperties": false
         },
         "Plato": {
@@ -76,9 +75,10 @@
                 "idsIngredientes": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
                 "idsPlatosIncompatibles": { "type": "array", "items": { "type": "string" } },
                 "idsBebidasIncompatibles": { "type": "array", "items": { "type": "string" } },
+                "idsTemporadas": { "type": "array", "items": { "type": "string" } },
                 "tipo": { "type": "integer" }
             },
-            "required": ["type", "id", "precio", "dificultad", "idCategoria", "idPreparacion", "idOrigen", "idsIngredientes", "idsPlatosIncompatibles", "idsBebidasIncompatibles", "tipo"],
+            "required": ["type", "id", "precio", "dificultad", "idCategoria", "idPreparacion", "idOrigen", "idsIngredientes", "idsPlatosIncompatibles", "idsBebidasIncompatibles", "idsTemporadas", "tipo"],
             "additionalProperties": false
         },
         "Bebida": {
