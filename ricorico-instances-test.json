@@ -122,6 +122,7 @@
   { "type": "Ingrediente", "id": "Tomillo", "glutenFree": true, "lactosaFree": true },
   { "type": "Ingrediente", "id": "Vinagre balsamico", "glutenFree": true, "lactosaFree": true },
   { "type": "Ingrediente", "id": "Yogur griego", "glutenFree": true, "lactosaFree": false },
+  { "type": "Ingrediente", "id": "Eneldo", "glutenFree": true, "lactosaFree": true },
 
   { "type": "Categoria", "id": "Carne" },
   { "type": "Categoria", "id": "Pasta" },
@@ -220,8 +221,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Primavera", "Verano"],
     "idsIngredientes": ["Arroz", "Pollo", "Mariscos", "Pimiento rojo", "Aceite de oliva", "Ajo"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Risotto ai Funghi", "Arroz Caldoso", "Arroz con Leche"],
+    "idsBebidasIncompatibles": ["Cerveza Artesanal", "Lambrusco", "Tinto de Verano"],
     "tipo": 3
   },
   {
@@ -234,8 +235,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Verano"],
     "idsIngredientes": ["Tomate", "Pepino", "Pimiento rojo", "Ajo", "Aceite de oliva", "Pan"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Salmorejo Cordobés", "Sopa Avgolemono", "Soupe à lOignon"],
+    "idsBebidasIncompatibles": ["Batido de Chocolate", "Bebida de Yogur", "Barolo"],
     "tipo": 1
   },
   {
@@ -248,8 +249,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
     "idsIngredientes": ["Huevos", "Cebolla", "Aceite de oliva"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Huevos Rotos con Jamón", "Revuelto de Setas", "Frittata di Zucchine"],
+    "idsBebidasIncompatibles": ["Chianti", "Cabernet Sauvignon", "Zinfandel"],
     "tipo": 3
   },
   {
@@ -262,8 +263,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Otoño"],
     "idsIngredientes": ["Pulpo", "Aceite de oliva", "Pimentón", "Sal gruesa"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Calamares a la Romana", "Bouillabaisse", "Moules Marinières"],
+    "idsBebidasIncompatibles": ["Fanta Naranja", "Sprite", "7Up"],
     "tipo": 2
   },
   {
@@ -276,8 +277,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Invierno"],
     "idsIngredientes": ["Garbanzos", "Chorizo", "Morcilla", "Ajo", "Aceite de oliva"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Cocido Madrileño", "Boeuf Bourguignon", "Coq au Vin"],
+    "idsBebidasIncompatibles": ["Limonada Casera", "Agua con Gas", "Cerveza Sin Alcohol"],
     "tipo": 2
   },
   {
@@ -290,8 +291,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Verano"],
     "idsIngredientes": ["Tomate", "Pan", "Ajo", "Aceite de oliva", "Huevos"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Gazpacho Andaluz", "Sopa Avgolemono", "Soupe à lOignon"],
+    "idsBebidasIncompatibles": ["Batido de Chocolate", "Bebida de Yogur", "Merlot"],
     "tipo": 1
   },
   {
@@ -304,8 +305,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Verano", "Otoño"],
     "idsIngredientes": ["Tomate", "Pimiento rojo", "Berenjena", "Calabacín", "Aceite de oliva"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Ratatouille", "Escalivada", "Parmigiana di Melanzane"],
+    "idsBebidasIncompatibles": ["Cerveza Rubia", "Cerveza Artesanal", "Txakoli"],
     "tipo": 1
   },
   {
@@ -318,8 +319,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
     "idsIngredientes": ["Huevos", "Jamón serrano", "Aceite de oliva", "Patatas"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Tortilla de Patatas", "Revuelto de Setas", "Frittata di Zucchine"],
+    "idsBebidasIncompatibles": ["Sauvignon Blanc", "Chardonnay", "Verdicchio"],
     "tipo": 2
   },
   {
@@ -332,8 +333,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Verano"],
     "idsIngredientes": ["Calamares", "Harina", "Aceite de oliva", "Limón"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Pulpo a la Gallega", "Bouillabaisse", "Moules Marinières"],
+    "idsBebidasIncompatibles": ["Pepsi", "Fanta Naranja", "Refresco de Cola"],
     "tipo": 2
   },
   {
@@ -346,8 +347,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Otoño", "Invierno"],
     "idsIngredientes": ["Arroz", "Calamares", "Mariscos", "Pimiento rojo", "Ajo"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Paella Valenciana", "Risotto ai Funghi", "Arroz con Leche"],
+    "idsBebidasIncompatibles": ["Lambrusco", "Tinto de Verano", "Cerveza Artesanal"],
     "tipo": 3
   },
   {
@@ -360,8 +361,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Invierno"],
     "idsIngredientes": ["Garbanzos", "Ternera", "Chorizo", "Morcilla", "Patatas", "Zanahoria"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Fabada Asturiana", "Boeuf Bourguignon", "Coq au Vin"],
+    "idsBebidasIncompatibles": ["Sprite", "7Up", "Limonada Casera"],
     "tipo": 3
   },
   {
@@ -374,8 +375,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Primavera", "Otoño"],
     "idsIngredientes": ["Atún", "Pimiento rojo", "Cebolla", "Harina", "Aceite de oliva"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Quiche Lorraine", "Spanakopita", "Tiropita"],
+    "idsBebidasIncompatibles": ["Batido de Chocolate", "Bebida de Yogur", "Agua con Gas"],
     "tipo": 1
   },
   {
@@ -388,8 +389,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Otoño"],
     "idsIngredientes": ["Huevos", "Champiñones", "Aceite de oliva", "Ajo"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Tortilla de Patatas", "Huevos Rotos con Jamón", "Frittata di Zucchine"],
+    "idsBebidasIncompatibles": ["Cabernet Sauvignon", "Barolo", "Zinfandel"],
     "tipo": 1
   },
   {
@@ -402,8 +403,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Verano"],
     "idsIngredientes": ["Berenjena", "Pimiento rojo", "Cebolla", "Aceite de oliva"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Pisto Manchego", "Ratatouille", "Parmigiana di Melanzane"],
+    "idsBebidasIncompatibles": ["Cerveza Rubia", "Cerveza Sin Alcohol", "Tinto de Verano"],
     "tipo": 1
   },
   {
@@ -416,8 +417,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
     "idsIngredientes": ["Arroz", "Leche", "Azúcar", "Canela", "Limón"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Paella Valenciana", "Arroz Caldoso", "Risotto ai Funghi"],
+    "idsBebidasIncompatibles": ["Chianti", "Barolo", "Cabernet Sauvignon"],
     "tipo": 0
   },
   {
@@ -430,8 +431,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
     "idsIngredientes": ["Huevos", "Leche", "Azúcar", "Canela", "Maicena"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Crema Catalana", "Panna Cotta", "Crème Brûlée"],
+    "idsBebidasIncompatibles": ["Cerveza Rubia", "Cerveza Artesanal", "Tinto de Verano"],
     "tipo": 0
   },
   {
@@ -444,8 +445,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Verano"],
     "idsIngredientes": ["Almendra", "Azúcar", "Huevos", "Canela", "Limón"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Torta Caprese", "Cannoli Siciliani", "Baklava"],
+    "idsBebidasIncompatibles": ["Pepsi", "Fanta Naranja", "Refresco de Cola"],
     "tipo": 0
   },
   {
@@ -458,8 +459,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Primavera"],
     "idsIngredientes": ["Pan", "Leche", "Huevos", "Canela", "Azúcar"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Tarte Tatin", "Loukoumades", "Galaktoboureko"],
+    "idsBebidasIncompatibles": ["Merlot", "Chardonnay", "Sauvignon Blanc"],
     "tipo": 0
   },
   {
@@ -472,8 +473,8 @@
     "idOrigen": "España",
     "idsTemporadas": ["Primavera", "Verano"],
     "idsIngredientes": ["Leche", "Huevos", "Azúcar", "Maicena", "Limón"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Natillas Caseras", "Panna Cotta", "Crème Brûlée"],
+    "idsBebidasIncompatibles": ["Cerveza Artesanal", "Tinto Rioja", "Albariño"],
     "tipo": 0
   },
   {
@@ -486,8 +487,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Invierno", "Otoño"],
     "idsIngredientes": ["Pasta", "Carne picada", "Queso parmesano", "Tomate", "Ajo", "Cebolla", "Aceite de oliva"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Tagliatelle al Ragù", "Pastitsio", "Moussaka"],
+    "idsBebidasIncompatibles": ["Sprite", "7Up", "Limonada Casera"],
     "tipo": 3
   },
   {
@@ -500,8 +501,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Primavera", "Otoño"],
     "idsIngredientes": ["Pasta", "Huevos", "Queso parmesano", "Panceta", "Pimienta negra"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Pasta al Pesto Genovese", "Gnocchi al Pomodoro", "Pasta alla Norma"],
+    "idsBebidasIncompatibles": ["Fanta Naranja", "Pepsi", "Refresco de Cola"],
     "tipo": 1
   },
   {
@@ -514,7 +515,7 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Otoño"],
     "idsIngredientes": ["Arroz", "Champiñones", "Queso parmesano", "Ajo", "Aceite de oliva", "Caldo de verduras"],
-    "idsPlatosIncompatibles": [],
+    "idsPlatosIncompatibles": ["Paella Valenciana", "Arroz Caldoso", "Arroz con Leche"],
     "idsBebidasIncompatibles": [],
     "tipo": 1
   },
@@ -528,8 +529,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Invierno"],
     "idsIngredientes": ["Ternera", "Zanahoria", "Cebolla", "Ajo", "Vino blanco", "Aceite de oliva"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Bistecca alla Fiorentina", "Steak Frites", "Kleftiko"],
+    "idsBebidasIncompatibles": ["Sprite", "7Up", "Limonada Casera"],
     "tipo": 2
   },
   {
@@ -542,8 +543,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Verano"],
     "idsIngredientes": ["Berenjena", "Queso parmesano", "Tomate", "Ajo", "Aceite de oliva"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Pisto Manchego", "Ratatouille", "Escalivada"],
+    "idsBebidasIncompatibles": ["Cerveza Rubia", "Cerveza Artesanal", "Tinto de Verano"],
     "tipo": 1
   },
   {
@@ -556,8 +557,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Primavera", "Verano"],
     "idsIngredientes": ["Pasta", "Albahaca", "Ajo", "Queso parmesano", "Aceite de oliva", "Piñones"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Spaghetti Carbonara", "Gnocchi al Pomodoro", "Pasta alla Norma"],
+    "idsBebidasIncompatibles": ["Batido de Chocolate", "Bebida de Yogur", "Barolo"],
     "tipo": 1
   },
   {
@@ -570,8 +571,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Otoño", "Invierno"],
     "idsIngredientes": ["Pollo", "Tomate", "Ajo", "Vino tinto", "Aceite de oliva"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Coq au Vin", "Souvlaki", "Sopa Avgolemono"],
+    "idsBebidasIncompatibles": ["Agua con Gas", "Agua Sin Gas", "Limonada Casera"],
     "tipo": 2
   },
   {
@@ -584,8 +585,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Primavera", "Otoño"],
     "idsIngredientes": ["Pasta", "Tomate", "Queso parmesano", "Ajo", "Aceite de oliva"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Spaghetti Carbonara", "Pasta al Pesto Genovese", "Pasta alla Norma"],
+    "idsBebidasIncompatibles": ["Fanta Naranja", "Sprite", "7Up"],
     "tipo": 1
   },
   {
@@ -598,8 +599,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Verano"],
     "idsIngredientes": ["Ternera", "Atún", "Huevos", "Aceite de oliva", "Alcaparras"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Saltimbocca alla Romana", "Ossobuco alla Milanese", "Bistecca alla Fiorentina"],
+    "idsBebidasIncompatibles": ["Pepsi", "Refresco de Cola", "Cerveza Sin Alcohol"],
     "tipo": 2
   },
   {
@@ -612,8 +613,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Invierno", "Otoño"],
     "idsIngredientes": ["Zanahoria", "Calabacín", "Cebolla", "Ajo", "Aceite de oliva", "Judías"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Fasolada", "Soupe à lOignon", "Sopa Avgolemono"],
+    "idsBebidasIncompatibles": ["Batido de Chocolate", "Bebida de Yogur", "Chianti"],
     "tipo": 1
   },
   {
@@ -626,8 +627,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Primavera", "Verano"],
     "idsIngredientes": ["Ternera", "Jamón serrano", "Salvia", "Aceite de oliva", "Vino blanco"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Vitello Tonnato", "Ossobuco alla Milanese", "Bistecca alla Fiorentina"],
+    "idsBebidasIncompatibles": ["Agua con Gas", "Agua Sin Gas", "Cerveza Sin Alcohol"],
     "tipo": 2
   },
   {
@@ -640,8 +641,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Verano"],
     "idsIngredientes": ["Pasta", "Berenjena", "Tomate", "Queso parmesano", "Ajo", "Aceite de oliva"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Spaghetti Carbonara", "Pasta al Pesto Genovese", "Gnocchi al Pomodoro"],
+    "idsBebidasIncompatibles": ["Sprite", "7Up", "Limonada Casera"],
     "tipo": 1
   },
   {
@@ -654,8 +655,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Primavera", "Verano"],
     "idsIngredientes": ["Huevos", "Calabacín", "Aceite de oliva", "Queso parmesano"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Tortilla de Patatas", "Huevos Rotos con Jamón", "Revuelto de Setas"],
+    "idsBebidasIncompatibles": ["Merlot", "Cabernet Sauvignon", "Zinfandel"],
     "tipo": 1
   },
   {
@@ -668,8 +669,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Invierno", "Otoño"],
     "idsIngredientes": ["Pasta", "Carne picada", "Tomate", "Ajo", "Cebolla", "Aceite de oliva"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Lasagna alla Bolognese", "Pastitsio", "Moussaka"],
+    "idsBebidasIncompatibles": ["Fanta Naranja", "Pepsi", "Sprite"],
     "tipo": 1
   },
   {
@@ -682,8 +683,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Verano"],
     "idsIngredientes": ["Ternera", "Aceite de oliva", "Sal gruesa", "Pimienta negra"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Ossobuco alla Milanese", "Steak Frites", "Kleftiko"],
+    "idsBebidasIncompatibles": ["Agua Sin Gas", "Agua con Gas", "Cerveza Sin Alcohol"],
     "tipo": 2
   },
   {
@@ -696,8 +697,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
     "idsIngredientes": ["Queso mascarpone", "Huevos", "Café", "Bizcocho", "Cacao en polvo", "Azúcar"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Panna Cotta", "Semifreddo de Limón", "Cannoli Siciliani"],
+    "idsBebidasIncompatibles": ["Cerveza Rubia", "Cerveza Artesanal", "Tinto de Verano"],
     "tipo": 0
   },
   {
@@ -710,8 +711,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Verano", "Primavera"],
     "idsIngredientes": ["Nata", "Azúcar", "Gelatina", "Vainilla"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Tiramisù", "Natillas Caseras", "Crème Brûlée"],
+    "idsBebidasIncompatibles": ["Pepsi", "Fanta Naranja", "Refresco de Cola"],
     "tipo": 0
   },
   {
@@ -724,8 +725,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Otoño", "Invierno"],
     "idsIngredientes": ["Ricotta", "Harina", "Azúcar", "Canela", "Chocolate", "Cáscara de naranja"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Tiramisù", "Tarta de Santiago", "Baklava"],
+    "idsBebidasIncompatibles": ["Agua con Gas", "Agua Sin Gas", "Limonada Casera"],
     "tipo": 0
   },
   {
@@ -738,8 +739,8 @@
 	"idOrigen": "Italia",
 	"idsTemporadas": ["Primavera", "Verano"],
 	"idsIngredientes": ["Limón", "Nata", "Azúcar", "Huevos", "Vainilla"],
-	"idsPlatosIncompatibles": [],
-	"idsBebidasIncompatibles": [],
+	"idsPlatosIncompatibles": ["Tiramisù", "Panna Cotta", "Crème Brûlée"],
+	"idsBebidasIncompatibles": ["Chianti", "Barolo", "Merlot"],
 	"tipo": 0
 	},
   {
@@ -752,8 +753,8 @@
     "idOrigen": "Italia",
     "idsTemporadas": ["Invierno", "Otoño"],
     "idsIngredientes": ["Almendra", "Chocolate", "Huevos", "Mantequilla", "Azúcar"],
-    "idsPlatosIncompatibles": [],
-    "idsBebidasIncompatibles": [],
+    "idsPlatosIncompatibles": ["Tarta de Santiago", "Cannoli Siciliani", "Baklava"],
+    "idsBebidasIncompatibles": ["Sprite", "7Up", "Cerveza Sin Alcohol"],
     "tipo": 0
   },
   {
@@ -765,8 +766,8 @@
         "idPreparacion": "Horno",
         "idOrigen": "Francia",
         "idsIngredientes": ["Caracoles", "Ajo", "Perejil", "Mantequilla", "Chalotas", "Sal", "Pimienta"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Cerveza Rubia"],
+        "idsPlatosIncompatibles": ["Caracoles a la Llauna", "Moules Marinières", "Bouillabaisse"],
+        "idsBebidasIncompatibles": ["Cerveza Rubia", "Fanta Naranja", "Pepsi"],
         "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 1
     },
@@ -779,8 +780,8 @@
         "idPreparacion": "Rehogado y Gratinado",
         "idOrigen": "Francia",
         "idsIngredientes": ["Cebolla", "Caldo de carne", "Mantequilla", "Vino blanco", "Baguette", "Queso Gruyère", "Tomillo", "Laurel", "Sal", "Pimienta"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Tinto De Verano"],
+        "idsPlatosIncompatibles": ["Gazpacho Andaluz", "Salmorejo Cordobés", "Minestrone"],
+        "idsBebidasIncompatibles": ["Tinto de Verano", "Sprite", "7Up"],
         "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 1
     },
@@ -793,8 +794,8 @@
         "idPreparacion": "Sellado Curado",
         "idOrigen": "Francia",
         "idsIngredientes": ["Hígado de pato o ganso", "Sal", "Pimienta"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Cerveza Artesanal"],
+        "idsPlatosIncompatibles": ["Confit de Canard", "Ossobuco alla Milanese", "Bistecca alla Fiorentina"],
+        "idsBebidasIncompatibles": ["Cerveza Artesanal", "Pepsi", "Fanta Naranja"],
         "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 1
     },
@@ -807,8 +808,8 @@
         "idPreparacion": "Horno",
         "idOrigen": "Francia",
         "idsIngredientes": ["Masa quebrada", "Huevos", "Nata", "Lardones", "Queso Gruyère", "Nuez moscada", "Sal", "Pimienta"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Tinto De Verano"],
+        "idsPlatosIncompatibles": ["Empanada Gallega", "Spanakopita", "Tiropita"],
+        "idsBebidasIncompatibles": ["Tinto de Verano", "Agua con Gas", "Limonada Casera"],
         "idsTemporadas": ["Primavera", "Verano", "Otoño"],
         "tipo": 3
     },
@@ -821,8 +822,8 @@
         "idPreparacion": "Montado y Tostado",
         "idOrigen": "Francia",
         "idsIngredientes": ["Queso de cabra", "Baguette", "Hojas verdes", "Nuez", "Aceite de oliva", "Vinagre balsámico", "Mostaza de Dijon", "Miel", "Sal", "Pimienta"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Cerveza Rubia"],
+        "idsPlatosIncompatibles": ["Assiette de Fromages", "Spanakopita", "Tiropita"],
+        "idsBebidasIncompatibles": ["Cerveza Rubia", "Batido de Chocolate", "Bebida de Yogur"],
         "idsTemporadas": ["Primavera", "Verano"],
         "tipo": 1
     },
@@ -835,8 +836,8 @@
         "idPreparacion": "Estofado",
         "idOrigen": "Francia",
         "idsIngredientes": ["Carne de res", "Vino tinto", "Zanahoria", "Cebolla", "Ajo", "Bacon", "Champiñones", "Pasta de tomate", "Caldo de carne", "Tomillo", "Laurel", "Harina", "Mantequilla", "Sal", "Pimienta"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": [],
+        "idsPlatosIncompatibles": ["Fabada Asturiana", "Cocido Madrileño", "Coq au Vin"],
+        "idsBebidasIncompatibles": ["Sprite", "7Up", "Agua Sin Gas"],
         "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 2
     },
@@ -849,8 +850,8 @@
         "idPreparacion": "Estofado",
         "idOrigen": "Francia",
         "idsIngredientes": ["Pollo", "Vino tinto", "Bacon", "Cebolla", "Champiñones", "Ajo", "Zanahoria", "Caldo de pollo", "Tomillo", "Laurel", "Harina", "Mantequilla", "Sal", "Pimienta"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Coca-Cola", "Pepsi"],
+        "idsPlatosIncompatibles": ["Pollo alla Cacciatora", "Boeuf Bourguignon", "Fabada Asturiana"],
+        "idsBebidasIncompatibles": ["Fanta Naranja", "Pepsi", "Limonada Casera"],
         "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 2
     },
@@ -863,8 +864,8 @@
         "idPreparacion": "Cocido a baja temperatura y Frito",
         "idOrigen": "Francia",
         "idsIngredientes": ["Muslos de pato", "Grasa de pato", "Ajo", "Tomillo", "Laurel", "Sal", "Pimienta"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Sprite"],
+        "idsPlatosIncompatibles": ["Foie Gras", "Ossobuco alla Milanese", "Kleftiko"],
+        "idsBebidasIncompatibles": ["Sprite", "Cerveza Sin Alcohol", "Agua con Gas"],
         "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 2
     },
@@ -877,8 +878,8 @@
         "idPreparacion": "Asado y Frito",
         "idOrigen": "Francia",
         "idsIngredientes": ["Carne de res", "Patatas", "Sal", "Pimienta", "Aceite de oliva"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Agua Sin Gas"],
+        "idsPlatosIncompatibles": ["Bistecca alla Fiorentina", "Ossobuco alla Milanese", "Kleftiko"],
+        "idsBebidasIncompatibles": ["Agua Sin Gas", "Limonada Casera", "Cerveza Sin Alcohol"],
         "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
         "tipo": 2
     },
@@ -891,8 +892,8 @@
         "idPreparacion": "Estofado",
         "idOrigen": "Francia",
         "idsIngredientes": ["Calabacín", "Berenjena", "Pimiento rojo", "Tomate", "Cebolla", "Ajo", "Aceite de oliva", "Tomillo", "Albahaca", "Sal", "Pimienta"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Cerveza Rubia"],
+        "idsPlatosIncompatibles": ["Pisto Manchego", "Escalivada", "Parmigiana di Melanzane"],
+        "idsBebidasIncompatibles": ["Cerveza Rubia", "Batido de Chocolate", "Bebida de Yogur"],
         "idsTemporadas": ["Verano"],
         "tipo": 3
     },
@@ -905,8 +906,8 @@
         "idPreparacion": "Rehogado",
         "idOrigen": "Francia",
         "idsIngredientes": ["Pescados variados", "Mariscos", "Hinojo", "Puerro", "Cebolla", "Ajo", "Tomate", "Ralladura de naranja", "Azafrán", "Aceite de oliva", "Caldo de pescado", "Laurel", "Tomillo"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Cerveza Artesanal"],
+        "idsPlatosIncompatibles": ["Pulpo a la Gallega", "Calamares a la Romana", "Moules Marinières"],
+        "idsBebidasIncompatibles": ["Cerveza Artesanal", "Pepsi", "Fanta Naranja"],
         "idsTemporadas": ["Verano"],
         "tipo": 2
     },
@@ -919,8 +920,8 @@
         "idPreparacion": "Vapor",
         "idOrigen": "Francia",
         "idsIngredientes": ["Mejillones", "Chalotas", "Ajo", "Vino blanco", "Perejil", "Mantequilla", "Sal", "Pimienta"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Tinto De Verano"],
+        "idsPlatosIncompatibles": ["Pulpo a la Gallega", "Calamares a la Romana", "Bouillabaisse"],
+        "idsBebidasIncompatibles": ["Tinto de Verano", "Sprite", "7Up"],
         "idsTemporadas": ["Verano"],
         "tipo": 2
     },
@@ -933,8 +934,8 @@
         "idPreparacion": "Montado",
         "idOrigen": "Francia",
         "idsIngredientes": ["Brie", "Roquefort", "Comté", "Queso de cabra", "Baguette"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["7Up"],
+        "idsPlatosIncompatibles": ["Salade de Chèvre Chaud", "Tiropita", "Spanakopita"],
+        "idsBebidasIncompatibles": ["7Up", "Fanta Naranja", "Pepsi"],
         "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
         "tipo": 3
     },
@@ -947,8 +948,8 @@
         "idPreparacion": "Horneado y Caramelizado",
         "idOrigen": "Francia",
         "idsIngredientes": ["Nata", "Huevos", "Azúcar", "Vainilla", "Azúcar moreno"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Cerveza Rubia"],
+        "idsPlatosIncompatibles": ["Natillas Caseras", "Panna Cotta", "Crema Catalana"],
+        "idsBebidasIncompatibles": ["Cerveza Rubia", "Tinto de Verano", "Cerveza Artesanal"],
         "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
         "tipo": 0
     },
@@ -961,8 +962,8 @@
         "idPreparacion": "Caramelizado y Horneado",
         "idOrigen": "Francia",
         "idsIngredientes": ["Manzana", "Mantequilla", "Azúcar", "Masa de hojaldre", "Canela"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Pepsi", "Fanta Naranja"],
+        "idsPlatosIncompatibles": ["Torrijas", "Loukoumades", "Galaktoboureko"],
+        "idsBebidasIncompatibles": ["Pepsi", "Fanta Naranja", "Refresco de Cola"],
         "idsTemporadas": ["Otoño"],
         "tipo": 0
     },
@@ -975,8 +976,8 @@
         "idPreparacion": "Horneado y en capas",
         "idOrigen": "Grecia",
         "idsIngredientes": ["Carne de res", "Berenjena", "Salsa bechamel", "Cebolla", "Ajo", "Tomate"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": [],
+        "idsPlatosIncompatibles": ["Lasagna alla Bolognese", "Pastitsio", "Tagliatelle al Ragù"],
+        "idsBebidasIncompatibles": ["Sprite", "7Up", "Agua con Gas"],
         "idsTemporadas": ["Verano", "Otoño"],
         "tipo": 2
     },
@@ -989,7 +990,7 @@
         "idPreparacion": "A la parrilla",
         "idOrigen": "Grecia",
         "idsIngredientes": ["Carne de cerdo", "Pollo", "Aceite de oliva", "Limón", "Orégano", "Ajo", "Pita", "Tomate", "Cebolla", "Tzatziki"],
-        "idsPlatosIncompatibles": [],
+        "idsPlatosIncompatibles": ["Pollo alla Cacciatora", "Coq au Vin", "Kleftiko"],
         "idsBebidasIncompatibles": ["Barolo", "Cabernet Sauvignon", "Chardonnay"],
         "idsTemporadas": ["Primavera", "Verano"],
         "tipo": 2
@@ -1003,7 +1004,7 @@
         "idPreparacion": "Horno",
         "idOrigen": "Grecia",
         "idsIngredientes": ["Espinacas", "Queso feta", "Masa filo", "Cebolla", "Eneldo", "Aceite de oliva"],
-        "idsPlatosIncompatibles": [],
+        "idsPlatosIncompatibles": ["Empanada Gallega", "Quiche Lorraine", "Tiropita"],
         "idsBebidasIncompatibles": ["Zinfandel", "Merlot", "Cerveza artesanal"],
         "idsTemporadas": ["Primavera", "Verano"],
         "tipo": 1
@@ -1017,7 +1018,7 @@
         "idPreparacion": "Vapor",
         "idOrigen": "Grecia",
         "idsIngredientes": ["Hojas de parra", "Arroz", "Cordero", "Carne de res", "Hierbas", "Cebolla", "Aceite de oliva", "Limón"],
-        "idsPlatosIncompatibles": [],
+        "idsPlatosIncompatibles": ["Gemista", "Kleftiko", "Souvlaki"],
         "idsBebidasIncompatibles": ["Barolo", "Tinto de verano", "Zinfandel"],
         "idsTemporadas": ["Primavera", "Verano"],
         "tipo": 1
@@ -1031,8 +1032,8 @@
         "idPreparacion": "Mezclado",
         "idOrigen": "Grecia",
         "idsIngredientes": ["Yogur griego", "Pepino", "Ajo", "Eneldo", "Aceite de oliva", "Limón"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": [],
+        "idsPlatosIncompatibles": ["Salmorejo Cordobés", "Gazpacho Andaluz", "Assiette de Fromages"],
+        "idsBebidasIncompatibles": ["Batido de Chocolate", "Bebida de Yogur", "Chianti"],
         "idsTemporadas": ["Verano"],
         "tipo": 1
     },
@@ -1045,7 +1046,7 @@
         "idPreparacion": "Horno",
         "idOrigen": "Grecia",
         "idsIngredientes": ["Carne de res", "Pasta", "Salsa bechamel", "Queso", "Cebolla", "Ajo", "Canela"],
-        "idsPlatosIncompatibles": [],
+        "idsPlatosIncompatibles": ["Lasagna alla Bolognese", "Moussaka", "Tagliatelle al Ragù"],
         "idsBebidasIncompatibles": ["Txakoli", "Albariño", "Verdicchio", "7Up", "Fanta naranja"],
         "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 2
@@ -1059,7 +1060,7 @@
         "idPreparacion": "Horno",
         "idOrigen": "Grecia",
         "idsIngredientes": ["Arroz", "Tomate", "Pimiento rojo", "Calabacín", "Cebolla", "Hierbas", "Aceite de oliva"],
-        "idsPlatosIncompatibles": [],
+        "idsPlatosIncompatibles": ["Dolmades", "Ratatouille", "Pisto Manchego"],
         "idsBebidasIncompatibles": ["Barolo", "Cabernet Sauvignon", "Lambrusco", "Fanta naranja", "Pepsi"],
         "idsTemporadas": ["Verano"],
         "tipo": 2
@@ -1073,7 +1074,7 @@
         "idPreparacion": "Sopa",
         "idOrigen": "Grecia",
         "idsIngredientes": ["Frijol", "Tomate", "Aceite de oliva", "Cebolla", "Zanahoria", "Apio", "Hierbas"],
-        "idsPlatosIncompatibles": [],
+        "idsPlatosIncompatibles": ["Minestrone", "Gigantes Plaki", "Fabada Asturiana"],
         "idsBebidasIncompatibles": ["Chardonnay", "Merlot", "Zinfandel", "Cerveza artesanal"],
         "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 1
@@ -1087,7 +1088,7 @@
         "idPreparacion": "Cocido",
         "idOrigen": "Grecia",
         "idsIngredientes": ["Cordero", "Patatas", "Ajo", "Romero", "Limón", "Aceite de oliva"],
-        "idsPlatosIncompatibles": [],
+        "idsPlatosIncompatibles": ["Confit de Canard", "Ossobuco alla Milanese", "Bistecca alla Fiorentina"],
         "idsBebidasIncompatibles": ["Txakoli", "Albariño", "Sprite", "7Up"],
         "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 2
@@ -1101,8 +1102,8 @@
         "idPreparacion": "Horno",
         "idOrigen": "Grecia",
         "idsIngredientes": ["Sémola", "Leche", "Azúcar", "Masa filo", "Limón", "Mantequilla"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Cabernet Sauvignon", "Merlot", "Chianti", "Ribera del Duero", "Cerveza rubia", "Tinto de verano"],
+        "idsPlatosIncompatibles": ["Torrijas", "Tarte Tatin", "Loukoumades"],
+        "idsBebidasIncompatibles": ["Merlot", "Cabernet Sauvignon", "Chianti"],
         "idsTemporadas": ["Primavera", "Verano"],
         "tipo": 0
     },
@@ -1115,8 +1116,8 @@
         "idPreparacion": "Frito",
         "idOrigen": "Grecia",
         "idsIngredientes": ["Harina", "Levadura", "Miel", "Azúcar", "Canela"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Barolo", "Zinfandel", "Ribera del Duero", "Cerveza artesanal"],
+        "idsPlatosIncompatibles": ["Torrijas", "Tarte Tatin", "Galaktoboureko"],
+        "idsBebidasIncompatibles": ["Barolo", "Zinfandel", "Chardonnay"],
         "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
         "tipo": 0
     },
@@ -1129,7 +1130,7 @@
         "idPreparacion": "Horno",
         "idOrigen": "Grecia",
         "idsIngredientes": ["Frijol", "Tomate", "Aceite de oliva", "Ajo", "Cebolla", "Hierbas"],
-        "idsPlatosIncompatibles": [],
+        "idsPlatosIncompatibles": ["Fasolada", "Minestrone", "Fabada Asturiana"],
         "idsBebidasIncompatibles": ["Chianti", "Barolo", "Cabernet Sauvignon", "Fanta naranja", "7Up"],
         "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 3
@@ -1143,8 +1144,8 @@
         "idPreparacion": "Horno",
         "idOrigen": "Grecia",
         "idsIngredientes": ["Masa filo", "Nuez", "Pistacho", "Miel", "Azúcar", "Mantequilla"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Merlot", "Barolo", "Cabernet Sauvignon", "Cerveza rubia", "Cerveza artesanal"],
+        "idsPlatosIncompatibles": ["Tarta de Santiago", "Cannoli Siciliani", "Torta Caprese"],
+        "idsBebidasIncompatibles": ["Merlot", "Barolo", "Cabernet Sauvignon", "Cerveza Rubia", "Cerveza Artesanal"],
         "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
         "tipo": 0
     },
@@ -1157,8 +1158,8 @@
         "idPreparacion": "Cocido y batido",
         "idOrigen": "Grecia",
         "idsIngredientes": ["Pollo", "Arroz", "Huevos", "Limón", "Caldo de verduras"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Txakoli", "Sauvignon Blanc", "Tinto de verano"],
+        "idsPlatosIncompatibles": ["Gazpacho Andaluz", "Salmorejo Cordobés", "Soupe à lOignon"],
+        "idsBebidasIncompatibles": ["Txakoli", "Sauvignon Blanc", "Tinto de Verano"],
         "idsTemporadas": ["Invierno"],
         "tipo": 1
     },
@@ -1171,8 +1172,8 @@
         "idPreparacion": "Horno",
         "idOrigen": "Grecia",
         "idsIngredientes": ["Queso feta", "Masa filo", "Huevos", "Aceite de oliva"],
-        "idsPlatosIncompatibles": [],
-        "idsBebidasIncompatibles": ["Zinfandel", "Cabernet Sauvignon", "Ribera del Duero", "Sprite", "Refresco de limón"],
+        "idsPlatosIncompatibles": ["Empanada Gallega", "Quiche Lorraine", "Spanakopita"],
+        "idsBebidasIncompatibles": ["Chianti", "Merlot", "Cabernet Sauvignon"],
         "idsTemporadas": ["Primavera", "Verano", "Otoño", "Invierno"],
         "tipo": 1
     }
