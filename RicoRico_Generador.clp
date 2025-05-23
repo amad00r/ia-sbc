@@ -1294,7 +1294,7 @@
 (deffunction RicoRico_Generador::compare-by-precio (?a ?b)
   (< (send ?a get-precio) (send ?b get-precio)))
 
-(defrule RicoRico_Generador::filter_menus
+(defrule RicoRico_Generador::select_final_menus
     (declare (salience 20))
     =>
     (bind ?menus (find-all-instances ((?m Menu)) TRUE))

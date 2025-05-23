@@ -1673,7 +1673,7 @@
     )
 )
 
-(defrule RicoRico_Generador::filter_menus
+(defrule RicoRico_Generador::select_final_menus
     (declare (salience 9))
     =>
     (bind ?menus (find-all-instances ((?m Menu)) TRUE))
