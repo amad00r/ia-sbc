@@ -2420,7 +2420,6 @@
                (bind ?delete FALSE)
 
                (foreach ?ingrediente ?ingredienteList
-                    (printout t ?ingrediente crlf)
                     (if (not (send ?ingrediente get-glutenFree)) then
                          (bind ?delete TRUE)
                     )
