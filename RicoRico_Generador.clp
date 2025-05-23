@@ -1253,15 +1253,34 @@
     =>
     (bind ?pref (nth$ 1 (find-instance ((?p Preferencias)) TRUE)))
     (bind ?price (compute_price ?b1 ?p1 ?b2 ?p2 ?pst))
+    (bind ?p1-bebidas-incompatibles (send ?p1 get-incompatibleConBebida))
+    (bind ?p2-bebidas-incompatibles (send ?p2 get-incompatibleConBebida))
+    (bind ?pst-bebidas-incompatibles (send ?pst get-incompatibleConBebida))
+    (bind ?p1-platos-incompatibles (send ?p1 get-incompatibleConPlato))
+    (bind ?p2-platos-incompatibles (send ?p2 get-incompatibleConPlato))
+    (bind ?pst-platos-incompatibles (send ?pst get-incompatibleConPlato))
+
     (if (and
         (neq ?p1 ?p2)
         (>= ?price (send ?pref get-precio_min))
         (<= ?price (send ?pref get-precio_max))
         (or
-            (and (eq TRUE (send ?pref get-diferentesBebidas)) (neq ?b1 ?b2))
-            (and (eq FALSE (send ?pref get-diferentesBebidas)) (eq ?b1 ?b2))
-        ))
-        then
+            (and (send ?pref get-diferentesBebidas) (neq ?b1 ?b2))
+            (and (not (send ?pref get-diferentesBebidas)) (eq ?b1 ?b2))
+        )
+        (not (member$ ?b1 ?p1-bebidas-incompatibles))
+        (not (member$ ?b1 ?p2-bebidas-incompatibles))
+        (not (member$ ?b1 ?pst-bebidas-incompatibles))
+        (not (member$ ?b2 ?p1-bebidas-incompatibles))
+        (not (member$ ?b2 ?p2-bebidas-incompatibles))
+        (not (member$ ?b2 ?pst-bebidas-incompatibles))
+        (not (member$ ?p1 ?p2-platos-incompatibles))
+        (not (member$ ?p1 ?pst-platos-incompatibles))
+        (not (member$ ?p2 ?p1-platos-incompatibles))
+        (not (member$ ?p2 ?pst-platos-incompatibles))
+        (not (member$ ?pst ?p1-platos-incompatibles))
+        (not (member$ ?pst ?p2-platos-incompatibles))
+     ) then
         (make-instance of Menu
             (1rBebida ?b1)
             (1rPlato ?p1)
