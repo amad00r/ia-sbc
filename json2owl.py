@@ -40,4 +40,5 @@ with open("ricorico-instances-test.json", "r", encoding="utf-8") as f:
 			print(f'\t\t:dificultad {obj["dificultad"]} ;')
 			print(f'\t\t:nombre "{ident}" ;')
 			print(f'\t\t:precio "{obj["precio"]}"^^xsd:float .')
+			print(f'\t\t:tipo "{obj["tipo"]}"^^xsd:integer .')
 		print()

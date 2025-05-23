@@ -32,7 +32,6 @@ with open("ricorico-instances.json", "r") as f:
 			print(f'\t\t(dificultad  {obj["dificultad"]})')
 			print(f'\t\t(nombre  \"{ident}\")')
 			print(f'\t\t(precio  {obj["precio"]})')
-			
-
+			print(f'\t\t(tipo  {obj["tipo"]})')
 		print("\t)")
 print(")")
