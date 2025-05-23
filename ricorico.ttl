@@ -116,8 +116,7 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
         rdfs:subPropertyOf owl:topObjectProperty ;
         rdf:type owl:FunctionalProperty ;
         rdfs:domain :Menu ;
-        rdfs:range :Plato ;
-        rdfs:comment "Relación para indicar el postre de un menú." .
+        rdfs:range :Plato .
 
 
 #################################################################
@@ -258,44 +257,55 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 #    Individuals
 #################################################################
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/a_la_brasa
+:a_la_brasa rdf:type owl:NamedIndividual ,
+                     :Preparacion ;
+            :nombre "a_la_brasa" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/a_la_parrilla
+:a_la_parrilla rdf:type owl:NamedIndividual ,
+                        :Preparacion ;
+               :nombre "a_la_parrilla" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/a_la_plancha
+:a_la_plancha rdf:type owl:NamedIndividual ,
+                       :Preparacion ;
+              :nombre "a_la_plancha" .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/aceite_de_oliva
 :aceite_de_oliva rdf:type owl:NamedIndividual ,
                           :Ingrediente ;
-                 :disponibleEn :invierno ,
-                               :otono ,
-                               :primavera ,
-                               :verano ;
                  :glutenFree "true"^^xsd:boolean ;
                  :lactosaFree "true"^^xsd:boolean ;
                  :nombre "aceite_de_oliva" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/aceitunas
-:aceitunas rdf:type owl:NamedIndividual ,
-                    :Ingrediente ;
-           :disponibleEn :verano ;
-           :glutenFree "true"^^xsd:boolean ;
-           :lactosaFree "true"^^xsd:boolean ;
-           :nombre "aceitunas" .
-
-
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/agua_mineral
-:agua_mineral rdf:type owl:NamedIndividual ,
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/agua_con_gas
+:agua_con_gas rdf:type owl:NamedIndividual ,
                        :Casual ;
               :alcoholica "false"^^xsd:boolean ;
               :glutenFree "true"^^xsd:boolean ;
               :lactosaFree "true"^^xsd:boolean ;
-              :nombre "agua_mineral" ;
+              :nombre "agua_con_gas" ;
+              :precio "1.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/agua_sin_gas
+:agua_sin_gas rdf:type owl:NamedIndividual ,
+                       :Casual ;
+              :alcoholica "false"^^xsd:boolean ;
+              :glutenFree "true"^^xsd:boolean ;
+              :lactosaFree "true"^^xsd:boolean ;
+              :nombre "agua_sin_gas" ;
               :precio "1.5"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/ajo
 :ajo rdf:type owl:NamedIndividual ,
               :Ingrediente ;
-     :disponibleEn :invierno ,
-                   :otono ,
-                   :primavera ,
-                   :verano ;
      :glutenFree "true"^^xsd:boolean ;
      :lactosaFree "true"^^xsd:boolean ;
      :nombre "ajo" .
@@ -304,25 +314,56 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/albahaca
 :albahaca rdf:type owl:NamedIndividual ,
                    :Ingrediente ;
-          :disponibleEn :verano ;
           :glutenFree "true"^^xsd:boolean ;
           :lactosaFree "true"^^xsd:boolean ;
           :nombre "albahaca" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/albarino
+:albarino rdf:type owl:NamedIndividual ,
+                   :Vino ;
+          :alcoholica "true"^^xsd:boolean ;
+          :glutenFree "true"^^xsd:boolean ;
+          :lactosaFree "true"^^xsd:boolean ;
+          :nombre "albarino" ;
+          :precio "12.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/alcaparras
+:alcaparras rdf:type owl:NamedIndividual ,
+                     :Ingrediente ;
+            :glutenFree "true"^^xsd:boolean ;
+            :lactosaFree "true"^^xsd:boolean ;
+            :nombre "alcaparras" .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/almejas
 :almejas rdf:type owl:NamedIndividual ,
                   :Ingrediente ;
-         :disponibleEn :verano ;
          :glutenFree "true"^^xsd:boolean ;
          :lactosaFree "true"^^xsd:boolean ;
          :nombre "almejas" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/almendra
+:almendra rdf:type owl:NamedIndividual ,
+                   :Ingrediente ;
+          :glutenFree "true"^^xsd:boolean ;
+          :lactosaFree "true"^^xsd:boolean ;
+          :nombre "almendra" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/anchoas
+:anchoas rdf:type owl:NamedIndividual ,
+                  :Ingrediente ;
+         :glutenFree "true"^^xsd:boolean ;
+         :lactosaFree "true"^^xsd:boolean ;
+         :nombre "anchoas" .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/apio
 :apio rdf:type owl:NamedIndividual ,
                :Ingrediente ;
-      :disponibleEn :otono ;
       :glutenFree "true"^^xsd:boolean ;
       :lactosaFree "true"^^xsd:boolean ;
       :nombre "apio" .
@@ -330,81 +371,176 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/arroz
 :arroz rdf:type owl:NamedIndividual ,
-                :Categoria ;
+                :Categoria ,
+                :Ingrediente ;
+       :glutenFree "true"^^xsd:boolean ;
+       :lactosaFree "true"^^xsd:boolean ;
        :nombre "arroz" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/arroz_arborio
-:arroz_arborio rdf:type owl:NamedIndividual ,
-                        :Ingrediente ;
-               :disponibleEn :otono ;
-               :glutenFree "true"^^xsd:boolean ;
-               :lactosaFree "true"^^xsd:boolean ;
-               :nombre "arroz_arborio" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/arroz_caldoso
+:arroz_caldoso rdf:type owl:NamedIndividual ,
+                        :Plato ;
+               :compuestoPor :ajo ,
+                             :arroz ,
+                             :calamares ,
+                             :mariscos ,
+                             :pimiento_rojo ;
+               :disponibleEn :invierno ,
+                             :otono ;
+               :esCategoria :arroz ;
+               :esPreparacion :guisado ;
+               :incompatibleConBebida :cerveza_artesanal ,
+                                      :lambrusco ,
+                                      :tinto_de_verano ;
+               :incompatibleConPlato :arroz_con_leche ,
+                                     :paella_valenciana ,
+                                     :risotto_ai_funghi ;
+               :originarioDe :espana ;
+               :dificultad 7 ;
+               :nombre "arroz_caldoso" ;
+               :precio "13.5"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/arroz_blanco
-:arroz_blanco rdf:type owl:NamedIndividual ,
-                       :Ingrediente ;
-              :disponibleEn :invierno ,
-                            :otono ,
-                            :primavera ,
-                            :verano ;
-              :glutenFree "true"^^xsd:boolean ;
-              :lactosaFree "true"^^xsd:boolean ;
-              :nombre "arroz_blanco" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/arroz_con_leche
+:arroz_con_leche rdf:type owl:NamedIndividual ,
+                          :Plato ;
+                 :compuestoPor :arroz ,
+                               :azucar ,
+                               :canela ,
+                               :leche ,
+                               :limon ;
+                 :disponibleEn :invierno ,
+                               :otono ,
+                               :primavera ,
+                               :verano ;
+                 :esCategoria :postre ;
+                 :esPreparacion :hervido ;
+                 :incompatibleConBebida :barolo ,
+                                        :cabernet_sauvignon ,
+                                        :chianti ;
+                 :incompatibleConPlato :arroz_caldoso ,
+                                       :paella_valenciana ,
+                                       :risotto_ai_funghi ;
+                 :originarioDe :espana ;
+                 :dificultad 4 ;
+                 :nombre "arroz_con_leche" ;
+                 :precio "4.5"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/arroz_caldoso_con_marisco
-:arroz_caldoso_con_marisco rdf:type owl:NamedIndividual ,
-                                    :Plato ;
-                           :compuestoPor :aceite_de_oliva ,
-                                         :ajo ,
-                                         :almejas ,
-                                         :arroz_blanco ,
-                                         :gambas ,
-                                         :mejillones ,
-                                         :pimiento_rojo ,
-                                         :tomate ;
-                           :esCategoria :arroz ;
-                           :esPreparacion :hervido ;
-                           :originarioDe :espana ;
-                           :dificultad 7 ;
-                           :nombre "arroz_caldoso_con_marisco" ;
-                           :precio "15.0"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/asado_y_frito
+:asado_y_frito rdf:type owl:NamedIndividual ,
+                        :Preparacion ;
+               :nombre "asado_y_frito" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/assiette_de_fromages
+:assiette_de_fromages rdf:type owl:NamedIndividual ,
+                               :Plato ;
+                      :compuestoPor :baguette ,
+                                    :brie ,
+                                    :comte ,
+                                    :queso_de_cabra ,
+                                    :roquefort ;
+                      :disponibleEn :invierno ,
+                                    :otono ,
+                                    :primavera ,
+                                    :verano ;
+                      :esCategoria :quesoc ;
+                      :esPreparacion :montado ;
+                      :incompatibleConBebida :fanta_naranja ,
+                                             :pepsi ,
+                                             <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up> ;
+                      :incompatibleConPlato :salade_de_chevre_chaud ,
+                                            :spanakopita ,
+                                            :tiropita ;
+                      :originarioDe :francia ;
+                      :dificultad 0 ;
+                      :nombre "assiette_de_fromages" ;
+                      :precio "8.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/atun
+:atun rdf:type owl:NamedIndividual ,
+               :Ingrediente ;
+      :glutenFree "true"^^xsd:boolean ;
+      :lactosaFree "true"^^xsd:boolean ;
+      :nombre "atun" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/aves
+:aves rdf:type owl:NamedIndividual ,
+               :Categoria ;
+      :nombre "aves" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/azafran
 :azafran rdf:type owl:NamedIndividual ,
                   :Ingrediente ;
-         :disponibleEn :otono ;
          :glutenFree "true"^^xsd:boolean ;
          :lactosaFree "true"^^xsd:boolean ;
          :nombre "azafran" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/bacalao
-:bacalao rdf:type owl:NamedIndividual ,
-                  :Ingrediente ;
-         :disponibleEn :primavera ;
-         :glutenFree "true"^^xsd:boolean ;
-         :lactosaFree "true"^^xsd:boolean ;
-         :nombre "bacalao" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/azucar
+:azucar rdf:type owl:NamedIndividual ,
+                 :Ingrediente ;
+        :glutenFree "true"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "azucar" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/bacalao_al_pil_pil
-:bacalao_al_pil_pil rdf:type owl:NamedIndividual ,
-                             :Plato ;
-                    :compuestoPor :aceite_de_oliva ,
-                                  :ajo ,
-                                  :bacalao ,
-                                  :guindilla ;
-                    :esCategoria :pescado ;
-                    :esPreparacion :sarten ;
-                    :originarioDe :espana ;
-                    :dificultad 6 ;
-                    :nombre "bacalao_al_pil_pil" ;
-                    :precio "12.0"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/azucar_moreno
+:azucar_moreno rdf:type owl:NamedIndividual ,
+                        :Ingrediente ;
+               :glutenFree "true"^^xsd:boolean ;
+               :lactosaFree "true"^^xsd:boolean ;
+               :nombre "azucar_moreno" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/bacon
+:bacon rdf:type owl:NamedIndividual ,
+                :Ingrediente ;
+       :glutenFree "true"^^xsd:boolean ;
+       :lactosaFree "true"^^xsd:boolean ;
+       :nombre "bacon" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/baguette
+:baguette rdf:type owl:NamedIndividual ,
+                   :Ingrediente ;
+          :glutenFree "false"^^xsd:boolean ;
+          :lactosaFree "true"^^xsd:boolean ;
+          :nombre "baguette" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/baklava
+:baklava rdf:type owl:NamedIndividual ,
+                  :Plato ;
+         :compuestoPor :azucar ,
+                       :mantequilla ,
+                       :masa_filo ,
+                       :miel ,
+                       :nuez ,
+                       :pistacho ;
+         :disponibleEn :invierno ,
+                       :otono ,
+                       :primavera ,
+                       :verano ;
+         :esCategoria :postre ;
+         :esPreparacion :horno ;
+         :incompatibleConBebida :barolo ,
+                                :cabernet_sauvignon ,
+                                :cerveza_artesanal ,
+                                :cerveza_rubia ,
+                                :merlot ;
+         :incompatibleConPlato :cannoli_siciliani ,
+                               :tarta_de_santiago ,
+                               :torta_caprese ;
+         :originarioDe :grecia ;
+         :dificultad 6 ;
+         :nombre "baklava" ;
+         :precio "6.0"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/barolo
@@ -414,81 +550,307 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
         :glutenFree "true"^^xsd:boolean ;
         :lactosaFree "true"^^xsd:boolean ;
         :nombre "barolo" ;
-        :precio "18.0"^^xsd:float .
+        :precio "22.0"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/batido_de_fresa
-:batido_de_fresa rdf:type owl:NamedIndividual ,
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/batido_de_chocolate
+:batido_de_chocolate rdf:type owl:NamedIndividual ,
+                              :Casual ;
+                     :alcoholica "false"^^xsd:boolean ;
+                     :glutenFree "true"^^xsd:boolean ;
+                     :lactosaFree "false"^^xsd:boolean ;
+                     :nombre "batido_de_chocolate" ;
+                     :precio "3.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/bebida_de_yogur
+:bebida_de_yogur rdf:type owl:NamedIndividual ,
                           :Casual ;
                  :alcoholica "false"^^xsd:boolean ;
                  :glutenFree "true"^^xsd:boolean ;
                  :lactosaFree "false"^^xsd:boolean ;
-                 :nombre "batido_de_fresa" ;
-                 :precio "2.7"^^xsd:float .
+                 :nombre "bebida_de_yogur" ;
+                 :precio "2.8"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/berenjena
 :berenjena rdf:type owl:NamedIndividual ,
                     :Ingrediente ;
-           :disponibleEn :verano ;
            :glutenFree "true"^^xsd:boolean ;
            :lactosaFree "true"^^xsd:boolean ;
            :nombre "berenjena" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/bistecca_alla_fiorentina
+:bistecca_alla_fiorentina rdf:type owl:NamedIndividual ,
+                                   :Plato ;
+                          :compuestoPor :aceite_de_oliva ,
+                                        :pimienta_negra ,
+                                        :sal_gruesa ,
+                                        :ternera ;
+                          :disponibleEn :verano ;
+                          :esCategoria :carne ;
+                          :esPreparacion :a_la_plancha ;
+                          :incompatibleConBebida :agua_con_gas ,
+                                                 :agua_sin_gas ,
+                                                 :cerveza_sin_alcohol ;
+                          :incompatibleConPlato :kleftiko ,
+                                                :ossobuco_alla_milanese ,
+                                                :steak_frites ;
+                          :originarioDe :italia ;
+                          :dificultad 7 ;
+                          :nombre "bistecca_alla_fiorentina" ;
+                          :precio "16.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/bizcocho
+:bizcocho rdf:type owl:NamedIndividual ,
+                   :Ingrediente ;
+          :glutenFree "false"^^xsd:boolean ;
+          :lactosaFree "false"^^xsd:boolean ;
+          :nombre "bizcocho" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/blanco_albarino
+:blanco_albarino rdf:type owl:NamedIndividual ,
+                          :Vino ;
+                 :alcoholica "true"^^xsd:boolean ;
+                 :glutenFree "true"^^xsd:boolean ;
+                 :lactosaFree "true"^^xsd:boolean ;
+                 :nombre "blanco_albarino" ;
+                 :precio "11.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/blanco_verdejo
+:blanco_verdejo rdf:type owl:NamedIndividual ,
+                         :Vino ;
+                :alcoholica "true"^^xsd:boolean ;
+                :glutenFree "true"^^xsd:boolean ;
+                :lactosaFree "true"^^xsd:boolean ;
+                :nombre "blanco_verdejo" ;
+                :precio "10.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/boeuf_bourguignon
+:boeuf_bourguignon rdf:type owl:NamedIndividual ,
+                            :Plato ;
+                   :compuestoPor :ajo ,
+                                 :bacon ,
+                                 :caldo_de_carne ,
+                                 :carne_de_res ,
+                                 :cebolla ,
+                                 :champinones ,
+                                 :harina ,
+                                 :laurel ,
+                                 :mantequilla ,
+                                 :pasta_de_tomate ,
+                                 :pimienta ,
+                                 :sal ,
+                                 :tomillo ,
+                                 :vino_tinto ,
+                                 :zanahoria ;
+                   :disponibleEn :invierno ,
+                                 :otono ;
+                   :esCategoria :carne ;
+                   :esPreparacion :estofado ;
+                   :incompatibleConBebida :agua_sin_gas ,
+                                          :sprite ,
+                                          <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up> ;
+                   :incompatibleConPlato :cocido_madrileno ,
+                                         :coq_au_vin ,
+                                         :fabada_asturiana ;
+                   :originarioDe :francia ;
+                   :dificultad 8 ;
+                   :nombre "boeuf_bourguignon" ;
+                   :precio "13.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/bouillabaisse
+:bouillabaisse rdf:type owl:NamedIndividual ,
+                        :Plato ;
+               :compuestoPor :aceite_de_oliva ,
+                             :ajo ,
+                             :azafran ,
+                             :caldo_de_pescado ,
+                             :cebolla ,
+                             :hinojo ,
+                             :laurel ,
+                             :mariscos ,
+                             :pescados_variados ,
+                             :puerro ,
+                             :ralladura_de_naranja ,
+                             :tomate ,
+                             :tomillo ;
+               :disponibleEn :verano ;
+               :esCategoria :mariscos ;
+               :esPreparacion :rehogado ;
+               :incompatibleConBebida :cerveza_artesanal ,
+                                      :fanta_naranja ,
+                                      :pepsi ;
+               :incompatibleConPlato :calamares_a_la_romana ,
+                                     :moules_marinieres ,
+                                     :pulpo_a_la_gallega ;
+               :originarioDe :francia ;
+               :dificultad 10 ;
+               :nombre "bouillabaisse" ;
+               :precio "17.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/brie
+:brie rdf:type owl:NamedIndividual ,
+               :Ingrediente ;
+      :glutenFree "true"^^xsd:boolean ;
+      :lactosaFree "false"^^xsd:boolean ;
+      :nombre "brie" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cabernet_sauvignon
+:cabernet_sauvignon rdf:type owl:NamedIndividual ,
+                             :Vino ;
+                    :alcoholica "true"^^xsd:boolean ;
+                    :glutenFree "true"^^xsd:boolean ;
+                    :lactosaFree "true"^^xsd:boolean ;
+                    :nombre "cabernet_sauvignon" ;
+                    :precio "19.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cacao_en_polvo
+:cacao_en_polvo rdf:type owl:NamedIndividual ,
+                         :Ingrediente ;
+                :glutenFree "true"^^xsd:boolean ;
+                :lactosaFree "true"^^xsd:boolean ;
+                :nombre "cacao_en_polvo" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cafe
+:cafe rdf:type owl:NamedIndividual ,
+               :Ingrediente ;
+      :glutenFree "true"^^xsd:boolean ;
+      :lactosaFree "true"^^xsd:boolean ;
+      :nombre "cafe" .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/calabacin
 :calabacin rdf:type owl:NamedIndividual ,
                     :Ingrediente ;
-           :disponibleEn :verano ;
            :glutenFree "true"^^xsd:boolean ;
            :lactosaFree "true"^^xsd:boolean ;
            :nombre "calabacin" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/calamar
-:calamar rdf:type owl:NamedIndividual ,
-                  :Ingrediente ;
-         :disponibleEn :verano ;
-         :glutenFree "true"^^xsd:boolean ;
-         :lactosaFree "true"^^xsd:boolean ;
-         :nombre "calamar" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/calamares
+:calamares rdf:type owl:NamedIndividual ,
+                    :Ingrediente ;
+           :glutenFree "true"^^xsd:boolean ;
+           :lactosaFree "true"^^xsd:boolean ;
+           :nombre "calamares" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/calamares_a_la_romana
 :calamares_a_la_romana rdf:type owl:NamedIndividual ,
                                 :Plato ;
                        :compuestoPor :aceite_de_oliva ,
-                                     :calamar ,
-                                     :harina_de_trigo ,
-                                     :huevos ,
+                                     :calamares ,
+                                     :harina ,
                                      :limon ;
-                       :esCategoria :marisco ;
+                       :disponibleEn :verano ;
+                       :esCategoria :mariscos ;
                        :esPreparacion :frito ;
+                       :incompatibleConBebida :fanta_naranja ,
+                                              :pepsi ,
+                                              :refresco_de_cola ;
+                       :incompatibleConPlato :bouillabaisse ,
+                                             :moules_marinieres ,
+                                             :pulpo_a_la_gallega ;
                        :originarioDe :espana ;
-                       :dificultad 4 ;
+                       :dificultad 6 ;
                        :nombre "calamares_a_la_romana" ;
-                       :precio "8.5"^^xsd:float .
+                       :precio "10.0"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/caldo_de_carne
 :caldo_de_carne rdf:type owl:NamedIndividual ,
                          :Ingrediente ;
-                :disponibleEn :invierno ;
                 :glutenFree "true"^^xsd:boolean ;
-                :lactosaFree "false"^^xsd:boolean ;
+                :lactosaFree "true"^^xsd:boolean ;
                 :nombre "caldo_de_carne" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/caldo_de_pescado
+:caldo_de_pescado rdf:type owl:NamedIndividual ,
+                           :Ingrediente ;
+                  :glutenFree "true"^^xsd:boolean ;
+                  :lactosaFree "true"^^xsd:boolean ;
+                  :nombre "caldo_de_pescado" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/caldo_de_pollo
+:caldo_de_pollo rdf:type owl:NamedIndividual ,
+                         :Ingrediente ;
+                :glutenFree "true"^^xsd:boolean ;
+                :lactosaFree "true"^^xsd:boolean ;
+                :nombre "caldo_de_pollo" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/caldo_de_verduras
 :caldo_de_verduras rdf:type owl:NamedIndividual ,
                             :Ingrediente ;
-                   :disponibleEn :invierno ,
-                                 :otono ,
-                                 :primavera ,
-                                 :verano ;
                    :glutenFree "true"^^xsd:boolean ;
                    :lactosaFree "true"^^xsd:boolean ;
                    :nombre "caldo_de_verduras" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/canela
+:canela rdf:type owl:NamedIndividual ,
+                 :Ingrediente ;
+        :glutenFree "true"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "canela" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cannoli_siciliani
+:cannoli_siciliani rdf:type owl:NamedIndividual ,
+                            :Plato ;
+                   :compuestoPor :azucar ,
+                                 :canela ,
+                                 :cascara_de_naranja ,
+                                 :chocolate ,
+                                 :harina ,
+                                 :ricotta ;
+                   :disponibleEn :invierno ,
+                                 :otono ;
+                   :esCategoria :dulce ;
+                   :esPreparacion :frito ;
+                   :incompatibleConBebida :agua_con_gas ,
+                                          :agua_sin_gas ,
+                                          :limonada_casera ;
+                   :incompatibleConPlato :baklava ,
+                                         :tarta_de_santiago ,
+                                         :tiramisu ;
+                   :originarioDe :italia ;
+                   :dificultad 6 ;
+                   :nombre "cannoli_siciliani" ;
+                   :precio "6.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/caracoles
+:caracoles rdf:type owl:NamedIndividual ,
+                    :Ingrediente ;
+           :glutenFree "true"^^xsd:boolean ;
+           :lactosaFree "true"^^xsd:boolean ;
+           :nombre "caracoles" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/caracolesc
+:caracolesc rdf:type owl:NamedIndividual ,
+                     :Categoria ;
+            :nombre "caracolesc" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/caramelizado_y_horneado
+:caramelizado_y_horneado rdf:type owl:NamedIndividual ,
+                                  :Preparacion ;
+                         :nombre "caramelizado_y_horneado" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/carne
@@ -497,25 +859,53 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
        :nombre "carne" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/carne_de_cerdo
+:carne_de_cerdo rdf:type owl:NamedIndividual ,
+                         :Ingrediente ;
+                :glutenFree "true"^^xsd:boolean ;
+                :lactosaFree "true"^^xsd:boolean ;
+                :nombre "carne_de_cerdo" .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/carne_de_res
 :carne_de_res rdf:type owl:NamedIndividual ,
                        :Ingrediente ;
-              :disponibleEn :invierno ,
-                            :otono ,
-                            :primavera ,
-                            :verano ;
               :glutenFree "true"^^xsd:boolean ;
               :lactosaFree "true"^^xsd:boolean ;
               :nombre "carne_de_res" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/carne_picada
+:carne_picada rdf:type owl:NamedIndividual ,
+                       :Ingrediente ;
+              :glutenFree "true"^^xsd:boolean ;
+              :lactosaFree "true"^^xsd:boolean ;
+              :nombre "carne_picada" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cascara_de_naranja
+:cascara_de_naranja rdf:type owl:NamedIndividual ,
+                             :Ingrediente ;
+                    :glutenFree "true"^^xsd:boolean ;
+                    :lactosaFree "true"^^xsd:boolean ;
+                    :nombre "cascara_de_naranja" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/casqueria
+:casqueria rdf:type owl:NamedIndividual ,
+                    :Categoria ;
+           :nombre "casqueria" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cazuela
+:cazuela rdf:type owl:NamedIndividual ,
+                  :Categoria ;
+         :nombre "cazuela" .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cebolla
 :cebolla rdf:type owl:NamedIndividual ,
                   :Ingrediente ;
-         :disponibleEn :invierno ,
-                       :otono ,
-                       :primavera ,
-                       :verano ;
          :glutenFree "true"^^xsd:boolean ;
          :lactosaFree "true"^^xsd:boolean ;
          :nombre "cebolla" .
@@ -528,61 +918,246 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                    :glutenFree "false"^^xsd:boolean ;
                    :lactosaFree "true"^^xsd:boolean ;
                    :nombre "cerveza_artesanal" ;
-                   :precio "3.0"^^xsd:float .
+                   :precio "4.0"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cerveza_sin_gluten
-:cerveza_sin_gluten rdf:type owl:NamedIndividual ,
-                             :Casual ;
-                    :alcoholica "true"^^xsd:boolean ;
-                    :glutenFree "true"^^xsd:boolean ;
-                    :lactosaFree "true"^^xsd:boolean ;
-                    :nombre "cerveza_sin_gluten" ;
-                    :precio "3.2"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cerveza_rubia
+:cerveza_rubia rdf:type owl:NamedIndividual ,
+                        :Casual ;
+               :alcoholica "true"^^xsd:boolean ;
+               :glutenFree "false"^^xsd:boolean ;
+               :lactosaFree "true"^^xsd:boolean ;
+               :nombre "cerveza_rubia" ;
+               :precio "3.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cerveza_sin_alcohol
+:cerveza_sin_alcohol rdf:type owl:NamedIndividual ,
+                              :Casual ;
+                     :alcoholica "false"^^xsd:boolean ;
+                     :glutenFree "false"^^xsd:boolean ;
+                     :lactosaFree "true"^^xsd:boolean ;
+                     :nombre "cerveza_sin_alcohol" ;
+                     :precio "3.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/chalotas
+:chalotas rdf:type owl:NamedIndividual ,
+                   :Ingrediente ;
+          :glutenFree "true"^^xsd:boolean ;
+          :lactosaFree "true"^^xsd:boolean ;
+          :nombre "chalotas" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/champinones
 :champinones rdf:type owl:NamedIndividual ,
                       :Ingrediente ;
-             :disponibleEn :otono ;
              :glutenFree "true"^^xsd:boolean ;
              :lactosaFree "true"^^xsd:boolean ;
              :nombre "champinones" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/chianti_clasico
-:chianti_clasico rdf:type owl:NamedIndividual ,
-                          :Vino ;
-                 :alcoholica "true"^^xsd:boolean ;
-                 :glutenFree "true"^^xsd:boolean ;
-                 :lactosaFree "true"^^xsd:boolean ;
-                 :nombre "chianti_clasico" ;
-                 :precio "14.0"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/chardonnay
+:chardonnay rdf:type owl:NamedIndividual ,
+                     :Vino ;
+            :alcoholica "true"^^xsd:boolean ;
+            :glutenFree "true"^^xsd:boolean ;
+            :lactosaFree "true"^^xsd:boolean ;
+            :nombre "chardonnay" ;
+            :precio "17.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/chianti
+:chianti rdf:type owl:NamedIndividual ,
+                  :Vino ;
+         :alcoholica "true"^^xsd:boolean ;
+         :glutenFree "true"^^xsd:boolean ;
+         :lactosaFree "true"^^xsd:boolean ;
+         :nombre "chianti" ;
+         :precio "13.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/chocolate
+:chocolate rdf:type owl:NamedIndividual ,
+                    :Ingrediente ;
+           :glutenFree "true"^^xsd:boolean ;
+           :lactosaFree "false"^^xsd:boolean ;
+           :nombre "chocolate" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/chorizo
 :chorizo rdf:type owl:NamedIndividual ,
                   :Ingrediente ;
-         :disponibleEn :invierno ;
          :glutenFree "false"^^xsd:boolean ;
          :lactosaFree "true"^^xsd:boolean ;
          :nombre "chorizo" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/croquetas_de_jamon
-:croquetas_de_jamon rdf:type owl:NamedIndividual ,
-                             :Plato ;
-                    :compuestoPor :aceite_de_oliva ,
-                                  :harina_de_trigo ,
-                                  :jamon_serrano ,
-                                  :leche ,
-                                  :mantequilla ;
-                    :esCategoria :carne ;
-                    :esPreparacion :frito ;
-                    :originarioDe :espana ;
-                    :dificultad 6 ;
-                    :nombre "croquetas_de_jamon" ;
-                    :precio "7.5"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cocido
+:cocido rdf:type owl:NamedIndividual ,
+                 :Preparacion ;
+        :nombre "cocido" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cocido_a_baja_temperatura_y_frito
+:cocido_a_baja_temperatura_y_frito rdf:type owl:NamedIndividual ,
+                                            :Preparacion ;
+                                   :nombre "cocido_a_baja_temperatura_y_frito" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cocido_madrileno
+:cocido_madrileno rdf:type owl:NamedIndividual ,
+                           :Plato ;
+                  :compuestoPor :chorizo ,
+                                :garbanzos ,
+                                :morcilla ,
+                                :patatas ,
+                                :ternera ,
+                                :zanahoria ;
+                  :disponibleEn :invierno ;
+                  :esCategoria :legumbres ;
+                  :esPreparacion :cocido ;
+                  :incompatibleConBebida :limonada_casera ,
+                                         :sprite ,
+                                         <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up> ;
+                  :incompatibleConPlato :boeuf_bourguignon ,
+                                        :coq_au_vin ,
+                                        :fabada_asturiana ;
+                  :originarioDe :espana ;
+                  :dificultad 9 ;
+                  :nombre "cocido_madrileno" ;
+                  :precio "14.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cocido_y_batido
+:cocido_y_batido rdf:type owl:NamedIndividual ,
+                          :Preparacion ;
+                 :nombre "cocido_y_batido" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/comte
+:comte rdf:type owl:NamedIndividual ,
+                :Ingrediente ;
+       :glutenFree "true"^^xsd:boolean ;
+       :lactosaFree "false"^^xsd:boolean ;
+       :nombre "comte" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/confit_de_canard
+:confit_de_canard rdf:type owl:NamedIndividual ,
+                           :Plato ;
+                  :compuestoPor :ajo ,
+                                :grasa_de_pato ,
+                                :laurel ,
+                                :muslos_de_pato ,
+                                :pimienta ,
+                                :sal ,
+                                :tomillo ;
+                  :disponibleEn :invierno ,
+                                :otono ;
+                  :esCategoria :pato ;
+                  :esPreparacion :cocido_a_baja_temperatura_y_frito ;
+                  :incompatibleConBebida :agua_con_gas ,
+                                         :cerveza_sin_alcohol ,
+                                         :sprite ;
+                  :incompatibleConPlato :foie_gras ,
+                                        :kleftiko ,
+                                        :ossobuco_alla_milanese ;
+                  :originarioDe :francia ;
+                  :dificultad 9 ;
+                  :nombre "confit_de_canard" ;
+                  :precio "15.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/coq_au_vin
+:coq_au_vin rdf:type owl:NamedIndividual ,
+                     :Plato ;
+            :compuestoPor :ajo ,
+                          :bacon ,
+                          :caldo_de_pollo ,
+                          :cebolla ,
+                          :champinones ,
+                          :harina ,
+                          :laurel ,
+                          :mantequilla ,
+                          :pimienta ,
+                          :pollo ,
+                          :sal ,
+                          :tomillo ,
+                          :vino_tinto ,
+                          :zanahoria ;
+            :disponibleEn :invierno ,
+                          :otono ;
+            :esCategoria :aves ;
+            :esPreparacion :estofado ;
+            :incompatibleConBebida :fanta_naranja ,
+                                   :limonada_casera ,
+                                   :pepsi ;
+            :incompatibleConPlato :boeuf_bourguignon ,
+                                  :fabada_asturiana ,
+                                  :pollo_alla_cacciatora ;
+            :originarioDe :francia ;
+            :dificultad 8 ;
+            :nombre "coq_au_vin" ;
+            :precio "12.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cordero
+:cordero rdf:type owl:NamedIndividual ,
+                  :Ingrediente ;
+         :glutenFree "true"^^xsd:boolean ;
+         :lactosaFree "true"^^xsd:boolean ;
+         :nombre "cordero" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/crema_catalana
+:crema_catalana rdf:type owl:NamedIndividual ,
+                         :Plato ;
+                :compuestoPor :azucar ,
+                              :huevos ,
+                              :leche ,
+                              :limon ,
+                              :maicena ;
+                :disponibleEn :primavera ,
+                              :verano ;
+                :esCategoria :postre ;
+                :esPreparacion :hervido ;
+                :incompatibleConBebida :albarino ,
+                                       :cerveza_artesanal ,
+                                       :tinto_rioja ;
+                :incompatibleConPlato :creme_brulee ,
+                                      :natillas_caseras ,
+                                      :panna_cotta ;
+                :originarioDe :espana ;
+                :dificultad 6 ;
+                :nombre "crema_catalana" ;
+                :precio "4.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/creme_brulee
+:creme_brulee rdf:type owl:NamedIndividual ,
+                       :Plato ;
+              :compuestoPor :azucar ,
+                            :azucar_moreno ,
+                            :huevos ,
+                            :nata ,
+                            :vainilla ;
+              :disponibleEn :invierno ,
+                            :otono ,
+                            :primavera ,
+                            :verano ;
+              :esCategoria :postre ;
+              :esPreparacion :horneado_y_caramelizado ;
+              :incompatibleConBebida :cerveza_artesanal ,
+                                     :cerveza_rubia ,
+                                     :tinto_de_verano ;
+              :incompatibleConPlato :crema_catalana ,
+                                    :natillas_caseras ,
+                                    :panna_cotta ;
+              :originarioDe :francia ;
+              :dificultad 6 ;
+              :nombre "creme_brulee" ;
+              :precio "5.5"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/crudo
@@ -591,22 +1166,75 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
        :nombre "crudo" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/ensalada_campera
-:ensalada_campera rdf:type owl:NamedIndividual ,
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/dip
+:dip rdf:type owl:NamedIndividual ,
+              :Categoria ;
+     :nombre "dip" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/dolmades
+:dolmades rdf:type owl:NamedIndividual ,
+                   :Plato ;
+          :compuestoPor :aceite_de_oliva ,
+                        :arroz ,
+                        :carne_de_res ,
+                        :cebolla ,
+                        :cordero ,
+                        :hierbas ,
+                        :hojas_de_parra ,
+                        :limon ;
+          :disponibleEn :primavera ,
+                        :verano ;
+          :esCategoria :carne ;
+          :esPreparacion :vapor ;
+          :incompatibleConBebida :barolo ,
+                                 :tinto_de_verano ,
+                                 :zinfandel ;
+          :incompatibleConPlato :gemista ,
+                                :kleftiko ,
+                                :souvlaki ;
+          :originarioDe :grecia ;
+          :dificultad 6 ;
+          :nombre "dolmades" ;
+          :precio "7.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/dulce
+:dulce rdf:type owl:NamedIndividual ,
+                :Categoria ;
+       :nombre "dulce" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/empanada_gallega
+:empanada_gallega rdf:type owl:NamedIndividual ,
                            :Plato ;
                   :compuestoPor :aceite_de_oliva ,
-                                :aceitunas ,
+                                :atun ,
                                 :cebolla ,
-                                :huevos ,
-                                :patata ,
-                                :pimiento_verde ,
-                                :tomate ;
-                  :esCategoria :vegetariano ;
-                  :esPreparacion :hervido ;
+                                :harina ,
+                                :pimiento_rojo ;
+                  :disponibleEn :otono ,
+                                :primavera ;
+                  :esCategoria :pescado ;
+                  :esPreparacion :horno ;
+                  :incompatibleConBebida :agua_con_gas ,
+                                         :batido_de_chocolate ,
+                                         :bebida_de_yogur ;
+                  :incompatibleConPlato :quiche_lorraine ,
+                                        :spanakopita ,
+                                        :tiropita ;
                   :originarioDe :espana ;
-                  :dificultad 3 ;
-                  :nombre "ensalada_campera" ;
-                  :precio "6.5"^^xsd:float .
+                  :dificultad 5 ;
+                  :nombre "empanada_gallega" ;
+                  :precio "7.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/eneldo
+:eneldo rdf:type owl:NamedIndividual ,
+                 :Ingrediente ;
+        :glutenFree "true"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "eneldo" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/escalivada
@@ -616,21 +1244,49 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                           :berenjena ,
                           :cebolla ,
                           :pimiento_rojo ;
+            :disponibleEn :verano ;
             :esCategoria :vegetariano ;
             :esPreparacion :horno ;
+            :incompatibleConBebida :cerveza_rubia ,
+                                   :cerveza_sin_alcohol ,
+                                   :tinto_de_verano ;
+            :incompatibleConPlato :parmigiana_di_melanzane ,
+                                  :pisto_manchego ,
+                                  :ratatouille ;
             :originarioDe :espana ;
-            :dificultad 4 ;
+            :dificultad 3 ;
             :nombre "escalivada" ;
             :precio "7.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/escargots_de_bourgogne
+:escargots_de_bourgogne rdf:type owl:NamedIndividual ,
+                                 :Plato ;
+                        :compuestoPor :ajo ,
+                                      :caracoles ,
+                                      :chalotas ,
+                                      :mantequilla ,
+                                      :perejil ,
+                                      :pimienta ,
+                                      :sal ;
+                        :disponibleEn :invierno ,
+                                      :otono ;
+                        :esCategoria :caracolesc ;
+                        :esPreparacion :horno ;
+                        :incompatibleConBebida :cerveza_rubia ,
+                                               :fanta_naranja ,
+                                               :pepsi ;
+                        :incompatibleConPlato :bouillabaisse ,
+                                              :moules_marinieres ;
+                        :originarioDe :francia ;
+                        :dificultad 6 ;
+                        :nombre "escargots_de_bourgogne" ;
+                        :precio "9.0"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/espaguetis
 :espaguetis rdf:type owl:NamedIndividual ,
                      :Ingrediente ;
-            :disponibleEn :invierno ,
-                          :otono ,
-                          :primavera ,
-                          :verano ;
             :glutenFree "false"^^xsd:boolean ;
             :lactosaFree "true"^^xsd:boolean ;
             :nombre "espaguetis" .
@@ -642,38 +1298,18 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
         :nombre "espana" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/esparragos
-:esparragos rdf:type owl:NamedIndividual ,
-                     :Ingrediente ;
-            :disponibleEn :primavera ;
-            :glutenFree "true"^^xsd:boolean ;
-            :lactosaFree "true"^^xsd:boolean ;
-            :nombre "esparragos" .
-
-
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/espinacas
 :espinacas rdf:type owl:NamedIndividual ,
                     :Ingrediente ;
-           :disponibleEn :primavera ;
            :glutenFree "true"^^xsd:boolean ;
            :lactosaFree "true"^^xsd:boolean ;
            :nombre "espinacas" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/espinacas_con_garbanzos
-:espinacas_con_garbanzos rdf:type owl:NamedIndividual ,
-                                  :Plato ;
-                         :compuestoPor :aceite_de_oliva ,
-                                       :ajo ,
-                                       :espinacas ,
-                                       :garbanzos ,
-                                       :pimenton ;
-                         :esCategoria :vegetariano ;
-                         :esPreparacion :sarten ;
-                         :originarioDe :espana ;
-                         :dificultad 4 ;
-                         :nombre "espinacas_con_garbanzos" ;
-                         :precio "6.5"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/estofado
+:estofado rdf:type owl:NamedIndividual ,
+                   :Preparacion ;
+          :nombre "estofado" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/fabada_asturiana
@@ -681,26 +1317,101 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                            :Plato ;
                   :compuestoPor :aceite_de_oliva ,
                                 :ajo ,
-                                :cebolla ,
                                 :chorizo ,
-                                :fabes ,
-                                :jamon_serrano ,
+                                :garbanzos ,
                                 :morcilla ;
-                  :esCategoria :carne ;
-                  :esPreparacion :hervido ;
+                  :disponibleEn :invierno ;
+                  :esCategoria :legumbres ;
+                  :esPreparacion :guisado ;
+                  :incompatibleConBebida :agua_con_gas ,
+                                         :cerveza_sin_alcohol ,
+                                         :limonada_casera ;
+                  :incompatibleConPlato :boeuf_bourguignon ,
+                                        :cocido_madrileno ,
+                                        :coq_au_vin ;
                   :originarioDe :espana ;
-                  :dificultad 6 ;
+                  :dificultad 8 ;
                   :nombre "fabada_asturiana" ;
-                  :precio "11.0"^^xsd:float .
+                  :precio "12.0"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/fabes
-:fabes rdf:type owl:NamedIndividual ,
-                :Ingrediente ;
-       :disponibleEn :invierno ;
-       :glutenFree "true"^^xsd:boolean ;
-       :lactosaFree "true"^^xsd:boolean ;
-       :nombre "fabes" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/fanta_naranja
+:fanta_naranja rdf:type owl:NamedIndividual ,
+                        :Casual ;
+               :alcoholica "false"^^xsd:boolean ;
+               :glutenFree "true"^^xsd:boolean ;
+               :lactosaFree "true"^^xsd:boolean ;
+               :nombre "fanta_naranja" ;
+               :precio "2.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/fasolada
+:fasolada rdf:type owl:NamedIndividual ,
+                   :Plato ;
+          :compuestoPor :aceite_de_oliva ,
+                        :apio ,
+                        :cebolla ,
+                        :frijol ,
+                        :hierbas ,
+                        :tomate ,
+                        :zanahoria ;
+          :disponibleEn :invierno ,
+                        :otono ;
+          :esCategoria :sopa ;
+          :esPreparacion :sopa ;
+          :incompatibleConBebida :cerveza_artesanal ,
+                                 :chardonnay ,
+                                 :merlot ,
+                                 :zinfandel ;
+          :incompatibleConPlato :fabada_asturiana ,
+                                :gigantes_plaki ,
+                                :minestrone ;
+          :originarioDe :grecia ;
+          :dificultad 4 ;
+          :nombre "fasolada" ;
+          :precio "4.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/foie_gras
+:foie_gras rdf:type owl:NamedIndividual ,
+                    :Plato ;
+           :compuestoPor :higado_de_pato_o_ganso ,
+                         :pimienta ,
+                         :sal ;
+           :disponibleEn :invierno ,
+                         :otono ;
+           :esCategoria :casqueria ;
+           :esPreparacion :sellado_curado ;
+           :incompatibleConBebida :cerveza_artesanal ,
+                                  :fanta_naranja ,
+                                  :pepsi ;
+           :incompatibleConPlato :bistecca_alla_fiorentina ,
+                                 :confit_de_canard ,
+                                 :ossobuco_alla_milanese ;
+           :originarioDe :francia ;
+           :dificultad 9 ;
+           :nombre "foie_gras" ;
+           :precio "14.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/francia
+:francia rdf:type owl:NamedIndividual ,
+                  :Origen ;
+         :nombre "francia" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/frijol
+:frijol rdf:type owl:NamedIndividual ,
+                 :Ingrediente ;
+        :glutenFree "true"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "frijol" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/frio
+:frio rdf:type owl:NamedIndividual ,
+               :Preparacion ;
+      :nombre "frio" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/frito
@@ -714,42 +1425,55 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                                :Plato ;
                       :compuestoPor :aceite_de_oliva ,
                                     :calabacin ,
-                                    :cebolla ,
                                     :huevos ,
                                     :queso_parmesano ;
+                      :disponibleEn :primavera ,
+                                    :verano ;
                       :esCategoria :huevo ;
-                      :esPreparacion :sarten ;
+                      :esPreparacion :frito ;
+                      :incompatibleConBebida :cabernet_sauvignon ,
+                                             :merlot ,
+                                             :zinfandel ;
+                      :incompatibleConPlato :huevos_rotos_con_jamon ,
+                                            :revuelto_de_setas ,
+                                            :tortilla_de_patatas ;
                       :originarioDe :italia ;
-                      :dificultad 4 ;
+                      :dificultad 3 ;
                       :nombre "frittata_di_zucchine" ;
-                      :precio "7.5"^^xsd:float .
+                      :precio "8.5"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/gambas
-:gambas rdf:type owl:NamedIndividual ,
-                 :Ingrediente ;
-        :disponibleEn :verano ;
-        :glutenFree "true"^^xsd:boolean ;
-        :lactosaFree "true"^^xsd:boolean ;
-        :nombre "gambas" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/galaktoboureko
+:galaktoboureko rdf:type owl:NamedIndividual ,
+                         :Plato ;
+                :compuestoPor :azucar ,
+                              :leche ,
+                              :limon ,
+                              :mantequilla ,
+                              :masa_filo ,
+                              :semola ;
+                :disponibleEn :primavera ,
+                              :verano ;
+                :esCategoria :postre ;
+                :esPreparacion :horno ;
+                :incompatibleConBebida :cabernet_sauvignon ,
+                                       :chianti ,
+                                       :merlot ;
+                :incompatibleConPlato :loukoumades ,
+                                      :tarte_tatin ,
+                                      :torrijas ;
+                :originarioDe :grecia ;
+                :dificultad 6 ;
+                :nombre "galaktoboureko" ;
+                :precio "6.5"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/garbanzos
 :garbanzos rdf:type owl:NamedIndividual ,
                     :Ingrediente ;
-           :disponibleEn :invierno ;
            :glutenFree "true"^^xsd:boolean ;
            :lactosaFree "true"^^xsd:boolean ;
            :nombre "garbanzos" .
-
-
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/garrofo
-:garrofo rdf:type owl:NamedIndividual ,
-                  :Ingrediente ;
-         :disponibleEn :verano ;
-         :glutenFree "true"^^xsd:boolean ;
-         :lactosaFree "true"^^xsd:boolean ;
-         :nombre "garrofo" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/gazpacho_andaluz
@@ -759,74 +1483,193 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                                 :ajo ,
                                 :pan ,
                                 :pepino ,
-                                :pimiento_verde ,
-                                :tomate ,
-                                :vinagre ;
+                                :pimiento_rojo ,
+                                :tomate ;
+                  :disponibleEn :verano ;
                   :esCategoria :vegetariano ;
                   :esPreparacion :crudo ;
+                  :incompatibleConBebida :barolo ,
+                                         :batido_de_chocolate ,
+                                         :bebida_de_yogur ;
+                  :incompatibleConPlato :salmorejo_cordobes ,
+                                        :sopa_avgolemono ,
+                                        :soupe_a_loignon ;
                   :originarioDe :espana ;
                   :dificultad 3 ;
                   :nombre "gazpacho_andaluz" ;
-                  :precio "6.0"^^xsd:float .
+                  :precio "6.5"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/gnocchi
-:gnocchi rdf:type owl:NamedIndividual ,
-                  :Ingrediente ;
-         :disponibleEn :invierno ;
-         :glutenFree "false"^^xsd:boolean ;
-         :lactosaFree "true"^^xsd:boolean ;
-         :nombre "gnocchi" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/gelatina
+:gelatina rdf:type owl:NamedIndividual ,
+                   :Ingrediente ;
+          :glutenFree "true"^^xsd:boolean ;
+          :lactosaFree "true"^^xsd:boolean ;
+          :nombre "gelatina" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/gnocchi_al_pesto
-:gnocchi_al_pesto rdf:type owl:NamedIndividual ,
-                           :Plato ;
-                  :compuestoPor :gnocchi ,
-                                :pesto ,
-                                :queso_parmesano ;
-                  :esCategoria :pasta ;
-                  :esPreparacion :hervido ;
-                  :originarioDe :italia ;
-                  :dificultad 5 ;
-                  :nombre "gnocchi_al_pesto" ;
-                  :precio "10.0"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/gemista
+:gemista rdf:type owl:NamedIndividual ,
+                  :Plato ;
+         :compuestoPor :aceite_de_oliva ,
+                       :arroz ,
+                       :calabacin ,
+                       :cebolla ,
+                       :hierbas ,
+                       :pimiento_rojo ,
+                       :tomate ;
+         :disponibleEn :verano ;
+         :esCategoria :vegetariano ;
+         :esPreparacion :horno ;
+         :incompatibleConBebida :barolo ,
+                                :cabernet_sauvignon ,
+                                :fanta_naranja ,
+                                :lambrusco ,
+                                :pepsi ;
+         :incompatibleConPlato :dolmades ,
+                               :pisto_manchego ,
+                               :ratatouille ;
+         :originarioDe :grecia ;
+         :dificultad 6 ;
+         :nombre "gemista" ;
+         :precio "7.5"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/guindilla
-:guindilla rdf:type owl:NamedIndividual ,
-                    :Ingrediente ;
-           :disponibleEn :primavera ;
-           :glutenFree "true"^^xsd:boolean ;
-           :lactosaFree "true"^^xsd:boolean ;
-           :nombre "guindilla" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/gigantes_plaki
+:gigantes_plaki rdf:type owl:NamedIndividual ,
+                         :Plato ;
+                :compuestoPor :aceite_de_oliva ,
+                              :ajo ,
+                              :cebolla ,
+                              :frijol ,
+                              :hierbas ,
+                              :tomate ;
+                :disponibleEn :invierno ,
+                              :otono ;
+                :esCategoria :vegetariano ;
+                :esPreparacion :horno ;
+                :incompatibleConBebida :barolo ,
+                                       :cabernet_sauvignon ,
+                                       :chianti ,
+                                       :fanta_naranja ,
+                                       <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up> ;
+                :incompatibleConPlato :fabada_asturiana ,
+                                      :fasolada ,
+                                      :minestrone ;
+                :originarioDe :grecia ;
+                :dificultad 4 ;
+                :nombre "gigantes_plaki" ;
+                :precio "5.0"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/guisantes
-:guisantes rdf:type owl:NamedIndividual ,
-                    :Ingrediente ;
-           :disponibleEn :primavera ;
-           :glutenFree "true"^^xsd:boolean ;
-           :lactosaFree "true"^^xsd:boolean ;
-           :nombre "guisantes" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/gnocchi_al_pomodoro
+:gnocchi_al_pomodoro rdf:type owl:NamedIndividual ,
+                              :Plato ;
+                     :compuestoPor :aceite_de_oliva ,
+                                   :ajo ,
+                                   :pasta ,
+                                   :queso_parmesano ,
+                                   :tomate ;
+                     :disponibleEn :otono ,
+                                   :primavera ;
+                     :esCategoria :pasta ;
+                     :esPreparacion :hervido ;
+                     :incompatibleConBebida :fanta_naranja ,
+                                            :sprite ,
+                                            <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up> ;
+                     :incompatibleConPlato :pasta_al_pesto_genovese ,
+                                           :pasta_alla_norma ,
+                                           :spaghetti_carbonara ;
+                     :originarioDe :italia ;
+                     :dificultad 4 ;
+                     :nombre "gnocchi_al_pomodoro" ;
+                     :precio "8.0"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/harina_de_trigo
-:harina_de_trigo rdf:type owl:NamedIndividual ,
-                          :Ingrediente ;
-                 :disponibleEn :invierno ,
-                               :otono ,
-                               :primavera ,
-                               :verano ;
-                 :glutenFree "false"^^xsd:boolean ;
-                 :lactosaFree "true"^^xsd:boolean ;
-                 :nombre "harina_de_trigo" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/grasa_de_pato
+:grasa_de_pato rdf:type owl:NamedIndividual ,
+                        :Ingrediente ;
+               :glutenFree "true"^^xsd:boolean ;
+               :lactosaFree "true"^^xsd:boolean ;
+               :nombre "grasa_de_pato" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/grecia
+:grecia rdf:type owl:NamedIndividual ,
+                 :Origen ;
+        :nombre "grecia" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/guisado
+:guisado rdf:type owl:NamedIndividual ,
+                  :Preparacion ;
+         :nombre "guisado" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/harina
+:harina rdf:type owl:NamedIndividual ,
+                 :Ingrediente ;
+        :glutenFree "false"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "harina" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/hervido
 :hervido rdf:type owl:NamedIndividual ,
                   :Preparacion ;
          :nombre "hervido" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/hierbas
+:hierbas rdf:type owl:NamedIndividual ,
+                  :Ingrediente ;
+         :glutenFree "true"^^xsd:boolean ;
+         :lactosaFree "true"^^xsd:boolean ;
+         :nombre "hierbas" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/higado_de_pato_o_ganso
+:higado_de_pato_o_ganso rdf:type owl:NamedIndividual ,
+                                 :Ingrediente ;
+                        :glutenFree "true"^^xsd:boolean ;
+                        :lactosaFree "true"^^xsd:boolean ;
+                        :nombre "higado_de_pato_o_ganso" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/hinojo
+:hinojo rdf:type owl:NamedIndividual ,
+                 :Ingrediente ;
+        :glutenFree "true"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "hinojo" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/hojas_de_parra
+:hojas_de_parra rdf:type owl:NamedIndividual ,
+                         :Ingrediente ;
+                :glutenFree "true"^^xsd:boolean ;
+                :lactosaFree "true"^^xsd:boolean ;
+                :nombre "hojas_de_parra" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/hojas_verdes
+:hojas_verdes rdf:type owl:NamedIndividual ,
+                       :Ingrediente ;
+              :glutenFree "true"^^xsd:boolean ;
+              :lactosaFree "true"^^xsd:boolean ;
+              :nombre "hojas_verdes" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/horneado_y_caramelizado
+:horneado_y_caramelizado rdf:type owl:NamedIndividual ,
+                                  :Preparacion ;
+                         :nombre "horneado_y_caramelizado" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/horneado_y_en_capas
+:horneado_y_en_capas rdf:type owl:NamedIndividual ,
+                              :Preparacion ;
+                     :nombre "horneado_y_en_capas" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/horno
@@ -844,10 +1687,6 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/huevos
 :huevos rdf:type owl:NamedIndividual ,
                  :Ingrediente ;
-        :disponibleEn :invierno ,
-                      :otono ,
-                      :primavera ,
-                      :verano ;
         :glutenFree "true"^^xsd:boolean ;
         :lactosaFree "true"^^xsd:boolean ;
         :nombre "huevos" .
@@ -859,28 +1698,23 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                         :compuestoPor :aceite_de_oliva ,
                                       :huevos ,
                                       :jamon_serrano ,
-                                      :patata ;
+                                      :patatas ;
+                        :disponibleEn :invierno ,
+                                      :otono ,
+                                      :primavera ,
+                                      :verano ;
                         :esCategoria :huevo ;
-                        :esPreparacion :sarten ;
+                        :esPreparacion :frito ;
+                        :incompatibleConBebida :chardonnay ,
+                                               :sauvignon_blanc ,
+                                               :verdicchio ;
+                        :incompatibleConPlato :frittata_di_zucchine ,
+                                              :revuelto_de_setas ,
+                                              :tortilla_de_patatas ;
                         :originarioDe :espana ;
                         :dificultad 4 ;
                         :nombre "huevos_rotos_con_jamon" ;
-                        :precio "8.0"^^xsd:float .
-
-
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/insalata_caprese
-:insalata_caprese rdf:type owl:NamedIndividual ,
-                           :Plato ;
-                  :compuestoPor :aceite_de_oliva ,
-                                :albahaca ,
-                                :mozzarella ,
-                                :tomate ;
-                  :esCategoria :vegetariano ;
-                  :esPreparacion :crudo ;
-                  :originarioDe :italia ;
-                  :dificultad 2 ;
-                  :nombre "insalata_caprese" ;
-                  :precio "6.0"^^xsd:float .
+                        :precio "9.5"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/invierno
@@ -898,19 +1732,43 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/jamon_serrano
 :jamon_serrano rdf:type owl:NamedIndividual ,
                         :Ingrediente ;
-               :disponibleEn :invierno ;
                :glutenFree "true"^^xsd:boolean ;
                :lactosaFree "true"^^xsd:boolean ;
                :nombre "jamon_serrano" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/judia_verde
-:judia_verde rdf:type owl:NamedIndividual ,
-                      :Ingrediente ;
-             :disponibleEn :verano ;
-             :glutenFree "true"^^xsd:boolean ;
-             :lactosaFree "true"^^xsd:boolean ;
-             :nombre "judia_verde" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/judias
+:judias rdf:type owl:NamedIndividual ,
+                 :Ingrediente ;
+        :glutenFree "true"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "judias" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/kleftiko
+:kleftiko rdf:type owl:NamedIndividual ,
+                   :Plato ;
+          :compuestoPor :aceite_de_oliva ,
+                        :ajo ,
+                        :cordero ,
+                        :limon ,
+                        :patatas ,
+                        :romero ;
+          :disponibleEn :invierno ,
+                        :otono ;
+          :esCategoria :carne ;
+          :esPreparacion :cocido ;
+          :incompatibleConBebida :albarino ,
+                                 :sprite ,
+                                 :txakoli ,
+                                 <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up> ;
+          :incompatibleConPlato :bistecca_alla_fiorentina ,
+                                :confit_de_canard ,
+                                :ossobuco_alla_milanese ;
+          :originarioDe :grecia ;
+          :dificultad 7 ;
+          :nombre "kleftiko" ;
+          :precio "11.0"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/lambrusco
@@ -920,218 +1778,424 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
            :glutenFree "true"^^xsd:boolean ;
            :lactosaFree "true"^^xsd:boolean ;
            :nombre "lambrusco" ;
-           :precio "8.5"^^xsd:float .
+           :precio "9.5"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/laminas_de_lasana
-:laminas_de_lasana rdf:type owl:NamedIndividual ,
-                            :Ingrediente ;
-                   :disponibleEn :invierno ,
-                                 :otono ,
-                                 :primavera ,
-                                 :verano ;
-                   :glutenFree "false"^^xsd:boolean ;
-                   :lactosaFree "true"^^xsd:boolean ;
-                   :nombre "laminas_de_lasana" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/lardones
+:lardones rdf:type owl:NamedIndividual ,
+                   :Ingrediente ;
+          :glutenFree "true"^^xsd:boolean ;
+          :lactosaFree "true"^^xsd:boolean ;
+          :nombre "lardones" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/lasagna_alla_bolognese
 :lasagna_alla_bolognese rdf:type owl:NamedIndividual ,
                                  :Plato ;
-                        :compuestoPor :carne_de_res ,
-                                      :harina_de_trigo ,
-                                      :laminas_de_lasana ,
-                                      :leche ,
-                                      :mantequilla ,
+                        :compuestoPor :aceite_de_oliva ,
+                                      :ajo ,
+                                      :carne_picada ,
+                                      :cebolla ,
+                                      :pasta ,
                                       :queso_parmesano ,
                                       :tomate ;
+                        :disponibleEn :invierno ,
+                                      :otono ;
                         :esCategoria :pasta ;
                         :esPreparacion :horno ;
+                        :incompatibleConBebida :limonada_casera ,
+                                               :sprite ,
+                                               <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up> ;
+                        :incompatibleConPlato :moussaka ,
+                                              :pastitsio ,
+                                              :tagliatelle_al_ragu ;
                         :originarioDe :italia ;
-                        :dificultad 7 ;
+                        :dificultad 8 ;
                         :nombre "lasagna_alla_bolognese" ;
-                        :precio "13.5"^^xsd:float .
+                        :precio "13.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/laurel
+:laurel rdf:type owl:NamedIndividual ,
+                 :Ingrediente ;
+        :glutenFree "true"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "laurel" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/leche
 :leche rdf:type owl:NamedIndividual ,
                 :Ingrediente ;
-       :disponibleEn :invierno ,
-                     :otono ,
-                     :primavera ,
-                     :verano ;
        :glutenFree "true"^^xsd:boolean ;
        :lactosaFree "false"^^xsd:boolean ;
        :nombre "leche" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/leche_con_cacao
-:leche_con_cacao rdf:type owl:NamedIndividual ,
-                          :Casual ;
-                 :alcoholica "false"^^xsd:boolean ;
-                 :glutenFree "true"^^xsd:boolean ;
-                 :lactosaFree "false"^^xsd:boolean ;
-                 :nombre "leche_con_cacao" ;
-                 :precio "2.5"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/legumbres
+:legumbres rdf:type owl:NamedIndividual ,
+                    :Categoria ;
+           :nombre "legumbres" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/levadura
+:levadura rdf:type owl:NamedIndividual ,
+                   :Ingrediente ;
+          :glutenFree "false"^^xsd:boolean ;
+          :lactosaFree "true"^^xsd:boolean ;
+          :nombre "levadura" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/limon
 :limon rdf:type owl:NamedIndividual ,
                 :Ingrediente ;
-       :disponibleEn :primavera ;
        :glutenFree "true"^^xsd:boolean ;
        :lactosaFree "true"^^xsd:boolean ;
        :nombre "limon" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/limonada_casera
+:limonada_casera rdf:type owl:NamedIndividual ,
+                          :Casual ;
+                 :alcoholica "false"^^xsd:boolean ;
+                 :glutenFree "true"^^xsd:boolean ;
+                 :lactosaFree "true"^^xsd:boolean ;
+                 :nombre "limonada_casera" ;
+                 :precio "2.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/loukoumades
+:loukoumades rdf:type owl:NamedIndividual ,
+                      :Plato ;
+             :compuestoPor :azucar ,
+                           :canela ,
+                           :harina ,
+                           :levadura ,
+                           :miel ;
+             :disponibleEn :invierno ,
+                           :otono ,
+                           :primavera ,
+                           :verano ;
+             :esCategoria :postre ;
+             :esPreparacion :frito ;
+             :incompatibleConBebida :barolo ,
+                                    :chardonnay ,
+                                    :zinfandel ;
+             :incompatibleConPlato :galaktoboureko ,
+                                   :tarte_tatin ,
+                                   :torrijas ;
+             :originarioDe :grecia ;
+             :dificultad 5 ;
+             :nombre "loukoumades" ;
+             :precio "4.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/maicena
+:maicena rdf:type owl:NamedIndividual ,
+                  :Ingrediente ;
+         :glutenFree "true"^^xsd:boolean ;
+         :lactosaFree "true"^^xsd:boolean ;
+         :nombre "maicena" .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mantequilla
 :mantequilla rdf:type owl:NamedIndividual ,
                       :Ingrediente ;
-             :disponibleEn :invierno ;
              :glutenFree "true"^^xsd:boolean ;
              :lactosaFree "false"^^xsd:boolean ;
              :nombre "mantequilla" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/marisco
-:marisco rdf:type owl:NamedIndividual ,
-                  :Categoria ;
-         :nombre "marisco" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/manzana
+:manzana rdf:type owl:NamedIndividual ,
+                  :Ingrediente ;
+         :glutenFree "true"^^xsd:boolean ;
+         :lactosaFree "true"^^xsd:boolean ;
+         :nombre "manzana" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/masa_de_pizza
-:masa_de_pizza rdf:type owl:NamedIndividual ,
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mariscos
+:mariscos rdf:type owl:NamedIndividual ,
+                   :Categoria ,
+                   :Ingrediente ;
+          :glutenFree "true"^^xsd:boolean ;
+          :lactosaFree "true"^^xsd:boolean ;
+          :nombre "mariscos" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/masa_de_hojaldre
+:masa_de_hojaldre rdf:type owl:NamedIndividual ,
+                           :Ingrediente ;
+                  :glutenFree "false"^^xsd:boolean ;
+                  :lactosaFree "false"^^xsd:boolean ;
+                  :nombre "masa_de_hojaldre" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/masa_filo
+:masa_filo rdf:type owl:NamedIndividual ,
+                    :Ingrediente ;
+           :glutenFree "false"^^xsd:boolean ;
+           :lactosaFree "true"^^xsd:boolean ;
+           :nombre "masa_filo" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/masa_quebrada
+:masa_quebrada rdf:type owl:NamedIndividual ,
                         :Ingrediente ;
-               :disponibleEn :invierno ,
-                             :otono ,
-                             :primavera ,
-                             :verano ;
                :glutenFree "false"^^xsd:boolean ;
-               :lactosaFree "true"^^xsd:boolean ;
-               :nombre "masa_de_pizza" .
+               :lactosaFree "false"^^xsd:boolean ;
+               :nombre "masa_quebrada" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mejillones
 :mejillones rdf:type owl:NamedIndividual ,
                      :Ingrediente ;
-            :disponibleEn :verano ;
             :glutenFree "true"^^xsd:boolean ;
             :lactosaFree "true"^^xsd:boolean ;
             :nombre "mejillones" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/melanzane_alla_parmigiana
-:melanzane_alla_parmigiana rdf:type owl:NamedIndividual ,
-                                    :Plato ;
-                           :compuestoPor :aceite_de_oliva ,
-                                         :albahaca ,
-                                         :berenjena ,
-                                         :mozzarella ,
-                                         :queso_parmesano ,
-                                         :tomate ;
-                           :esCategoria :vegetariano ;
-                           :esPreparacion :horno ;
-                           :originarioDe :italia ;
-                           :dificultad 6 ;
-                           :nombre "melanzane_alla_parmigiana" ;
-                           :precio "9.5"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/merlot
+:merlot rdf:type owl:NamedIndividual ,
+                 :Vino ;
+        :alcoholica "true"^^xsd:boolean ;
+        :glutenFree "true"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "merlot" ;
+        :precio "14.0"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/merluza
-:merluza rdf:type owl:NamedIndividual ,
-                  :Ingrediente ;
-         :disponibleEn :primavera ,
-                       :verano ;
-         :glutenFree "true"^^xsd:boolean ;
-         :lactosaFree "true"^^xsd:boolean ;
-         :nombre "merluza" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mezclado
+:mezclado rdf:type owl:NamedIndividual ,
+                   :Preparacion ;
+          :nombre "mezclado" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/merluza_a_la_koskera
-:merluza_a_la_koskera rdf:type owl:NamedIndividual ,
-                               :Plato ;
-                      :compuestoPor :aceite_de_oliva ,
-                                    :ajo ,
-                                    :almejas ,
-                                    :esparragos ,
-                                    :guisantes ,
-                                    :huevos ,
-                                    :merluza ;
-                      :esCategoria :pescado ;
-                      :esPreparacion :hervido ;
-                      :originarioDe :espana ;
-                      :dificultad 6 ;
-                      :nombre "merluza_a_la_koskera" ;
-                      :precio "12.0"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/miel
+:miel rdf:type owl:NamedIndividual ,
+               :Ingrediente ;
+      :glutenFree "true"^^xsd:boolean ;
+      :lactosaFree "true"^^xsd:boolean ;
+      :nombre "miel" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/minestrone
+:minestrone rdf:type owl:NamedIndividual ,
+                     :Plato ;
+            :compuestoPor :aceite_de_oliva ,
+                          :ajo ,
+                          :calabacin ,
+                          :cebolla ,
+                          :judias ,
+                          :zanahoria ;
+            :disponibleEn :invierno ,
+                          :otono ;
+            :esCategoria :vegetariano ;
+            :esPreparacion :hervido ;
+            :incompatibleConBebida :batido_de_chocolate ,
+                                   :bebida_de_yogur ,
+                                   :chianti ;
+            :incompatibleConPlato :fasolada ,
+                                  :sopa_avgolemono ,
+                                  :soupe_a_loignon ;
+            :originarioDe :italia ;
+            :dificultad 5 ;
+            :nombre "minestrone" ;
+            :precio "7.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/montado
+:montado rdf:type owl:NamedIndividual ,
+                  :Preparacion ;
+         :nombre "montado" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/montado_y_tostado
+:montado_y_tostado rdf:type owl:NamedIndividual ,
+                            :Preparacion ;
+                   :nombre "montado_y_tostado" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/montepulciano
+:montepulciano rdf:type owl:NamedIndividual ,
+                        :Vino ;
+               :alcoholica "true"^^xsd:boolean ;
+               :glutenFree "true"^^xsd:boolean ;
+               :lactosaFree "true"^^xsd:boolean ;
+               :nombre "montepulciano" ;
+               :precio "12.0"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/morcilla
 :morcilla rdf:type owl:NamedIndividual ,
                    :Ingrediente ;
-          :disponibleEn :invierno ;
           :glutenFree "false"^^xsd:boolean ;
-          :lactosaFree "false"^^xsd:boolean ;
+          :lactosaFree "true"^^xsd:boolean ;
           :nombre "morcilla" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mostaza_de_dijon
+:mostaza_de_dijon rdf:type owl:NamedIndividual ,
+                           :Ingrediente ;
+                  :glutenFree "true"^^xsd:boolean ;
+                  :lactosaFree "true"^^xsd:boolean ;
+                  :nombre "mostaza_de_dijon" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/moules_marinieres
+:moules_marinieres rdf:type owl:NamedIndividual ,
+                            :Plato ;
+                   :compuestoPor :ajo ,
+                                 :chalotas ,
+                                 :mantequilla ,
+                                 :mejillones ,
+                                 :perejil ,
+                                 :pimienta ,
+                                 :sal ,
+                                 :vino_blanco ;
+                   :disponibleEn :verano ;
+                   :esCategoria :mariscos ;
+                   :esPreparacion :vapor ;
+                   :incompatibleConBebida :sprite ,
+                                          :tinto_de_verano ,
+                                          <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up> ;
+                   :incompatibleConPlato :bouillabaisse ,
+                                         :calamares_a_la_romana ,
+                                         :pulpo_a_la_gallega ;
+                   :originarioDe :francia ;
+                   :dificultad 4 ;
+                   :nombre "moules_marinieres" ;
+                   :precio "9.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/moussaka
+:moussaka rdf:type owl:NamedIndividual ,
+                   :Plato ;
+          :compuestoPor :ajo ,
+                        :berenjena ,
+                        :carne_de_res ,
+                        :cebolla ,
+                        :salsa_bechamel ,
+                        :tomate ;
+          :disponibleEn :otono ,
+                        :verano ;
+          :esCategoria :cazuela ;
+          :esPreparacion :horneado_y_en_capas ;
+          :incompatibleConBebida :agua_con_gas ,
+                                 :sprite ,
+                                 <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up> ;
+          :incompatibleConPlato :lasagna_alla_bolognese ,
+                                :pastitsio ,
+                                :tagliatelle_al_ragu ;
+          :originarioDe :grecia ;
+          :dificultad 7 ;
+          :nombre "moussaka" ;
+          :precio "9.5"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mozzarella
 :mozzarella rdf:type owl:NamedIndividual ,
                      :Ingrediente ;
-            :disponibleEn :invierno ,
-                          :otono ,
-                          :primavera ,
-                          :verano ;
             :glutenFree "true"^^xsd:boolean ;
             :lactosaFree "false"^^xsd:boolean ;
             :nombre "mozzarella" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/muslos_de_pato
+:muslos_de_pato rdf:type owl:NamedIndividual ,
+                         :Ingrediente ;
+                :glutenFree "true"^^xsd:boolean ;
+                :lactosaFree "true"^^xsd:boolean ;
+                :nombre "muslos_de_pato" .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/nata
 :nata rdf:type owl:NamedIndividual ,
                :Ingrediente ;
-      :disponibleEn :invierno ;
       :glutenFree "true"^^xsd:boolean ;
       :lactosaFree "false"^^xsd:boolean ;
       :nombre "nata" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/nata_espesa
+:nata_espesa rdf:type owl:NamedIndividual ,
+                      :Ingrediente ;
+             :glutenFree "true"^^xsd:boolean ;
+             :lactosaFree "false"^^xsd:boolean ;
+             :nombre "nata_espesa" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/natillas_caseras
+:natillas_caseras rdf:type owl:NamedIndividual ,
+                           :Plato ;
+                  :compuestoPor :azucar ,
+                                :canela ,
+                                :huevos ,
+                                :leche ,
+                                :maicena ;
+                  :disponibleEn :invierno ,
+                                :otono ,
+                                :primavera ,
+                                :verano ;
+                  :esCategoria :postre ;
+                  :esPreparacion :hervido ;
+                  :incompatibleConBebida :cerveza_artesanal ,
+                                         :cerveza_rubia ,
+                                         :tinto_de_verano ;
+                  :incompatibleConPlato :crema_catalana ,
+                                        :creme_brulee ,
+                                        :panna_cotta ;
+                  :originarioDe :espana ;
+                  :dificultad 3 ;
+                  :nombre "natillas_caseras" ;
+                  :precio "3.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/nuez
+:nuez rdf:type owl:NamedIndividual ,
+               :Ingrediente ;
+      :glutenFree "true"^^xsd:boolean ;
+      :lactosaFree "true"^^xsd:boolean ;
+      :nombre "nuez" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/nuez_moscada
+:nuez_moscada rdf:type owl:NamedIndividual ,
+                       :Ingrediente ;
+              :glutenFree "true"^^xsd:boolean ;
+              :lactosaFree "true"^^xsd:boolean ;
+              :nombre "nuez_moscada" .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/oregano
 :oregano rdf:type owl:NamedIndividual ,
                   :Ingrediente ;
-         :disponibleEn :invierno ,
-                       :otono ,
-                       :primavera ,
-                       :verano ;
          :glutenFree "true"^^xsd:boolean ;
          :lactosaFree "true"^^xsd:boolean ;
          :nombre "oregano" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/osobuco_de_ternera
-:osobuco_de_ternera rdf:type owl:NamedIndividual ,
-                             :Ingrediente ;
-                    :disponibleEn :invierno ;
-                    :glutenFree "true"^^xsd:boolean ;
-                    :lactosaFree "true"^^xsd:boolean ;
-                    :nombre "osobuco_de_ternera" .
-
-
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/ossobuco_alla_milanese
 :ossobuco_alla_milanese rdf:type owl:NamedIndividual ,
                                  :Plato ;
-                        :compuestoPor :apio ,
-                                      :caldo_de_carne ,
+                        :compuestoPor :aceite_de_oliva ,
+                                      :ajo ,
                                       :cebolla ,
-                                      :osobuco_de_ternera ,
-                                      :tomate ,
+                                      :ternera ,
                                       :vino_blanco ,
                                       :zanahoria ;
+                        :disponibleEn :invierno ;
                         :esCategoria :carne ;
-                        :esPreparacion :sarten ;
+                        :esPreparacion :guisado ;
+                        :incompatibleConBebida :limonada_casera ,
+                                               :sprite ,
+                                               <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up> ;
+                        :incompatibleConPlato :bistecca_alla_fiorentina ,
+                                              :kleftiko ,
+                                              :steak_frites ;
                         :originarioDe :italia ;
                         :dificultad 7 ;
                         :nombre "ossobuco_alla_milanese" ;
-                        :precio "16.0"^^xsd:float .
+                        :precio "15.0"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/otono
@@ -1145,13 +2209,20 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                             :Plato ;
                    :compuestoPor :aceite_de_oliva ,
                                  :ajo ,
-                                 :arroz_blanco ,
-                                 :garrofo ,
-                                 :judia_verde ,
-                                 :pollo ,
-                                 :tomate ;
+                                 :arroz ,
+                                 :mariscos ,
+                                 :pimiento_rojo ,
+                                 :pollo ;
+                   :disponibleEn :primavera ,
+                                 :verano ;
                    :esCategoria :arroz ;
-                   :esPreparacion :horno ;
+                   :esPreparacion :cocido ;
+                   :incompatibleConBebida :cerveza_artesanal ,
+                                          :lambrusco ,
+                                          :tinto_de_verano ;
+                   :incompatibleConPlato :arroz_caldoso ,
+                                         :arroz_con_leche ,
+                                         :risotto_ai_funghi ;
                    :originarioDe :espana ;
                    :dificultad 7 ;
                    :nombre "paella_valenciana" ;
@@ -1161,10 +2232,6 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pan
 :pan rdf:type owl:NamedIndividual ,
               :Ingrediente ;
-     :disponibleEn :invierno ,
-                   :otono ,
-                   :primavera ,
-                   :verano ;
      :glutenFree "false"^^xsd:boolean ;
      :lactosaFree "true"^^xsd:boolean ;
      :nombre "pan" .
@@ -1173,75 +2240,203 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/panceta
 :panceta rdf:type owl:NamedIndividual ,
                   :Ingrediente ;
-         :disponibleEn :invierno ;
          :glutenFree "true"^^xsd:boolean ;
          :lactosaFree "true"^^xsd:boolean ;
          :nombre "panceta" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/panna_cotta
+:panna_cotta rdf:type owl:NamedIndividual ,
+                      :Plato ;
+             :compuestoPor :azucar ,
+                           :gelatina ,
+                           :nata ,
+                           :vainilla ;
+             :disponibleEn :primavera ,
+                           :verano ;
+             :esCategoria :dulce ;
+             :esPreparacion :frio ;
+             :incompatibleConBebida :fanta_naranja ,
+                                    :pepsi ,
+                                    :refresco_de_cola ;
+             :incompatibleConPlato :creme_brulee ,
+                                   :natillas_caseras ,
+                                   :tiramisu ;
+             :originarioDe :italia ;
+             :dificultad 4 ;
+             :nombre "panna_cotta" ;
+             :precio "5.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/parmigiana_di_melanzane
+:parmigiana_di_melanzane rdf:type owl:NamedIndividual ,
+                                  :Plato ;
+                         :compuestoPor :aceite_de_oliva ,
+                                       :ajo ,
+                                       :berenjena ,
+                                       :queso_parmesano ,
+                                       :tomate ;
+                         :disponibleEn :verano ;
+                         :esCategoria :vegetariano ;
+                         :esPreparacion :horno ;
+                         :incompatibleConBebida :cerveza_artesanal ,
+                                                :cerveza_rubia ,
+                                                :tinto_de_verano ;
+                         :incompatibleConPlato :escalivada ,
+                                               :pisto_manchego ,
+                                               :ratatouille ;
+                         :originarioDe :italia ;
+                         :dificultad 6 ;
+                         :nombre "parmigiana_di_melanzane" ;
+                         :precio "9.5"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pasta
 :pasta rdf:type owl:NamedIndividual ,
                 :Categoria ,
                 :Ingrediente ;
-       :disponibleEn :invierno ,
-                     :otono ,
-                     :primavera ,
-                     :verano ;
        :glutenFree "false"^^xsd:boolean ;
        :lactosaFree "true"^^xsd:boolean ;
        :nombre "pasta" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pasta_al_pomodoro
-:pasta_al_pomodoro rdf:type owl:NamedIndividual ,
-                            :Plato ;
-                   :compuestoPor :aceite_de_oliva ,
-                                 :albahaca ,
-                                 :pasta ,
-                                 :queso_parmesano ,
-                                 :tomate ;
-                   :esCategoria :pasta ;
-                   :esPreparacion :hervido ;
-                   :originarioDe :italia ;
-                   :dificultad 3 ;
-                   :nombre "pasta_al_pomodoro" ;
-                   :precio "8.0"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pasta_al_pesto_genovese
+:pasta_al_pesto_genovese rdf:type owl:NamedIndividual ,
+                                  :Plato ;
+                         :compuestoPor :aceite_de_oliva ,
+                                       :ajo ,
+                                       :albahaca ,
+                                       :pasta ,
+                                       :pinones ,
+                                       :queso_parmesano ;
+                         :disponibleEn :primavera ,
+                                       :verano ;
+                         :esCategoria :pasta ;
+                         :esPreparacion :hervido ;
+                         :incompatibleConBebida :barolo ,
+                                                :batido_de_chocolate ,
+                                                :bebida_de_yogur ;
+                         :incompatibleConPlato :gnocchi_al_pomodoro ,
+                                               :pasta_alla_norma ,
+                                               :spaghetti_carbonara ;
+                         :originarioDe :italia ;
+                         :dificultad 4 ;
+                         :nombre "pasta_al_pesto_genovese" ;
+                         :precio "9.0"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pasta_alla_norma
 :pasta_alla_norma rdf:type owl:NamedIndividual ,
                            :Plato ;
                   :compuestoPor :aceite_de_oliva ,
-                                :albahaca ,
+                                :ajo ,
                                 :berenjena ,
                                 :pasta ,
-                                :ricotta ,
+                                :queso_parmesano ,
                                 :tomate ;
+                  :disponibleEn :verano ;
                   :esCategoria :pasta ;
                   :esPreparacion :hervido ;
+                  :incompatibleConBebida :limonada_casera ,
+                                         :sprite ,
+                                         <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up> ;
+                  :incompatibleConPlato :gnocchi_al_pomodoro ,
+                                        :pasta_al_pesto_genovese ,
+                                        :spaghetti_carbonara ;
                   :originarioDe :italia ;
                   :dificultad 5 ;
                   :nombre "pasta_alla_norma" ;
-                  :precio "9.0"^^xsd:float .
+                  :precio "9.5"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/patata
-:patata rdf:type owl:NamedIndividual ,
-                 :Ingrediente ;
-        :disponibleEn :invierno ,
-                      :otono ;
-        :glutenFree "true"^^xsd:boolean ;
-        :lactosaFree "true"^^xsd:boolean ;
-        :nombre "patata" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pasta_de_tomate
+:pasta_de_tomate rdf:type owl:NamedIndividual ,
+                          :Ingrediente ;
+                 :glutenFree "true"^^xsd:boolean ;
+                 :lactosaFree "true"^^xsd:boolean ;
+                 :nombre "pasta_de_tomate" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pastel_salado
+:pastel_salado rdf:type owl:NamedIndividual ,
+                        :Categoria ;
+               :nombre "pastel_salado" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pastitsio
+:pastitsio rdf:type owl:NamedIndividual ,
+                    :Plato ;
+           :compuestoPor :ajo ,
+                         :canela ,
+                         :carne_de_res ,
+                         :cebolla ,
+                         :pasta ,
+                         :queso ,
+                         :salsa_bechamel ;
+           :disponibleEn :invierno ,
+                         :otono ;
+           :esCategoria :carne ;
+           :esPreparacion :horno ;
+           :incompatibleConBebida :albarino ,
+                                  :fanta_naranja ,
+                                  :txakoli ,
+                                  :verdicchio ,
+                                  <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up> ;
+           :incompatibleConPlato :lasagna_alla_bolognese ,
+                                 :moussaka ,
+                                 :tagliatelle_al_ragu ;
+           :originarioDe :grecia ;
+           :dificultad 6 ;
+           :nombre "pastitsio" ;
+           :precio "8.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/patatas
+:patatas rdf:type owl:NamedIndividual ,
+                  :Ingrediente ;
+         :glutenFree "true"^^xsd:boolean ;
+         :lactosaFree "true"^^xsd:boolean ;
+         :nombre "patatas" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pato
+:pato rdf:type owl:NamedIndividual ,
+               :Categoria ;
+      :nombre "pato" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pecorino
+:pecorino rdf:type owl:NamedIndividual ,
+                   :Ingrediente ;
+          :glutenFree "true"^^xsd:boolean ;
+          :lactosaFree "false"^^xsd:boolean ;
+          :nombre "pecorino" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pepino
 :pepino rdf:type owl:NamedIndividual ,
                  :Ingrediente ;
-        :disponibleEn :verano ;
         :glutenFree "true"^^xsd:boolean ;
         :lactosaFree "true"^^xsd:boolean ;
         :nombre "pepino" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pepsi
+:pepsi rdf:type owl:NamedIndividual ,
+                :Casual ;
+       :alcoholica "false"^^xsd:boolean ;
+       :glutenFree "true"^^xsd:boolean ;
+       :lactosaFree "true"^^xsd:boolean ;
+       :nombre "pepsi" ;
+       :precio "2.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/perejil
+:perejil rdf:type owl:NamedIndividual ,
+                  :Ingrediente ;
+         :glutenFree "true"^^xsd:boolean ;
+         :lactosaFree "true"^^xsd:boolean ;
+         :nombre "perejil" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pescado
@@ -1250,31 +2445,33 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
          :nombre "pescado" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pesto
-:pesto rdf:type owl:NamedIndividual ,
-                :Ingrediente ;
-       :disponibleEn :verano ;
-       :glutenFree "true"^^xsd:boolean ;
-       :lactosaFree "false"^^xsd:boolean ;
-       :nombre "pesto" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pescados_variados
+:pescados_variados rdf:type owl:NamedIndividual ,
+                            :Ingrediente ;
+                   :glutenFree "true"^^xsd:boolean ;
+                   :lactosaFree "true"^^xsd:boolean ;
+                   :nombre "pescados_variados" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pimenton
 :pimenton rdf:type owl:NamedIndividual ,
                    :Ingrediente ;
-          :disponibleEn :otono ;
           :glutenFree "true"^^xsd:boolean ;
           :lactosaFree "true"^^xsd:boolean ;
           :nombre "pimenton" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pimienta
+:pimienta rdf:type owl:NamedIndividual ,
+                   :Ingrediente ;
+          :glutenFree "true"^^xsd:boolean ;
+          :lactosaFree "true"^^xsd:boolean ;
+          :nombre "pimienta" .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pimienta_negra
 :pimienta_negra rdf:type owl:NamedIndividual ,
                          :Ingrediente ;
-                :disponibleEn :invierno ,
-                              :otono ,
-                              :primavera ,
-                              :verano ;
                 :glutenFree "true"^^xsd:boolean ;
                 :lactosaFree "true"^^xsd:boolean ;
                 :nombre "pimienta_negra" .
@@ -1283,94 +2480,95 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pimiento_rojo
 :pimiento_rojo rdf:type owl:NamedIndividual ,
                         :Ingrediente ;
-               :disponibleEn :verano ;
                :glutenFree "true"^^xsd:boolean ;
                :lactosaFree "true"^^xsd:boolean ;
                :nombre "pimiento_rojo" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pimiento_verde
-:pimiento_verde rdf:type owl:NamedIndividual ,
-                         :Ingrediente ;
-                :disponibleEn :verano ;
-                :glutenFree "true"^^xsd:boolean ;
-                :lactosaFree "true"^^xsd:boolean ;
-                :nombre "pimiento_verde" .
-
-
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pimientos_rellenos
-:pimientos_rellenos rdf:type owl:NamedIndividual ,
-                             :Plato ;
-                    :compuestoPor :aceite_de_oliva ,
-                                  :ajo ,
-                                  :carne_de_res ,
-                                  :cebolla ,
-                                  :pimiento_rojo ,
-                                  :tomate ;
-                    :esCategoria :carne ;
-                    :esPreparacion :horno ;
-                    :originarioDe :espana ;
-                    :dificultad 5 ;
-                    :nombre "pimientos_rellenos" ;
-                    :precio "9.0"^^xsd:float .
-
-
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pizza_margherita
-:pizza_margherita rdf:type owl:NamedIndividual ,
-                           :Plato ;
-                  :compuestoPor :aceite_de_oliva ,
-                                :albahaca ,
-                                :masa_de_pizza ,
-                                :mozzarella ,
-                                :tomate ;
-                  :esCategoria :vegetariano ;
-                  :esPreparacion :horno ;
-                  :originarioDe :italia ;
-                  :dificultad 5 ;
-                  :nombre "pizza_margherita" ;
-                  :precio "9.0"^^xsd:float .
-
-
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/plancha
-:plancha rdf:type owl:NamedIndividual ,
-                  :Preparacion ;
-         :nombre "plancha" .
-
-
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/polenta
-:polenta rdf:type owl:NamedIndividual ,
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pinones
+:pinones rdf:type owl:NamedIndividual ,
                   :Ingrediente ;
-         :disponibleEn :invierno ;
          :glutenFree "true"^^xsd:boolean ;
          :lactosaFree "true"^^xsd:boolean ;
-         :nombre "polenta" .
+         :nombre "pinones" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/polenta_con_funghi
-:polenta_con_funghi rdf:type owl:NamedIndividual ,
-                             :Plato ;
-                    :compuestoPor :aceite_de_oliva ,
-                                  :champinones ,
-                                  :polenta ,
-                                  :queso_parmesano ;
-                    :esCategoria :vegetariano ;
-                    :esPreparacion :hervido ;
-                    :originarioDe :italia ;
-                    :dificultad 4 ;
-                    :nombre "polenta_con_funghi" ;
-                    :precio "8.5"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pistacho
+:pistacho rdf:type owl:NamedIndividual ,
+                   :Ingrediente ;
+          :glutenFree "true"^^xsd:boolean ;
+          :lactosaFree "true"^^xsd:boolean ;
+          :nombre "pistacho" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pisto_manchego
+:pisto_manchego rdf:type owl:NamedIndividual ,
+                         :Plato ;
+                :compuestoPor :aceite_de_oliva ,
+                              :berenjena ,
+                              :calabacin ,
+                              :pimiento_rojo ,
+                              :tomate ;
+                :disponibleEn :otono ,
+                              :verano ;
+                :esCategoria :vegetariano ;
+                :esPreparacion :cocido ;
+                :incompatibleConBebida :cerveza_artesanal ,
+                                       :cerveza_rubia ,
+                                       :txakoli ;
+                :incompatibleConPlato :escalivada ,
+                                      :parmigiana_di_melanzane ,
+                                      :ratatouille ;
+                :originarioDe :espana ;
+                :dificultad 5 ;
+                :nombre "pisto_manchego" ;
+                :precio "8.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pita
+:pita rdf:type owl:NamedIndividual ,
+               :Ingrediente ;
+      :glutenFree "false"^^xsd:boolean ;
+      :lactosaFree "true"^^xsd:boolean ;
+      :nombre "pita" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pollo
 :pollo rdf:type owl:NamedIndividual ,
                 :Ingrediente ;
-       :disponibleEn :invierno ,
-                     :otono ,
-                     :primavera ,
-                     :verano ;
        :glutenFree "true"^^xsd:boolean ;
        :lactosaFree "true"^^xsd:boolean ;
        :nombre "pollo" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pollo_alla_cacciatora
+:pollo_alla_cacciatora rdf:type owl:NamedIndividual ,
+                                :Plato ;
+                       :compuestoPor :aceite_de_oliva ,
+                                     :ajo ,
+                                     :pollo ,
+                                     :tomate ,
+                                     :vino_tinto ;
+                       :disponibleEn :invierno ,
+                                     :otono ;
+                       :esCategoria :carne ;
+                       :esPreparacion :guisado ;
+                       :incompatibleConBebida :agua_con_gas ,
+                                              :agua_sin_gas ,
+                                              :limonada_casera ;
+                       :incompatibleConPlato :coq_au_vin ,
+                                             :sopa_avgolemono ,
+                                             :souvlaki ;
+                       :originarioDe :italia ;
+                       :dificultad 5 ;
+                       :nombre "pollo_alla_cacciatora" ;
+                       :precio "11.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/postre
+:postre rdf:type owl:NamedIndividual ,
+                 :Categoria ;
+        :nombre "postre" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/primavera
@@ -1379,20 +2577,17 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
            :nombre "primavera" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/prosecco
-:prosecco rdf:type owl:NamedIndividual ,
-                   :Vino ;
-          :alcoholica "true"^^xsd:boolean ;
-          :glutenFree "true"^^xsd:boolean ;
-          :lactosaFree "true"^^xsd:boolean ;
-          :nombre "prosecco" ;
-          :precio "11.5"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/puerro
+:puerro rdf:type owl:NamedIndividual ,
+                 :Ingrediente ;
+        :glutenFree "true"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "puerro" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pulpo
 :pulpo rdf:type owl:NamedIndividual ,
                 :Ingrediente ;
-       :disponibleEn :verano ;
        :glutenFree "true"^^xsd:boolean ;
        :lactosaFree "true"^^xsd:boolean ;
        :nombre "pulpo" .
@@ -1402,69 +2597,198 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 :pulpo_a_la_gallega rdf:type owl:NamedIndividual ,
                              :Plato ;
                     :compuestoPor :aceite_de_oliva ,
-                                  :patata ,
                                   :pimenton ,
                                   :pulpo ,
                                   :sal_gruesa ;
-                    :esCategoria :marisco ;
-                    :esPreparacion :hervido ;
+                    :disponibleEn :otono ;
+                    :esCategoria :mariscos ;
+                    :esPreparacion :cocido ;
+                    :incompatibleConBebida :fanta_naranja ,
+                                           :sprite ,
+                                           <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up> ;
+                    :incompatibleConPlato :bouillabaisse ,
+                                          :calamares_a_la_romana ,
+                                          :moules_marinieres ;
                     :originarioDe :espana ;
                     :dificultad 6 ;
                     :nombre "pulpo_a_la_gallega" ;
                     :precio "13.0"^^xsd:float .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/queso
+:queso rdf:type owl:NamedIndividual ,
+                :Ingrediente ;
+       :glutenFree "true"^^xsd:boolean ;
+       :lactosaFree "false"^^xsd:boolean ;
+       :nombre "queso" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/queso_de_cabra
+:queso_de_cabra rdf:type owl:NamedIndividual ,
+                         :Ingrediente ;
+                :glutenFree "true"^^xsd:boolean ;
+                :lactosaFree "false"^^xsd:boolean ;
+                :nombre "queso_de_cabra" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/queso_feta
+:queso_feta rdf:type owl:NamedIndividual ,
+                     :Ingrediente ;
+            :glutenFree "true"^^xsd:boolean ;
+            :lactosaFree "false"^^xsd:boolean ;
+            :nombre "queso_feta" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/queso_gruyere
+:queso_gruyere rdf:type owl:NamedIndividual ,
+                        :Ingrediente ;
+               :glutenFree "true"^^xsd:boolean ;
+               :lactosaFree "false"^^xsd:boolean ;
+               :nombre "queso_gruyere" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/queso_manchego
+:queso_manchego rdf:type owl:NamedIndividual ,
+                         :Ingrediente ;
+                :glutenFree "true"^^xsd:boolean ;
+                :lactosaFree "false"^^xsd:boolean ;
+                :nombre "queso_manchego" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/queso_mascarpone
+:queso_mascarpone rdf:type owl:NamedIndividual ,
+                           :Ingrediente ;
+                  :glutenFree "true"^^xsd:boolean ;
+                  :lactosaFree "false"^^xsd:boolean ;
+                  :nombre "queso_mascarpone" .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/queso_parmesano
 :queso_parmesano rdf:type owl:NamedIndividual ,
                           :Ingrediente ;
-                 :disponibleEn :invierno ,
-                               :otono ,
-                               :primavera ,
-                               :verano ;
                  :glutenFree "true"^^xsd:boolean ;
                  :lactosaFree "false"^^xsd:boolean ;
                  :nombre "queso_parmesano" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/ravioli_di_ricotta_e_spinaci
-:ravioli_di_ricotta_e_spinaci rdf:type owl:NamedIndividual ,
-                                       :Plato ;
-                              :compuestoPor :espinacas ,
-                                            :mantequilla ,
-                                            :queso_parmesano ,
-                                            :raviolis ,
-                                            :ricotta ;
-                              :esCategoria :pasta ;
-                              :esPreparacion :hervido ;
-                              :originarioDe :italia ;
-                              :dificultad 6 ;
-                              :nombre "ravioli_di_ricotta_e_spinaci" ;
-                              :precio "11.0"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/quesoc
+:quesoc rdf:type owl:NamedIndividual ,
+                 :Categoria ;
+        :nombre "quesoc" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/raviolis
-:raviolis rdf:type owl:NamedIndividual ,
-                   :Ingrediente ;
-          :disponibleEn :otono ;
-          :glutenFree "false"^^xsd:boolean ;
-          :lactosaFree "false"^^xsd:boolean ;
-          :nombre "raviolis" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/quiche_lorraine
+:quiche_lorraine rdf:type owl:NamedIndividual ,
+                          :Plato ;
+                 :compuestoPor :huevos ,
+                               :lardones ,
+                               :masa_quebrada ,
+                               :nata ,
+                               :nuez_moscada ,
+                               :pimienta ,
+                               :queso_gruyere ,
+                               :sal ;
+                 :disponibleEn :otono ,
+                               :primavera ,
+                               :verano ;
+                 :esCategoria :pastel_salado ;
+                 :esPreparacion :horno ;
+                 :incompatibleConBebida :agua_con_gas ,
+                                        :limonada_casera ,
+                                        :tinto_de_verano ;
+                 :incompatibleConPlato :empanada_gallega ,
+                                       :spanakopita ,
+                                       :tiropita ;
+                 :originarioDe :francia ;
+                 :dificultad 3 ;
+                 :nombre "quiche_lorraine" ;
+                 :precio "6.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/ralladura_de_naranja
+:ralladura_de_naranja rdf:type owl:NamedIndividual ,
+                               :Ingrediente ;
+                      :glutenFree "true"^^xsd:boolean ;
+                      :lactosaFree "true"^^xsd:boolean ;
+                      :nombre "ralladura_de_naranja" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/ratatouille
+:ratatouille rdf:type owl:NamedIndividual ,
+                      :Plato ;
+             :compuestoPor :aceite_de_oliva ,
+                           :ajo ,
+                           :albahaca ,
+                           :berenjena ,
+                           :calabacin ,
+                           :cebolla ,
+                           :pimienta ,
+                           :pimiento_rojo ,
+                           :sal ,
+                           :tomate ,
+                           :tomillo ;
+             :disponibleEn :verano ;
+             :esCategoria :vegetariano ;
+             :esPreparacion :estofado ;
+             :incompatibleConBebida :batido_de_chocolate ,
+                                    :bebida_de_yogur ,
+                                    :cerveza_rubia ;
+             :incompatibleConPlato :escalivada ,
+                                   :parmigiana_di_melanzane ,
+                                   :pisto_manchego ;
+             :originarioDe :francia ;
+             :dificultad 5 ;
+             :nombre "ratatouille" ;
+             :precio "7.0"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/refresco_de_cola
 :refresco_de_cola rdf:type owl:NamedIndividual ,
                            :Casual ;
                   :alcoholica "false"^^xsd:boolean ;
-                  :glutenFree "false"^^xsd:boolean ;
+                  :glutenFree "true"^^xsd:boolean ;
                   :lactosaFree "true"^^xsd:boolean ;
                   :nombre "refresco_de_cola" ;
                   :precio "2.0"^^xsd:float .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/rehogado
+:rehogado rdf:type owl:NamedIndividual ,
+                   :Preparacion ;
+          :nombre "rehogado" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/rehogado_y_gratinado
+:rehogado_y_gratinado rdf:type owl:NamedIndividual ,
+                               :Preparacion ;
+                      :nombre "rehogado_y_gratinado" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/revuelto_de_setas
+:revuelto_de_setas rdf:type owl:NamedIndividual ,
+                            :Plato ;
+                   :compuestoPor :aceite_de_oliva ,
+                                 :ajo ,
+                                 :champinones ,
+                                 :huevos ;
+                   :disponibleEn :otono ;
+                   :esCategoria :huevo ;
+                   :esPreparacion :a_la_plancha ;
+                   :incompatibleConBebida :barolo ,
+                                          :cabernet_sauvignon ,
+                                          :zinfandel ;
+                   :incompatibleConPlato :frittata_di_zucchine ,
+                                         :huevos_rotos_con_jamon ,
+                                         :tortilla_de_patatas ;
+                   :originarioDe :espana ;
+                   :dificultad 4 ;
+                   :nombre "revuelto_de_setas" ;
+                   :precio "8.0"^^xsd:float .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/ricotta
 :ricotta rdf:type owl:NamedIndividual ,
                   :Ingrediente ;
-         :disponibleEn :primavera ;
          :glutenFree "true"^^xsd:boolean ;
          :lactosaFree "false"^^xsd:boolean ;
          :nombre "ricotta" .
@@ -1473,91 +2797,590 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/risotto_ai_funghi
 :risotto_ai_funghi rdf:type owl:NamedIndividual ,
                             :Plato ;
-                   :compuestoPor :arroz_arborio ,
+                   :compuestoPor :aceite_de_oliva ,
+                                 :ajo ,
+                                 :arroz ,
                                  :caldo_de_verduras ,
-                                 :cebolla ,
                                  :champinones ,
-                                 :mantequilla ,
                                  :queso_parmesano ;
+                   :disponibleEn :otono ;
                    :esCategoria :arroz ;
-                   :esPreparacion :sarten ;
+                   :esPreparacion :guisado ;
+                   :incompatibleConPlato :arroz_caldoso ,
+                                         :arroz_con_leche ,
+                                         :paella_valenciana ;
                    :originarioDe :italia ;
                    :dificultad 6 ;
                    :nombre "risotto_ai_funghi" ;
                    :precio "12.0"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/risotto_alla_milanese
-:risotto_alla_milanese rdf:type owl:NamedIndividual ,
-                                :Plato ;
-                       :compuestoPor :arroz_arborio ,
-                                     :azafran ,
-                                     :caldo_de_carne ,
-                                     :cebolla ,
-                                     :mantequilla ,
-                                     :queso_parmesano ;
-                       :esCategoria :arroz ;
-                       :esPreparacion :sarten ;
-                       :originarioDe :italia ;
-                       :dificultad 6 ;
-                       :nombre "risotto_alla_milanese" ;
-                       :precio "12.5"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/romero
+:romero rdf:type owl:NamedIndividual ,
+                 :Ingrediente ;
+        :glutenFree "true"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "romero" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/roquefort
+:roquefort rdf:type owl:NamedIndividual ,
+                    :Ingrediente ;
+           :glutenFree "true"^^xsd:boolean ;
+           :lactosaFree "false"^^xsd:boolean ;
+           :nombre "roquefort" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/sal
+:sal rdf:type owl:NamedIndividual ,
+              :Ingrediente ;
+     :glutenFree "true"^^xsd:boolean ;
+     :lactosaFree "true"^^xsd:boolean ;
+     :nombre "sal" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/sal_gruesa
 :sal_gruesa rdf:type owl:NamedIndividual ,
                      :Ingrediente ;
-            :disponibleEn :invierno ,
-                          :otono ,
-                          :primavera ,
-                          :verano ;
             :glutenFree "true"^^xsd:boolean ;
             :lactosaFree "true"^^xsd:boolean ;
             :nombre "sal_gruesa" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/sarten
-:sarten rdf:type owl:NamedIndividual ,
-                 :Preparacion ;
-        :nombre "sarten" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/salade_de_chevre_chaud
+:salade_de_chevre_chaud rdf:type owl:NamedIndividual ,
+                                 :Plato ;
+                        :compuestoPor :aceite_de_oliva ,
+                                      :baguette ,
+                                      :hojas_verdes ,
+                                      :miel ,
+                                      :mostaza_de_dijon ,
+                                      :nuez ,
+                                      :pimienta ,
+                                      :queso_de_cabra ,
+                                      :sal ,
+                                      :vinagre_balsamico ;
+                        :disponibleEn :primavera ,
+                                      :verano ;
+                        :esCategoria :vegetariano ;
+                        :esPreparacion :montado_y_tostado ;
+                        :incompatibleConBebida :batido_de_chocolate ,
+                                               :bebida_de_yogur ,
+                                               :cerveza_rubia ;
+                        :incompatibleConPlato :assiette_de_fromages ,
+                                              :spanakopita ,
+                                              :tiropita ;
+                        :originarioDe :francia ;
+                        :dificultad 1 ;
+                        :nombre "salade_de_chevre_chaud" ;
+                        :precio "7.5"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/spaghetti_alla_carbonara
-:spaghetti_alla_carbonara rdf:type owl:NamedIndividual ,
-                                   :Plato ;
-                          :compuestoPor :espaguetis ,
-                                        :huevos ,
-                                        :panceta ,
-                                        :pimienta_negra ,
-                                        :queso_parmesano ;
-                          :esCategoria :pasta ;
-                          :esPreparacion :sarten ;
-                          :originarioDe :italia ;
-                          :dificultad 5 ;
-                          :nombre "spaghetti_alla_carbonara" ;
-                          :precio "10.5"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/salmorejo_cordobes
+:salmorejo_cordobes rdf:type owl:NamedIndividual ,
+                             :Plato ;
+                    :compuestoPor :aceite_de_oliva ,
+                                  :ajo ,
+                                  :huevos ,
+                                  :pan ,
+                                  :tomate ;
+                    :disponibleEn :verano ;
+                    :esCategoria :vegetariano ;
+                    :esPreparacion :crudo ;
+                    :incompatibleConBebida :batido_de_chocolate ,
+                                           :bebida_de_yogur ,
+                                           :merlot ;
+                    :incompatibleConPlato :gazpacho_andaluz ,
+                                          :sopa_avgolemono ,
+                                          :soupe_a_loignon ;
+                    :originarioDe :espana ;
+                    :dificultad 4 ;
+                    :nombre "salmorejo_cordobes" ;
+                    :precio "6.0"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/te_helado_de_limon
-:te_helado_de_limon rdf:type owl:NamedIndividual ,
-                             :Casual ;
-                    :alcoholica "false"^^xsd:boolean ;
-                    :glutenFree "true"^^xsd:boolean ;
-                    :lactosaFree "true"^^xsd:boolean ;
-                    :nombre "te_helado_de_limon" ;
-                    :precio "2.2"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/salsa_bechamel
+:salsa_bechamel rdf:type owl:NamedIndividual ,
+                         :Ingrediente ;
+                :glutenFree "false"^^xsd:boolean ;
+                :lactosaFree "false"^^xsd:boolean ;
+                :nombre "salsa_bechamel" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/saltimbocca_alla_romana
+:saltimbocca_alla_romana rdf:type owl:NamedIndividual ,
+                                  :Plato ;
+                         :compuestoPor :aceite_de_oliva ,
+                                       :jamon_serrano ,
+                                       :salvia ,
+                                       :ternera ,
+                                       :vino_blanco ;
+                         :disponibleEn :primavera ,
+                                       :verano ;
+                         :esCategoria :carne ;
+                         :esPreparacion :a_la_plancha ;
+                         :incompatibleConBebida :agua_con_gas ,
+                                                :agua_sin_gas ,
+                                                :cerveza_sin_alcohol ;
+                         :incompatibleConPlato :bistecca_alla_fiorentina ,
+                                               :ossobuco_alla_milanese ,
+                                               :vitello_tonnato ;
+                         :originarioDe :italia ;
+                         :dificultad 6 ;
+                         :nombre "saltimbocca_alla_romana" ;
+                         :precio "13.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/salvia
+:salvia rdf:type owl:NamedIndividual ,
+                 :Ingrediente ;
+        :glutenFree "true"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "salvia" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/sauvignon_blanc
+:sauvignon_blanc rdf:type owl:NamedIndividual ,
+                          :Vino ;
+                 :alcoholica "true"^^xsd:boolean ;
+                 :glutenFree "true"^^xsd:boolean ;
+                 :lactosaFree "true"^^xsd:boolean ;
+                 :nombre "sauvignon_blanc" ;
+                 :precio "18.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/sellado_curado
+:sellado_curado rdf:type owl:NamedIndividual ,
+                         :Preparacion ;
+                :nombre "sellado_curado" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/semifreddo_de_limon
+:semifreddo_de_limon rdf:type owl:NamedIndividual ,
+                              :Plato ;
+                     :compuestoPor :azucar ,
+                                   :huevos ,
+                                   :limon ,
+                                   :nata ,
+                                   :vainilla ;
+                     :disponibleEn :primavera ,
+                                   :verano ;
+                     :esCategoria :dulce ;
+                     :esPreparacion :frio ;
+                     :incompatibleConBebida :barolo ,
+                                            :chianti ,
+                                            :merlot ;
+                     :incompatibleConPlato :creme_brulee ,
+                                           :panna_cotta ,
+                                           :tiramisu ;
+                     :originarioDe :italia ;
+                     :dificultad 5 ;
+                     :nombre "semifreddo_de_limon" ;
+                     :precio "5.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/semola
+:semola rdf:type owl:NamedIndividual ,
+                 :Ingrediente ;
+        :glutenFree "false"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "semola" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/sopa
+:sopa rdf:type owl:NamedIndividual ,
+               :Categoria ;
+      :nombre "sopa" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/sopa_avgolemono
+:sopa_avgolemono rdf:type owl:NamedIndividual ,
+                          :Plato ;
+                 :compuestoPor :arroz ,
+                               :caldo_de_verduras ,
+                               :huevos ,
+                               :limon ,
+                               :pollo ;
+                 :disponibleEn :invierno ;
+                 :esCategoria :sopa ;
+                 :esPreparacion :cocido_y_batido ;
+                 :incompatibleConBebida :sauvignon_blanc ,
+                                        :tinto_de_verano ,
+                                        :txakoli ;
+                 :incompatibleConPlato :gazpacho_andaluz ,
+                                       :salmorejo_cordobes ,
+                                       :soupe_a_loignon ;
+                 :originarioDe :grecia ;
+                 :dificultad 3 ;
+                 :nombre "sopa_avgolemono" ;
+                 :precio "4.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/soupe_a_loignon
+:soupe_a_loignon rdf:type owl:NamedIndividual ,
+                          :Plato ;
+                 :compuestoPor :baguette ,
+                               :caldo_de_carne ,
+                               :cebolla ,
+                               :laurel ,
+                               :mantequilla ,
+                               :pimienta ,
+                               :queso_gruyere ,
+                               :sal ,
+                               :tomillo ,
+                               :vino_blanco ;
+                 :disponibleEn :invierno ,
+                               :otono ;
+                 :esCategoria :sopa ;
+                 :esPreparacion :rehogado_y_gratinado ;
+                 :incompatibleConBebida :sprite ,
+                                        :tinto_de_verano ,
+                                        <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up> ;
+                 :incompatibleConPlato :gazpacho_andaluz ,
+                                       :minestrone ,
+                                       :salmorejo_cordobes ;
+                 :originarioDe :francia ;
+                 :dificultad 4 ;
+                 :nombre "soupe_a_loignon" ;
+                 :precio "5.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/souvlaki
+:souvlaki rdf:type owl:NamedIndividual ,
+                   :Plato ;
+          :compuestoPor :aceite_de_oliva ,
+                        :ajo ,
+                        :carne_de_cerdo ,
+                        :cebolla ,
+                        :limon ,
+                        :oregano ,
+                        :pita ,
+                        :pollo ,
+                        :tomate ,
+                        :tzatziki ;
+          :disponibleEn :primavera ,
+                        :verano ;
+          :esCategoria :carne ;
+          :esPreparacion :a_la_parrilla ;
+          :incompatibleConBebida :barolo ,
+                                 :cabernet_sauvignon ,
+                                 :chardonnay ;
+          :incompatibleConPlato :coq_au_vin ,
+                                :kleftiko ,
+                                :pollo_alla_cacciatora ;
+          :originarioDe :grecia ;
+          :dificultad 3 ;
+          :nombre "souvlaki" ;
+          :precio "6.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/spaghetti_carbonara
+:spaghetti_carbonara rdf:type owl:NamedIndividual ,
+                              :Plato ;
+                     :compuestoPor :huevos ,
+                                   :panceta ,
+                                   :pasta ,
+                                   :pimienta_negra ,
+                                   :queso_parmesano ;
+                     :disponibleEn :otono ,
+                                   :primavera ;
+                     :esCategoria :pasta ;
+                     :esPreparacion :hervido ;
+                     :incompatibleConBebida :fanta_naranja ,
+                                            :pepsi ,
+                                            :refresco_de_cola ;
+                     :incompatibleConPlato :gnocchi_al_pomodoro ,
+                                           :pasta_al_pesto_genovese ,
+                                           :pasta_alla_norma ;
+                     :originarioDe :italia ;
+                     :dificultad 5 ;
+                     :nombre "spaghetti_carbonara" ;
+                     :precio "10.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/spanakopita
+:spanakopita rdf:type owl:NamedIndividual ,
+                      :Plato ;
+             :compuestoPor :aceite_de_oliva ,
+                           :cebolla ,
+                           :eneldo ,
+                           :espinacas ,
+                           :masa_filo ,
+                           :queso_feta ;
+             :disponibleEn :primavera ,
+                           :verano ;
+             :esCategoria :vegetariano ;
+             :esPreparacion :horno ;
+             :incompatibleConBebida :cerveza_artesanal ,
+                                    :merlot ,
+                                    :zinfandel ;
+             :incompatibleConPlato :empanada_gallega ,
+                                   :quiche_lorraine ,
+                                   :tiropita ;
+             :originarioDe :grecia ;
+             :dificultad 5 ;
+             :nombre "spanakopita" ;
+             :precio "5.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/sprite
+:sprite rdf:type owl:NamedIndividual ,
+                 :Casual ;
+        :alcoholica "false"^^xsd:boolean ;
+        :glutenFree "true"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "sprite" ;
+        :precio "2.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/steak_frites
+:steak_frites rdf:type owl:NamedIndividual ,
+                       :Plato ;
+              :compuestoPor :aceite_de_oliva ,
+                            :carne_de_res ,
+                            :patatas ,
+                            :pimienta ,
+                            :sal ;
+              :disponibleEn :invierno ,
+                            :otono ,
+                            :primavera ,
+                            :verano ;
+              :esCategoria :carne ;
+              :esPreparacion :asado_y_frito ;
+              :incompatibleConBebida :agua_sin_gas ,
+                                     :cerveza_sin_alcohol ,
+                                     :limonada_casera ;
+              :incompatibleConPlato :bistecca_alla_fiorentina ,
+                                    :kleftiko ,
+                                    :ossobuco_alla_milanese ;
+              :originarioDe :francia ;
+              :dificultad 3 ;
+              :nombre "steak_frites" ;
+              :precio "11.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tagliatelle_al_ragu
+:tagliatelle_al_ragu rdf:type owl:NamedIndividual ,
+                              :Plato ;
+                     :compuestoPor :aceite_de_oliva ,
+                                   :ajo ,
+                                   :carne_picada ,
+                                   :cebolla ,
+                                   :pasta ,
+                                   :tomate ;
+                     :disponibleEn :invierno ,
+                                   :otono ;
+                     :esCategoria :pasta ;
+                     :esPreparacion :hervido ;
+                     :incompatibleConBebida :fanta_naranja ,
+                                            :pepsi ,
+                                            :sprite ;
+                     :incompatibleConPlato :lasagna_alla_bolognese ,
+                                           :moussaka ,
+                                           :pastitsio ;
+                     :originarioDe :italia ;
+                     :dificultad 5 ;
+                     :nombre "tagliatelle_al_ragu" ;
+                     :precio "11.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tarta_de_santiago
+:tarta_de_santiago rdf:type owl:NamedIndividual ,
+                            :Plato ;
+                   :compuestoPor :almendra ,
+                                 :azucar ,
+                                 :canela ,
+                                 :huevos ,
+                                 :limon ;
+                   :disponibleEn :verano ;
+                   :esCategoria :postre ;
+                   :esPreparacion :horno ;
+                   :incompatibleConBebida :fanta_naranja ,
+                                          :pepsi ,
+                                          :refresco_de_cola ;
+                   :incompatibleConPlato :baklava ,
+                                         :cannoli_siciliani ,
+                                         :torta_caprese ;
+                   :originarioDe :espana ;
+                   :dificultad 5 ;
+                   :nombre "tarta_de_santiago" ;
+                   :precio "5.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tarte_tatin
+:tarte_tatin rdf:type owl:NamedIndividual ,
+                      :Plato ;
+             :compuestoPor :azucar ,
+                           :canela ,
+                           :mantequilla ,
+                           :manzana ,
+                           :masa_de_hojaldre ;
+             :disponibleEn :otono ;
+             :esCategoria :postre ;
+             :esPreparacion :caramelizado_y_horneado ;
+             :incompatibleConBebida :fanta_naranja ,
+                                    :pepsi ,
+                                    :refresco_de_cola ;
+             :incompatibleConPlato :galaktoboureko ,
+                                   :loukoumades ,
+                                   :torrijas ;
+             :originarioDe :francia ;
+             :dificultad 7 ;
+             :nombre "tarte_tatin" ;
+             :precio "6.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/ternera
+:ternera rdf:type owl:NamedIndividual ,
+                  :Ingrediente ;
+         :glutenFree "true"^^xsd:boolean ;
+         :lactosaFree "true"^^xsd:boolean ;
+         :nombre "ternera" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tinto_de_verano
+:tinto_de_verano rdf:type owl:NamedIndividual ,
+                          :Casual ;
+                 :alcoholica "true"^^xsd:boolean ;
+                 :glutenFree "true"^^xsd:boolean ;
+                 :lactosaFree "true"^^xsd:boolean ;
+                 :nombre "tinto_de_verano" ;
+                 :precio "3.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tinto_ribera_del_duero
+:tinto_ribera_del_duero rdf:type owl:NamedIndividual ,
+                                 :Vino ;
+                        :alcoholica "true"^^xsd:boolean ;
+                        :glutenFree "true"^^xsd:boolean ;
+                        :lactosaFree "true"^^xsd:boolean ;
+                        :nombre "tinto_ribera_del_duero" ;
+                        :precio "14.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tinto_rioja
+:tinto_rioja rdf:type owl:NamedIndividual ,
+                      :Vino ;
+             :alcoholica "true"^^xsd:boolean ;
+             :glutenFree "true"^^xsd:boolean ;
+             :lactosaFree "true"^^xsd:boolean ;
+             :nombre "tinto_rioja" ;
+             :precio "12.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tiramisu
+:tiramisu rdf:type owl:NamedIndividual ,
+                   :Plato ;
+          :compuestoPor :azucar ,
+                        :bizcocho ,
+                        :cacao_en_polvo ,
+                        :cafe ,
+                        :huevos ,
+                        :queso_mascarpone ;
+          :disponibleEn :invierno ,
+                        :otono ,
+                        :primavera ,
+                        :verano ;
+          :esCategoria :dulce ;
+          :esPreparacion :frio ;
+          :incompatibleConBebida :cerveza_artesanal ,
+                                 :cerveza_rubia ,
+                                 :tinto_de_verano ;
+          :incompatibleConPlato :cannoli_siciliani ,
+                                :panna_cotta ,
+                                :semifreddo_de_limon ;
+          :originarioDe :italia ;
+          :dificultad 5 ;
+          :nombre "tiramisu" ;
+          :precio "6.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tiropita
+:tiropita rdf:type owl:NamedIndividual ,
+                   :Plato ;
+          :compuestoPor :aceite_de_oliva ,
+                        :huevos ,
+                        :masa_filo ,
+                        :queso_feta ;
+          :disponibleEn :invierno ,
+                        :otono ,
+                        :primavera ,
+                        :verano ;
+          :esCategoria :vegetariano ;
+          :esPreparacion :horno ;
+          :incompatibleConBebida :cabernet_sauvignon ,
+                                 :chianti ,
+                                 :merlot ;
+          :incompatibleConPlato :empanada_gallega ,
+                                :quiche_lorraine ,
+                                :spanakopita ;
+          :originarioDe :grecia ;
+          :dificultad 4 ;
+          :nombre "tiropita" ;
+          :precio "5.0"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tomate
 :tomate rdf:type owl:NamedIndividual ,
                  :Ingrediente ;
-        :disponibleEn :invierno ,
-                      :otono ,
-                      :primavera ,
-                      :verano ;
         :glutenFree "true"^^xsd:boolean ;
         :lactosaFree "true"^^xsd:boolean ;
         :nombre "tomate" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tomillo
+:tomillo rdf:type owl:NamedIndividual ,
+                  :Ingrediente ;
+         :glutenFree "true"^^xsd:boolean ;
+         :lactosaFree "true"^^xsd:boolean ;
+         :nombre "tomillo" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/torrijas
+:torrijas rdf:type owl:NamedIndividual ,
+                   :Plato ;
+          :compuestoPor :azucar ,
+                        :canela ,
+                        :huevos ,
+                        :leche ,
+                        :pan ;
+          :disponibleEn :primavera ;
+          :esCategoria :postre ;
+          :esPreparacion :frito ;
+          :incompatibleConBebida :chardonnay ,
+                                 :merlot ,
+                                 :sauvignon_blanc ;
+          :incompatibleConPlato :galaktoboureko ,
+                                :loukoumades ,
+                                :tarte_tatin ;
+          :originarioDe :espana ;
+          :dificultad 4 ;
+          :nombre "torrijas" ;
+          :precio "3.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/torta_caprese
+:torta_caprese rdf:type owl:NamedIndividual ,
+                        :Plato ;
+               :compuestoPor :almendra ,
+                             :azucar ,
+                             :chocolate ,
+                             :huevos ,
+                             :mantequilla ;
+               :disponibleEn :invierno ,
+                             :otono ;
+               :esCategoria :dulce ;
+               :esPreparacion :horno ;
+               :incompatibleConBebida :cerveza_sin_alcohol ,
+                                      :sprite ,
+                                      <http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up> ;
+               :incompatibleConPlato :baklava ,
+                                     :cannoli_siciliani ,
+                                     :tarta_de_santiago ;
+               :originarioDe :italia ;
+               :dificultad 6 ;
+               :nombre "torta_caprese" ;
+               :precio "7.0"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tortilla_de_patatas
@@ -1565,37 +3388,79 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                               :Plato ;
                      :compuestoPor :aceite_de_oliva ,
                                    :cebolla ,
-                                   :huevos ,
-                                   :patata ;
+                                   :huevos ;
+                     :disponibleEn :invierno ,
+                                   :otono ,
+                                   :primavera ,
+                                   :verano ;
                      :esCategoria :huevo ;
-                     :esPreparacion :sarten ;
+                     :esPreparacion :frito ;
+                     :incompatibleConBebida :cabernet_sauvignon ,
+                                            :chianti ,
+                                            :zinfandel ;
+                     :incompatibleConPlato :frittata_di_zucchine ,
+                                           :huevos_rotos_con_jamon ,
+                                           :revuelto_de_setas ;
                      :originarioDe :espana ;
-                     :dificultad 5 ;
+                     :dificultad 4 ;
                      :nombre "tortilla_de_patatas" ;
-                     :precio "7.5"^^xsd:float .
+                     :precio "7.0"^^xsd:float .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/trofie
-:trofie rdf:type owl:NamedIndividual ,
-                 :Ingrediente ;
-        :disponibleEn :primavera ;
-        :glutenFree "false"^^xsd:boolean ;
-        :lactosaFree "true"^^xsd:boolean ;
-        :nombre "trofie" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/trufa
+:trufa rdf:type owl:NamedIndividual ,
+                :Ingrediente ;
+       :glutenFree "true"^^xsd:boolean ;
+       :lactosaFree "true"^^xsd:boolean ;
+       :nombre "trufa" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/trofie_al_pesto
-:trofie_al_pesto rdf:type owl:NamedIndividual ,
-                          :Plato ;
-                 :compuestoPor :pesto ,
-                               :queso_parmesano ,
-                               :trofie ;
-                 :esCategoria :pasta ;
-                 :esPreparacion :hervido ;
-                 :originarioDe :italia ;
-                 :dificultad 4 ;
-                 :nombre "trofie_al_pesto" ;
-                 :precio "10.0"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/txakoli
+:txakoli rdf:type owl:NamedIndividual ,
+                  :Vino ;
+         :alcoholica "true"^^xsd:boolean ;
+         :glutenFree "true"^^xsd:boolean ;
+         :lactosaFree "true"^^xsd:boolean ;
+         :nombre "txakoli" ;
+         :precio "11.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tzatziki
+:tzatziki rdf:type owl:NamedIndividual ,
+                   :Plato ;
+          :compuestoPor :aceite_de_oliva ,
+                        :ajo ,
+                        :eneldo ,
+                        :limon ,
+                        :pepino ,
+                        :yogur_griego ;
+          :disponibleEn :verano ;
+          :esCategoria :dip ;
+          :esPreparacion :mezclado ;
+          :incompatibleConBebida :batido_de_chocolate ,
+                                 :bebida_de_yogur ,
+                                 :chianti ;
+          :incompatibleConPlato :assiette_de_fromages ,
+                                :gazpacho_andaluz ,
+                                :salmorejo_cordobes ;
+          :originarioDe :grecia ;
+          :dificultad 2 ;
+          :nombre "tzatziki" ;
+          :precio "3.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/vainilla
+:vainilla rdf:type owl:NamedIndividual ,
+                   :Ingrediente ;
+          :glutenFree "true"^^xsd:boolean ;
+          :lactosaFree "true"^^xsd:boolean ;
+          :nombre "vainilla" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/vapor
+:vapor rdf:type owl:NamedIndividual ,
+                :Preparacion ;
+       :nombre "vapor" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/vegetariano
@@ -1610,78 +3475,112 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
         :nombre "verano" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/vinagre
-:vinagre rdf:type owl:NamedIndividual ,
-                  :Ingrediente ;
-         :disponibleEn :invierno ,
-                       :otono ,
-                       :primavera ,
-                       :verano ;
-         :glutenFree "true"^^xsd:boolean ;
-         :lactosaFree "true"^^xsd:boolean ;
-         :nombre "vinagre" .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/verdicchio
+:verdicchio rdf:type owl:NamedIndividual ,
+                     :Vino ;
+            :alcoholica "true"^^xsd:boolean ;
+            :glutenFree "true"^^xsd:boolean ;
+            :lactosaFree "true"^^xsd:boolean ;
+            :nombre "verdicchio" ;
+            :precio "13.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/vinagre_balsamico
+:vinagre_balsamico rdf:type owl:NamedIndividual ,
+                            :Ingrediente ;
+                   :glutenFree "true"^^xsd:boolean ;
+                   :lactosaFree "true"^^xsd:boolean ;
+                   :nombre "vinagre_balsamico" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/vino_blanco
 :vino_blanco rdf:type owl:NamedIndividual ,
                       :Ingrediente ;
-             :disponibleEn :primavera ,
-                           :verano ;
              :glutenFree "true"^^xsd:boolean ;
              :lactosaFree "true"^^xsd:boolean ;
              :nombre "vino_blanco" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/vino_blanco_albarino
-:vino_blanco_albarino rdf:type owl:NamedIndividual ,
-                               :Vino ;
-                      :alcoholica "true"^^xsd:boolean ;
-                      :glutenFree "true"^^xsd:boolean ;
-                      :lactosaFree "true"^^xsd:boolean ;
-                      :nombre "vino_blanco_albarino" ;
-                      :precio "10.0"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/vino_dulce
+:vino_dulce rdf:type owl:NamedIndividual ,
+                     :Ingrediente ;
+            :glutenFree "true"^^xsd:boolean ;
+            :lactosaFree "true"^^xsd:boolean ;
+            :nombre "vino_dulce" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/vino_rosado_navarra
-:vino_rosado_navarra rdf:type owl:NamedIndividual ,
-                              :Vino ;
-                     :alcoholica "true"^^xsd:boolean ;
-                     :glutenFree "true"^^xsd:boolean ;
-                     :lactosaFree "true"^^xsd:boolean ;
-                     :nombre "vino_rosado_navarra" ;
-                     :precio "9.0"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/vino_tinto
+:vino_tinto rdf:type owl:NamedIndividual ,
+                     :Ingrediente ;
+            :glutenFree "true"^^xsd:boolean ;
+            :lactosaFree "true"^^xsd:boolean ;
+            :nombre "vino_tinto" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/vino_tinto_rioja
-:vino_tinto_rioja rdf:type owl:NamedIndividual ,
-                           :Vino ;
-                  :alcoholica "true"^^xsd:boolean ;
-                  :glutenFree "true"^^xsd:boolean ;
-                  :lactosaFree "true"^^xsd:boolean ;
-                  :nombre "vino_tinto_rioja" ;
-                  :precio "12.5"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/vitello_tonnato
+:vitello_tonnato rdf:type owl:NamedIndividual ,
+                          :Plato ;
+                 :compuestoPor :aceite_de_oliva ,
+                               :alcaparras ,
+                               :atun ,
+                               :huevos ,
+                               :ternera ;
+                 :disponibleEn :verano ;
+                 :esCategoria :carne ;
+                 :esPreparacion :hervido ;
+                 :incompatibleConBebida :cerveza_sin_alcohol ,
+                                        :pepsi ,
+                                        :refresco_de_cola ;
+                 :incompatibleConPlato :bistecca_alla_fiorentina ,
+                                       :ossobuco_alla_milanese ,
+                                       :saltimbocca_alla_romana ;
+                 :originarioDe :italia ;
+                 :dificultad 6 ;
+                 :nombre "vitello_tonnato" ;
+                 :precio "14.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/yogur_griego
+:yogur_griego rdf:type owl:NamedIndividual ,
+                       :Ingrediente ;
+              :glutenFree "true"^^xsd:boolean ;
+              :lactosaFree "false"^^xsd:boolean ;
+              :nombre "yogur_griego" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/zanahoria
 :zanahoria rdf:type owl:NamedIndividual ,
                     :Ingrediente ;
-           :disponibleEn :invierno ,
-                         :otono ,
-                         :primavera ,
-                         :verano ;
            :glutenFree "true"^^xsd:boolean ;
            :lactosaFree "true"^^xsd:boolean ;
            :nombre "zanahoria" .
 
 
-###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/zumo_de_naranja_natural
-:zumo_de_naranja_natural rdf:type owl:NamedIndividual ,
-                                  :Casual ;
-                         :alcoholica "false"^^xsd:boolean ;
-                         :glutenFree "true"^^xsd:boolean ;
-                         :lactosaFree "true"^^xsd:boolean ;
-                         :nombre "zumo_de_naranja_natural" ;
-                         :precio "2.8"^^xsd:float .
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/zinfandel
+:zinfandel rdf:type owl:NamedIndividual ,
+                    :Vino ;
+           :alcoholica "true"^^xsd:boolean ;
+           :glutenFree "true"^^xsd:boolean ;
+           :lactosaFree "true"^^xsd:boolean ;
+           :nombre "zinfandel" ;
+           :precio "16.5"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up
+<http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/7up> rdf:type owl:NamedIndividual ,
+                                                                               :Casual ;
+                                                                      :alcoholica "false"^^xsd:boolean ;
+                                                                      :glutenFree "true"^^xsd:boolean ;
+                                                                      :lactosaFree "true"^^xsd:boolean ;
+                                                                      :nombre "7up" ;
+                                                                      :precio "2.5"^^xsd:float .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:postre rdfs:comment "Relación para indicar el postre de un menú." .
 
 
 #################################################################

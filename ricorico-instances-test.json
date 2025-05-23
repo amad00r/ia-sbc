@@ -766,7 +766,7 @@
         "idPreparacion": "Horno",
         "idOrigen": "Francia",
         "idsIngredientes": ["Caracoles", "Ajo", "Perejil", "Mantequilla", "Chalotas", "Sal", "Pimienta"],
-        "idsPlatosIncompatibles": ["Caracoles a la Llauna", "Moules Marinières", "Bouillabaisse"],
+        "idsPlatosIncompatibles": ["Moules Marinières", "Bouillabaisse"],
         "idsBebidasIncompatibles": ["Cerveza Rubia", "Fanta Naranja", "Pepsi"],
         "idsTemporadas": ["Otoño", "Invierno"],
         "tipo": 1
