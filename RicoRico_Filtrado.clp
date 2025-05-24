@@ -27,23 +27,9 @@
      (bind ?lista1 (find-all-instances ((?l1 Plato)) TRUE))
 
      (foreach ?plato ?lista1
-          (bind ?ingredienteList (send ?plato get-compuestoPor))
-          (bind ?delete FALSE)
-
-          (bind ?lista2 (find-all-instances ((?l2 Ingrediente)) TRUE))
-          
-          (foreach ?ingrediente ?lista2
-               (bind ?disponibles (send ?ingrediente get-disponibleEn))
-
-               (if (and (member$ (instance-name ?ingrediente) ?ingredienteList)
-                        (not (member$ (instance-name ?temporada) ?disponibles)))
-               then
-                    (bind ?delete TRUE)
-               )
-          )
-
-          (if ?delete then
-               (send ?plato delete)     
+          (bind ?temporadas (send ?plato get-disponibleEn))
+          (if (not (member$ (instance-name ?temporada) ?temporadas)) then
+               (send ?plato delete)
           )
      )
 )
@@ -52,12 +38,9 @@
      (printout t "Eliminando bebidas alcoholicas..." crlf)
 
      (bind ?pref (nth$ 1 (find-instance ((?p Preferencias)) TRUE)))
-     (if (eq (send ?pref get-alcoholica) FALSE) then
-
-          (do-for-all-instances ((?bebida Bebida))
-               (if (eq (send ?bebida get-alcoholica) TRUE) then
-                    (send ?bebida delete)
-               )   
+     (do-for-all-instances ((?bebida Bebida))
+          (if (not (eq (send ?bebida get-alcoholica) (send ?pref get-alcoholica))) then
+               (send ?bebida delete)
           )
      )
 )
@@ -70,6 +53,10 @@
 
           (do-for-all-instances ((?vino Vino))
                (send ?vino delete)  
+          )
+     else
+          (do-for-all-instances ((?casual Casual))
+               (send ?casual delete)
           )
      )
 )
@@ -161,7 +148,7 @@
      (eliminar_bebidas_gluten)
      (eliminar_bebidas_lactosa)
      (eliminar_platos_complejos)
-     ;(eliminar_platos_fuera_temporada)
+     (eliminar_platos_fuera_temporada)
      (eliminar_platos_gluten)
      (eliminar_platos_lactosa)
      (eliminar_vinos)
