@@ -16,11 +16,7 @@
 
 - **ricorico.schema.json**: Esquema para la generación de instancias.
 
-- **ricorico-instances.json**: Parte 1 de las instancias de platos, bebidas, 
-  ingredientes...
-
-- **ricorico-instances-v2.json**: Parte 2 de las instancias de platos, bebidas, 
-  ingredientes...
+- **ricorico.json**: Instancias de platos, bebidas, ingredientes... en json.
 
 ----- Scripts Parciales:
 

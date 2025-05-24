@@ -4,7 +4,7 @@ import re
 
 
 print("(definstances instances")
-with open("ricorico-instances.json", "r") as f:
+with open("ricorico.json", "r") as f:
 	for obj in json.load(f):
 		ident = re.sub(r'\s+', '_', unicodedata.normalize("NFKD", obj["id"]).encode("ASCII", "ignore").decode("utf-8").lower())
 		print(f'\t([{ident}] of ' + obj["type"])

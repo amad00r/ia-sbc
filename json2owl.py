@@ -11,7 +11,7 @@ import re
 def format_transformation(i):
 	return re.sub(r'\s+', '_', unicodedata.normalize("NFKD", i).encode("ASCII", "ignore").decode("utf-8").lower())
 
-with open("ricorico-instances-test.json", "r", encoding="utf-8") as f:
+with open("ricorico.json", "r", encoding="utf-8") as f:
 	for obj in json.load(f):
 		ident = format_transformation(obj["id"])
 		print(f':{ident} rdf:type owl:NamedIndividual ,\n\t\t\t:{obj["type"]} ;')
