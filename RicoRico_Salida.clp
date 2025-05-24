@@ -29,6 +29,7 @@
 )
 
 (defrule RicoRico_Salida::escrituraSalida
+    ?pref <- (object (is-a Preferencias) (precio_min ?min) (precio_max ?max))
     =>
     (printout t "Procesando la salida ..." crlf crlf)
 
@@ -51,7 +52,10 @@
         (printout t "No hay preferencias definidas." crlf)
     )
 
-    (bind ?menus (find-all-instances ((?m Menu)) TRUE))
+    (bind ?menus (find-all-instances ((?m Menu)) (and
+        (>= (send ?m get-precio) ?min)
+        (<= (send ?m get-precio) ?max)
+    )))
     (bind ?menus (sort cmp-menu $?menus))
     ; Mostrar menús según el número disponible
     (switch (length$ ?menus)
@@ -78,6 +82,21 @@
         )
         (default
             (printout t "INFO: No se ha podido generar ningún menú - Condiciones demasiado restrictivas." crlf)
+        )
+    )
+
+
+    (bind ?menus-alternativos (find-all-instances ((?m Menu)) (or
+        (< (send ?m get-precio) ?min)
+        (> (send ?m get-precio) ?max)
+    )))
+    (bind ?menus-alternativos-size (length$ ?menus-alternativos))
+
+    (if (> ?menus-alternativos-size 0) then
+        (printout t "INFO: Proponemos " ?menus-alternativos-size " menús alternativos que se acercan lo máximo al rango de precios deseado." crlf crlf)
+        (foreach ?m ?menus-alternativos
+            (printout t "Menú Alternativo:" crlf)
+            (print-menu ?m)
         )
     )
 )
