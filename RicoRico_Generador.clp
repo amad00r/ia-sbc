@@ -1,13 +1,19 @@
-(deffunction RicoRico_Generador::compute_price (?b1 ?p1 ?b2 ?p2 ?pst) (+
+(deffunction RicoRico_Generador::compute_price (?tipo-evento ?b1 ?p1 ?b2 ?p2 ?pst) (* (+
     (send ?b1  get-precio)
     (send ?p1  get-precio)
     (if (eq (send ?b1 get-nombre) (send ?b2 get-nombre)) then 0 else (send ?b2 get-precio))
     (send ?p2  get-precio)
     (send ?pst get-precio)
+) (if (eq ?tipo-evento formal) then 1.25 else 1.0)
 ))
 
 (defrule RicoRico_Generador::generate_menu
-    ?pref <- (object (is-a Preferencias) (precio_min ?min) (precio_max ?max) (diferentesBebidas ?diffBebidas))
+    ?pref <- (object
+        (is-a Preferencias)
+        (precio_min ?min)
+        (precio_max ?max)
+        (diferentesBebidas ?diffBebidas)
+        (tipo_evento ?tipo-evento))
     =>
     (bind ?bebidas (find-all-instances ((?b Bebida)) TRUE))
     (bind ?platos1 (find-all-instances ((?p Plato)) (or (eq 1 (send ?p get-tipo)) (eq 3 (send ?p get-tipo)))))
@@ -50,7 +56,7 @@
                 (bind ?p1                        (nth$ ?p1-idx ?platos1))
                 (bind ?p2                        (nth$ ?p2-idx ?platos2))
                 (bind ?pst                       (nth$ ?pst-idx ?postres))
-                (bind ?price                     (compute_price ?b1 ?p1 ?b2 ?p2 ?pst))
+                (bind ?price                     (compute_price ?tipo-evento ?b1 ?p1 ?b2 ?p2 ?pst))
                 (bind ?p1-bebidas-incompatibles  (send ?p1 get-incompatibleConBebida))
                 (bind ?p2-bebidas-incompatibles  (send ?p2 get-incompatibleConBebida))
                 (bind ?pst-bebidas-incompatibles (send ?pst get-incompatibleConBebida))
@@ -126,7 +132,7 @@
                 (bind ?p1                        (nth$ ?p1-idx ?platos1))
                 (bind ?p2                        (nth$ ?p2-idx ?platos2))
                 (bind ?pst                       (nth$ ?pst-idx ?postres))
-                (bind ?price                     (compute_price ?b ?p1 ?b ?p2 ?pst))
+                (bind ?price                     (compute_price ?tipo-evento ?b ?p1 ?b ?p2 ?pst))
                 (bind ?p1-bebidas-incompatibles  (send ?p1 get-incompatibleConBebida))
                 (bind ?p2-bebidas-incompatibles  (send ?p2 get-incompatibleConBebida))
                 (bind ?pst-bebidas-incompatibles (send ?pst get-incompatibleConBebida))

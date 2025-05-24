@@ -1,4 +1,4 @@
-(deffunction RicoRico_Salida::print-menu (?m)
+(deffunction RicoRico_Salida::print-menu (?m ?tipo-evento)
     (bind ?price    (send ?m get-precio))
     (bind ?b1-name  (send (send ?m get-1rBebida) get-nombre))
     (bind ?p1-name  (send (send ?m get-1rPlato)  get-nombre))
@@ -6,9 +6,14 @@
     (bind ?p2-name  (send (send ?m get-2oPlato)  get-nombre))
     (bind ?pst-name (send (send ?m get-postre)   get-nombre))
 
+    (if (eq ?tipo-evento formal) then
+        (printout t "    Precio:        " ?price " eur    (" (/ ?price 1.25) " eur + 25% evento formal)" crlf)
+    else
+        (printout t "    Precio:        " ?price " eur" crlf)
+    )
+
     (if (eq ?b1-name ?b2-name) then
         (printout t
-            "    Precio:        " ?price " euros" crlf
             "    Bebida:        " ?b1-name        crlf
             "    Primer plato:  " ?p1-name        crlf
             "    Segundo plato: " ?p2-name        crlf
@@ -17,7 +22,6 @@
         )
     else
         (printout t
-            "    Precio:         " ?price " euros" crlf
             "    Primera bebida: " ?b1-name        crlf
             "    Primer plato:   " ?p1-name        crlf
             "    Segunda bebida: " ?b2-name        crlf
@@ -29,7 +33,11 @@
 )
 
 (defrule RicoRico_Salida::escrituraSalida
-    ?pref <- (object (is-a Preferencias) (precio_min ?min) (precio_max ?max))
+    ?pref <- (object
+        (is-a Preferencias)
+        (precio_min ?min)
+        (precio_max ?max)
+        (tipo_evento ?tipo-evento))
     =>
     (printout t "Procesando la salida ..." crlf crlf)
 
@@ -62,23 +70,23 @@
         (case 1 then
             (printout t "INFO: Con las restricciones actuales, solo se ha podido generar 1 menú." crlf crlf)
             (printout t "Menú:" crlf)
-            (print-menu (nth 1 ?menus))
+            (print-menu (nth 1 ?menus) ?tipo-evento)
         )
         (case 2 then
             (printout t "INFO: Con las restricciones actuales, solo se han podido generar 2 menús." crlf crlf)
             (printout t "Menú Caro:" crlf)
-            (print-menu (nth 1 ?menus))
+            (print-menu (nth 1 ?menus) ?tipo-evento)
             (printout t "Menú Barato:" crlf)
-            (print-menu (nth 2 ?menus))
+            (print-menu (nth 2 ?menus) ?tipo-evento)
         )
         (case 3 then
             (printout t "INFO: Se han generado 3 menús." crlf crlf)
             (printout t "Menú Caro:" crlf)
-            (print-menu (nth 1 ?menus))
+            (print-menu (nth 1 ?menus) ?tipo-evento)
             (printout t "Menú Estándar:" crlf)
-            (print-menu (nth 2 ?menus))
+            (print-menu (nth 2 ?menus) ?tipo-evento)
             (printout t "Menú Barato:" crlf)
-            (print-menu (nth 3 ?menus))
+            (print-menu (nth 3 ?menus) ?tipo-evento)
         )
         (default
             (printout t "INFO: No se ha podido generar ningún menú - Condiciones demasiado restrictivas." crlf)
@@ -96,7 +104,7 @@
         (printout t "INFO: Proponemos " ?menus-alternativos-size " menús alternativos que se acercan lo máximo al rango de precios deseado." crlf crlf)
         (foreach ?m ?menus-alternativos
             (printout t "Menú Alternativo:" crlf)
-            (print-menu ?m)
+            (print-menu ?m ?tipo-evento)
         )
     )
 )
