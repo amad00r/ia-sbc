@@ -28,6 +28,10 @@
      (slot intolerancia_lactosa)
 )
 
+(deffunction MAIN::cmp-menu (?m1 ?m2)
+    (<= (send ?m1 get-precio) (send ?m2 get-precio))
+)
+
 (defrule MAIN::inicio 
      => 
      (printout t "Bienvenido al creador de menús para el catering RicoRico." crlf)

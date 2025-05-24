@@ -28,10 +28,6 @@
     )
 )
 
-(deffunction RicoRico_Salida::cmp-menu (?m1 ?m2)
-    (<= (send ?m1 get-precio) (send ?m2 get-precio))
-)
-
 (defrule RicoRico_Salida::escrituraSalida
     =>
     (printout t "Procesando la salida ..." crlf crlf)
@@ -56,6 +52,7 @@
     )
 
     (bind ?menus (find-all-instances ((?m Menu)) TRUE))
+    (bind ?menus (sort cmp-menu $?menus))
     ; Mostrar menús según el número disponible
     (switch (length$ ?menus)
         (case 1 then
@@ -64,36 +61,20 @@
             (print-menu (nth 1 ?menus))
         )
         (case 2 then
-            (bind ?m1 (nth 1 ?menus))
-            (bind ?m2 (nth 2 ?menus))
-            (bind ?ordered-menus (if (cmp-menu ?m1 ?m2) then (create$ ?m1 ?m2) else (create$ ?m2 ?m1)))
-
             (printout t "INFO: Con las restricciones actuales, solo se han podido generar 2 menús." crlf crlf)
-            (printout t "Menú Barato:" crlf)
-            (print-menu (nth 1 ?ordered-menus))
             (printout t "Menú Caro:" crlf)
-            (print-menu (nth 2 ?ordered-menus))
+            (print-menu (nth 1 ?menus))
+            (printout t "Menú Barato:" crlf)
+            (print-menu (nth 2 ?menus))
         )
         (case 3 then
-            (bind ?m1 (nth 1 ?menus))
-            (bind ?m2 (nth 2 ?menus))
-            (bind ?m3 (nth 3 ?menus))
-            (bind ?ordered-menus (
-                if       (and (cmp-menu ?m1 ?m2) (cmp-menu ?m2 ?m3)) then (create$ ?m1 ?m2 ?m3)
-                else (if (and (cmp-menu ?m1 ?m3) (cmp-menu ?m3 ?m2)) then (create$ ?m1 ?m3 ?m2)
-                else (if (and (cmp-menu ?m2 ?m1) (cmp-menu ?m1 ?m2)) then (create$ ?m2 ?m1 ?m3)
-                else (if (and (cmp-menu ?m2 ?m3) (cmp-menu ?m3 ?m1)) then (create$ ?m2 ?m3 ?m1)
-                else (if (and (cmp-menu ?m3 ?m1) (cmp-menu ?m1 ?m2)) then (create$ ?m3 ?m1 ?m2)
-                else                                                 then (create$ ?m3 ?m2 ?m1)
-            ))))))
-
             (printout t "INFO: Se han generado 3 menús." crlf crlf)
-            (printout t "Menú Barato:" crlf)
-            (print-menu (nth 1 ?ordered-menus))
-            (printout t "Menú Estándar:" crlf)
-            (print-menu (nth 2 ?ordered-menus))
             (printout t "Menú Caro:" crlf)
-            (print-menu (nth 3 ?ordered-menus))
+            (print-menu (nth 1 ?menus))
+            (printout t "Menú Estándar:" crlf)
+            (print-menu (nth 2 ?menus))
+            (printout t "Menú Barato:" crlf)
+            (print-menu (nth 3 ?menus))
         )
         (default
             (printout t "INFO: No se ha podido generar ningún menú - Condiciones demasiado restrictivas." crlf)
