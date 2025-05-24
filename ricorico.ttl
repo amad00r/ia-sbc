@@ -399,7 +399,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                :originarioDe :espana ;
                :dificultad 7 ;
                :nombre "arroz_caldoso" ;
-               :precio "13.5"^^xsd:float .
+               :precio "13.5"^^xsd:float ;
+               :tipo 3 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/arroz_con_leche
@@ -425,7 +426,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                  :originarioDe :espana ;
                  :dificultad 4 ;
                  :nombre "arroz_con_leche" ;
-                 :precio "4.5"^^xsd:float .
+                 :precio "4.5"^^xsd:float ;
+                 :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/asado_y_frito
@@ -457,7 +459,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                       :originarioDe :francia ;
                       :dificultad 0 ;
                       :nombre "assiette_de_fromages" ;
-                      :precio "8.0"^^xsd:float .
+                      :precio "8.0"^^xsd:float ;
+                      :tipo 3 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/atun
@@ -540,7 +543,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
          :originarioDe :grecia ;
          :dificultad 6 ;
          :nombre "baklava" ;
-         :precio "6.0"^^xsd:float .
+         :precio "6.0"^^xsd:float ;
+         :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/barolo
@@ -600,7 +604,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                           :originarioDe :italia ;
                           :dificultad 7 ;
                           :nombre "bistecca_alla_fiorentina" ;
-                          :precio "16.5"^^xsd:float .
+                          :precio "16.5"^^xsd:float ;
+                          :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/bizcocho
@@ -662,7 +667,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                    :originarioDe :francia ;
                    :dificultad 8 ;
                    :nombre "boeuf_bourguignon" ;
-                   :precio "13.0"^^xsd:float .
+                   :precio "13.0"^^xsd:float ;
+                   :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/bouillabaisse
@@ -693,7 +699,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                :originarioDe :francia ;
                :dificultad 10 ;
                :nombre "bouillabaisse" ;
-               :precio "17.0"^^xsd:float .
+               :precio "17.0"^^xsd:float ;
+               :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/brie
@@ -765,7 +772,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                        :originarioDe :espana ;
                        :dificultad 6 ;
                        :nombre "calamares_a_la_romana" ;
-                       :precio "10.0"^^xsd:float .
+                       :precio "10.0"^^xsd:float ;
+                       :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/caldo_de_carne
@@ -830,7 +838,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                    :originarioDe :italia ;
                    :dificultad 6 ;
                    :nombre "cannoli_siciliani" ;
-                   :precio "6.0"^^xsd:float .
+                   :precio "6.0"^^xsd:float ;
+                   :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/caracoles
@@ -1026,7 +1035,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                   :originarioDe :espana ;
                   :dificultad 9 ;
                   :nombre "cocido_madrileno" ;
-                  :precio "14.0"^^xsd:float .
+                  :precio "14.0"^^xsd:float ;
+                  :tipo 3 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cocido_y_batido
@@ -1066,7 +1076,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                   :originarioDe :francia ;
                   :dificultad 9 ;
                   :nombre "confit_de_canard" ;
-                  :precio "15.0"^^xsd:float .
+                  :precio "15.0"^^xsd:float ;
+                  :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/coq_au_vin
@@ -1099,7 +1110,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
             :originarioDe :francia ;
             :dificultad 8 ;
             :nombre "coq_au_vin" ;
-            :precio "12.0"^^xsd:float .
+            :precio "12.0"^^xsd:float ;
+            :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cordero
@@ -1131,7 +1143,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                 :originarioDe :espana ;
                 :dificultad 6 ;
                 :nombre "crema_catalana" ;
-                :precio "4.0"^^xsd:float .
+                :precio "4.0"^^xsd:float ;
+                :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/creme_brulee
@@ -1157,7 +1170,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
               :originarioDe :francia ;
               :dificultad 6 ;
               :nombre "creme_brulee" ;
-              :precio "5.5"^^xsd:float .
+              :precio "5.5"^^xsd:float ;
+              :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/crudo
@@ -1196,7 +1210,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
           :originarioDe :grecia ;
           :dificultad 6 ;
           :nombre "dolmades" ;
-          :precio "7.0"^^xsd:float .
+          :precio "7.0"^^xsd:float ;
+          :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/dulce
@@ -1226,7 +1241,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                   :originarioDe :espana ;
                   :dificultad 5 ;
                   :nombre "empanada_gallega" ;
-                  :precio "7.5"^^xsd:float .
+                  :precio "7.5"^^xsd:float ;
+                  :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/eneldo
@@ -1256,7 +1272,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
             :originarioDe :espana ;
             :dificultad 3 ;
             :nombre "escalivada" ;
-            :precio "7.0"^^xsd:float .
+            :precio "7.0"^^xsd:float ;
+            :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/escargots_de_bourgogne
@@ -1281,7 +1298,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                         :originarioDe :francia ;
                         :dificultad 6 ;
                         :nombre "escargots_de_bourgogne" ;
-                        :precio "9.0"^^xsd:float .
+                        :precio "9.0"^^xsd:float ;
+                        :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/espaguetis
@@ -1332,7 +1350,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                   :originarioDe :espana ;
                   :dificultad 8 ;
                   :nombre "fabada_asturiana" ;
-                  :precio "12.0"^^xsd:float .
+                  :precio "12.0"^^xsd:float ;
+                  :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/fanta_naranja
@@ -1369,7 +1388,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
           :originarioDe :grecia ;
           :dificultad 4 ;
           :nombre "fasolada" ;
-          :precio "4.0"^^xsd:float .
+          :precio "4.0"^^xsd:float ;
+          :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/foie_gras
@@ -1391,7 +1411,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
            :originarioDe :francia ;
            :dificultad 9 ;
            :nombre "foie_gras" ;
-           :precio "14.0"^^xsd:float .
+           :precio "14.0"^^xsd:float ;
+           :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/francia
@@ -1440,7 +1461,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                       :originarioDe :italia ;
                       :dificultad 3 ;
                       :nombre "frittata_di_zucchine" ;
-                      :precio "8.5"^^xsd:float .
+                      :precio "8.5"^^xsd:float ;
+                      :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/galaktoboureko
@@ -1465,7 +1487,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                 :originarioDe :grecia ;
                 :dificultad 6 ;
                 :nombre "galaktoboureko" ;
-                :precio "6.5"^^xsd:float .
+                :precio "6.5"^^xsd:float ;
+                :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/garbanzos
@@ -1497,7 +1520,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                   :originarioDe :espana ;
                   :dificultad 3 ;
                   :nombre "gazpacho_andaluz" ;
-                  :precio "6.5"^^xsd:float .
+                  :precio "6.5"^^xsd:float ;
+                  :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/gelatina
@@ -1532,7 +1556,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
          :originarioDe :grecia ;
          :dificultad 6 ;
          :nombre "gemista" ;
-         :precio "7.5"^^xsd:float .
+         :precio "7.5"^^xsd:float ;
+         :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/gigantes_plaki
@@ -1559,7 +1584,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                 :originarioDe :grecia ;
                 :dificultad 4 ;
                 :nombre "gigantes_plaki" ;
-                :precio "5.0"^^xsd:float .
+                :precio "5.0"^^xsd:float ;
+                :tipo 3 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/gnocchi_al_pomodoro
@@ -1583,7 +1609,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                      :originarioDe :italia ;
                      :dificultad 4 ;
                      :nombre "gnocchi_al_pomodoro" ;
-                     :precio "8.0"^^xsd:float .
+                     :precio "8.0"^^xsd:float ;
+                     :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/grasa_de_pato
@@ -1714,7 +1741,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                         :originarioDe :espana ;
                         :dificultad 4 ;
                         :nombre "huevos_rotos_con_jamon" ;
-                        :precio "9.5"^^xsd:float .
+                        :precio "9.5"^^xsd:float ;
+                        :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/invierno
@@ -1768,7 +1796,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
           :originarioDe :grecia ;
           :dificultad 7 ;
           :nombre "kleftiko" ;
-          :precio "11.0"^^xsd:float .
+          :precio "11.0"^^xsd:float ;
+          :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/lambrusco
@@ -1812,7 +1841,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                         :originarioDe :italia ;
                         :dificultad 8 ;
                         :nombre "lasagna_alla_bolognese" ;
-                        :precio "13.0"^^xsd:float .
+                        :precio "13.0"^^xsd:float ;
+                        :tipo 3 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/laurel
@@ -1886,7 +1916,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
              :originarioDe :grecia ;
              :dificultad 5 ;
              :nombre "loukoumades" ;
-             :precio "4.0"^^xsd:float .
+             :precio "4.0"^^xsd:float ;
+             :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/maicena
@@ -2000,7 +2031,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
             :originarioDe :italia ;
             :dificultad 5 ;
             :nombre "minestrone" ;
-            :precio "7.5"^^xsd:float .
+            :precio "7.5"^^xsd:float ;
+            :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/montado
@@ -2064,7 +2096,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                    :originarioDe :francia ;
                    :dificultad 4 ;
                    :nombre "moules_marinieres" ;
-                   :precio "9.5"^^xsd:float .
+                   :precio "9.5"^^xsd:float ;
+                   :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/moussaka
@@ -2089,7 +2122,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
           :originarioDe :grecia ;
           :dificultad 7 ;
           :nombre "moussaka" ;
-          :precio "9.5"^^xsd:float .
+          :precio "9.5"^^xsd:float ;
+          :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mozzarella
@@ -2147,7 +2181,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                   :originarioDe :espana ;
                   :dificultad 3 ;
                   :nombre "natillas_caseras" ;
-                  :precio "3.5"^^xsd:float .
+                  :precio "3.5"^^xsd:float ;
+                  :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/nuez
@@ -2195,7 +2230,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                         :originarioDe :italia ;
                         :dificultad 7 ;
                         :nombre "ossobuco_alla_milanese" ;
-                        :precio "15.0"^^xsd:float .
+                        :precio "15.0"^^xsd:float ;
+                        :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/otono
@@ -2226,7 +2262,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                    :originarioDe :espana ;
                    :dificultad 7 ;
                    :nombre "paella_valenciana" ;
-                   :precio "14.5"^^xsd:float .
+                   :precio "14.5"^^xsd:float ;
+                   :tipo 3 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pan
@@ -2265,7 +2302,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
              :originarioDe :italia ;
              :dificultad 4 ;
              :nombre "panna_cotta" ;
-             :precio "5.5"^^xsd:float .
+             :precio "5.5"^^xsd:float ;
+             :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/parmigiana_di_melanzane
@@ -2288,7 +2326,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                          :originarioDe :italia ;
                          :dificultad 6 ;
                          :nombre "parmigiana_di_melanzane" ;
-                         :precio "9.5"^^xsd:float .
+                         :precio "9.5"^^xsd:float ;
+                         :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pasta
@@ -2322,7 +2361,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                          :originarioDe :italia ;
                          :dificultad 4 ;
                          :nombre "pasta_al_pesto_genovese" ;
-                         :precio "9.0"^^xsd:float .
+                         :precio "9.0"^^xsd:float ;
+                         :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pasta_alla_norma
@@ -2346,7 +2386,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                   :originarioDe :italia ;
                   :dificultad 5 ;
                   :nombre "pasta_alla_norma" ;
-                  :precio "9.5"^^xsd:float .
+                  :precio "9.5"^^xsd:float ;
+                  :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pasta_de_tomate
@@ -2388,7 +2429,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
            :originarioDe :grecia ;
            :dificultad 6 ;
            :nombre "pastitsio" ;
-           :precio "8.5"^^xsd:float .
+           :precio "8.5"^^xsd:float ;
+           :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/patatas
@@ -2522,7 +2564,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                 :originarioDe :espana ;
                 :dificultad 5 ;
                 :nombre "pisto_manchego" ;
-                :precio "8.0"^^xsd:float .
+                :precio "8.0"^^xsd:float ;
+                :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pita
@@ -2562,7 +2605,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                        :originarioDe :italia ;
                        :dificultad 5 ;
                        :nombre "pollo_alla_cacciatora" ;
-                       :precio "11.5"^^xsd:float .
+                       :precio "11.5"^^xsd:float ;
+                       :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/postre
@@ -2612,7 +2656,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                     :originarioDe :espana ;
                     :dificultad 6 ;
                     :nombre "pulpo_a_la_gallega" ;
-                    :precio "13.0"^^xsd:float .
+                    :precio "13.0"^^xsd:float ;
+                    :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/queso
@@ -2702,7 +2747,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                  :originarioDe :francia ;
                  :dificultad 3 ;
                  :nombre "quiche_lorraine" ;
-                 :precio "6.5"^^xsd:float .
+                 :precio "6.5"^^xsd:float ;
+                 :tipo 3 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/ralladura_de_naranja
@@ -2739,7 +2785,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
              :originarioDe :francia ;
              :dificultad 5 ;
              :nombre "ratatouille" ;
-             :precio "7.0"^^xsd:float .
+             :precio "7.0"^^xsd:float ;
+             :tipo 3 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/refresco_de_cola
@@ -2783,7 +2830,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                    :originarioDe :espana ;
                    :dificultad 4 ;
                    :nombre "revuelto_de_setas" ;
-                   :precio "8.0"^^xsd:float .
+                   :precio "8.0"^^xsd:float ;
+                   :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/ricotta
@@ -2812,7 +2860,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                    :originarioDe :italia ;
                    :dificultad 6 ;
                    :nombre "risotto_ai_funghi" ;
-                   :precio "12.0"^^xsd:float .
+                   :precio "12.0"^^xsd:float ;
+                   :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/romero
@@ -2873,7 +2922,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                         :originarioDe :francia ;
                         :dificultad 1 ;
                         :nombre "salade_de_chevre_chaud" ;
-                        :precio "7.5"^^xsd:float .
+                        :precio "7.5"^^xsd:float ;
+                        :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/salmorejo_cordobes
@@ -2896,7 +2946,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                     :originarioDe :espana ;
                     :dificultad 4 ;
                     :nombre "salmorejo_cordobes" ;
-                    :precio "6.0"^^xsd:float .
+                    :precio "6.0"^^xsd:float ;
+                    :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/salsa_bechamel
@@ -2928,7 +2979,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                          :originarioDe :italia ;
                          :dificultad 6 ;
                          :nombre "saltimbocca_alla_romana" ;
-                         :precio "13.0"^^xsd:float .
+                         :precio "13.0"^^xsd:float ;
+                         :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/salvia
@@ -2976,7 +3028,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                      :originarioDe :italia ;
                      :dificultad 5 ;
                      :nombre "semifreddo_de_limon" ;
-                     :precio "5.0"^^xsd:float .
+                     :precio "5.0"^^xsd:float ;
+                     :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/semola
@@ -3013,7 +3066,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                  :originarioDe :grecia ;
                  :dificultad 3 ;
                  :nombre "sopa_avgolemono" ;
-                 :precio "4.5"^^xsd:float .
+                 :precio "4.5"^^xsd:float ;
+                 :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/soupe_a_loignon
@@ -3042,7 +3096,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                  :originarioDe :francia ;
                  :dificultad 4 ;
                  :nombre "soupe_a_loignon" ;
-                 :precio "5.5"^^xsd:float .
+                 :precio "5.5"^^xsd:float ;
+                 :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/souvlaki
@@ -3071,7 +3126,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
           :originarioDe :grecia ;
           :dificultad 3 ;
           :nombre "souvlaki" ;
-          :precio "6.0"^^xsd:float .
+          :precio "6.0"^^xsd:float ;
+          :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/spaghetti_carbonara
@@ -3095,7 +3151,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                      :originarioDe :italia ;
                      :dificultad 5 ;
                      :nombre "spaghetti_carbonara" ;
-                     :precio "10.5"^^xsd:float .
+                     :precio "10.5"^^xsd:float ;
+                     :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/spanakopita
@@ -3120,7 +3177,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
              :originarioDe :grecia ;
              :dificultad 5 ;
              :nombre "spanakopita" ;
-             :precio "5.5"^^xsd:float .
+             :precio "5.5"^^xsd:float ;
+             :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/sprite
@@ -3156,7 +3214,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
               :originarioDe :francia ;
               :dificultad 3 ;
               :nombre "steak_frites" ;
-              :precio "11.0"^^xsd:float .
+              :precio "11.0"^^xsd:float ;
+              :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tagliatelle_al_ragu
@@ -3181,7 +3240,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                      :originarioDe :italia ;
                      :dificultad 5 ;
                      :nombre "tagliatelle_al_ragu" ;
-                     :precio "11.0"^^xsd:float .
+                     :precio "11.0"^^xsd:float ;
+                     :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tarta_de_santiago
@@ -3204,7 +3264,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                    :originarioDe :espana ;
                    :dificultad 5 ;
                    :nombre "tarta_de_santiago" ;
-                   :precio "5.0"^^xsd:float .
+                   :precio "5.0"^^xsd:float ;
+                   :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tarte_tatin
@@ -3227,7 +3288,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
              :originarioDe :francia ;
              :dificultad 7 ;
              :nombre "tarte_tatin" ;
-             :precio "6.5"^^xsd:float .
+             :precio "6.5"^^xsd:float ;
+             :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/ternera
@@ -3292,7 +3354,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
           :originarioDe :italia ;
           :dificultad 5 ;
           :nombre "tiramisu" ;
-          :precio "6.5"^^xsd:float .
+          :precio "6.5"^^xsd:float ;
+          :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tiropita
@@ -3317,7 +3380,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
           :originarioDe :grecia ;
           :dificultad 4 ;
           :nombre "tiropita" ;
-          :precio "5.0"^^xsd:float .
+          :precio "5.0"^^xsd:float ;
+          :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tomate
@@ -3356,7 +3420,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
           :originarioDe :espana ;
           :dificultad 4 ;
           :nombre "torrijas" ;
-          :precio "3.0"^^xsd:float .
+          :precio "3.0"^^xsd:float ;
+          :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/torta_caprese
@@ -3380,7 +3445,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                :originarioDe :italia ;
                :dificultad 6 ;
                :nombre "torta_caprese" ;
-               :precio "7.0"^^xsd:float .
+               :precio "7.0"^^xsd:float ;
+               :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tortilla_de_patatas
@@ -3404,7 +3470,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                      :originarioDe :espana ;
                      :dificultad 4 ;
                      :nombre "tortilla_de_patatas" ;
-                     :precio "7.0"^^xsd:float .
+                     :precio "7.0"^^xsd:float ;
+                     :tipo 3 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/trufa
@@ -3446,7 +3513,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
           :originarioDe :grecia ;
           :dificultad 2 ;
           :nombre "tzatziki" ;
-          :precio "3.0"^^xsd:float .
+          :precio "3.0"^^xsd:float ;
+          :tipo 1 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/vainilla
@@ -3537,7 +3605,8 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                  :originarioDe :italia ;
                  :dificultad 6 ;
                  :nombre "vitello_tonnato" ;
-                 :precio "14.0"^^xsd:float .
+                 :precio "14.0"^^xsd:float ;
+                 :tipo 2 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/yogur_griego

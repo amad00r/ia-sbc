@@ -2,7 +2,7 @@
 ;;; RicoRico_Ontology.clp
 ;;; Translated by owl2clips
 ;;; Translated to CLIPS from ontology ricorico.ttl
-;;; :Date 23/05/2025 18:38:32
+;;; :Date 24/05/2025 09:00:00
 
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
@@ -282,6 +282,7 @@
          (dificultad  7)
          (nombre  "arroz_caldoso")
          (precio  13.5)
+         (tipo  3)
     )
 
     ([arroz_con_leche] of Plato
@@ -295,6 +296,7 @@
          (dificultad  4)
          (nombre  "arroz_con_leche")
          (precio  4.5)
+         (tipo  0)
     )
 
     ([asado_y_frito] of Preparacion
@@ -312,6 +314,7 @@
          (dificultad  0)
          (nombre  "assiette_de_fromages")
          (precio  8.0)
+         (tipo  3)
     )
 
     ([atun] of Ingrediente
@@ -365,6 +368,7 @@
          (dificultad  6)
          (nombre  "baklava")
          (precio  6.0)
+         (tipo  0)
     )
 
     ([barolo] of Vino
@@ -408,6 +412,7 @@
          (dificultad  7)
          (nombre  "bistecca_alla_fiorentina")
          (precio  16.5)
+         (tipo  2)
     )
 
     ([bizcocho] of Ingrediente
@@ -443,6 +448,7 @@
          (dificultad  8)
          (nombre  "boeuf_bourguignon")
          (precio  13.0)
+         (tipo  2)
     )
 
     ([bouillabaisse] of Plato
@@ -456,6 +462,7 @@
          (dificultad  10)
          (nombre  "bouillabaisse")
          (precio  17.0)
+         (tipo  2)
     )
 
     ([brie] of Ingrediente
@@ -507,6 +514,7 @@
          (dificultad  6)
          (nombre  "calamares_a_la_romana")
          (precio  10.0)
+         (tipo  2)
     )
 
     ([caldo_de_carne] of Ingrediente
@@ -550,6 +558,7 @@
          (dificultad  6)
          (nombre  "cannoli_siciliani")
          (precio  6.0)
+         (tipo  0)
     )
 
     ([caracoles] of Ingrediente
@@ -691,6 +700,7 @@
          (dificultad  9)
          (nombre  "cocido_madrileno")
          (precio  14.0)
+         (tipo  3)
     )
 
     ([cocido_y_batido] of Preparacion
@@ -714,6 +724,7 @@
          (dificultad  9)
          (nombre  "confit_de_canard")
          (precio  15.0)
+         (tipo  2)
     )
 
     ([coq_au_vin] of Plato
@@ -727,6 +738,7 @@
          (dificultad  8)
          (nombre  "coq_au_vin")
          (precio  12.0)
+         (tipo  2)
     )
 
     ([cordero] of Ingrediente
@@ -746,6 +758,7 @@
          (dificultad  6)
          (nombre  "crema_catalana")
          (precio  4.0)
+         (tipo  0)
     )
 
     ([creme_brulee] of Plato
@@ -759,6 +772,7 @@
          (dificultad  6)
          (nombre  "creme_brulee")
          (precio  5.5)
+         (tipo  0)
     )
 
     ([crudo] of Preparacion
@@ -780,6 +794,7 @@
          (dificultad  6)
          (nombre  "dolmades")
          (precio  7.0)
+         (tipo  1)
     )
 
     ([dulce] of Categoria
@@ -797,6 +812,7 @@
          (dificultad  5)
          (nombre  "empanada_gallega")
          (precio  7.5)
+         (tipo  1)
     )
 
     ([eneldo] of Ingrediente
@@ -816,6 +832,7 @@
          (dificultad  3)
          (nombre  "escalivada")
          (precio  7.0)
+         (tipo  1)
     )
 
     ([escargots_de_bourgogne] of Plato
@@ -829,6 +846,7 @@
          (dificultad  6)
          (nombre  "escargots_de_bourgogne")
          (precio  9.0)
+         (tipo  1)
     )
 
     ([espaguetis] of Ingrediente
@@ -862,6 +880,7 @@
          (dificultad  8)
          (nombre  "fabada_asturiana")
          (precio  12.0)
+         (tipo  2)
     )
 
     ([fanta_naranja] of Casual
@@ -883,6 +902,7 @@
          (dificultad  4)
          (nombre  "fasolada")
          (precio  4.0)
+         (tipo  1)
     )
 
     ([foie_gras] of Plato
@@ -896,6 +916,7 @@
          (dificultad  9)
          (nombre  "foie_gras")
          (precio  14.0)
+         (tipo  1)
     )
 
     ([francia] of Origen
@@ -927,6 +948,7 @@
          (dificultad  3)
          (nombre  "frittata_di_zucchine")
          (precio  8.5)
+         (tipo  1)
     )
 
     ([galaktoboureko] of Plato
@@ -940,6 +962,7 @@
          (dificultad  6)
          (nombre  "galaktoboureko")
          (precio  6.5)
+         (tipo  0)
     )
 
     ([garbanzos] of Ingrediente
@@ -959,6 +982,7 @@
          (dificultad  3)
          (nombre  "gazpacho_andaluz")
          (precio  6.5)
+         (tipo  1)
     )
 
     ([gelatina] of Ingrediente
@@ -978,6 +1002,7 @@
          (dificultad  6)
          (nombre  "gemista")
          (precio  7.5)
+         (tipo  2)
     )
 
     ([gigantes_plaki] of Plato
@@ -991,6 +1016,7 @@
          (dificultad  4)
          (nombre  "gigantes_plaki")
          (precio  5.0)
+         (tipo  3)
     )
 
     ([gnocchi_al_pomodoro] of Plato
@@ -1004,6 +1030,7 @@
          (dificultad  4)
          (nombre  "gnocchi_al_pomodoro")
          (precio  8.0)
+         (tipo  1)
     )
 
     ([grasa_de_pato] of Ingrediente
@@ -1093,6 +1120,7 @@
          (dificultad  4)
          (nombre  "huevos_rotos_con_jamon")
          (precio  9.5)
+         (tipo  2)
     )
 
     ([invierno] of Temporada
@@ -1126,6 +1154,7 @@
          (dificultad  7)
          (nombre  "kleftiko")
          (precio  11.0)
+         (tipo  2)
     )
 
     ([lambrusco] of Vino
@@ -1153,6 +1182,7 @@
          (dificultad  8)
          (nombre  "lasagna_alla_bolognese")
          (precio  13.0)
+         (tipo  3)
     )
 
     ([laurel] of Ingrediente
@@ -1202,6 +1232,7 @@
          (dificultad  5)
          (nombre  "loukoumades")
          (precio  4.0)
+         (tipo  0)
     )
 
     ([maicena] of Ingrediente
@@ -1281,6 +1312,7 @@
          (dificultad  5)
          (nombre  "minestrone")
          (precio  7.5)
+         (tipo  1)
     )
 
     ([montado] of Preparacion
@@ -1322,6 +1354,7 @@
          (dificultad  4)
          (nombre  "moules_marinieres")
          (precio  9.5)
+         (tipo  2)
     )
 
     ([moussaka] of Plato
@@ -1335,6 +1368,7 @@
          (dificultad  7)
          (nombre  "moussaka")
          (precio  9.5)
+         (tipo  2)
     )
 
     ([mozzarella] of Ingrediente
@@ -1372,6 +1406,7 @@
          (dificultad  3)
          (nombre  "natillas_caseras")
          (precio  3.5)
+         (tipo  0)
     )
 
     ([nuez] of Ingrediente
@@ -1403,6 +1438,7 @@
          (dificultad  7)
          (nombre  "ossobuco_alla_milanese")
          (precio  15.0)
+         (tipo  2)
     )
 
     ([otono] of Temporada
@@ -1420,6 +1456,7 @@
          (dificultad  7)
          (nombre  "paella_valenciana")
          (precio  14.5)
+         (tipo  3)
     )
 
     ([pan] of Ingrediente
@@ -1445,6 +1482,7 @@
          (dificultad  4)
          (nombre  "panna_cotta")
          (precio  5.5)
+         (tipo  0)
     )
 
     ([parmigiana_di_melanzane] of Plato
@@ -1458,6 +1496,7 @@
          (dificultad  6)
          (nombre  "parmigiana_di_melanzane")
          (precio  9.5)
+         (tipo  1)
     )
 
     ([pasta] of Ingrediente
@@ -1477,6 +1516,7 @@
          (dificultad  4)
          (nombre  "pasta_al_pesto_genovese")
          (precio  9.0)
+         (tipo  1)
     )
 
     ([pasta_alla_norma] of Plato
@@ -1490,6 +1530,7 @@
          (dificultad  5)
          (nombre  "pasta_alla_norma")
          (precio  9.5)
+         (tipo  1)
     )
 
     ([pasta_de_tomate] of Ingrediente
@@ -1513,6 +1554,7 @@
          (dificultad  6)
          (nombre  "pastitsio")
          (precio  8.5)
+         (tipo  2)
     )
 
     ([patatas] of Ingrediente
@@ -1608,6 +1650,7 @@
          (dificultad  5)
          (nombre  "pisto_manchego")
          (precio  8.0)
+         (tipo  1)
     )
 
     ([pita] of Ingrediente
@@ -1633,6 +1676,7 @@
          (dificultad  5)
          (nombre  "pollo_alla_cacciatora")
          (precio  11.5)
+         (tipo  2)
     )
 
     ;;; Relación para indicar el postre de un menú.
@@ -1667,6 +1711,7 @@
          (dificultad  6)
          (nombre  "pulpo_a_la_gallega")
          (precio  13.0)
+         (tipo  2)
     )
 
     ([queso] of Ingrediente
@@ -1726,6 +1771,7 @@
          (dificultad  3)
          (nombre  "quiche_lorraine")
          (precio  6.5)
+         (tipo  3)
     )
 
     ([ralladura_de_naranja] of Ingrediente
@@ -1745,6 +1791,7 @@
          (dificultad  5)
          (nombre  "ratatouille")
          (precio  7.0)
+         (tipo  3)
     )
 
     ([refresco_de_cola] of Casual
@@ -1774,6 +1821,7 @@
          (dificultad  4)
          (nombre  "revuelto_de_setas")
          (precio  8.0)
+         (tipo  1)
     )
 
     ([ricotta] of Ingrediente
@@ -1792,6 +1840,7 @@
          (dificultad  6)
          (nombre  "risotto_ai_funghi")
          (precio  12.0)
+         (tipo  1)
     )
 
     ([romero] of Ingrediente
@@ -1829,6 +1878,7 @@
          (dificultad  1)
          (nombre  "salade_de_chevre_chaud")
          (precio  7.5)
+         (tipo  1)
     )
 
     ([salmorejo_cordobes] of Plato
@@ -1842,6 +1892,7 @@
          (dificultad  4)
          (nombre  "salmorejo_cordobes")
          (precio  6.0)
+         (tipo  1)
     )
 
     ([salsa_bechamel] of Ingrediente
@@ -1861,6 +1912,7 @@
          (dificultad  6)
          (nombre  "saltimbocca_alla_romana")
          (precio  13.0)
+         (tipo  2)
     )
 
     ([salvia] of Ingrediente
@@ -1892,6 +1944,7 @@
          (dificultad  5)
          (nombre  "semifreddo_de_limon")
          (precio  5.0)
+         (tipo  0)
     )
 
     ([semola] of Ingrediente
@@ -1915,6 +1968,7 @@
          (dificultad  3)
          (nombre  "sopa_avgolemono")
          (precio  4.5)
+         (tipo  1)
     )
 
     ([soupe_a_loignon] of Plato
@@ -1928,6 +1982,7 @@
          (dificultad  4)
          (nombre  "soupe_a_loignon")
          (precio  5.5)
+         (tipo  1)
     )
 
     ([souvlaki] of Plato
@@ -1941,6 +1996,7 @@
          (dificultad  3)
          (nombre  "souvlaki")
          (precio  6.0)
+         (tipo  2)
     )
 
     ([spaghetti_carbonara] of Plato
@@ -1954,6 +2010,7 @@
          (dificultad  5)
          (nombre  "spaghetti_carbonara")
          (precio  10.5)
+         (tipo  1)
     )
 
     ([spanakopita] of Plato
@@ -1967,6 +2024,7 @@
          (dificultad  5)
          (nombre  "spanakopita")
          (precio  5.5)
+         (tipo  1)
     )
 
     ([sprite] of Casual
@@ -1988,6 +2046,7 @@
          (dificultad  3)
          (nombre  "steak_frites")
          (precio  11.0)
+         (tipo  2)
     )
 
     ([tagliatelle_al_ragu] of Plato
@@ -2001,6 +2060,7 @@
          (dificultad  5)
          (nombre  "tagliatelle_al_ragu")
          (precio  11.0)
+         (tipo  1)
     )
 
     ([tarta_de_santiago] of Plato
@@ -2014,6 +2074,7 @@
          (dificultad  5)
          (nombre  "tarta_de_santiago")
          (precio  5.0)
+         (tipo  0)
     )
 
     ([tarte_tatin] of Plato
@@ -2027,6 +2088,7 @@
          (dificultad  7)
          (nombre  "tarte_tatin")
          (precio  6.5)
+         (tipo  0)
     )
 
     ([ternera] of Ingrediente
@@ -2070,6 +2132,7 @@
          (dificultad  5)
          (nombre  "tiramisu")
          (precio  6.5)
+         (tipo  0)
     )
 
     ([tiropita] of Plato
@@ -2083,6 +2146,7 @@
          (dificultad  4)
          (nombre  "tiropita")
          (precio  5.0)
+         (tipo  1)
     )
 
     ([tomate] of Ingrediente
@@ -2108,6 +2172,7 @@
          (dificultad  4)
          (nombre  "torrijas")
          (precio  3.0)
+         (tipo  0)
     )
 
     ([torta_caprese] of Plato
@@ -2121,6 +2186,7 @@
          (dificultad  6)
          (nombre  "torta_caprese")
          (precio  7.0)
+         (tipo  0)
     )
 
     ([tortilla_de_patatas] of Plato
@@ -2134,6 +2200,7 @@
          (dificultad  4)
          (nombre  "tortilla_de_patatas")
          (precio  7.0)
+         (tipo  3)
     )
 
     ([trufa] of Ingrediente
@@ -2161,6 +2228,7 @@
          (dificultad  2)
          (nombre  "tzatziki")
          (precio  3.0)
+         (tipo  1)
     )
 
     ([vainilla] of Ingrediente
@@ -2224,6 +2292,7 @@
          (dificultad  6)
          (nombre  "vitello_tonnato")
          (precio  14.0)
+         (tipo  2)
     )
 
     ([yogur_griego] of Ingrediente
