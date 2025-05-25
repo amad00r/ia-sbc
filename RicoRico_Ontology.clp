@@ -1986,7 +1986,7 @@
     )
 
     ([souvlaki] of Plato
-         (compuestoPor  [aceite_de_oliva] [ajo] [carne_de_cerdo] [cebolla] [limon] [oregano] [pita] [pollo] [tomate] [tzatziki])
+         (compuestoPor  [aceite_de_oliva] [ajo] [carne_de_cerdo] [cebolla] [limon] [oregano] [pita] [pollo] [tomate])
          (disponibleEn  [primavera] [verano])
          (esCategoria  [carne])
          (esPreparacion  [a_la_parrilla])
