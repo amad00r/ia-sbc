@@ -7,7 +7,7 @@
 ) (if (eq ?tipo-evento formal) then 1.25 else 1.0)
 ))
 
-(defrule RicoRico_Generador::generate_menu
+(defrule RicoRico_Generador::generate_menus
     ?pref <- (object
         (is-a Preferencias)
         (precio_min ?min)
@@ -15,6 +15,11 @@
         (diferentesBebidas ?diffBebidas)
         (tipo_evento ?tipo-evento))
     =>
+
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;;;; GENERACIÓN DE CANDIDATOS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
     (bind ?bebidas (find-all-instances ((?b Bebida)) TRUE))
     (bind ?platos1 (find-all-instances ((?p Plato)) (or (eq 1 (send ?p get-tipo)) (eq 3 (send ?p get-tipo)))))
     (bind ?platos2 (find-all-instances ((?p Plato)) (or (eq 2 (send ?p get-tipo)) (eq 3 (send ?p get-tipo)))))
@@ -182,6 +187,9 @@
     )
 
 
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;;;; SELECCIÓN DE FINALISTAS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
     (bind ?final-menus (find-all-instances ((?m Menu)) (and
         (>= (send ?m get-precio) ?min)
