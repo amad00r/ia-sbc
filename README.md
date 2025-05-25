@@ -7,10 +7,11 @@
 
 ## Comando
 
-Para convertir un archivo OWL a formato CLIPS, utiliza el siguiente comando:
+Para convertir un archivo OWL a formato CLIPS, utiliza los siguientes comando:
 
 ```bash
 owl2clips --input ricorico.ttl --output RicoRico_Ontology.clp --format turtle
+python3 boolConverter.py RicoRico_Ontology.clp
 ```
 
 ## Ejecución RicoRico_Entrada.clp

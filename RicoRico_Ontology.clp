@@ -2,7 +2,7 @@
 ;;; RicoRico_Ontology.clp
 ;;; Translated by owl2clips
 ;;; Translated to CLIPS from ontology ricorico.ttl
-;;; :Date 24/05/2025 09:00:00
+;;; :Date 25/05/2025 10:46:20
 
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
