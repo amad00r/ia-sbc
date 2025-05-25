@@ -9,6 +9,28 @@
      ?max
 )
 
+(deffunction RicoRico_Entrada::calcular_dos_precios_mas_altos (?instancias)
+     ;;; Función que retorna los dos precios más altos de una lista de instancias
+     (bind ?precio_primero 0.0)
+     (bind ?precio_segundo 0.0)
+     
+     (foreach ?inst ?instancias
+          (bind ?precio_actual (send ?inst get-precio))
+          
+          (if (> ?precio_actual ?precio_primero) then
+               (bind ?precio_segundo ?precio_primero)
+               (bind ?precio_primero ?precio_actual)
+          else
+               (if (> ?precio_actual ?precio_segundo) then
+                    (bind ?precio_segundo ?precio_actual)
+               )
+          )
+     )
+     
+     ;; Retorna una lista con los dos precios más altos
+     (create$ ?precio_primero ?precio_segundo)
+)
+
 (deffunction RicoRico_Entrada::calcular_precio_minimo (?instancias)
      ;;; Funcion para calcula el precio mínimo de una lista de instancias
      (bind ?min 999999.0)
@@ -83,7 +105,9 @@
      (bind ?precio_max_primero (calcular_precio_maximo ?platos_primero))
      (bind ?precio_max_segundo (calcular_precio_maximo ?platos_segundo))
      (bind ?precio_max_postre (calcular_precio_maximo ?platos_postre))
-     (bind ?precio_max_bebida (calcular_precio_maximo ?todas_bebidas))
+     (bind ?dos_precios_max_bebidas (calcular_dos_precios_mas_altos ?todas_bebidas))
+     (bind ?precio_max_bebida_1 (nth$ 1 $?dos_precios_max_bebidas))
+     (bind ?precio_max_bebida_2 (nth$ 2 $?dos_precios_max_bebidas))
      
      (bind ?precio_total_min (+ 
           ?precio_min_primero
@@ -92,12 +116,12 @@
           ?precio_min_bebida
      ))
      
-     (bind ?precio_2_bebidas_max (* 2 ?precio_max_bebida))
      (bind ?precio_total_max (+ 
           ?precio_max_primero
           ?precio_max_segundo
           ?precio_max_postre
-          ?precio_2_bebidas_max
+          ?precio_max_bebida_1
+          ?precio_max_bebida_2
      ))
      
      (return (create$ ?precio_total_min ?precio_total_max))
