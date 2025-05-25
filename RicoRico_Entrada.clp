@@ -215,8 +215,6 @@
      (bind ?precios_menu_min_max (calcular_precios_menu_min_max))
      (bind ?precio_menu_min(nth$ 1 ?precios_menu_min_max))
      (bind ?precio_menu_max (nth$ 2 ?precios_menu_min_max))
-     (printout t "El precio mínimo del menú es: " ?precio_menu_min crlf)
-     (printout t "El precio máximo del menú es: " ?precio_menu_max crlf)
 
      ;;Obtenemos el número de comensales, el precio mínimo y máximo y la temporada
      (bind ?tipo_evento (seleccion_una_opcion "¿Qué tipo de evento es?" casual formal))
