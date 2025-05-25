@@ -2,7 +2,7 @@
 ;;; RicoRico_Ontology.clp
 ;;; Translated by owl2clips
 ;;; Translated to CLIPS from ontology ricorico.ttl
-;;; :Date 25/05/2025 14:02:49
+;;; :Date 25/05/2025 20:49:02
 
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
@@ -213,6 +213,14 @@
          (lactosaFree  TRUE)
          (nombre  "agua_sin_gas")
          (precio  1.5)
+    )
+
+    ([aguardiente_de_orujo] of Casual
+         (alcoholica  TRUE)
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "aguardiente_de_orujo")
+         (precio  5.5)
     )
 
     ([ajo] of Ingrediente
@@ -643,6 +651,30 @@
          (precio  4.0)
     )
 
+    ([cerveza_de_trigo_alemana] of Casual
+         (alcoholica  TRUE)
+         (glutenFree  FALSE)
+         (lactosaFree  TRUE)
+         (nombre  "cerveza_de_trigo_alemana")
+         (precio  3.8)
+    )
+
+    ([cerveza_ipa] of Casual
+         (alcoholica  TRUE)
+         (glutenFree  FALSE)
+         (lactosaFree  TRUE)
+         (nombre  "cerveza_ipa")
+         (precio  4.2)
+    )
+
+    ([cerveza_negra] of Casual
+         (alcoholica  TRUE)
+         (glutenFree  FALSE)
+         (lactosaFree  TRUE)
+         (nombre  "cerveza_negra")
+         (precio  3.9)
+    )
+
     ([cerveza_rubia] of Casual
          (alcoholica  TRUE)
          (glutenFree  FALSE)
@@ -819,6 +851,14 @@
          (tipo  0)
     )
 
+    ([crema_de_cacao] of Casual
+         (alcoholica  TRUE)
+         (glutenFree  TRUE)
+         (lactosaFree  FALSE)
+         (nombre  "crema_de_cacao")
+         (precio  4.8)
+    )
+
     ([crema_de_castanas] of Plato
          (compuestoPor  [azucar] [castanas])
          (disponibleEn  [invierno] [otono])
@@ -829,6 +869,14 @@
          (nombre  "crema_de_castanas")
          (precio  5.0)
          (tipo  0)
+    )
+
+    ([crema_irlandesa] of Casual
+         (alcoholica  TRUE)
+         (glutenFree  TRUE)
+         (lactosaFree  FALSE)
+         (nombre  "crema_irlandesa")
+         (precio  5.0)
     )
 
     ([creme_brulee] of Plato
@@ -1155,6 +1203,14 @@
          (tipo  1)
     )
 
+    ([grappa] of Casual
+         (alcoholica  TRUE)
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "grappa")
+         (precio  6.0)
+    )
+
     ([grasa_de_pato] of Ingrediente
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
@@ -1381,6 +1437,14 @@
          (glutenFree  FALSE)
          (lactosaFree  TRUE)
          (nombre  "levadura")
+    )
+
+    ([licor_de_cafe_con_leche] of Casual
+         (alcoholica  TRUE)
+         (glutenFree  TRUE)
+         (lactosaFree  FALSE)
+         (nombre  "licor_de_cafe_con_leche")
+         (precio  5.5)
     )
 
     ([limon] of Ingrediente
@@ -2017,6 +2081,14 @@
          (tipo  2)
     )
 
+    ([ponche_de_huevo] of Casual
+         (alcoholica  TRUE)
+         (glutenFree  TRUE)
+         (lactosaFree  FALSE)
+         (nombre  "ponche_de_huevo")
+         (precio  4.6)
+    )
+
     ;;; Relación para indicar el postre de un menú.
     ([postre] of Categoria
          (nombre  "postre")
@@ -2116,6 +2188,14 @@
          (nombre  "quiche_lorraine")
          (precio  6.5)
          (tipo  3)
+    )
+
+    ([radler_de_limon] of Casual
+         (alcoholica  TRUE)
+         (glutenFree  FALSE)
+         (lactosaFree  TRUE)
+         (nombre  "radler_de_limon")
+         (precio  3.7)
     )
 
     ([ralladura_de_naranja] of Ingrediente
@@ -2314,6 +2394,14 @@
          (glutenFree  FALSE)
          (lactosaFree  TRUE)
          (nombre  "semola")
+    )
+
+    ([sidra_asturiana] of Casual
+         (alcoholica  TRUE)
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "sidra_asturiana")
+         (precio  4.0)
     )
 
     ([sopa] of Categoria
@@ -2666,6 +2754,14 @@
          (lactosaFree  TRUE)
          (nombre  "verdicchio")
          (precio  13.0)
+    )
+
+    ([vermut_rojo] of Casual
+         (alcoholica  TRUE)
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "vermut_rojo")
+         (precio  4.5)
     )
 
     ([vinagre_balsamico] of Ingrediente

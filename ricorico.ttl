@@ -303,6 +303,16 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
               :precio "1.5"^^xsd:float .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/aguardiente_de_orujo
+:aguardiente_de_orujo rdf:type owl:NamedIndividual ,
+                               :Casual ;
+                      :alcoholica "true"^^xsd:boolean ;
+                      :glutenFree "true"^^xsd:boolean ;
+                      :lactosaFree "true"^^xsd:boolean ;
+                      :nombre "aguardiente_de_orujo" ;
+                      :precio "5.5"^^xsd:float .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/ajo
 :ajo rdf:type owl:NamedIndividual ,
               :Ingrediente ;
@@ -954,6 +964,36 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                    :precio "4.0"^^xsd:float .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cerveza_de_trigo_alemana
+:cerveza_de_trigo_alemana rdf:type owl:NamedIndividual ,
+                                   :Casual ;
+                          :alcoholica "true"^^xsd:boolean ;
+                          :glutenFree "false"^^xsd:boolean ;
+                          :lactosaFree "true"^^xsd:boolean ;
+                          :nombre "cerveza_de_trigo_alemana" ;
+                          :precio "3.8"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cerveza_ipa
+:cerveza_ipa rdf:type owl:NamedIndividual ,
+                      :Casual ;
+             :alcoholica "true"^^xsd:boolean ;
+             :glutenFree "false"^^xsd:boolean ;
+             :lactosaFree "true"^^xsd:boolean ;
+             :nombre "cerveza_ipa" ;
+             :precio "4.2"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cerveza_negra
+:cerveza_negra rdf:type owl:NamedIndividual ,
+                        :Casual ;
+               :alcoholica "true"^^xsd:boolean ;
+               :glutenFree "false"^^xsd:boolean ;
+               :lactosaFree "true"^^xsd:boolean ;
+               :nombre "cerveza_negra" ;
+               :precio "3.9"^^xsd:float .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cerveza_rubia
 :cerveza_rubia rdf:type owl:NamedIndividual ,
                         :Casual ;
@@ -1228,6 +1268,16 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                 :tipo 0 .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/crema_de_cacao
+:crema_de_cacao rdf:type owl:NamedIndividual ,
+                         :Casual ;
+                :alcoholica "true"^^xsd:boolean ;
+                :glutenFree "true"^^xsd:boolean ;
+                :lactosaFree "false"^^xsd:boolean ;
+                :nombre "crema_de_cacao" ;
+                :precio "4.8"^^xsd:float .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/crema_de_castanas
 :crema_de_castanas rdf:type owl:NamedIndividual ,
                             :Plato ;
@@ -1242,6 +1292,16 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                    :nombre "crema_de_castanas" ;
                    :precio "5.0"^^xsd:float ;
                    :tipo 0 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/crema_irlandesa
+:crema_irlandesa rdf:type owl:NamedIndividual ,
+                          :Casual ;
+                 :alcoholica "true"^^xsd:boolean ;
+                 :glutenFree "true"^^xsd:boolean ;
+                 :lactosaFree "false"^^xsd:boolean ;
+                 :nombre "crema_irlandesa" ;
+                 :precio "5.0"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/creme_brulee
@@ -1784,6 +1844,16 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                      :tipo 1 .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/grappa
+:grappa rdf:type owl:NamedIndividual ,
+                 :Casual ;
+        :alcoholica "true"^^xsd:boolean ;
+        :glutenFree "true"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "grappa" ;
+        :precio "6.0"^^xsd:float .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/grasa_de_pato
 :grasa_de_pato rdf:type owl:NamedIndividual ,
                         :Ingrediente ;
@@ -2121,6 +2191,16 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
           :glutenFree "false"^^xsd:boolean ;
           :lactosaFree "true"^^xsd:boolean ;
           :nombre "levadura" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/licor_de_cafe_con_leche
+:licor_de_cafe_con_leche rdf:type owl:NamedIndividual ,
+                                  :Casual ;
+                         :alcoholica "true"^^xsd:boolean ;
+                         :glutenFree "true"^^xsd:boolean ;
+                         :lactosaFree "false"^^xsd:boolean ;
+                         :nombre "licor_de_cafe_con_leche" ;
+                         :precio "5.5"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/limon
@@ -3083,6 +3163,16 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                        :tipo 2 .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/ponche_de_huevo
+:ponche_de_huevo rdf:type owl:NamedIndividual ,
+                          :Casual ;
+                 :alcoholica "true"^^xsd:boolean ;
+                 :glutenFree "true"^^xsd:boolean ;
+                 :lactosaFree "false"^^xsd:boolean ;
+                 :nombre "ponche_de_huevo" ;
+                 :precio "4.6"^^xsd:float .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/postre
 :postre rdf:type owl:NamedIndividual ,
                  :Categoria ;
@@ -3231,6 +3321,16 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                  :nombre "quiche_lorraine" ;
                  :precio "6.5"^^xsd:float ;
                  :tipo 3 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/radler_de_limon
+:radler_de_limon rdf:type owl:NamedIndividual ,
+                          :Casual ;
+                 :alcoholica "true"^^xsd:boolean ;
+                 :glutenFree "false"^^xsd:boolean ;
+                 :lactosaFree "true"^^xsd:boolean ;
+                 :nombre "radler_de_limon" ;
+                 :precio "3.7"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/ralladura_de_naranja
@@ -3548,6 +3648,16 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
         :nombre "semola" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/sidra_asturiana
+:sidra_asturiana rdf:type owl:NamedIndividual ,
+                          :Casual ;
+                 :alcoholica "true"^^xsd:boolean ;
+                 :glutenFree "true"^^xsd:boolean ;
+                 :lactosaFree "true"^^xsd:boolean ;
+                 :nombre "sidra_asturiana" ;
+                 :precio "4.0"^^xsd:float .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/sopa
 :sopa rdf:type owl:NamedIndividual ,
                :Categoria ;
@@ -3650,8 +3760,7 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                         :oregano ,
                         :pita ,
                         :pollo ,
-                        :tomate ,
-                        :tzatziki ;
+                        :tomate ;
           :disponibleEn :primavera ,
                         :verano ;
           :esCategoria :carne ;
@@ -4122,6 +4231,16 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
             :lactosaFree "true"^^xsd:boolean ;
             :nombre "verdicchio" ;
             :precio "13.0"^^xsd:float .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/vermut_rojo
+:vermut_rojo rdf:type owl:NamedIndividual ,
+                      :Casual ;
+             :alcoholica "true"^^xsd:boolean ;
+             :glutenFree "true"^^xsd:boolean ;
+             :lactosaFree "true"^^xsd:boolean ;
+             :nombre "vermut_rojo" ;
+             :precio "4.5"^^xsd:float .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/vinagre_balsamico
