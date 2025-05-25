@@ -353,6 +353,14 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
           :nombre "almendra" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/almidon_de_maiz
+:almidon_de_maiz rdf:type owl:NamedIndividual ,
+                          :Ingrediente ;
+                 :glutenFree "true"^^xsd:boolean ;
+                 :lactosaFree "true"^^xsd:boolean ;
+                 :nombre "almidon_de_maiz" .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/anchoas
 :anchoas rdf:type owl:NamedIndividual ,
                   :Ingrediente ;
@@ -906,6 +914,14 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
            :nombre "casqueria" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/castanas
+:castanas rdf:type owl:NamedIndividual ,
+                   :Ingrediente ;
+          :glutenFree "true"^^xsd:boolean ;
+          :lactosaFree "true"^^xsd:boolean ;
+          :nombre "castanas" .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cazuela
 :cazuela rdf:type owl:NamedIndividual ,
                   :Categoria ;
@@ -918,6 +934,14 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
          :glutenFree "true"^^xsd:boolean ;
          :lactosaFree "true"^^xsd:boolean ;
          :nombre "cebolla" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cerezas
+:cerezas rdf:type owl:NamedIndividual ,
+                  :Ingrediente ;
+         :glutenFree "true"^^xsd:boolean ;
+         :lactosaFree "true"^^xsd:boolean ;
+         :nombre "cerezas" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cerveza_artesanal
@@ -1002,6 +1026,57 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
          :nombre "chorizo" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/ciliegie_al_vino_rosso
+:ciliegie_al_vino_rosso rdf:type owl:NamedIndividual ,
+                                 :Plato ;
+                        :compuestoPor :azucar ,
+                                      :cerezas ,
+                                      :vino_tinto ;
+                        :disponibleEn :verano ;
+                        :esCategoria :fruta ;
+                        :esPreparacion :hervido ;
+                        :originarioDe :italia ;
+                        :dificultad 3 ;
+                        :nombre "ciliegie_al_vino_rosso" ;
+                        :precio "4.2"^^xsd:float ;
+                        :tipo 0 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/citricos_con_canela
+:citricos_con_canela rdf:type owl:NamedIndividual ,
+                              :Plato ;
+                     :compuestoPor :canela ,
+                                   :limon ,
+                                   :miel ,
+                                   :naranja ;
+                     :disponibleEn :invierno ,
+                                   :primavera ;
+                     :esCategoria :fruta ;
+                     :esPreparacion :crudo ;
+                     :originarioDe :espana ;
+                     :dificultad 2 ;
+                     :nombre "citricos_con_canela" ;
+                     :precio "3.5"^^xsd:float ;
+                     :tipo 0 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/clafoutis_de_cerezas
+:clafoutis_de_cerezas rdf:type owl:NamedIndividual ,
+                               :Plato ;
+                      :compuestoPor :cerezas ,
+                                    :harina_de_almendra ,
+                                    :huevos ,
+                                    :leche_vegetal ;
+                      :disponibleEn :verano ;
+                      :esCategoria :postre ;
+                      :esPreparacion :horneado_y_en_capas ;
+                      :originarioDe :francia ;
+                      :dificultad 6 ;
+                      :nombre "clafoutis_de_cerezas" ;
+                      :precio "6.0"^^xsd:float ;
+                      :tipo 0 .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/cocido
 :cocido rdf:type owl:NamedIndividual ,
                  :Preparacion ;
@@ -1080,6 +1155,12 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                   :tipo 2 .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/congelado
+:congelado rdf:type owl:NamedIndividual ,
+                    :Preparacion ;
+           :nombre "congelado" .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/coq_au_vin
 :coq_au_vin rdf:type owl:NamedIndividual ,
                      :Plato ;
@@ -1145,6 +1226,22 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                 :nombre "crema_catalana" ;
                 :precio "4.0"^^xsd:float ;
                 :tipo 0 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/crema_de_castanas
+:crema_de_castanas rdf:type owl:NamedIndividual ,
+                            :Plato ;
+                   :compuestoPor :azucar ,
+                                 :castanas ;
+                   :disponibleEn :invierno ,
+                                 :otono ;
+                   :esCategoria :postre ;
+                   :esPreparacion :hervido ;
+                   :originarioDe :francia ;
+                   :dificultad 4 ;
+                   :nombre "crema_de_castanas" ;
+                   :precio "5.0"^^xsd:float ;
+                   :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/creme_brulee
@@ -1218,6 +1315,24 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
 :dulce rdf:type owl:NamedIndividual ,
                 :Categoria ;
        :nombre "dulce" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/dulces_de_cuchara
+:dulces_de_cuchara rdf:type owl:NamedIndividual ,
+                            :Plato ;
+                   :compuestoPor :azucar ,
+                                 :frutas ;
+                   :disponibleEn :invierno ,
+                                 :otono ,
+                                 :primavera ,
+                                 :verano ;
+                   :esCategoria :dulce ;
+                   :esPreparacion :hervido ;
+                   :originarioDe :grecia ;
+                   :dificultad 5 ;
+                   :nombre "dulces_de_cuchara" ;
+                   :precio "4.0"^^xsd:float ;
+                   :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/empanada_gallega
@@ -1392,6 +1507,24 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
           :tipo 1 .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/fichi_al_forno
+:fichi_al_forno rdf:type owl:NamedIndividual ,
+                         :Plato ;
+                :compuestoPor :canela ,
+                              :higos ,
+                              :miel ,
+                              :pistacho ;
+                :disponibleEn :otono ,
+                              :verano ;
+                :esCategoria :fruta ;
+                :esPreparacion :horno ;
+                :originarioDe :italia ;
+                :dificultad 3 ;
+                :nombre "fichi_al_forno" ;
+                :precio "4.5"^^xsd:float ;
+                :tipo 0 .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/foie_gras
 :foie_gras rdf:type owl:NamedIndividual ,
                     :Plato ;
@@ -1415,10 +1548,34 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
            :tipo 1 .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/fragole_allaceto_balsamico
+:fragole_allaceto_balsamico rdf:type owl:NamedIndividual ,
+                                     :Plato ;
+                            :compuestoPor :azucar_moreno ,
+                                          :fresa ,
+                                          :vinagre_balsamico ;
+                            :disponibleEn :primavera ;
+                            :esCategoria :fruta ;
+                            :esPreparacion :crudo ;
+                            :originarioDe :italia ;
+                            :dificultad 2 ;
+                            :nombre "fragole_allaceto_balsamico" ;
+                            :precio "3.7"^^xsd:float ;
+                            :tipo 0 .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/francia
 :francia rdf:type owl:NamedIndividual ,
                   :Origen ;
          :nombre "francia" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/fresa
+:fresa rdf:type owl:NamedIndividual ,
+                :Ingrediente ;
+       :glutenFree "true"^^xsd:boolean ;
+       :lactosaFree "true"^^xsd:boolean ;
+       :nombre "fresa" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/frijol
@@ -1463,6 +1620,20 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                       :nombre "frittata_di_zucchine" ;
                       :precio "8.5"^^xsd:float ;
                       :tipo 1 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/fruta
+:fruta rdf:type owl:NamedIndividual ,
+                :Categoria ;
+       :nombre "fruta" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/frutas
+:frutas rdf:type owl:NamedIndividual ,
+                 :Ingrediente ;
+        :glutenFree "true"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "frutas" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/galaktoboureko
@@ -1633,12 +1804,38 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
          :nombre "guisado" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/halva_de_tahini
+:halva_de_tahini rdf:type owl:NamedIndividual ,
+                          :Plato ;
+                 :compuestoPor :azucar ,
+                               :tahini ;
+                 :disponibleEn :invierno ,
+                               :otono ,
+                               :primavera ,
+                               :verano ;
+                 :esCategoria :dulce ;
+                 :esPreparacion :mezclado ;
+                 :originarioDe :grecia ;
+                 :dificultad 3 ;
+                 :nombre "halva_de_tahini" ;
+                 :precio "4.5"^^xsd:float ;
+                 :tipo 0 .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/harina
 :harina rdf:type owl:NamedIndividual ,
                  :Ingrediente ;
         :glutenFree "false"^^xsd:boolean ;
         :lactosaFree "true"^^xsd:boolean ;
         :nombre "harina" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/harina_de_almendra
+:harina_de_almendra rdf:type owl:NamedIndividual ,
+                             :Ingrediente ;
+                    :glutenFree "true"^^xsd:boolean ;
+                    :lactosaFree "true"^^xsd:boolean ;
+                    :nombre "harina_de_almendra" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/hervido
@@ -1661,6 +1858,31 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                         :glutenFree "true"^^xsd:boolean ;
                         :lactosaFree "true"^^xsd:boolean ;
                         :nombre "higado_de_pato_o_ganso" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/higos
+:higos rdf:type owl:NamedIndividual ,
+                :Ingrediente ;
+       :glutenFree "true"^^xsd:boolean ;
+       :lactosaFree "true"^^xsd:boolean ;
+       :nombre "higos" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/higos_al_vino_tinto
+:higos_al_vino_tinto rdf:type owl:NamedIndividual ,
+                              :Plato ;
+                     :compuestoPor :canela ,
+                                   :higos ,
+                                   :vino_tinto ;
+                     :disponibleEn :otono ,
+                                   :verano ;
+                     :esCategoria :fruta ;
+                     :esPreparacion :hervido ;
+                     :originarioDe :espana ;
+                     :dificultad 3 ;
+                     :nombre "higos_al_vino_tinto" ;
+                     :precio "4.5"^^xsd:float ;
+                     :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/hinojo
@@ -1743,6 +1965,24 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                         :nombre "huevos_rotos_con_jamon" ;
                         :precio "9.5"^^xsd:float ;
                         :tipo 2 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/insalata_dolce_di_frutta
+:insalata_dolce_di_frutta rdf:type owl:NamedIndividual ,
+                                   :Plato ;
+                          :compuestoPor :cerezas ,
+                                        :higos ,
+                                        :limon ,
+                                        :miel ,
+                                        :uvas ;
+                          :disponibleEn :verano ;
+                          :esCategoria :fruta ;
+                          :esPreparacion :crudo ;
+                          :originarioDe :italia ;
+                          :dificultad 2 ;
+                          :nombre "insalata_dolce_di_frutta" ;
+                          :precio "3.6"^^xsd:float ;
+                          :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/invierno
@@ -1861,6 +2101,14 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
        :nombre "leche" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/leche_vegetal
+:leche_vegetal rdf:type owl:NamedIndividual ,
+                        :Ingrediente ;
+               :glutenFree "true"^^xsd:boolean ;
+               :lactosaFree "true"^^xsd:boolean ;
+               :nombre "leche_vegetal" .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/legumbres
 :legumbres rdf:type owl:NamedIndividual ,
                     :Categoria ;
@@ -1920,6 +2168,59 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
              :tipo 0 .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/loukoumi
+:loukoumi rdf:type owl:NamedIndividual ,
+                   :Plato ;
+          :compuestoPor :almidon_de_maiz ,
+                        :azucar ;
+          :disponibleEn :invierno ,
+                        :otono ,
+                        :primavera ,
+                        :verano ;
+          :esCategoria :dulce ;
+          :esPreparacion :hervido ;
+          :originarioDe :grecia ;
+          :dificultad 7 ;
+          :nombre "loukoumi" ;
+          :precio "3.0"^^xsd:float ;
+          :tipo 0 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/macedonia_de_frutas_mediterraneas
+:macedonia_de_frutas_mediterraneas rdf:type owl:NamedIndividual ,
+                                            :Plato ;
+                                   :compuestoPor :higos ,
+                                                 :manzana ,
+                                                 :naranja ,
+                                                 :pera ;
+                                   :disponibleEn :verano ;
+                                   :esCategoria :fruta ;
+                                   :esPreparacion :crudo ;
+                                   :originarioDe :espana ;
+                                   :dificultad 1 ;
+                                   :nombre "macedonia_de_frutas_mediterraneas" ;
+                                   :precio "3.2"^^xsd:float ;
+                                   :tipo 0 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/macedonia_di_mele_e_pere
+:macedonia_di_mele_e_pere rdf:type owl:NamedIndividual ,
+                                   :Plato ;
+                          :compuestoPor :manzana ,
+                                        :menta ,
+                                        :miel ,
+                                        :pera ;
+                          :disponibleEn :primavera ,
+                                        :verano ;
+                          :esCategoria :fruta ;
+                          :esPreparacion :crudo ;
+                          :originarioDe :italia ;
+                          :dificultad 3 ;
+                          :nombre "macedonia_di_mele_e_pere" ;
+                          :precio "3.9"^^xsd:float ;
+                          :tipo 0 .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/maicena
 :maicena rdf:type owl:NamedIndividual ,
                   :Ingrediente ;
@@ -1942,6 +2243,24 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
          :glutenFree "true"^^xsd:boolean ;
          :lactosaFree "true"^^xsd:boolean ;
          :nombre "manzana" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/manzanas_asadas_con_frutos_secos
+:manzanas_asadas_con_frutos_secos rdf:type owl:NamedIndividual ,
+                                           :Plato ;
+                                  :compuestoPor :almendra ,
+                                                :canela ,
+                                                :manzana ,
+                                                :pistacho ;
+                                  :disponibleEn :invierno ,
+                                                :otono ;
+                                  :esCategoria :fruta ;
+                                  :esPreparacion :horno ;
+                                  :originarioDe :espana ;
+                                  :dificultad 4 ;
+                                  :nombre "manzanas_asadas_con_frutos_secos" ;
+                                  :precio "4.0"^^xsd:float ;
+                                  :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/mariscos
@@ -1983,6 +2302,79 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
             :glutenFree "true"^^xsd:boolean ;
             :lactosaFree "true"^^xsd:boolean ;
             :nombre "mejillones" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/melon
+:melon rdf:type owl:NamedIndividual ,
+                :Ingrediente ;
+       :glutenFree "true"^^xsd:boolean ;
+       :lactosaFree "true"^^xsd:boolean ;
+       :nombre "melon" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/melon_con_menta
+:melon_con_menta rdf:type owl:NamedIndividual ,
+                          :Plato ;
+                 :compuestoPor :melon ,
+                               :menta ;
+                 :disponibleEn :verano ;
+                 :esCategoria :fruta ;
+                 :esPreparacion :crudo ;
+                 :originarioDe :grecia ;
+                 :dificultad 1 ;
+                 :nombre "melon_con_menta" ;
+                 :precio "3.5"^^xsd:float ;
+                 :tipo 0 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/membrillo
+:membrillo rdf:type owl:NamedIndividual ,
+                    :Ingrediente ;
+           :glutenFree "true"^^xsd:boolean ;
+           :lactosaFree "true"^^xsd:boolean ;
+           :nombre "membrillo" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/membrillo_al_horno_con_miel
+:membrillo_al_horno_con_miel rdf:type owl:NamedIndividual ,
+                                      :Plato ;
+                             :compuestoPor :membrillo ,
+                                           :miel ;
+                             :disponibleEn :invierno ,
+                                           :otono ;
+                             :esCategoria :postre ;
+                             :esPreparacion :horno ;
+                             :originarioDe :grecia ;
+                             :dificultad 4 ;
+                             :nombre "membrillo_al_horno_con_miel" ;
+                             :precio "5.5"^^xsd:float ;
+                             :tipo 0 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/menta
+:menta rdf:type owl:NamedIndividual ,
+                :Ingrediente ;
+       :glutenFree "true"^^xsd:boolean ;
+       :lactosaFree "true"^^xsd:boolean ;
+       :nombre "menta" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/merengues
+:merengues rdf:type owl:NamedIndividual ,
+                    :Plato ;
+           :compuestoPor :azucar ,
+                         :huevos ;
+           :disponibleEn :invierno ,
+                         :otono ,
+                         :primavera ,
+                         :verano ;
+           :esCategoria :dulce ;
+           :esPreparacion :horneado_y_caramelizado ;
+           :originarioDe :francia ;
+           :dificultad 6 ;
+           :nombre "merengues" ;
+           :precio "3.5"^^xsd:float ;
+           :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/merlot
@@ -2140,6 +2532,45 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                 :glutenFree "true"^^xsd:boolean ;
                 :lactosaFree "true"^^xsd:boolean ;
                 :nombre "muslos_de_pato" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/naranja
+:naranja rdf:type owl:NamedIndividual ,
+                  :Ingrediente ;
+         :glutenFree "true"^^xsd:boolean ;
+         :lactosaFree "true"^^xsd:boolean ;
+         :nombre "naranja" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/naranjas_con_canela
+:naranjas_con_canela rdf:type owl:NamedIndividual ,
+                              :Plato ;
+                     :compuestoPor :canela ,
+                                   :naranja ;
+                     :disponibleEn :invierno ;
+                     :esCategoria :dulce ;
+                     :esPreparacion :crudo ;
+                     :originarioDe :francia ;
+                     :dificultad 2 ;
+                     :nombre "naranjas_con_canela" ;
+                     :precio "3.5"^^xsd:float ;
+                     :tipo 0 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/naranjas_con_canela_y_miel
+:naranjas_con_canela_y_miel rdf:type owl:NamedIndividual ,
+                                     :Plato ;
+                            :compuestoPor :canela ,
+                                          :miel ,
+                                          :naranja ;
+                            :disponibleEn :invierno ;
+                            :esCategoria :fruta ;
+                            :esPreparacion :crudo ;
+                            :originarioDe :espana ;
+                            :dificultad 2 ;
+                            :nombre "naranjas_con_canela_y_miel" ;
+                            :precio "4.0"^^xsd:float ;
+                            :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/nata
@@ -2473,6 +2904,49 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
        :precio "2.5"^^xsd:float .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/pera
+:pera rdf:type owl:NamedIndividual ,
+               :Ingrediente ;
+      :glutenFree "true"^^xsd:boolean ;
+      :lactosaFree "true"^^xsd:boolean ;
+      :nombre "pera" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/peras_al_azafran
+:peras_al_azafran rdf:type owl:NamedIndividual ,
+                           :Plato ;
+                  :compuestoPor :azafran ,
+                                :canela ,
+                                :miel ,
+                                :pera ;
+                  :disponibleEn :otono ,
+                                :primavera ,
+                                :verano ;
+                  :esCategoria :fruta ;
+                  :esPreparacion :hervido ;
+                  :originarioDe :espana ;
+                  :dificultad 5 ;
+                  :nombre "peras_al_azafran" ;
+                  :precio "4.8"^^xsd:float ;
+                  :tipo 0 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/peras_al_vino_tinto
+:peras_al_vino_tinto rdf:type owl:NamedIndividual ,
+                              :Plato ;
+                     :compuestoPor :pera ,
+                                   :vino_tinto ;
+                     :disponibleEn :invierno ,
+                                   :otono ;
+                     :esCategoria :fruta ;
+                     :esPreparacion :hervido ;
+                     :originarioDe :francia ;
+                     :dificultad 5 ;
+                     :nombre "peras_al_vino_tinto" ;
+                     :precio "6.5"^^xsd:float ;
+                     :tipo 0 .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/perejil
 :perejil rdf:type owl:NamedIndividual ,
                   :Ingrediente ;
@@ -2716,6 +3190,14 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                  :nombre "queso_parmesano" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/queso_vegano
+:queso_vegano rdf:type owl:NamedIndividual ,
+                       :Ingrediente ;
+              :glutenFree "true"^^xsd:boolean ;
+              :lactosaFree "true"^^xsd:boolean ;
+              :nombre "queso_vegano" .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/quesoc
 :quesoc rdf:type owl:NamedIndividual ,
                  :Categoria ;
@@ -2854,6 +3336,9 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                    :disponibleEn :otono ;
                    :esCategoria :arroz ;
                    :esPreparacion :guisado ;
+                   :incompatibleConBebida :cerveza_artesanal ,
+                                          :lambrusco ,
+                                          :tinto_de_verano ;
                    :incompatibleConPlato :arroz_caldoso ,
                                          :arroz_con_leche ,
                                          :paella_valenciana ;
@@ -2991,6 +3476,29 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
         :nombre "salvia" .
 
 
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/sandia
+:sandia rdf:type owl:NamedIndividual ,
+                 :Ingrediente ;
+        :glutenFree "true"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "sandia" .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/sandia_con_queso_vegano
+:sandia_con_queso_vegano rdf:type owl:NamedIndividual ,
+                                  :Plato ;
+                         :compuestoPor :queso_vegano ,
+                                       :sandia ;
+                         :disponibleEn :verano ;
+                         :esCategoria :fruta ;
+                         :esPreparacion :crudo ;
+                         :originarioDe :grecia ;
+                         :dificultad 2 ;
+                         :nombre "sandia_con_queso_vegano" ;
+                         :precio "4.0"^^xsd:float ;
+                         :tipo 0 .
+
+
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/sauvignon_blanc
 :sauvignon_blanc rdf:type owl:NamedIndividual ,
                           :Vino ;
@@ -3068,6 +3576,37 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                  :nombre "sopa_avgolemono" ;
                  :precio "4.5"^^xsd:float ;
                  :tipo 1 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/sorbete_de_frutas
+:sorbete_de_frutas rdf:type owl:NamedIndividual ,
+                            :Plato ;
+                   :compuestoPor :azucar ,
+                                 :frutas ;
+                   :disponibleEn :primavera ,
+                                 :verano ;
+                   :esCategoria :fruta ;
+                   :esPreparacion :frio ;
+                   :originarioDe :francia ;
+                   :dificultad 3 ;
+                   :nombre "sorbete_de_frutas" ;
+                   :precio "4.5"^^xsd:float ;
+                   :tipo 0 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/sorbetto_di_limone
+:sorbetto_di_limone rdf:type owl:NamedIndividual ,
+                             :Plato ;
+                    :compuestoPor :azucar ,
+                                  :limon ;
+                    :disponibleEn :verano ;
+                    :esCategoria :fruta ;
+                    :esPreparacion :congelado ;
+                    :originarioDe :italia ;
+                    :dificultad 4 ;
+                    :nombre "sorbetto_di_limone" ;
+                    :precio "3.0"^^xsd:float ;
+                    :tipo 0 .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/soupe_a_loignon
@@ -3242,6 +3781,14 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
                      :nombre "tagliatelle_al_ragu" ;
                      :precio "11.0"^^xsd:float ;
                      :tipo 1 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tahini
+:tahini rdf:type owl:NamedIndividual ,
+                 :Ingrediente ;
+        :glutenFree "true"^^xsd:boolean ;
+        :lactosaFree "true"^^xsd:boolean ;
+        :nombre "tahini" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/tarta_de_santiago
@@ -3515,6 +4062,30 @@ Juan Jiménez Pardo - juan.jimenez.pardo@estudiantat.upc.edu""" .
           :nombre "tzatziki" ;
           :precio "3.0"^^xsd:float ;
           :tipo 1 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/uva_fresca_con_reduccion_de_balsamico
+:uva_fresca_con_reduccion_de_balsamico rdf:type owl:NamedIndividual ,
+                                                :Plato ;
+                                       :compuestoPor :miel ,
+                                                     :uvas ,
+                                                     :vinagre_balsamico ;
+                                       :disponibleEn :verano ;
+                                       :esCategoria :fruta ;
+                                       :esPreparacion :crudo ;
+                                       :originarioDe :italia ;
+                                       :dificultad 2 ;
+                                       :nombre "uva_fresca_con_reduccion_de_balsamico" ;
+                                       :precio "3.8"^^xsd:float ;
+                                       :tipo 0 .
+
+
+###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/uvas
+:uvas rdf:type owl:NamedIndividual ,
+               :Ingrediente ;
+      :glutenFree "true"^^xsd:boolean ;
+      :lactosaFree "true"^^xsd:boolean ;
+      :nombre "uvas" .
 
 
 ###  http://www.semanticweb.org/polaracil/ontologies/2025/3/ricorico/vainilla

@@ -2,7 +2,7 @@
 ;;; RicoRico_Ontology.clp
 ;;; Translated by owl2clips
 ;;; Translated to CLIPS from ontology ricorico.ttl
-;;; :Date 25/05/2025 10:46:20
+;;; :Date 25/05/2025 14:02:49
 
 (defclass Bebida "Clase para representar una bebida."
     (is-a USER)
@@ -251,6 +251,12 @@
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "almendra")
+    )
+
+    ([almidon_de_maiz] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "almidon_de_maiz")
     )
 
     ([anchoas] of Ingrediente
@@ -607,6 +613,12 @@
          (nombre  "casqueria")
     )
 
+    ([castanas] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "castanas")
+    )
+
     ([cazuela] of Categoria
          (nombre  "cazuela")
     )
@@ -615,6 +627,12 @@
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "cebolla")
+    )
+
+    ([cerezas] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "cerezas")
     )
 
     ([cerveza_artesanal] of Casual
@@ -681,6 +699,42 @@
          (nombre  "chorizo")
     )
 
+    ([ciliegie_al_vino_rosso] of Plato
+         (compuestoPor  [azucar] [cerezas] [vino_tinto])
+         (disponibleEn  [verano])
+         (esCategoria  [fruta])
+         (esPreparacion  [hervido])
+         (originarioDe  [italia])
+         (dificultad  3)
+         (nombre  "ciliegie_al_vino_rosso")
+         (precio  4.2)
+         (tipo  0)
+    )
+
+    ([citricos_con_canela] of Plato
+         (compuestoPor  [canela] [limon] [miel] [naranja])
+         (disponibleEn  [invierno] [primavera])
+         (esCategoria  [fruta])
+         (esPreparacion  [crudo])
+         (originarioDe  [espana])
+         (dificultad  2)
+         (nombre  "citricos_con_canela")
+         (precio  3.5)
+         (tipo  0)
+    )
+
+    ([clafoutis_de_cerezas] of Plato
+         (compuestoPor  [cerezas] [harina_de_almendra] [huevos] [leche_vegetal])
+         (disponibleEn  [verano])
+         (esCategoria  [postre])
+         (esPreparacion  [horneado_y_en_capas])
+         (originarioDe  [francia])
+         (dificultad  6)
+         (nombre  "clafoutis_de_cerezas")
+         (precio  6.0)
+         (tipo  0)
+    )
+
     ([cocido] of Preparacion
          (nombre  "cocido")
     )
@@ -727,6 +781,10 @@
          (tipo  2)
     )
 
+    ([congelado] of Preparacion
+         (nombre  "congelado")
+    )
+
     ([coq_au_vin] of Plato
          (compuestoPor  [ajo] [bacon] [caldo_de_pollo] [cebolla] [champinones] [harina] [laurel] [mantequilla] [pimienta] [pollo] [sal] [tomillo] [vino_tinto] [zanahoria])
          (disponibleEn  [invierno] [otono])
@@ -758,6 +816,18 @@
          (dificultad  6)
          (nombre  "crema_catalana")
          (precio  4.0)
+         (tipo  0)
+    )
+
+    ([crema_de_castanas] of Plato
+         (compuestoPor  [azucar] [castanas])
+         (disponibleEn  [invierno] [otono])
+         (esCategoria  [postre])
+         (esPreparacion  [hervido])
+         (originarioDe  [francia])
+         (dificultad  4)
+         (nombre  "crema_de_castanas")
+         (precio  5.0)
          (tipo  0)
     )
 
@@ -799,6 +869,18 @@
 
     ([dulce] of Categoria
          (nombre  "dulce")
+    )
+
+    ([dulces_de_cuchara] of Plato
+         (compuestoPor  [azucar] [frutas])
+         (disponibleEn  [invierno] [otono] [primavera] [verano])
+         (esCategoria  [dulce])
+         (esPreparacion  [hervido])
+         (originarioDe  [grecia])
+         (dificultad  5)
+         (nombre  "dulces_de_cuchara")
+         (precio  4.0)
+         (tipo  0)
     )
 
     ([empanada_gallega] of Plato
@@ -905,6 +987,18 @@
          (tipo  1)
     )
 
+    ([fichi_al_forno] of Plato
+         (compuestoPor  [canela] [higos] [miel] [pistacho])
+         (disponibleEn  [otono] [verano])
+         (esCategoria  [fruta])
+         (esPreparacion  [horno])
+         (originarioDe  [italia])
+         (dificultad  3)
+         (nombre  "fichi_al_forno")
+         (precio  4.5)
+         (tipo  0)
+    )
+
     ([foie_gras] of Plato
          (compuestoPor  [higado_de_pato_o_ganso] [pimienta] [sal])
          (disponibleEn  [invierno] [otono])
@@ -919,8 +1013,26 @@
          (tipo  1)
     )
 
+    ([fragole_allaceto_balsamico] of Plato
+         (compuestoPor  [azucar_moreno] [fresa] [vinagre_balsamico])
+         (disponibleEn  [primavera])
+         (esCategoria  [fruta])
+         (esPreparacion  [crudo])
+         (originarioDe  [italia])
+         (dificultad  2)
+         (nombre  "fragole_allaceto_balsamico")
+         (precio  3.7)
+         (tipo  0)
+    )
+
     ([francia] of Origen
          (nombre  "francia")
+    )
+
+    ([fresa] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "fresa")
     )
 
     ([frijol] of Ingrediente
@@ -949,6 +1061,16 @@
          (nombre  "frittata_di_zucchine")
          (precio  8.5)
          (tipo  1)
+    )
+
+    ([fruta] of Categoria
+         (nombre  "fruta")
+    )
+
+    ([frutas] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "frutas")
     )
 
     ([galaktoboureko] of Plato
@@ -1047,10 +1169,28 @@
          (nombre  "guisado")
     )
 
+    ([halva_de_tahini] of Plato
+         (compuestoPor  [azucar] [tahini])
+         (disponibleEn  [invierno] [otono] [primavera] [verano])
+         (esCategoria  [dulce])
+         (esPreparacion  [mezclado])
+         (originarioDe  [grecia])
+         (dificultad  3)
+         (nombre  "halva_de_tahini")
+         (precio  4.5)
+         (tipo  0)
+    )
+
     ([harina] of Ingrediente
          (glutenFree  FALSE)
          (lactosaFree  TRUE)
          (nombre  "harina")
+    )
+
+    ([harina_de_almendra] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "harina_de_almendra")
     )
 
     ([hervido] of Preparacion
@@ -1067,6 +1207,24 @@
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "higado_de_pato_o_ganso")
+    )
+
+    ([higos] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "higos")
+    )
+
+    ([higos_al_vino_tinto] of Plato
+         (compuestoPor  [canela] [higos] [vino_tinto])
+         (disponibleEn  [otono] [verano])
+         (esCategoria  [fruta])
+         (esPreparacion  [hervido])
+         (originarioDe  [espana])
+         (dificultad  3)
+         (nombre  "higos_al_vino_tinto")
+         (precio  4.5)
+         (tipo  0)
     )
 
     ([hinojo] of Ingrediente
@@ -1121,6 +1279,18 @@
          (nombre  "huevos_rotos_con_jamon")
          (precio  9.5)
          (tipo  2)
+    )
+
+    ([insalata_dolce_di_frutta] of Plato
+         (compuestoPor  [cerezas] [higos] [limon] [miel] [uvas])
+         (disponibleEn  [verano])
+         (esCategoria  [fruta])
+         (esPreparacion  [crudo])
+         (originarioDe  [italia])
+         (dificultad  2)
+         (nombre  "insalata_dolce_di_frutta")
+         (precio  3.6)
+         (tipo  0)
     )
 
     ([invierno] of Temporada
@@ -1197,6 +1367,12 @@
          (nombre  "leche")
     )
 
+    ([leche_vegetal] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "leche_vegetal")
+    )
+
     ([legumbres] of Categoria
          (nombre  "legumbres")
     )
@@ -1235,6 +1411,42 @@
          (tipo  0)
     )
 
+    ([loukoumi] of Plato
+         (compuestoPor  [almidon_de_maiz] [azucar])
+         (disponibleEn  [invierno] [otono] [primavera] [verano])
+         (esCategoria  [dulce])
+         (esPreparacion  [hervido])
+         (originarioDe  [grecia])
+         (dificultad  7)
+         (nombre  "loukoumi")
+         (precio  3.0)
+         (tipo  0)
+    )
+
+    ([macedonia_de_frutas_mediterraneas] of Plato
+         (compuestoPor  [higos] [manzana] [naranja] [pera])
+         (disponibleEn  [verano])
+         (esCategoria  [fruta])
+         (esPreparacion  [crudo])
+         (originarioDe  [espana])
+         (dificultad  1)
+         (nombre  "macedonia_de_frutas_mediterraneas")
+         (precio  3.2)
+         (tipo  0)
+    )
+
+    ([macedonia_di_mele_e_pere] of Plato
+         (compuestoPor  [manzana] [menta] [miel] [pera])
+         (disponibleEn  [primavera] [verano])
+         (esCategoria  [fruta])
+         (esPreparacion  [crudo])
+         (originarioDe  [italia])
+         (dificultad  3)
+         (nombre  "macedonia_di_mele_e_pere")
+         (precio  3.9)
+         (tipo  0)
+    )
+
     ([maicena] of Ingrediente
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
@@ -1251,6 +1463,18 @@
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "manzana")
+    )
+
+    ([manzanas_asadas_con_frutos_secos] of Plato
+         (compuestoPor  [almendra] [canela] [manzana] [pistacho])
+         (disponibleEn  [invierno] [otono])
+         (esCategoria  [fruta])
+         (esPreparacion  [horno])
+         (originarioDe  [espana])
+         (dificultad  4)
+         (nombre  "manzanas_asadas_con_frutos_secos")
+         (precio  4.0)
+         (tipo  0)
     )
 
     ([mariscos] of Ingrediente
@@ -1281,6 +1505,60 @@
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "mejillones")
+    )
+
+    ([melon] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "melon")
+    )
+
+    ([melon_con_menta] of Plato
+         (compuestoPor  [melon] [menta])
+         (disponibleEn  [verano])
+         (esCategoria  [fruta])
+         (esPreparacion  [crudo])
+         (originarioDe  [grecia])
+         (dificultad  1)
+         (nombre  "melon_con_menta")
+         (precio  3.5)
+         (tipo  0)
+    )
+
+    ([membrillo] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "membrillo")
+    )
+
+    ([membrillo_al_horno_con_miel] of Plato
+         (compuestoPor  [membrillo] [miel])
+         (disponibleEn  [invierno] [otono])
+         (esCategoria  [postre])
+         (esPreparacion  [horno])
+         (originarioDe  [grecia])
+         (dificultad  4)
+         (nombre  "membrillo_al_horno_con_miel")
+         (precio  5.5)
+         (tipo  0)
+    )
+
+    ([menta] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "menta")
+    )
+
+    ([merengues] of Plato
+         (compuestoPor  [azucar] [huevos])
+         (disponibleEn  [invierno] [otono] [primavera] [verano])
+         (esCategoria  [dulce])
+         (esPreparacion  [horneado_y_caramelizado])
+         (originarioDe  [francia])
+         (dificultad  6)
+         (nombre  "merengues")
+         (precio  3.5)
+         (tipo  0)
     )
 
     ([merlot] of Vino
@@ -1381,6 +1659,36 @@
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
          (nombre  "muslos_de_pato")
+    )
+
+    ([naranja] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "naranja")
+    )
+
+    ([naranjas_con_canela] of Plato
+         (compuestoPor  [canela] [naranja])
+         (disponibleEn  [invierno])
+         (esCategoria  [dulce])
+         (esPreparacion  [crudo])
+         (originarioDe  [francia])
+         (dificultad  2)
+         (nombre  "naranjas_con_canela")
+         (precio  3.5)
+         (tipo  0)
+    )
+
+    ([naranjas_con_canela_y_miel] of Plato
+         (compuestoPor  [canela] [miel] [naranja])
+         (disponibleEn  [invierno])
+         (esCategoria  [fruta])
+         (esPreparacion  [crudo])
+         (originarioDe  [espana])
+         (dificultad  2)
+         (nombre  "naranjas_con_canela_y_miel")
+         (precio  4.0)
+         (tipo  0)
     )
 
     ([nata] of Ingrediente
@@ -1587,6 +1895,36 @@
          (precio  2.5)
     )
 
+    ([pera] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "pera")
+    )
+
+    ([peras_al_azafran] of Plato
+         (compuestoPor  [azafran] [canela] [miel] [pera])
+         (disponibleEn  [otono] [primavera] [verano])
+         (esCategoria  [fruta])
+         (esPreparacion  [hervido])
+         (originarioDe  [espana])
+         (dificultad  5)
+         (nombre  "peras_al_azafran")
+         (precio  4.8)
+         (tipo  0)
+    )
+
+    ([peras_al_vino_tinto] of Plato
+         (compuestoPor  [pera] [vino_tinto])
+         (disponibleEn  [invierno] [otono])
+         (esCategoria  [fruta])
+         (esPreparacion  [hervido])
+         (originarioDe  [francia])
+         (dificultad  5)
+         (nombre  "peras_al_vino_tinto")
+         (precio  6.5)
+         (tipo  0)
+    )
+
     ([perejil] of Ingrediente
          (glutenFree  TRUE)
          (lactosaFree  TRUE)
@@ -1756,6 +2094,12 @@
          (nombre  "queso_parmesano")
     )
 
+    ([queso_vegano] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "queso_vegano")
+    )
+
     ([quesoc] of Categoria
          (nombre  "quesoc")
     )
@@ -1835,6 +2179,7 @@
          (disponibleEn  [otono])
          (esCategoria  [arroz])
          (esPreparacion  [guisado])
+         (incompatibleConBebida  [cerveza_artesanal] [lambrusco] [tinto_de_verano])
          (incompatibleConPlato  [arroz_caldoso] [arroz_con_leche] [paella_valenciana])
          (originarioDe  [italia])
          (dificultad  6)
@@ -1921,6 +2266,24 @@
          (nombre  "salvia")
     )
 
+    ([sandia] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "sandia")
+    )
+
+    ([sandia_con_queso_vegano] of Plato
+         (compuestoPor  [queso_vegano] [sandia])
+         (disponibleEn  [verano])
+         (esCategoria  [fruta])
+         (esPreparacion  [crudo])
+         (originarioDe  [grecia])
+         (dificultad  2)
+         (nombre  "sandia_con_queso_vegano")
+         (precio  4.0)
+         (tipo  0)
+    )
+
     ([sauvignon_blanc] of Vino
          (alcoholica  TRUE)
          (glutenFree  TRUE)
@@ -1969,6 +2332,30 @@
          (nombre  "sopa_avgolemono")
          (precio  4.5)
          (tipo  1)
+    )
+
+    ([sorbete_de_frutas] of Plato
+         (compuestoPor  [azucar] [frutas])
+         (disponibleEn  [primavera] [verano])
+         (esCategoria  [fruta])
+         (esPreparacion  [frio])
+         (originarioDe  [francia])
+         (dificultad  3)
+         (nombre  "sorbete_de_frutas")
+         (precio  4.5)
+         (tipo  0)
+    )
+
+    ([sorbetto_di_limone] of Plato
+         (compuestoPor  [azucar] [limon])
+         (disponibleEn  [verano])
+         (esCategoria  [fruta])
+         (esPreparacion  [congelado])
+         (originarioDe  [italia])
+         (dificultad  4)
+         (nombre  "sorbetto_di_limone")
+         (precio  3.0)
+         (tipo  0)
     )
 
     ([soupe_a_loignon] of Plato
@@ -2061,6 +2448,12 @@
          (nombre  "tagliatelle_al_ragu")
          (precio  11.0)
          (tipo  1)
+    )
+
+    ([tahini] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "tahini")
     )
 
     ([tarta_de_santiago] of Plato
@@ -2229,6 +2622,24 @@
          (nombre  "tzatziki")
          (precio  3.0)
          (tipo  1)
+    )
+
+    ([uva_fresca_con_reduccion_de_balsamico] of Plato
+         (compuestoPor  [miel] [uvas] [vinagre_balsamico])
+         (disponibleEn  [verano])
+         (esCategoria  [fruta])
+         (esPreparacion  [crudo])
+         (originarioDe  [italia])
+         (dificultad  2)
+         (nombre  "uva_fresca_con_reduccion_de_balsamico")
+         (precio  3.8)
+         (tipo  0)
+    )
+
+    ([uvas] of Ingrediente
+         (glutenFree  TRUE)
+         (lactosaFree  TRUE)
+         (nombre  "uvas")
     )
 
     ([vainilla] of Ingrediente
