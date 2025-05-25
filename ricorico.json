@@ -230,7 +230,19 @@
   { "type": "Casual", "id": "7Up", "precio": 2.5, "alcoholica": false, "glutenFree": true, "lactosaFree": true },
   { "type": "Casual", "id": "Agua Sin Gas", "precio": 1.5, "alcoholica": false, "glutenFree": true, "lactosaFree": true },
   { "type": "Casual", "id": "Cerveza Rubia", "precio": 3.5, "alcoholica": true, "glutenFree": false, "lactosaFree": true },
-
+  { "type": "Casual", "id": "Sidra Asturiana", "precio": 4.0, "alcoholica": true, "glutenFree": true, "lactosaFree": true },
+  { "type": "Casual", "id": "Vermut Rojo", "precio": 4.5, "alcoholica": true, "glutenFree": true, "lactosaFree": true },
+  { "type": "Casual", "id": "Aguardiente de Orujo", "precio": 5.5, "alcoholica": true, "glutenFree": true, "lactosaFree": true },
+  { "type": "Casual", "id": "Grappa", "precio": 6.0, "alcoholica": true, "glutenFree": true, "lactosaFree": true },
+  { "type": "Casual", "id": "Crema Irlandesa", "precio": 5.0, "alcoholica": true, "glutenFree": true, "lactosaFree": false },
+  { "type": "Casual", "id": "Licor de Café con Leche", "precio": 5.5, "alcoholica": true, "glutenFree": true, "lactosaFree": false },
+  { "type": "Casual", "id": "Crema de Cacao", "precio": 4.8, "alcoholica": true, "glutenFree": true, "lactosaFree": false },
+  { "type": "Casual", "id": "Ponche de Huevo", "precio": 4.6, "alcoholica": true, "glutenFree": true, "lactosaFree": false },
+  { "type": "Casual", "id": "Cerveza de Trigo Alemana", "precio": 3.8, "alcoholica": true, "glutenFree": false, "lactosaFree": true },
+  { "type": "Casual", "id": "Cerveza Negra", "precio": 3.9, "alcoholica": true, "glutenFree": false, "lactosaFree": true },
+  { "type": "Casual", "id": "Cerveza IPA", "precio": 4.2, "alcoholica": true, "glutenFree": false, "lactosaFree": true },
+  { "type": "Casual", "id": "Radler de Limón", "precio": 3.7, "alcoholica": true, "glutenFree": false, "lactosaFree": true },
+  
   {
     "type": "Plato",
     "id": "Paella Valenciana",
