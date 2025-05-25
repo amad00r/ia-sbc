@@ -112,7 +112,7 @@
      (while (or (not (integerp ?num_comensales)) (<= ?num_comensales 0)) do
           (if (not (integerp ?num_comensales))
                then (printout t "Por favor, introduce un número entero válido: ")
-               else (printout t "Por favor, introduce un número de comensales mayor que 0: ")
+               else (printout t "Por favor, introduce un número de comensales válido (mayor que 0): ")
           )
           (bind ?num_comensales (read))
      )
@@ -129,7 +129,7 @@
      ;; Validar que sea un número y que sea mayor que 0
      (while (or (not (numberp ?precio_min)) (<= ?precio_min 0.0)) do
           (if (not (numberp ?precio_min))
-               then (printout t "Por favor, introduce un número válido: ")
+               then (printout t "Por favor, introduce un precio válido (valor númerico): ")
                else (printout t "Por favor, introduce un precio válido (mayor que 0): ")
           )
           (bind ?precio_min (read))
@@ -147,7 +147,7 @@
      ;; Validar que sea un número, mayor que 0, mayor que precio_min y con diferencia mínima de 5€
      (while (or (not (numberp ?precio_max)) (<= ?precio_max 0.0) (<= ?precio_max ?precio_min) (< ?precio_max (+ ?precio_min 5))) do
           (if (not (numberp ?precio_max))
-               then (printout t "Por favor, introduce un número válido: ")
+               then (printout t "Por favor, introduce un precio válido (valor númerico): ")
           else (if (<= ?precio_max 0)
                     then (printout t "Por favor, introduce un precio válido (mayor que 0): ")
                else (if (<= ?precio_max ?precio_min)
@@ -241,7 +241,7 @@
           )
      )
 
-     (bind ?temporada (seleccion_una_opcion "Introduzca la temporada del año." invierno primavera otono verano))
+     (bind ?temporada (seleccion_una_opcion "Introduzca la temporada del año." primavera verano otono invierno))
 
      ;; Obtenemos las preferencias y restricciones de bebida
      (bind $?condiciones_bebida (obtener_bebida))
