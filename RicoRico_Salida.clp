@@ -64,35 +64,34 @@
         (>= (send ?m get-precio) ?min)
         (<= (send ?m get-precio) ?max)
     )))
-    (bind ?menus (sort cmp-menu $?menus))
+    (bind ?menus (sort cmp-menu ?menus))
     ; Mostrar menús según el número disponible
     (switch (length$ ?menus)
         (case 1 then
             (printout t "INFO: Con las restricciones actuales, solo se ha podido generar 1 menú." crlf crlf)
             (printout t "Menú:" crlf)
-            (print-menu (nth 1 ?menus) ?tipo-evento)
+            (print-menu (nth$ 1 ?menus) ?tipo-evento)
         )
         (case 2 then
             (printout t "INFO: Con las restricciones actuales, solo se han podido generar 2 menús." crlf crlf)
             (printout t "Menú Caro:" crlf)
-            (print-menu (nth 1 ?menus) ?tipo-evento)
+            (print-menu (nth$ 1 ?menus) ?tipo-evento)
             (printout t "Menú Barato:" crlf)
-            (print-menu (nth 2 ?menus) ?tipo-evento)
+            (print-menu (nth$ 2 ?menus) ?tipo-evento)
         )
         (case 3 then
             (printout t "INFO: Se han generado 3 menús." crlf crlf)
             (printout t "Menú Caro:" crlf)
-            (print-menu (nth 1 ?menus) ?tipo-evento)
+            (print-menu (nth$ 1 ?menus) ?tipo-evento)
             (printout t "Menú Estándar:" crlf)
-            (print-menu (nth 2 ?menus) ?tipo-evento)
+            (print-menu (nth$ 2 ?menus) ?tipo-evento)
             (printout t "Menú Barato:" crlf)
-            (print-menu (nth 3 ?menus) ?tipo-evento)
+            (print-menu (nth$ 3 ?menus) ?tipo-evento)
         )
         (default
             (printout t "INFO: No se ha podido generar ningún menú - Condiciones demasiado restrictivas." crlf)
         )
     )
-
 
     (bind ?menus-alternativos (find-all-instances ((?m Menu)) (or
         (< (send ?m get-precio) ?min)
