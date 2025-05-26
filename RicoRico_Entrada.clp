@@ -242,6 +242,13 @@
 
      ;;Obtenemos el número de comensales, el precio mínimo y máximo y la temporada
      (bind ?tipo_evento (seleccion_una_opcion "¿Qué tipo de evento es?" casual formal))
+     
+     ;; Si el evento es formal, aumentar los precios mínimo y máximo del menú un 25%
+     (if (eq ?tipo_evento formal) then
+          (bind ?precio_menu_min (* ?precio_menu_min 1.25))
+          (bind ?precio_menu_max (* ?precio_menu_max 1.25))
+     )
+     
      (bind ?num_comensales (obtener_numero_comensales))
      (bind ?precio_min (obtener_precio_min))
 
