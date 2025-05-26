@@ -32,15 +32,13 @@
 
     (bind ?visited-menus (create$))
 
-    ; Number of desired valid menus
-    (bind ?valid-menus 30)
     ; Number of attempts
     (bind ?attempts 10000)
 
     (if ?diffBebidas then
         (bind ?max-menus (* ?bebidas-size ?bebidas-size ?platos1-size ?platos2-size ?postres-size))
 
-        (while (and (> ?valid-menus 0) (> ?attempts 0) (< (length$ ?visited-menus) ?max-menus))
+        (while (and (> ?attempts 0) (< (length$ ?visited-menus) ?max-menus))
             (bind ?b1-idx  (random 1 ?bebidas-size))
             (bind ?b2-idx  (random 1 ?bebidas-size))
             (bind ?p1-idx  (random 1 ?platos1-size))
@@ -106,8 +104,6 @@
                         (2oPlato  ?p2)
                         (postre   ?pst)
                         (precio   ?price))
-                    
-                    (if ?is-in-range then (bind ?valid-menus (- ?valid-menus 1)))
                 )
 
                 (bind ?visited-menus (insert$ ?visited-menus 1 ?menu-id))
@@ -119,7 +115,7 @@
     else
         (bind ?max-menus (* ?bebidas-size ?platos1-size ?platos2-size ?postres-size))
 
-        (while (and (> ?valid-menus 0) (> ?attempts 0) (< (length$ ?visited-menus) ?max-menus))
+        (while (and (> ?attempts 0) (< (length$ ?visited-menus) ?max-menus))
             (bind ?b-idx   (random 1 ?bebidas-size))
             (bind ?p1-idx  (random 1 ?platos1-size))
             (bind ?p2-idx  (random 1 ?platos2-size))
@@ -176,8 +172,6 @@
                         (2oPlato  ?p2)
                         (postre   ?pst)
                         (precio   ?price))
-                    
-                    (if ?is-in-range then (bind ?valid-menus (- ?valid-menus 1)))
                 )
 
                 (bind ?visited-menus (insert$ ?visited-menus 1 ?menu-id))
